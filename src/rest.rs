@@ -8,6 +8,8 @@ use crate::RESTClient;
 type Error = Box<dyn std::error::Error>;
 
 impl RESTClient {
+
+    /// Create a new instance of the LCU REST wrapper
     pub fn new() -> Result<Self, Error> {
         let mut sys = System::new_all();
         sys.refresh_all();
@@ -21,6 +23,7 @@ impl RESTClient {
         })
     }
 
+    /// Make a get request to the specified endpoint
     pub async fn get(&self, endpoint: &'static str) -> Result<serde_json::Value, reqwest::Error> {
         let req: serde_json::Value = self
             .reqwest_client
@@ -33,6 +36,7 @@ impl RESTClient {
         Ok(req)
     }
 
+    /// Make a post request to the specified endpoint
     pub async fn post(
         &self,
         endpoint: &'static str,
@@ -50,6 +54,7 @@ impl RESTClient {
         Ok(req)
     }
 
+    /// Make a put request to the specified endpoint
     pub async fn put(
         &self,
         endpoint: &'static str,
