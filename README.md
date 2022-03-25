@@ -6,13 +6,13 @@ A league of
 
 ## TODO
 
-[] Finish REST implementation
-    [] Add parameters to endpoints
-    [] Add Delete call
-[] Finish WAMP implementation
-[] Add helpers
-[] Add documentation
-[x] Finish ingame implementation
+- [ ] Finish REST implementation
+    - [ ] Add parameters to endpoints
+    - [ ] Add Delete call
+- [ ] Finish WAMP implementation
+- [ ] Add helpers
+- [ ] Add documentation
+- [x] Finish ingame implementation
 
 [docs-badge]: https://img.shields.io/badge/docs-online-5023dd.svg?style=flat-square
 [docs]: https://docs.rs/shaco
