@@ -5,7 +5,7 @@
 pub mod rest;
 // pub mod wamp;
 pub mod ingame;
-mod model;
+pub mod model;
 mod utils;
 
 pub struct RESTClient {
