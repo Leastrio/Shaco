@@ -6,13 +6,11 @@ pub fn build_reqwest_client(
     let cert = Certificate::from_pem(include_bytes!("../riotgames.pem"))?;
     let mut headers = header::HeaderMap::new();
 
-    match auth_token {
-        Some(token) => {
-            let auth_header =
-                header::HeaderValue::from_str(format!("Basic {}", token).as_str()).unwrap();
-            headers.insert("Authorization", auth_header);
-        }
-        None => (),
+
+    if let Some(token) = auth_token {
+        let auth_header =
+            header::HeaderValue::from_str(format!("Basic {}", token).as_str()).unwrap();
+        headers.insert("Authorization", auth_header);
     }
 
     Ok(reqwest::ClientBuilder::new()
