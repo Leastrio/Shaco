@@ -6,12 +6,11 @@ A league of legends wrapper for the LCU rest & wamp (soon) + the ingame api
 
 ## TODO
 
-- [ ] Finish REST implementation
-    - [ ] Add parameters to endpoints
-    - [ ] Add Delete call
+- [x] Finish REST implementation
+    - [x] Add Delete call
 - [ ] Finish WAMP implementation
 - [ ] Add helpers
-- [ ] Add documentation
+- [ ] Add better documentation
 - [x] Finish ingame implementation
 
 [docs-badge]: https://img.shields.io/badge/docs-online-5023dd.svg?style=flat-square
