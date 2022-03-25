@@ -2,7 +2,7 @@
 
 # Shaco
 
-A league of 
+A league of legends wrapper for the LCU rest & wamp (soon) + the ingame api
 
 ## TODO
 
