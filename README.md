@@ -12,6 +12,7 @@ A league of
 [] Finish WAMP implementation
 [] Add helpers
 [] Add documentation
+[x] Finish ingame implementation
 
 [docs-badge]: https://img.shields.io/badge/docs-online-5023dd.svg?style=flat-square
 [docs]: https://docs.rs/shaco
