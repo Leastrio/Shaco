@@ -7,7 +7,7 @@ pub struct AllGameData {
     pub activePlayer: ActivePlayer,
     pub allPlayers: Vec<Player>,
     pub events: EventData,
-    pub gameData: GameStats
+    pub gameData: GameStats,
 }
 
 #[derive(Debug, Deserialize)]
@@ -18,7 +18,7 @@ pub struct ActivePlayer {
     pub fullRunes: ActivePlayerRunes,
     pub level: u32,
     pub summonerName: String,
-    pub teamRelativeColors: bool
+    pub teamRelativeColors: bool,
 }
 
 #[derive(Debug, Deserialize)]
@@ -53,7 +53,7 @@ pub struct ChampionStats {
     pub resourceType: String,
     pub resourceValue: f64,
     pub spellVamp: f64,
-    pub tenacity: f64
+    pub tenacity: f64,
 }
 
 #[derive(Debug, Deserialize)]
@@ -62,7 +62,7 @@ pub struct ActivePlayerAbilities {
     pub Passive: PlayerAbility,
     pub Q: PlayerAbility,
     pub R: PlayerAbility,
-    pub W: PlayerAbility
+    pub W: PlayerAbility,
 }
 
 #[derive(Debug, Deserialize)]
@@ -71,7 +71,7 @@ pub struct PlayerAbility {
     pub displayName: String,
     pub id: String,
     pub rawDescription: String,
-    pub rawDisplayName: String
+    pub rawDisplayName: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -80,7 +80,7 @@ pub struct ActivePlayerRunes {
     pub keystone: PlayerRune,
     pub primaryRuneTree: PlayerRune,
     pub secondaryRuneTree: PlayerRune,
-    pub statRunes: Vec<StatRune>
+    pub statRunes: Vec<StatRune>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -88,13 +88,13 @@ pub struct PlayerRune {
     pub displayName: String,
     pub id: u32,
     pub rawDescription: String,
-    pub rawDisplayName: String
+    pub rawDisplayName: String,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct StatRune {
     pub id: u32,
-    pub rawDescription: String
+    pub rawDescription: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -114,7 +114,7 @@ pub struct Player {
     pub skinName: Option<String>,
     pub summonerName: String,
     pub summonerSpells: PlayerSummonerSpells,
-    pub team: String
+    pub team: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -123,27 +123,27 @@ pub struct PlayerScores {
     pub creepScore: u32,
     pub deaths: u32,
     pub kills: u32,
-    pub wardScore: f64
+    pub wardScore: f64,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct PlayerSummonerSpells {
     pub summonerSpellOne: SummonerSpell,
-    pub summonerSpellTwo: SummonerSpell
+    pub summonerSpellTwo: SummonerSpell,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct SummonerSpell {
     pub displayName: String,
     pub rawDescription: String,
-    pub rawDisplayName: String
+    pub rawDisplayName: String,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct PlayerMainRunes {
     pub keystone: PlayerRune,
     pub primaryRuneTree: PlayerRune,
-    pub secondaryRuneTree: PlayerRune
+    pub secondaryRuneTree: PlayerRune,
 }
 
 #[derive(Debug, Deserialize)]
@@ -156,12 +156,12 @@ pub struct PlayerItem {
     pub price: u32,
     pub rawDescription: String,
     pub rawDisplayName: String,
-    pub slot: u32
+    pub slot: u32,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct EventData {
-    pub Events: Vec<Event>
+    pub Events: Vec<Event>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -178,8 +178,7 @@ pub struct Event {
     pub VictimName: Option<String>,
     pub KillStreak: Option<u32>,
     pub Acer: Option<String>,
-    pub AcingTeam: Option<String>
-
+    pub AcingTeam: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -188,5 +187,5 @@ pub struct GameStats {
     pub gameTime: f64,
     pub mapName: String,
     pub mapNumber: u32,
-    pub mapTerrain: String
+    pub mapTerrain: String,
 }

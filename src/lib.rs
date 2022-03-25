@@ -5,17 +5,17 @@
 pub mod rest;
 // pub mod wamp;
 pub mod ingame;
-mod utils;
 mod model;
+mod utils;
 
 pub struct RESTClient {
     port: u32,
-    reqwest_client: reqwest::Client
+    reqwest_client: reqwest::Client,
 }
 
 pub struct InGameClient {
     port: u32,
-    reqwest_client: reqwest::Client
+    reqwest_client: reqwest::Client,
 }
 
 // pub struct WAMPClient<'a> {
