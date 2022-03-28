@@ -23,6 +23,6 @@ pub struct InGameClient {
 }
 
 pub struct WSClient {
-    write: SplitSink<WebSocketStream<MaybeTlsStream<TcpStream>>, Message>,
-    read: SplitStream<WebSocketStream<MaybeTlsStream<TcpStream>>>,
+    pub write: SplitSink<WebSocketStream<MaybeTlsStream<TcpStream>>, Message>,
+    pub read: SplitStream<WebSocketStream<MaybeTlsStream<TcpStream>>>,
 }
