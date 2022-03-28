@@ -12,8 +12,8 @@ impl RESTClient {
         sys.refresh_all();
         let process = find_process(&sys)?;
         let args = extract_info(process)?;
-        let rest_token = encode_token(&args.0);
-        let client = build_reqwest_client(Some(rest_token))?;
+        let auth_token = encode_token(&args.0);
+        let client = build_reqwest_client(Some(auth_token))?;
         Ok(Self {
             port: args.1,
             reqwest_client: client,

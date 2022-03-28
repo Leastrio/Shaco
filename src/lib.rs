@@ -2,8 +2,11 @@
 //!
 //! A LCU REST + WAMP api wrapper
 
+use tokio::net::TcpStream;
+use tokio_tungstenite::{WebSocketStream, MaybeTlsStream};
+
 pub mod rest;
-// pub mod wamp;
+pub mod ws;
 pub mod ingame;
 pub mod model;
 mod utils;
@@ -18,8 +21,7 @@ pub struct InGameClient {
     reqwest_client: reqwest::Client,
 }
 
-// pub struct WAMPClient<'a> {
-//     port: u32,
-//     password: String,
-//     wamp_client: Client<'a>
-// }
+pub struct WSClient {
+    ws_stream: WebSocketStream<MaybeTlsStream<TcpStream>>
+    
+}
