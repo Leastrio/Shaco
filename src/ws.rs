@@ -1,4 +1,4 @@
-use futures_util::SinkExt;
+use futures_util::{SinkExt, StreamExt};
 use sysinfo::{System, SystemExt};
 use tokio_tungstenite::tungstenite::client::IntoClientRequest;
 use tokio_tungstenite::tungstenite::http::HeaderValue;
@@ -11,7 +11,9 @@ type Error = Box<dyn std::error::Error>;
 
 #[derive(PartialEq)]
 pub enum Events {
-    All,
+    Json,
+    Lcds,
+    Callback,
     None,
 }
 
@@ -37,20 +39,23 @@ impl WSClient {
             );
         }
 
-        let (mut ws_stream, _) =
+        let (ws_stream, _response) =
             tokio_tungstenite::connect_async_tls_with_config(url, None, Some(connector)).await?;
 
-        if events == Events::All {
-            ws_stream
-                .send(Message::text("[5, \"OnJsonApiEvent\"]"))
-                .await?;
+        let (mut write, read) = ws_stream.split();
+
+        match events {
+            Events::Json => write.send(Message::text("[5, \"OnJsonApiEvent\"]")).await?,
+            Events::Lcds => write.send(Message::text("[5, \"OnLcdsEvent\"]")).await?,
+            Events::Callback => write.send(Message::text("[5, \"OnCallback\"]")).await?,
+            Events::None => (),
         }
 
-        Ok(Self { ws_stream })
+        Ok(Self { write, read })
     }
 
     pub async fn subscribe(&mut self, event: String) -> Result<(), Error> {
-        self.ws_stream
+        self.write
             .send(Message::text(format!("[5, {}]", event)))
             .await?;
 
@@ -58,7 +63,7 @@ impl WSClient {
     }
 
     pub async fn unsubscribe(&mut self, event: String) -> Result<(), Error> {
-        self.ws_stream
+        self.write
             .send(Message::text(format!("[6, {}]", event)))
             .await?;
 
