@@ -2,11 +2,16 @@
 
 # Shaco
 
-A league of legends wrapper for the LCU rest & ws (soon) + the ingame api
+A League of Legends wrapper for the LCU REST & WS + the ingame API
 
-## TODO
+| :exclamation:  Only tested on Windows, full support for other platforms coming in V1   |
+|-----------------------------------------|
 
-Check the projects tab!
+# How to install
+Add the following snippet to your `Cargo.toml`
+```toml
+shaco = "0.4.0"
+```
 
 [docs-badge]: https://img.shields.io/badge/docs-online-5023dd.svg?style=flat-square
 [docs]: https://docs.rs/shaco

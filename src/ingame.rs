@@ -6,8 +6,16 @@ pub struct InGameClient {
     reqwest_client: reqwest::Client,
 }
 
+pub enum TeamID {
+    ALL,
+    UNKNOWN,
+    ORDER,
+    CHAOS,
+    NEUTRAL,
+}
+
 impl InGameClient {
-    /// Create a new connection to the ingame api. This will not return an error if a game is not detected
+    /// Create a new connection to the ingame api. This will return an error if a game is not detected
     pub fn new() -> Result<Self, Box<dyn std::error::Error>> {
         let client = build_reqwest_client(None)?;
         Ok(Self {
@@ -17,12 +25,21 @@ impl InGameClient {
     }
 
     /// Get all current game data
-    pub async fn all_game_data(&self) -> Result<AllGameData, reqwest::Error> {
+    pub async fn all_game_data(
+        &self,
+        event_id: Option<u32>,
+    ) -> Result<AllGameData, reqwest::Error> {
+        let parameter: String = if let Some(id) = event_id {
+            format!("?eventID={}", id)
+        } else {
+            String::from("")
+        };
+
         let req: AllGameData = self
             .reqwest_client
             .get(format!(
-                "https://127.0.0.1:{}/liveclientdata/{}",
-                self.port, "allgamedata"
+                "https://127.0.0.1:{}/liveclientdata/{}{}",
+                self.port, "allgamedata", parameter
             ))
             .send()
             .await?
@@ -97,12 +114,27 @@ impl InGameClient {
     }
 
     /// Get a list of players in game
-    pub async fn player_list(&self) -> Result<Vec<Player>, reqwest::Error> {
+    pub async fn player_list(
+        &self,
+        team_id: Option<TeamID>,
+    ) -> Result<Vec<Player>, reqwest::Error> {
+        let parameter: &str = if let Some(teams) = team_id {
+            match teams {
+                TeamID::ALL => "?teamID=ALL",
+                TeamID::UNKNOWN => "?teamID=UNKNOWN",
+                TeamID::ORDER => "?teamID=ORDER",
+                TeamID::CHAOS => "?teamID=CHAOS",
+                TeamID::NEUTRAL => "?teamID=NEUTRAL",
+            }
+        } else {
+            ""
+        };
+
         let req: Vec<Player> = self
             .reqwest_client
             .get(format!(
-                "https://127.0.0.1:{}/liveclientdata/{}",
-                self.port, "playerlist"
+                "https://127.0.0.1:{}/liveclientdata/{}{}",
+                self.port, "playerlist", parameter
             ))
             .send()
             .await?
@@ -189,12 +221,18 @@ impl InGameClient {
     }
 
     /// Get event data for the active game
-    pub async fn event_data(&self) -> Result<EventData, reqwest::Error> {
+    pub async fn event_data(&self, event_id: Option<u32>) -> Result<EventData, reqwest::Error> {
+        let parameter: String = if let Some(id) = event_id {
+            format!("?eventID={}", id)
+        } else {
+            String::from("")
+        };
+
         let req: EventData = self
             .reqwest_client
             .get(format!(
-                "https://127.0.0.1:{}/liveclientdata/{}",
-                self.port, "eventdata"
+                "https://127.0.0.1:{}/liveclientdata/{}{}",
+                self.port, "eventdata", parameter
             ))
             .send()
             .await?

@@ -1,8 +1,8 @@
 [package]
 name = "shaco"
-version = "0.3.0"
+version = "0.4.0"
 edition = "2021"
-description = "A League of Legends wrapper for the LCU REST and the ingame API"
+description = "A League of Legends wrapper for the LCU REST & WS + the ingame API"
 license = "MIT"
 documentation = "https://docs.rs/shaco"
 readme = "README.md"
