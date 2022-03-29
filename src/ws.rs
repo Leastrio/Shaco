@@ -1,11 +1,17 @@
+use futures_util::stream::{SplitSink, SplitStream};
 use futures_util::{SinkExt, StreamExt};
 use sysinfo::{System, SystemExt};
+use tokio::net::TcpStream;
 use tokio_tungstenite::tungstenite::client::IntoClientRequest;
 use tokio_tungstenite::tungstenite::http::HeaderValue;
-use tokio_tungstenite::tungstenite::Message;
+use tokio_tungstenite::{tungstenite::Message, MaybeTlsStream, WebSocketStream};
 
 use crate::utils::process_info::*;
-use crate::WSClient;
+
+pub struct WSClient {
+    pub write: SplitSink<WebSocketStream<MaybeTlsStream<TcpStream>>, Message>,
+    pub read: SplitStream<WebSocketStream<MaybeTlsStream<TcpStream>>>,
+}
 
 type Error = Box<dyn std::error::Error>;
 

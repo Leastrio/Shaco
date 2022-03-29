@@ -1,6 +1,10 @@
 use crate::model::ingame::*;
 use crate::utils::request::build_reqwest_client;
-use crate::InGameClient;
+
+pub struct InGameClient {
+    port: u32,
+    reqwest_client: reqwest::Client,
+}
 
 impl InGameClient {
     /// Create a new connection to the ingame api. This will not return an error if a game is not detected

@@ -1,7 +1,11 @@
 use sysinfo::{System, SystemExt};
 
 use crate::utils::{process_info::*, request::build_reqwest_client};
-use crate::RESTClient;
+
+pub struct RESTClient {
+    port: u32,
+    reqwest_client: reqwest::Client,
+}
 
 type Error = Box<dyn std::error::Error>;
 
