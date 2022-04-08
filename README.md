@@ -13,7 +13,7 @@ Add the following snippet to your `Cargo.toml`
 shaco = "0.4.0"
 ```
 
-[docs-badge]: https://img.shields.io/badge/docs-online-5023dd.svg?style=flat-square
+[docs-badge]: https://img.shields.io/badge/docs-online-5023dd.svg?style=for-the-badge
 [docs]: https://docs.rs/shaco
 [crates.io link]: https://crates.io/crates/shaco
-[crates.io version]: https://img.shields.io/crates/v/shaco.svg?style=flat-square
+[crates.io version]: https://img.shields.io/crates/v/shaco.svg?style=for-the-badge
