@@ -76,7 +76,7 @@ impl RESTClient {
     /// Make a delete request to the specified endpoint
     pub async fn delete(
         &self,
-        endpoint: &'static str,
+        endpoint: String,
     ) -> Result<serde_json::Value, reqwest::Error> {
         let req: serde_json::Value = self
             .reqwest_client
