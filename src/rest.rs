@@ -25,7 +25,7 @@ impl RESTClient {
     }
 
     /// Make a get request to the specified endpoint
-    pub async fn get(&self, endpoint: &'static str) -> Result<serde_json::Value, reqwest::Error> {
+    pub async fn get(&self, endpoint: String) -> Result<serde_json::Value, reqwest::Error> {
         let req: serde_json::Value = self
             .reqwest_client
             .get(format!("https://127.0.0.1:{}{}", self.port, endpoint))
@@ -40,7 +40,7 @@ impl RESTClient {
     /// Make a post request to the specified endpoint
     pub async fn post(
         &self,
-        endpoint: &'static str,
+        endpoint: String,
         body: serde_json::Value,
     ) -> Result<serde_json::Value, reqwest::Error> {
         let req: serde_json::Value = self
@@ -58,7 +58,7 @@ impl RESTClient {
     /// Make a put request to the specified endpoint
     pub async fn put(
         &self,
-        endpoint: &'static str,
+        endpoint: String,
         body: serde_json::Value,
     ) -> Result<serde_json::Value, reqwest::Error> {
         let req: serde_json::Value = self
@@ -76,7 +76,7 @@ impl RESTClient {
     /// Make a delete request to the specified endpoint
     pub async fn delete(
         &self,
-        endpoint: &'static str,
+        endpoint: String,
     ) -> Result<serde_json::Value, reqwest::Error> {
         let req: serde_json::Value = self
             .reqwest_client
