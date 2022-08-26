@@ -4,7 +4,7 @@
 
 A League of Legends wrapper for the LCU REST & WS + the ingame API
 
-| :exclamation:  Only tested on Windows, full support for other platforms coming in V1   |
+| :exclamation:  Only tested on Windows |
 |-----------------------------------------|
 
 # How to install
