@@ -12,10 +12,7 @@ pub fn find_process(system: &System) -> Result<String, &'static str> {
         }
 
         #[cfg(target_os = "linux")]
-        println!("{}", process.name());
-        #[cfg(target_os = "linux")]
         if process.name() == "LeagueClientUx." {
-            println!("{:?}", process.cmd());
             res = Some(process.cmd().join(" "));
             break;
         }
