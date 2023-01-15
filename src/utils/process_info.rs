@@ -5,7 +5,23 @@ use sysinfo::{ProcessExt, System, SystemExt};
 pub fn find_process(system: &System) -> Result<String, &'static str> {
     let mut res: Option<String> = None;
     for process in system.processes().values() {
+        #[cfg(target_os = "windows")]
         if process.name() == "LeagueClientUx.exe" {
+            res = Some(process.cmd().join(" "));
+            break;
+        }
+
+        #[cfg(target_os = "linux")]
+        println!("{}", process.name());
+        #[cfg(target_os = "linux")]
+        if process.name() == "LeagueClientUx." {
+            println!("{:?}", process.cmd());
+            res = Some(process.cmd().join(" "));
+            break;
+        }
+
+        #[cfg(target_os = "macos")]
+        if process.name() == "LeagueClientUx" {
             res = Some(process.cmd().join(" "));
             break;
         }
