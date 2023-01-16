@@ -10,14 +10,12 @@ const TARGET_PROCESS: &str = "LeagueClientUx.";
 const TARGET_PROCESS: &str = "LeagueClientUx";
 
 pub fn find_process(system: &System) -> Result<String, &'static str> {
-    match system
-    .processes()
-    .values()
-    .find(|process| process.name() == TARGET_PROCESS)
-    .map(|process| process.cmd().join(" ")) {
-        Some(x) => Ok(x),
-        None => Err("Could not find a running LCU process!"),
-    }
+    system
+        .processes()
+        .values()
+        .find(|process| process.name() == TARGET_PROCESS)
+        .map(|process| process.cmd().join(" "))
+        .ok_or("Could not find a running LCU process!")
 }
 
 pub fn extract_info(cmd_args: String) -> Result<(String, u32), &'static str> {
