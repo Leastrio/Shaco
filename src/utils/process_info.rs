@@ -2,28 +2,19 @@ use lazy_static::lazy_static;
 use regex::Regex;
 use sysinfo::{ProcessExt, System, SystemExt};
 
+#[cfg(target_os = "windows")]
+const TARGET_PROCESS: &str = "LeagueClientUx.exe";
+#[cfg(target_os = "linux")]
+const TARGET_PROCESS: &str = "LeagueClientUx.";
+#[cfg(target_os = "macos")]
+const TARGET_PROCESS: &str = "LeagueClientUx";
+
 pub fn find_process(system: &System) -> Result<String, &'static str> {
-    let mut res: Option<String> = None;
-    for process in system.processes().values() {
-        #[cfg(target_os = "windows")]
-        if process.name() == "LeagueClientUx.exe" {
-            res = Some(process.cmd().join(" "));
-            break;
-        }
-
-        #[cfg(target_os = "linux")]
-        if process.name() == "LeagueClientUx." {
-            res = Some(process.cmd().join(" "));
-            break;
-        }
-
-        #[cfg(target_os = "macos")]
-        if process.name() == "LeagueClientUx" {
-            res = Some(process.cmd().join(" "));
-            break;
-        }
-    }
-    match res {
+    match system
+    .processes()
+    .values()
+    .find(|process| process.name() == TARGET_PROCESS)
+    .map(|process| process.cmd().join(" ")) {
         Some(x) => Ok(x),
         None => Err("Could not find a running LCU process!"),
     }
