@@ -1,3 +1,4 @@
+use serde::Serialize;
 use sysinfo::{System, SystemExt};
 
 use crate::utils::{process_info::*, request::build_reqwest_client};
@@ -38,10 +39,10 @@ impl RESTClient {
     }
 
     /// Make a post request to the specified endpoint
-    pub async fn post(
+    pub async fn post<T: Serialize>(
         &self,
         endpoint: String,
-        body: serde_json::Value,
+        body: T,
     ) -> Result<serde_json::Value, reqwest::Error> {
         let req: serde_json::Value = self
             .reqwest_client
@@ -56,10 +57,10 @@ impl RESTClient {
     }
 
     /// Make a put request to the specified endpoint
-    pub async fn put(
+    pub async fn put<T: Serialize>(
         &self,
         endpoint: String,
-        body: serde_json::Value,
+        body: T,
     ) -> Result<serde_json::Value, reqwest::Error> {
         let req: serde_json::Value = self
             .reqwest_client
