@@ -16,34 +16,36 @@ pub fn find_process(system: &System) -> Result<String, &'static str> {
     }
 }
 
-pub fn extract_info(cmd_args: String) -> Result<(String, u32), &'static str> {
-    lazy_static! {
-        static ref PORT_RE: Regex = Regex::new(r"--app-port=([0-9]*)").unwrap();
-        static ref TOKEN_RE: Regex = Regex::new(r"--remoting-auth-token=([\w-]*)").unwrap();
-    }
-    let port = match PORT_RE.captures(&cmd_args) {
-        Some(x) => match x.get(1) {
-            Some(y) => match y.as_str().parse::<u32>() {
-                Ok(z) => z,
-                Err(_) => return Err("Failed to parse port"),
-            },
-            None => return Err("No port found!"),
-        },
-        None => return Err("No port found!"),
-    };
+lazy_static! {
+    static ref PORT_RE: Regex = Regex::new(r"--app-port=([0-9]*)").unwrap();
+    static ref TOKEN_RE: Regex = Regex::new(r"--remoting-auth-token=([\w-]*)").unwrap();
+}
 
-    let token = match TOKEN_RE.captures(&cmd_args) {
-        Some(x) => match x.get(1) {
-            Some(y) => y.as_str(),
-            None => return Err("No authentication token found!"),
-        },
-        None => return Err("No authentication token found!"),
-    };
+pub fn extract_info(cmd_args: String) -> Result<(String, u32), &'static str> {
+    let port: u32 = PORT_RE
+        .captures(&cmd_args)
+        .map_or(Err("No port found!"), |value| {
+            value.get(1).map_or(Err("No port found!"), |port| {
+                port.as_str()
+                    .parse()
+                    .map_or(Err("Failed to parse port"), |port| Ok(port))
+            })
+        })?;
+
+    let token =
+        TOKEN_RE
+            .captures(&cmd_args)
+            .map_or(Err("No authentication token found!"), |value| {
+                value
+                    .get(1)
+                    .map_or(Err("No authentication token found!"), |token| {
+                        Ok(token.as_str())
+                    })
+            })?;
 
     Ok((token.to_string(), port))
 }
 
 pub fn encode_token(remote_token: &str) -> String {
-    let token = format!("riot:{}", remote_token);
-    base64::encode(token)
+    base64::encode(format!("riot:{}", remote_token))
 }
