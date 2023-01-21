@@ -1,3 +1,4 @@
+use base64::{Engine, engine::general_purpose};
 use lazy_static::lazy_static;
 use regex::Regex;
 use sysinfo::{ProcessExt, System, SystemExt};
@@ -47,5 +48,5 @@ pub fn extract_info(cmd_args: String) -> Result<(String, u32), &'static str> {
 }
 
 pub fn encode_token(remote_token: &str) -> String {
-    base64::encode(format!("riot:{}", remote_token))
+    general_purpose::STANDARD.encode(&format!("riot:{}", remote_token))
 }
