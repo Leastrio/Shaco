@@ -1,7 +1,33 @@
-use base64::{Engine, engine::general_purpose};
+use base64::{engine::general_purpose, Engine};
 use lazy_static::lazy_static;
 use regex::Regex;
 use sysinfo::{ProcessExt, System, SystemExt};
+
+pub fn get_auth_info() -> Result<(String, u16), ()> {
+    let mut sys = System::new_all();
+    sys.refresh_processes();
+
+    let args = sys
+        .processes()
+        .values()
+        .find(|p| p.name() == "LeagueClientUx.exe")
+        .map(|p| p.cmd())
+        .ok_or(())?;
+
+    let port = args
+        .into_iter()
+        .find(|arg| arg.starts_with("--app-port="))
+        .map(|arg| arg[11..].parse::<u16>().ok())
+        .flatten()
+        .ok_or(())?;
+    let auth_token = args
+        .into_iter()
+        .find(|arg| arg.starts_with("--remoting-auth-token="))
+        .map(|arg| arg[22..].to_string())
+        .ok_or(())?;
+
+    Ok((general_purpose::STANDARD.encode(format!("riot:{}", auth_token)), port))
+}
 
 pub fn find_process(system: &System) -> Result<String, &'static str> {
     let mut res: Option<String> = None;

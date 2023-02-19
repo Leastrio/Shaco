@@ -1,31 +1,36 @@
-use serde_json::Value;
 use std::error::Error;
 use std::fmt::{Display, Formatter, Result};
 
 #[derive(Debug)]
-pub enum WebsocketError {
-    DISCONNECTED,
+pub enum LcuWebsocketError {
+    LcuNotAvailable,
+    AuthError,
+    SendError,
+    Disconnected,
 }
-impl Display for WebsocketError {
+impl Error for LcuWebsocketError {}
+impl Display for LcuWebsocketError {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         match self {
-            WebsocketError::DISCONNECTED => write!(f, "Websocket disconnected!"),
+            Self::LcuNotAvailable => write!(f, "LCU API not available"),
+            Self::AuthError => write!(f, "Authentication error"),
+            Self::SendError => write!(f, "Error sending message"),
+            Self::Disconnected => write!(f, "Websocket disconnected"),
         }
     }
 }
-impl Error for WebsocketError {}
 
 #[derive(Debug)]
 pub struct Event {
-    subscription_type: SubscriptionType,
-    data: Value,
-    event_type: String,
+    pub subscription_type: SubscriptionType,
+    pub data: String,
+    pub event_type: String,
 }
-impl From<deserialize::DeEvent> for Event {
+impl<'a> From<deserialize::DeEvent<'a>> for Event {
     fn from(de_event: deserialize::DeEvent) -> Event {
         Self {
             subscription_type: de_event.subscription_type,
-            data: de_event.data.data,
+            data: de_event.data.data.get().to_string(),
             event_type: de_event.data.event_type,
         }
     }
@@ -52,7 +57,7 @@ impl Display for SubscriptionType {
 pub(crate) mod deserialize {
     use super::SubscriptionType;
     use serde::{de, Deserialize, Deserializer};
-    use serde_json::Value;
+    use serde_json::value::RawValue;
 
     impl<'de> Deserialize<'de> for SubscriptionType {
         fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
@@ -84,15 +89,17 @@ pub(crate) mod deserialize {
 
     #[derive(Deserialize, Debug)]
     #[serde(rename_all = "camelCase")]
-    pub(crate) struct Data {
-        pub(crate) data: Value,
+    pub struct Data<'a> {
+        #[serde(borrow)]
+        pub(crate) data: &'a RawValue,
         pub(crate) event_type: String,
     }
 
     #[derive(Deserialize, Debug)]
-    pub(crate) struct DeEvent {
+    pub struct DeEvent<'a> {
         _opcode: i64,
         pub(crate) subscription_type: SubscriptionType,
-        pub(crate) data: Data,
+        #[serde(borrow)]
+        pub(crate) data: Data<'a>,
     }
 }
