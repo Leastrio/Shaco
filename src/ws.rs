@@ -92,8 +92,8 @@ impl WSClient {
             .send(Message::text(format!("[5, \"{event}\"]")))
             .await
             .map_err(|e| match e {
-                Error::ConnectionClosed | Error::AlreadyClosed => LcuWebsocketError::SendError,
-                _ => LcuWebsocketError::Disconnected,
+                Error::ConnectionClosed | Error::AlreadyClosed => LcuWebsocketError::Disconnected,
+                _ => LcuWebsocketError::SendError,
             })
     }
 
@@ -102,8 +102,8 @@ impl WSClient {
             .send(Message::text(format!("[6, \"{event}\"]")))
             .await
             .map_err(|e| match e {
-                Error::ConnectionClosed | Error::AlreadyClosed => LcuWebsocketError::SendError,
-                _ => LcuWebsocketError::Disconnected,
+                Error::ConnectionClosed | Error::AlreadyClosed => LcuWebsocketError::Disconnected,
+                _ => LcuWebsocketError::SendError,
             })
     }
 
