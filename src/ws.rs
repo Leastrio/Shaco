@@ -1,4 +1,7 @@
-use futures_util::{SinkExt, StreamExt};
+use std::pin::Pin;
+use std::task::{Context, Poll};
+
+use futures_util::{SinkExt, Stream, StreamExt};
 use tokio::net::TcpStream;
 use tokio_tungstenite::tungstenite::Error;
 use tokio_tungstenite::{
@@ -12,8 +15,7 @@ use crate::utils::process_info::*;
 #[cfg(test)]
 mod tests {
     use crate::model::ws::deserialize::DeEvent;
-    use crate::model::ws::{Event, SubscriptionType};
-    use crate::ws::WSClient;
+    use crate::model::ws::Event;
 
     #[test]
     fn test_deserialize() {
@@ -37,22 +39,6 @@ mod tests {
         println!("{:?}", event.subscription_type);
         println!("{:?}", event.data);
         println!("{:?}", event.event_type);
-    }
-
-    #[tokio::test]
-    async fn test_event_loop() {
-        let mut ws_client = WSClient::connect().await.unwrap();
-        ws_client
-            .subscribe(SubscriptionType::AllJsonApiEvents)
-            .await
-            .unwrap();
-
-        loop {
-            match ws_client.next_event().await {
-                Ok(e) => println!("Event: {:?}", e),
-                Err(_e) => break,
-            };
-        }
     }
 }
 
@@ -106,22 +92,22 @@ impl WSClient {
                 _ => LcuWebsocketError::SendError,
             })
     }
+}
 
-    pub async fn next_event(&mut self) -> Result<Event, LcuWebsocketError> {
+impl Stream for WSClient {
+    type Item = Event;
+
+    fn poll_next(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Option<Self::Item>> {
         loop {
-            let msg = match self.0.next().await {
-                Some(Ok(Message::Text(msg))) => msg,
-                Some(Ok(Message::Close(_))) | Some(Err(_)) | None => {
-                    self.0
-                        .close(None)
-                        .await
-                        .map_err(|_| LcuWebsocketError::Disconnected)?;
-                    return Err(LcuWebsocketError::Disconnected);
+            return match self.0.poll_next_unpin(cx) {
+                Poll::Pending => Poll::Pending,
+                Poll::Ready(Some(Ok(Message::Text(text)))) => {
+                    let Ok(de_event) = serde_json::from_str::<DeEvent>(&text) else { continue };
+                    Poll::Ready(Some(Event::from(de_event)))
                 }
-                Some(Ok(_)) => continue,
+                Poll::Ready(Some(Ok(Message::Close(_))) | Some(Err(_)) | None) => Poll::Ready(None),
+                _ => continue,
             };
-            let Ok(de_event) = serde_json::from_str::<DeEvent>(&msg) else { continue };
-            return Ok(Event::from(de_event));
         }
     }
 }

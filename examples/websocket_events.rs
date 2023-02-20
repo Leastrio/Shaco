@@ -1,15 +1,19 @@
 use futures_util::StreamExt;
-use shaco::ws;
 use tokio::io::AsyncWriteExt;
+
+use shaco::model::ws::SubscriptionType;
+use shaco::ws;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let client = ws::WSClient::connect(ws::Events::Json).await?;
-    let read = client.read;
+    let mut client = ws::WSClient::connect().await?;
+    client
+        .subscribe(SubscriptionType::AllJsonApiEvents)
+        .await
+        .unwrap();
 
-    let read_future = read.for_each(|message| async {
-        let data = message.unwrap().into_data();
-        tokio::io::stdout().write(&data).await.unwrap();
+    let read_future = client.for_each(|message| async move {
+        tokio::io::stdout().write_all(format!("{:?}", message).as_bytes()).await.unwrap();
     });
 
     read_future.await;

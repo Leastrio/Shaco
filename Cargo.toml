@@ -9,33 +9,18 @@ readme = "README.md"
 homepage = "https://github.com/Leastrio/Shaco"
 repository = "https://github.com/Leastrio/Shaco"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-sysinfo = "0.27.7"
+sysinfo = "0.28.0"
 regex = "1.7.1"
 lazy_static = "1.4.0"
 base64 = "0.21.0"
 native-tls = "0.2.11"
 futures-util = "0.3.25"
 tokio = "1.24.2"
+reqwest = { version = "0.11.14", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0.91", features = ["raw_value"] }
+tokio-tungstenite = { version = "0.18.0", features = ["native-tls"] }
 
-[dependencies.reqwest]
-version = "0.11.14"
-features = ["json"]
-
-[dependencies.serde]
-version = "1.0"
-features = ["derive"]
-
-[dependencies.serde_json]
-version = "1.0.91"
-features = ["raw_value"]
-
-[dependencies.tokio-tungstenite]
-version = "0.18.0"
-features = ["native-tls"]
-
-[dev-dependencies.tokio]
-version = "1.17.0"
-features = ["full"]
+[dev-dependencies]
+tokio = { version = "1.17.0", features = ["full"] }

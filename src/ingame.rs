@@ -1,3 +1,12 @@
+use std::task::Poll;
+use std::time::Duration;
+
+use futures_util::Stream;
+use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver};
+use tokio::sync::oneshot;
+use tokio::sync::oneshot::Sender;
+use tokio::task::JoinHandle;
+
 use crate::model::ingame::*;
 use crate::utils::request::build_reqwest_client;
 
@@ -256,5 +265,97 @@ impl InGameClient {
             .await?;
 
         Ok(req)
+    }
+
+    pub async fn active_game(&self) -> bool {
+        let req = self
+            .reqwest_client
+            .head(format!("https://127.0.0.1:{}/Help", self.port)) // only /Help doesn't 404 during loading screen
+            .send()
+            .await;
+
+        if let Ok(req) = req {
+            req.status().is_success()
+        } else {
+            false
+        }
+    }
+}
+
+pub struct EventStream {
+    start_tx: Option<Sender<()>>,
+    poll_task_handle: JoinHandle<()>,
+    events_rx: UnboundedReceiver<Event>,
+}
+
+impl EventStream {
+    pub fn new(polling_rate: Option<Duration>) -> Result<Self, Box<dyn std::error::Error>> {
+        let (start_tx, start_rx) = oneshot::channel::<()>();
+        let (events_tx, events_rx) = unbounded_channel();
+
+        let ingame_client = InGameClient::new()?;
+        let poll_task_handle = tokio::spawn(async move {
+            let polling_rate = polling_rate.unwrap_or(Duration::from_millis(500));
+            let mut timer = tokio::time::interval(polling_rate);
+            let mut current_event_id = 0;
+
+            // await start, but return on error (start_tx got dropped)
+            if let Err(_) = start_rx.await {
+                return;
+            }
+
+            // wait for a game to start
+            loop {
+                timer.tick().await;
+                if ingame_client.active_game().await {
+                    break;
+                };
+            }
+
+            loop {
+                timer.tick().await;
+                match ingame_client.event_data(Some(current_event_id)).await {
+                    Ok(mut events) => {
+                        if let Some(last_event) = events.Events.last() {
+                            current_event_id = last_event.EventID + 1;
+                        }
+                        events.Events.drain(..).for_each(|e| {
+                            let _ = events_tx.send(e);
+                        })
+                    }
+                    // before all players have loaded into the game all api calls return 404
+                    Err(e) if e.status().is_some() => continue,
+                    _ => return,
+                }
+            }
+        });
+
+        Ok(Self {
+            start_tx: Some(start_tx),
+            poll_task_handle,
+            events_rx,
+        })
+    }
+}
+
+impl Stream for EventStream {
+    type Item = Event;
+
+    fn poll_next(
+        mut self: std::pin::Pin<&mut Self>,
+        cx: &mut std::task::Context<'_>,
+    ) -> Poll<Option<Self::Item>> {
+        if let Some(start_tx) = self.start_tx.take() {
+            if start_tx.send(()).is_err() {
+                return Poll::Ready(None);
+            }
+        }
+        self.events_rx.poll_recv(cx)
+    }
+}
+
+impl Drop for EventStream {
+    fn drop(&mut self) {
+        self.poll_task_handle.abort()
     }
 }

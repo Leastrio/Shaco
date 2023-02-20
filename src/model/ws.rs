@@ -1,7 +1,7 @@
 use std::error::Error;
 use std::fmt::{Display, Formatter, Result};
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub enum LcuWebsocketError {
     LcuNotAvailable,
     AuthError,
@@ -20,7 +20,7 @@ impl Display for LcuWebsocketError {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Event {
     pub subscription_type: SubscriptionType,
     pub data: String,
@@ -36,7 +36,7 @@ impl<'a> From<deserialize::DeEvent<'a>> for Event {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub enum SubscriptionType {
     AllJsonApiEvents,
     AllLcdsEvents,
