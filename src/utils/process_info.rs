@@ -3,6 +3,13 @@ use lazy_static::lazy_static;
 use regex::Regex;
 use sysinfo::{ProcessExt, System, SystemExt};
 
+#[cfg(target_os = "windows")]
+const TARGET_PROCESS: &str = "LeagueClientUx.exe";
+#[cfg(target_os = "linux")]
+const TARGET_PROCESS: &str = "LeagueClientUx.";
+#[cfg(target_os = "macos")]
+const TARGET_PROCESS: &str = "LeagueClientUx";
+
 pub fn get_auth_info() -> Result<(String, u16), ()> {
     let mut sys = System::new_all();
     sys.refresh_processes();
@@ -10,7 +17,7 @@ pub fn get_auth_info() -> Result<(String, u16), ()> {
     let args = sys
         .processes()
         .values()
-        .find(|p| p.name() == "LeagueClientUx.exe")
+        .find(|p| p.name() == TARGET_PROCESS)
         .map(|p| p.cmd())
         .ok_or(())?;
 
@@ -30,17 +37,12 @@ pub fn get_auth_info() -> Result<(String, u16), ()> {
 }
 
 pub fn find_process(system: &System) -> Result<String, &'static str> {
-    let mut res: Option<String> = None;
-    for process in system.processes().values() {
-        if process.name() == "LeagueClientUx.exe" {
-            res = Some(process.cmd().join(" "));
-            break;
-        }
-    }
-    match res {
-        Some(x) => Ok(x),
-        None => Err("Could not find a running LCU process!"),
-    }
+    system
+        .processes()
+        .values()
+        .find(|process| process.name() == TARGET_PROCESS)
+        .map(|process| process.cmd().join(" "))
+        .ok_or("Could not find a running LCU process!")
 }
 
 lazy_static! {
