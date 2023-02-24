@@ -6,8 +6,8 @@ use std::{
 use futures_util::{SinkExt, Stream, StreamExt};
 use tokio::net::TcpStream;
 use tokio_tungstenite::{
-    Connector, MaybeTlsStream, tungstenite,
-    tungstenite::client::IntoClientRequest, tungstenite::http::HeaderValue, tungstenite::Message, WebSocketStream,
+    tungstenite, tungstenite::client::IntoClientRequest, tungstenite::http::HeaderValue,
+    tungstenite::Message, Connector, MaybeTlsStream, WebSocketStream,
 };
 
 use crate::{
@@ -27,16 +27,16 @@ impl WSClient {
         let tls = native_tls::TlsConnector::builder()
             .add_root_certificate(cert)
             .build()
-            .unwrap_or(Err(LcuWebsocketError::AuthError)?);
+            .map_err(|_| LcuWebsocketError::AuthError)?;
         let connector = Connector::NativeTls(tls);
 
         let mut url = format!("wss://127.0.0.1:{port}")
             .into_client_request()
-            .unwrap_or(Err(LcuWebsocketError::AuthError)?);
+            .map_err(|_| LcuWebsocketError::AuthError)?;
         url.headers_mut().insert(
             "Authorization",
             HeaderValue::from_str(format!("Basic {auth_token}").as_str())
-                .unwrap_or(Err(LcuWebsocketError::AuthError)?),
+                .map_err(|_| LcuWebsocketError::AuthError)?,
         );
 
         let (ws_stream, _response) =
@@ -51,23 +51,23 @@ impl WSClient {
         &mut self,
         subscription: LcuSubscriptionType,
     ) -> Result<(), LcuWebsocketError> {
-        self.send_message(5, subscription).await
+        self.0
+            .send(Message::text(format!("[5, \"{subscription}\"]")))
+            .await
+            .map_err(|e| match e {
+                tungstenite::Error::ConnectionClosed | tungstenite::Error::AlreadyClosed => {
+                    LcuWebsocketError::Disconnected(e.to_string())
+                }
+                _ => LcuWebsocketError::SendError,
+            })
     }
 
     pub async fn unsubscribe(
         &mut self,
         subscription: LcuSubscriptionType,
     ) -> Result<(), LcuWebsocketError> {
-        self.send_message(6, subscription).await
-    }
-
-    async fn send_message(
-        &mut self,
-        event_id: u8,
-        subscription: LcuSubscriptionType,
-    ) -> Result<(), LcuWebsocketError> {
         self.0
-            .send(Message::text(format!("[{event_id}, \"{subscription}\"]")))
+            .send(Message::text(format!("[6, \"{subscription}\"]")))
             .await
             .map_err(|e| match e {
                 tungstenite::Error::ConnectionClosed | tungstenite::Error::AlreadyClosed => {
