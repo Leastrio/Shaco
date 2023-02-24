@@ -1,35 +1,17 @@
-use std::error::Error;
-use std::fmt::{Display, Formatter, Result};
+use std::{fmt, fmt::Display};
 
 use serde_json::Value;
 
-#[derive(Debug, Clone)]
-pub enum LcuWebsocketError {
-    LcuNotAvailable,
-    AuthError,
-    SendError,
-    Disconnected,
-}
-
-impl Error for LcuWebsocketError {}
-
-impl Display for LcuWebsocketError {
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
-        match self {
-            Self::LcuNotAvailable => write!(f, "LCU API not available"),
-            Self::AuthError => write!(f, "Authentication error"),
-            Self::SendError => write!(f, "Error sending message"),
-            Self::Disconnected => write!(f, "Websocket disconnected"),
-        }
-    }
-}
-
+/// The Websocket connection returns LcuEvents
 #[derive(Debug, Clone)]
 pub struct LcuEvent {
     pub subscription_type: LcuSubscriptionType,
     pub data: Value,
     pub event_type: String,
 }
+
+/// LcuEvents first get deserialized to deserialize::DeEvent and then to LcuEvent
+/// because the data formats are not directly deserializable by serde
 impl From<deserialize::DeEvent> for LcuEvent {
     fn from(de_event: deserialize::DeEvent) -> LcuEvent {
         Self {
@@ -40,6 +22,12 @@ impl From<deserialize::DeEvent> for LcuEvent {
     }
 }
 
+/// The Websocket events to subscribe to.
+/// Look at the in-official documentation for event strings to subscribe to.
+///
+/// https://www.mingweisamuel.com/lcu-schema/tool/#/
+///
+/// /lol-gameflow/v1/gameflow-phase => LcuSubscriptionType::JsonApiEvent("lol-gameflow_v1_gameflow-phase".to_string())
 #[derive(Debug, Clone)]
 pub enum LcuSubscriptionType {
     AllJsonApiEvents,
@@ -48,7 +36,7 @@ pub enum LcuSubscriptionType {
     LcdsEvent(String),
 }
 impl Display for LcuSubscriptionType {
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
             LcuSubscriptionType::AllJsonApiEvents => f.write_str("OnJsonApiEvent"),
             LcuSubscriptionType::AllLcdsEvents => f.write_str("OnJsonApiEvent"),
@@ -58,16 +46,34 @@ impl Display for LcuSubscriptionType {
     }
 }
 
+/// Intermediate data-structures for deserializing LcuEvents
 pub(crate) mod deserialize {
     use serde::{de, Deserialize, Deserializer};
     use serde_json::Value;
 
     use super::LcuSubscriptionType;
 
+    /// Main intermediate data-structure
+    #[derive(Deserialize, Debug)]
+    pub struct DeEvent {
+        _opcode: i64,
+        pub(crate) subscription_type: LcuSubscriptionType,
+        pub(crate) data: Data,
+    }
+
+    /// part of DeEvent
+    #[derive(Deserialize, Debug)]
+    #[serde(rename_all = "camelCase")]
+    pub struct Data {
+        pub(crate) data: Value,
+        pub(crate) event_type: String,
+    }
+
+    /// Custom deserializer to differentiate between the different subscription types
     impl<'de> Deserialize<'de> for LcuSubscriptionType {
         fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
-        where
-            D: Deserializer<'de>,
+            where
+                D: Deserializer<'de>,
         {
             let s = String::deserialize(deserializer)?;
 
@@ -90,19 +96,5 @@ pub(crate) mod deserialize {
                 )))
             }
         }
-    }
-
-    #[derive(Deserialize, Debug)]
-    #[serde(rename_all = "camelCase")]
-    pub struct Data {
-        pub(crate) data: Value,
-        pub(crate) event_type: String,
-    }
-
-    #[derive(Deserialize, Debug)]
-    pub struct DeEvent {
-        _opcode: i64,
-        pub(crate) subscription_type: LcuSubscriptionType,
-        pub(crate) data: Data,
     }
 }

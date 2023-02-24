@@ -1,5 +1,3 @@
-use std::time::Duration;
-
 use reqwest::{header, Certificate};
 
 pub fn build_reqwest_client(
@@ -17,6 +15,5 @@ pub fn build_reqwest_client(
     Ok(reqwest::ClientBuilder::new()
         .add_root_certificate(cert)
         .default_headers(headers)
-        .pool_idle_timeout(Some(Duration::from_secs(5 * 60)))
         .build()?)
 }

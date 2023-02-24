@@ -3,7 +3,7 @@ use serde::Serialize;
 use crate::utils::{process_info, request::build_reqwest_client};
 
 pub struct RESTClient {
-    port: u16,
+    port: String,
     reqwest_client: reqwest::Client,
 }
 

@@ -1,14 +1,14 @@
-use std::task::Poll;
-use std::time::Duration;
+use std::{task::Poll, time::Duration};
 
 use futures_util::Stream;
-use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver};
-use tokio::sync::oneshot;
-use tokio::sync::oneshot::Sender;
-use tokio::task::JoinHandle;
+use tokio::{
+    sync::mpsc::{unbounded_channel, UnboundedReceiver},
+    sync::oneshot,
+    sync::oneshot::Sender,
+    task::JoinHandle,
+};
 
-use crate::model::ingame::*;
-use crate::utils::request::build_reqwest_client;
+use crate::{model::ingame::*, utils::request::build_reqwest_client};
 
 pub struct InGameClient {
     port: u32,
@@ -260,10 +260,11 @@ impl InGameClient {
         Ok(req)
     }
 
+    /// only /Help doesn't 404 during loading screen
     pub async fn active_game(&self) -> bool {
         let req = self
             .reqwest_client
-            .head(format!("https://127.0.0.1:{}/Help", self.port)) // only /Help doesn't 404 during loading screen
+            .head(format!("https://127.0.0.1:{}/Help", self.port))
             .send()
             .await;
 

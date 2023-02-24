@@ -1,67 +1,78 @@
-use std::pin::Pin;
-use std::task::{Context, Poll};
+use std::{
+    pin::Pin,
+    task::{Context, Poll},
+};
 
 use futures_util::{SinkExt, Stream, StreamExt};
 use tokio::net::TcpStream;
-use tokio_tungstenite::tungstenite::Error;
 use tokio_tungstenite::{
-    tungstenite::client::IntoClientRequest, tungstenite::http::HeaderValue, tungstenite::Message,
-    Connector, MaybeTlsStream, WebSocketStream,
+    Connector, MaybeTlsStream, tungstenite,
+    tungstenite::client::IntoClientRequest, tungstenite::http::HeaderValue, tungstenite::Message, WebSocketStream,
 };
 
-use crate::model::ws::{deserialize::DeEvent, LcuEvent, LcuSubscriptionType, LcuWebsocketError};
-use crate::utils::process_info::*;
+use crate::{
+    model::ws::{deserialize::DeEvent, LcuEvent, LcuSubscriptionType},
+    utils::error::LcuWebsocketError,
+    utils::process_info,
+};
 
 pub struct WSClient(WebSocketStream<MaybeTlsStream<TcpStream>>);
 
 impl WSClient {
     pub async fn connect() -> Result<Self, LcuWebsocketError> {
-        let (auth_token, port) = get_auth_info().map_err(|_| LcuWebsocketError::LcuNotAvailable)?;
+        let (auth_token, port) = process_info::get_auth_info()
+            .map_err(|e| LcuWebsocketError::LcuNotAvailable(e.to_string()))?;
 
-        let cert = native_tls::Certificate::from_pem(include_bytes!("./riotgames.pem"))
-            .expect("invalid riotgames.pem certificate");
+        let cert = native_tls::Certificate::from_pem(include_bytes!("./riotgames.pem")).unwrap();
         let tls = native_tls::TlsConnector::builder()
             .add_root_certificate(cert)
             .build()
-            .map_err(|_| LcuWebsocketError::AuthError)?;
+            .unwrap_or(Err(LcuWebsocketError::AuthError)?);
         let connector = Connector::NativeTls(tls);
 
         let mut url = format!("wss://127.0.0.1:{port}")
             .into_client_request()
-            .map_err(|_| LcuWebsocketError::AuthError)?;
+            .unwrap_or(Err(LcuWebsocketError::AuthError)?);
         url.headers_mut().insert(
             "Authorization",
             HeaderValue::from_str(format!("Basic {auth_token}").as_str())
-                .map_err(|_| LcuWebsocketError::AuthError)?,
+                .unwrap_or(Err(LcuWebsocketError::AuthError)?),
         );
 
         let (ws_stream, _response) =
             tokio_tungstenite::connect_async_tls_with_config(url, None, Some(connector))
                 .await
-                .map_err(|_| LcuWebsocketError::Disconnected)?;
+                .map_err(|e| LcuWebsocketError::Disconnected(e.to_string()))?;
 
         Ok(Self(ws_stream))
     }
 
-    pub async fn subscribe(&mut self, event: LcuSubscriptionType) -> Result<(), LcuWebsocketError> {
-        self.0
-            .send(Message::text(format!("[5, \"{event}\"]")))
-            .await
-            .map_err(|e| match e {
-                Error::ConnectionClosed | Error::AlreadyClosed => LcuWebsocketError::Disconnected,
-                _ => LcuWebsocketError::SendError,
-            })
+    pub async fn subscribe(
+        &mut self,
+        subscription: LcuSubscriptionType,
+    ) -> Result<(), LcuWebsocketError> {
+        self.send_message(5, subscription).await
     }
 
     pub async fn unsubscribe(
         &mut self,
-        event: LcuSubscriptionType,
+        subscription: LcuSubscriptionType,
+    ) -> Result<(), LcuWebsocketError> {
+        self.send_message(6, subscription).await
+    }
+
+    async fn send_message(
+        &mut self,
+        event_id: u8,
+        subscription: LcuSubscriptionType,
     ) -> Result<(), LcuWebsocketError> {
         self.0
-            .send(Message::text(format!("[6, \"{event}\"]")))
+            .send(Message::text(format!("[{event_id}, \"{subscription}\"]")))
             .await
             .map_err(|e| match e {
-                Error::ConnectionClosed | Error::AlreadyClosed => LcuWebsocketError::Disconnected,
+                tungstenite::Error::ConnectionClosed | tungstenite::Error::AlreadyClosed => {
+                    LcuWebsocketError::Disconnected(e.to_string())
+                }
                 _ => LcuWebsocketError::SendError,
             })
     }
