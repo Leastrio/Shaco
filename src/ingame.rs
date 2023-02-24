@@ -15,14 +15,6 @@ pub struct InGameClient {
     reqwest_client: reqwest::Client,
 }
 
-pub enum TeamID {
-    ALL,
-    UNKNOWN,
-    ORDER,
-    CHAOS,
-    NEUTRAL,
-}
-
 impl InGameClient {
     /// Create a new connection to the ingame api. This will return an error if a game is not detected
     pub fn new() -> Result<Self, Box<dyn std::error::Error>> {

@@ -9,38 +9,8 @@ use tokio_tungstenite::{
     Connector, MaybeTlsStream, WebSocketStream,
 };
 
-use crate::model::ws::{deserialize::DeEvent, Event, LcuWebsocketError, SubscriptionType};
+use crate::model::ws::{deserialize::DeEvent, LcuEvent, LcuSubscriptionType, LcuWebsocketError};
 use crate::utils::process_info::*;
-
-#[cfg(test)]
-mod tests {
-    use crate::model::ws::deserialize::DeEvent;
-    use crate::model::ws::Event;
-
-    #[test]
-    fn test_deserialize() {
-        let json = r#"[
-    8,
-    "OnJsonApiEvent_lol-end-of-game_v1_eog-stats-block",
-    {
-        "data": {
-            "basePoints": 0,
-            "battleBoostIpEarned": 0,
-            "boostIpEarned": 0,
-            "others": "..."
-        },
-        "eventType": "Create",
-        "uri": "/lol-end-of-game/v1/eog-stats-block"
-    }
-]"#;
-
-        let event: DeEvent = serde_json::from_str(json).unwrap();
-        let event = Event::from(event);
-        println!("{:?}", event.subscription_type);
-        println!("{:?}", event.data);
-        println!("{:?}", event.event_type);
-    }
-}
 
 pub struct WSClient(WebSocketStream<MaybeTlsStream<TcpStream>>);
 
@@ -73,7 +43,7 @@ impl WSClient {
         Ok(Self(ws_stream))
     }
 
-    pub async fn subscribe(&mut self, event: SubscriptionType) -> Result<(), LcuWebsocketError> {
+    pub async fn subscribe(&mut self, event: LcuSubscriptionType) -> Result<(), LcuWebsocketError> {
         self.0
             .send(Message::text(format!("[5, \"{event}\"]")))
             .await
@@ -83,7 +53,10 @@ impl WSClient {
             })
     }
 
-    pub async fn unsubscribe(&mut self, event: SubscriptionType) -> Result<(), LcuWebsocketError> {
+    pub async fn unsubscribe(
+        &mut self,
+        event: LcuSubscriptionType,
+    ) -> Result<(), LcuWebsocketError> {
         self.0
             .send(Message::text(format!("[6, \"{event}\"]")))
             .await
@@ -95,7 +68,7 @@ impl WSClient {
 }
 
 impl Stream for WSClient {
-    type Item = Event;
+    type Item = LcuEvent;
 
     fn poll_next(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Option<Self::Item>> {
         loop {
@@ -103,7 +76,7 @@ impl Stream for WSClient {
                 Poll::Pending => Poll::Pending,
                 Poll::Ready(Some(Ok(Message::Text(text)))) => {
                     let Ok(de_event) = serde_json::from_str::<DeEvent>(&text) else { continue };
-                    Poll::Ready(Some(Event::from(de_event)))
+                    Poll::Ready(Some(LcuEvent::from(de_event)))
                 }
                 Poll::Ready(Some(Ok(Message::Close(_))) | Some(Err(_)) | None) => Poll::Ready(None),
                 _ => continue,

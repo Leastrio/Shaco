@@ -1,7 +1,16 @@
-use futures_util::StreamExt;
+use std::time::Duration;
 
+use futures_util::StreamExt;
+use native_tls::TlsConnector;
+use tokio::net::TcpStream;
+use tokio::time::Instant;
+
+use hyper::body::{Bytes, HttpBody};
+use hyper::Uri;
+use hyper::{Body, Client};
+use hyper_tls::HttpsConnector;
 use shaco::ingame::EventStream;
-use shaco::model::ws::SubscriptionType;
+use shaco::model::ws::LcuSubscriptionType;
 use shaco::ws::WSClient;
 
 #[tokio::test]
@@ -16,7 +25,7 @@ async fn ingame_event_stream() {
 async fn lcu_event_stream() {
     let mut ws_client = WSClient::connect().await.unwrap();
     ws_client
-        .subscribe(SubscriptionType::AllJsonApiEvents)
+        .subscribe(LcuSubscriptionType::AllJsonApiEvents)
         .await
         .unwrap();
 

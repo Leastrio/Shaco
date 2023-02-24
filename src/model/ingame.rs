@@ -1,6 +1,6 @@
 #![allow(non_snake_case)]
 
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Deserialize)]
 pub struct AllGameData {
@@ -157,6 +157,15 @@ pub struct PlayerItem {
     pub rawDescription: String,
     pub rawDisplayName: String,
     pub slot: u32,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub enum TeamID {
+    ALL,
+    UNKNOWN,
+    ORDER,
+    CHAOS,
+    NEUTRAL,
 }
 
 #[derive(Debug, Deserialize)]
