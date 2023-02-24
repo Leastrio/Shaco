@@ -237,6 +237,7 @@ impl InGameClient {
             ))
             .send()
             .await?
+            .error_for_status()?
             .json()
             .await?;
 
@@ -315,9 +316,9 @@ impl EventStream {
                             let _ = events_tx.send(e);
                         })
                     }
-                    // before all players have loaded into the game all api calls return 404
-                    Err(e) if e.status().is_some() => continue,
-                    _ => return,
+                    // before all players have loaded into the game the events api returns 404 status error
+                    Err(e) if e.is_status() => continue,
+                    Err(_) => return,
                 }
             }
         });
