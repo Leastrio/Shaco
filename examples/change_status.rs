@@ -1,8 +1,6 @@
-use shaco::rest;
-
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let client = rest::RESTClient::new()?;
+    let client = shaco::rest::RESTClient::new()?;
 
     client.put("/lol-chat/v1/me".to_string(),
         serde_json::json!({

@@ -11,14 +11,17 @@ use tokio_tungstenite::{
 };
 
 use crate::{
-    model::ws::{deserialize::DeEvent, LcuEvent, LcuSubscriptionType},
-    utils::error::LcuWebsocketError,
+    error::LcuWebsocketError,
+    model::ws::{LcuEvent, LcuSubscriptionType},
     utils::process_info,
 };
 
-pub struct WSClient(WebSocketStream<MaybeTlsStream<TcpStream>>);
+/// A client for the League-Client(LCU) websocket API
+pub struct LcuWebsocketClient(WebSocketStream<MaybeTlsStream<TcpStream>>);
 
-impl WSClient {
+impl LcuWebsocketClient {
+    /// Tries to establish a connection to the LCU Websocket API \
+    /// Returns an [LcuWebsocketError] if the API is not reachable
     pub async fn connect() -> Result<Self, LcuWebsocketError> {
         let (auth_token, port) = process_info::get_auth_info()
             .map_err(|e| LcuWebsocketError::LcuNotAvailable(e.to_string()))?;
@@ -27,7 +30,7 @@ impl WSClient {
         let tls = native_tls::TlsConnector::builder()
             .add_root_certificate(cert)
             .build()
-            .map_err(|_| LcuWebsocketError::AuthError)?;
+            .unwrap();
         let connector = Connector::NativeTls(tls);
 
         let mut url = format!("wss://127.0.0.1:{port}")
@@ -47,6 +50,10 @@ impl WSClient {
         Ok(Self(ws_stream))
     }
 
+    /// The Websocket events to subscribe to.
+    /// Look at the in-official documentation for event strings to subscribe to.
+    ///
+    /// <https://www.mingweisamuel.com/lcu-schema/tool/#/>
     pub async fn subscribe(
         &mut self,
         subscription: LcuSubscriptionType,
@@ -62,6 +69,10 @@ impl WSClient {
             })
     }
 
+    /// The Websocket events to subscribe to.
+    /// Look at the in-official documentation for event strings to subscribe to.
+    ///
+    /// <https://www.mingweisamuel.com/lcu-schema/tool/#/>
     pub async fn unsubscribe(
         &mut self,
         subscription: LcuSubscriptionType,
@@ -78,7 +89,7 @@ impl WSClient {
     }
 }
 
-impl Stream for WSClient {
+impl Stream for LcuWebsocketClient {
     type Item = LcuEvent;
 
     fn poll_next(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Option<Self::Item>> {
@@ -86,8 +97,8 @@ impl Stream for WSClient {
             return match self.0.poll_next_unpin(cx) {
                 Poll::Pending => Poll::Pending,
                 Poll::Ready(Some(Ok(Message::Text(text)))) => {
-                    let Ok(de_event) = serde_json::from_str::<DeEvent>(&text) else { continue };
-                    Poll::Ready(Some(LcuEvent::from(de_event)))
+                    let Ok(event) = serde_json::from_str::<LcuEvent>(&text) else { continue };
+                    Poll::Ready(Some(event))
                 }
                 Poll::Ready(Some(Ok(Message::Close(_))) | Some(Err(_)) | None) => Poll::Ready(None),
                 _ => continue,

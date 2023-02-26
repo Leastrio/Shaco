@@ -1,25 +1,20 @@
-use futures_util::StreamExt;
-use tokio::io::AsyncWriteExt;
+use futures_util::stream::StreamExt;
 
-use shaco::model::ws::LcuSubscriptionType;
-use shaco::ws;
+use shaco::{model::ws::LcuSubscriptionType, ws};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let mut client = ws::WSClient::connect().await?;
+    let mut client = ws::LcuWebsocketClient::connect().await?;
     client
-        .subscribe(LcuSubscriptionType::AllJsonApiEvents)
+        .subscribe(LcuSubscriptionType::JsonApiEvent(
+            "/lol-gameflow/v1/gameflow-phase".to_string(),
+        ))
         .await
         .unwrap();
 
-    let read_future = client.for_each(|message| async move {
-        tokio::io::stdout()
-            .write_all(format!("{:?}", message).as_bytes())
-            .await
-            .unwrap();
-    });
-
-    read_future.await;
+    while let Some(event) = client.next().await {
+        println!("Event: {:?}", event);
+    }
 
     Ok(())
 }

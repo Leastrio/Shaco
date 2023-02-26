@@ -1,7 +1,7 @@
 use base64::{engine::general_purpose, Engine};
 use sysinfo::{ProcessExt, System, SystemExt};
 
-use crate::utils::error::ProcessInfoError;
+use crate::error::ProcessInfoError;
 
 #[cfg(target_os = "windows")]
 const TARGET_PROCESS: &str = "LeagueClientUx.exe";
@@ -10,7 +10,7 @@ const TARGET_PROCESS: &str = "LeagueClientUx.";
 #[cfg(target_os = "macos")]
 const TARGET_PROCESS: &str = "LeagueClientUx";
 
-pub fn get_auth_info() -> Result<(String, String), ProcessInfoError> {
+pub(crate) fn get_auth_info() -> Result<(String, String), ProcessInfoError> {
     let mut sys = System::new_all();
     sys.refresh_processes();
 
@@ -22,12 +22,12 @@ pub fn get_auth_info() -> Result<(String, String), ProcessInfoError> {
         .ok_or(ProcessInfoError::ProcessNotAvailable)?;
 
     let port = args
-        .into_iter()
+        .iter()
         .find(|arg| arg.starts_with("--app-port="))
         .map(|arg| arg.strip_prefix("--app-port=").unwrap().to_string())
         .ok_or(ProcessInfoError::PortNotFound)?;
     let auth_token = args
-        .into_iter()
+        .iter()
         .find(|arg| arg.starts_with("--remoting-auth-token="))
         .map(|arg| {
             arg.strip_prefix("--remoting-auth-token=")

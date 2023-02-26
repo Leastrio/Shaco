@@ -11,16 +11,16 @@ repository = "https://github.com/Leastrio/Shaco"
 
 [dependencies]
 sysinfo = "0.28.0"
-regex = "1.7.1"
-lazy_static = "1.4.0"
 base64 = "0.21.0"
 native-tls = "0.2.11"
 futures-util = "0.3.25"
 tokio = "1.24.2"
+tokio-tungstenite = { version = "0.18.0", features = ["native-tls"] }
 reqwest = { version = "0.11.14", features = ["json"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = { version = "1.0.91", features = ["raw_value"] }
-tokio-tungstenite = { version = "0.18.0", features = ["native-tls"] }
+serde_with = "2.2.0"
+serde-single-key-map = "0.1.0"
 
 [dev-dependencies]
 tokio = { version = "1.17.0", features = ["full"] }

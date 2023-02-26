@@ -1,0 +1,1166 @@
+{
+	"Events": [
+		{
+			"EventID": 0,
+			"EventName": "GameStart",
+			"EventTime": 0.0172262005507946
+		},
+		{
+			"EventID": 1,
+			"EventName": "MinionsSpawning",
+			"EventTime": 65.07975769042969
+		},
+		{
+			"Assisters": [],
+			"EventID": 2,
+			"EventName": "ChampionKill",
+			"EventTime": 381.8620910644531,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 3,
+			"EventName": "FirstBlood",
+			"EventTime": 381.8620910644531,
+			"Recipient": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 4,
+			"EventName": "ChampionKill",
+			"EventTime": 522.9642944335938,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 5,
+			"EventName": "ChampionKill",
+			"EventTime": 580.6359252929688,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 6,
+			"EventName": "ChampionKill",
+			"EventTime": 586.4884033203125,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"EventID": 7,
+			"EventName": "Multikill",
+			"EventTime": 586.4884033203125,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 8,
+			"EventName": "ChampionKill",
+			"EventTime": 618.824951171875,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 9,
+			"EventName": "TurretKilled",
+			"EventTime": 629.390869140625,
+			"KillerName": "Minion_T200L0S18N0110",
+			"TurretKilled": "Turret_T1_R_03_A"
+		},
+		{
+			"EventID": 10,
+			"EventName": "FirstBrick",
+			"EventTime": 629.390869140625,
+			"KillerName": "Minion_T200L0S18N0110"
+		},
+		{
+			"Assisters": [
+				"Shyvana Bot"
+			],
+			"EventID": 11,
+			"EventName": "TurretKilled",
+			"EventTime": 666.7861328125,
+			"KillerName": "Trundle Bot",
+			"TurretKilled": "Turret_T1_L_03_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 12,
+			"EventName": "TurretKilled",
+			"EventTime": 672.798095703125,
+			"KillerName": "Letherian",
+			"TurretKilled": "Turret_T2_C_05_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 13,
+			"EventName": "ChampionKill",
+			"EventTime": 686.4691772460938,
+			"KillerName": "Soraka Bot",
+			"VictimName": "Letherian"
+		},
+		{
+			"Acer": "Soraka Bot",
+			"AcingTeam": "CHAOS",
+			"EventID": 14,
+			"EventName": "Ace",
+			"EventTime": 686.4691772460938
+		},
+		{
+			"Assisters": [],
+			"EventID": 15,
+			"EventName": "ChampionKill",
+			"EventTime": 752.2989501953125,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 16,
+			"EventName": "ChampionKill",
+			"EventTime": 757.2203369140625,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 17,
+			"EventName": "Multikill",
+			"EventTime": 757.2203369140625,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 18,
+			"EventName": "ChampionKill",
+			"EventTime": 818.2979125976563,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 19,
+			"EventName": "ChampionKill",
+			"EventTime": 821.41064453125,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"EventID": 20,
+			"EventName": "Multikill",
+			"EventTime": 821.41064453125,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [
+				"Trundle Bot"
+			],
+			"EventID": 21,
+			"EventName": "TurretKilled",
+			"EventTime": 838.2587280273438,
+			"KillerName": "Shyvana Bot",
+			"TurretKilled": "Turret_T1_L_02_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 22,
+			"EventName": "TurretKilled",
+			"EventTime": 838.4230346679688,
+			"KillerName": "Minion_T100L0S25N0155",
+			"TurretKilled": "Turret_T2_R_03_A"
+		},
+		{
+			"Assisters": [],
+			"DragonType": "Chemtech",
+			"EventID": 23,
+			"EventName": "DragonKill",
+			"EventTime": 880.4721069335938,
+			"KillerName": "Letherian",
+			"Stolen": "False"
+		},
+		{
+			"Assisters": [],
+			"EventID": 24,
+			"EventName": "ChampionKill",
+			"EventTime": 889.97802734375,
+			"KillerName": "Turret_T1_C_05_A",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 25,
+			"EventName": "ChampionKill",
+			"EventTime": 892.754638671875,
+			"KillerName": "Turret_T1_C_05_A",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 26,
+			"EventName": "ChampionKill",
+			"EventTime": 914.0765991210938,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 27,
+			"EventName": "ChampionKill",
+			"EventTime": 917.9287719726563,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"EventID": 28,
+			"EventName": "Multikill",
+			"EventTime": 917.9287719726563,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 29,
+			"EventName": "ChampionKill",
+			"EventTime": 1013.1043701171875,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 30,
+			"EventName": "ChampionKill",
+			"EventTime": 1015.1529541015625,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"EventID": 31,
+			"EventName": "Multikill",
+			"EventTime": 1015.1529541015625,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 32,
+			"EventName": "ChampionKill",
+			"EventTime": 1016.9993286132813,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 33,
+			"EventName": "Multikill",
+			"EventTime": 1016.9993286132813,
+			"KillStreak": 3,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 34,
+			"EventName": "ChampionKill",
+			"EventTime": 1018.6251831054688,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"EventID": 35,
+			"EventName": "Multikill",
+			"EventTime": 1018.6251831054688,
+			"KillStreak": 4,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 36,
+			"EventName": "ChampionKill",
+			"EventTime": 1021.107177734375,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 37,
+			"EventName": "Multikill",
+			"EventTime": 1021.107177734375,
+			"KillStreak": 5,
+			"KillerName": "Letherian"
+		},
+		{
+			"Acer": "Letherian",
+			"AcingTeam": "ORDER",
+			"EventID": 38,
+			"EventName": "Ace",
+			"EventTime": 1021.107177734375
+		},
+		{
+			"Assisters": [],
+			"EventID": 39,
+			"EventName": "HeraldKill",
+			"EventTime": 1062.6546630859376,
+			"KillerName": "Letherian",
+			"Stolen": "False"
+		},
+		{
+			"Assisters": [],
+			"EventID": 40,
+			"EventName": "ChampionKill",
+			"EventTime": 1113.8729248046876,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [
+				"Shyvana Bot",
+				"Soraka Bot",
+				"Alistar Bot",
+				"Trundle Bot"
+			],
+			"EventID": 41,
+			"EventName": "ChampionKill",
+			"EventTime": 1114.2532958984376,
+			"KillerName": "Jax Bot",
+			"VictimName": "Letherian"
+		},
+		{
+			"Acer": "Jax Bot",
+			"AcingTeam": "CHAOS",
+			"EventID": 42,
+			"EventName": "Ace",
+			"EventTime": 1114.2532958984376
+		},
+		{
+			"Assisters": [
+				"Jax Bot",
+				"Alistar Bot",
+				"Trundle Bot"
+			],
+			"EventID": 43,
+			"EventName": "TurretKilled",
+			"EventTime": 1180.86962890625,
+			"KillerName": "Minion_T200L2S36N0226",
+			"TurretKilled": "Turret_T1_C_06_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 44,
+			"EventName": "ChampionKill",
+			"EventTime": 1186.4644775390626,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 45,
+			"EventName": "ChampionKill",
+			"EventTime": 1190.4039306640626,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"EventID": 46,
+			"EventName": "Multikill",
+			"EventTime": 1190.4039306640626,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 47,
+			"EventName": "ChampionKill",
+			"EventTime": 1191.6783447265626,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 48,
+			"EventName": "Multikill",
+			"EventTime": 1191.6783447265626,
+			"KillStreak": 3,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 49,
+			"EventName": "ChampionKill",
+			"EventTime": 1194.2054443359376,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"EventID": 50,
+			"EventName": "Multikill",
+			"EventTime": 1194.2054443359376,
+			"KillStreak": 4,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 51,
+			"EventName": "ChampionKill",
+			"EventTime": 1212.6968994140626,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"EventID": 52,
+			"EventName": "Multikill",
+			"EventTime": 1212.6968994140626,
+			"KillStreak": 5,
+			"KillerName": "Letherian"
+		},
+		{
+			"Acer": "Letherian",
+			"AcingTeam": "ORDER",
+			"EventID": 53,
+			"EventName": "Ace",
+			"EventTime": 1212.6968994140626
+		},
+		{
+			"Assisters": [],
+			"DragonType": "Earth",
+			"EventID": 54,
+			"EventName": "DragonKill",
+			"EventTime": 1226.4942626953126,
+			"KillerName": "Letherian",
+			"Stolen": "False"
+		},
+		{
+			"Assisters": [],
+			"EventID": 55,
+			"EventName": "TurretKilled",
+			"EventTime": 1286.1712646484376,
+			"KillerName": "Letherian",
+			"TurretKilled": "Turret_T2_C_04_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 56,
+			"EventName": "ChampionKill",
+			"EventTime": 1325.541748046875,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 57,
+			"EventName": "ChampionKill",
+			"EventTime": 1326.4515380859376,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 58,
+			"EventName": "Multikill",
+			"EventTime": 1326.4515380859376,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 59,
+			"EventName": "ChampionKill",
+			"EventTime": 1327.9622802734376,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 60,
+			"EventName": "Multikill",
+			"EventTime": 1327.9622802734376,
+			"KillStreak": 3,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 61,
+			"EventName": "ChampionKill",
+			"EventTime": 1329.876708984375,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"EventID": 62,
+			"EventName": "Multikill",
+			"EventTime": 1329.876708984375,
+			"KillStreak": 4,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 63,
+			"EventName": "BaronKill",
+			"EventTime": 1367.7987060546876,
+			"KillerName": "Letherian",
+			"Stolen": "False"
+		},
+		{
+			"Assisters": [],
+			"EventID": 64,
+			"EventName": "ChampionKill",
+			"EventTime": 1435.9730224609376,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 65,
+			"EventName": "ChampionKill",
+			"EventTime": 1437.9180908203126,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 66,
+			"EventName": "Multikill",
+			"EventTime": 1437.9180908203126,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 67,
+			"EventName": "ChampionKill",
+			"EventTime": 1439.3460693359376,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"EventID": 68,
+			"EventName": "Multikill",
+			"EventTime": 1439.3460693359376,
+			"KillStreak": 3,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 69,
+			"EventName": "ChampionKill",
+			"EventTime": 1441.8515625,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"EventID": 70,
+			"EventName": "Multikill",
+			"EventTime": 1441.8515625,
+			"KillStreak": 4,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 71,
+			"EventName": "ChampionKill",
+			"EventTime": 1445.5550537109376,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"EventID": 72,
+			"EventName": "Multikill",
+			"EventTime": 1445.5550537109376,
+			"KillStreak": 5,
+			"KillerName": "Letherian"
+		},
+		{
+			"Acer": "Letherian",
+			"AcingTeam": "ORDER",
+			"EventID": 73,
+			"EventName": "Ace",
+			"EventTime": 1445.5550537109376
+		},
+		{
+			"Assisters": [],
+			"DragonType": "Hextech",
+			"EventID": 74,
+			"EventName": "DragonKill",
+			"EventTime": 1533.5389404296876,
+			"KillerName": "Letherian",
+			"Stolen": "False"
+		},
+		{
+			"Assisters": [],
+			"EventID": 75,
+			"EventName": "ChampionKill",
+			"EventTime": 1551.83837890625,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 76,
+			"EventName": "ChampionKill",
+			"EventTime": 1556.363525390625,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 77,
+			"EventName": "Multikill",
+			"EventTime": 1556.363525390625,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 78,
+			"EventName": "ChampionKill",
+			"EventTime": 1560.4366455078126,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"EventID": 79,
+			"EventName": "Multikill",
+			"EventTime": 1560.4366455078126,
+			"KillStreak": 3,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 80,
+			"EventName": "ChampionKill",
+			"EventTime": 1563.72509765625,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"EventID": 81,
+			"EventName": "Multikill",
+			"EventTime": 1563.72509765625,
+			"KillStreak": 4,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 82,
+			"EventName": "ChampionKill",
+			"EventTime": 1582.913330078125,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 83,
+			"EventName": "Multikill",
+			"EventTime": 1582.913330078125,
+			"KillStreak": 5,
+			"KillerName": "Letherian"
+		},
+		{
+			"Acer": "Letherian",
+			"AcingTeam": "ORDER",
+			"EventID": 84,
+			"EventName": "Ace",
+			"EventTime": 1582.913330078125
+		},
+		{
+			"Assisters": [],
+			"EventID": 85,
+			"EventName": "ChampionKill",
+			"EventTime": 1624.6112060546876,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 86,
+			"EventName": "TurretKilled",
+			"EventTime": 1653.6617431640626,
+			"KillerName": "Letherian",
+			"TurretKilled": "Turret_T2_R_02_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 87,
+			"EventName": "ChampionKill",
+			"EventTime": 1682.5130615234376,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 88,
+			"EventName": "ChampionKill",
+			"EventTime": 1684.884765625,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 89,
+			"EventName": "Multikill",
+			"EventTime": 1684.884765625,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 90,
+			"EventName": "ChampionKill",
+			"EventTime": 1689.4075927734376,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 91,
+			"EventName": "Multikill",
+			"EventTime": 1689.4075927734376,
+			"KillStreak": 3,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 92,
+			"EventName": "TurretKilled",
+			"EventTime": 1721.077880859375,
+			"KillerName": "Letherian",
+			"TurretKilled": "Turret_T2_L_03_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 93,
+			"EventName": "TurretKilled",
+			"EventTime": 1737.7860107421876,
+			"KillerName": "Letherian",
+			"TurretKilled": "Turret_T2_L_02_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 94,
+			"EventName": "ChampionKill",
+			"EventTime": 1743.6397705078126,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 95,
+			"EventName": "ChampionKill",
+			"EventTime": 1744.6114501953126,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"EventID": 96,
+			"EventName": "Multikill",
+			"EventTime": 1744.6114501953126,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 97,
+			"EventName": "ChampionKill",
+			"EventTime": 1747.7099609375,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 98,
+			"EventName": "Multikill",
+			"EventTime": 1747.7099609375,
+			"KillStreak": 3,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 99,
+			"EventName": "ChampionKill",
+			"EventTime": 1750.1583251953126,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 100,
+			"EventName": "Multikill",
+			"EventTime": 1750.1583251953126,
+			"KillStreak": 4,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 101,
+			"EventName": "BaronKill",
+			"EventTime": 1790.5968017578126,
+			"KillerName": "Letherian",
+			"Stolen": "False"
+		},
+		{
+			"Assisters": [],
+			"DragonType": "Hextech",
+			"EventID": 102,
+			"EventName": "DragonKill",
+			"EventTime": 1840.571533203125,
+			"KillerName": "Letherian",
+			"Stolen": "False"
+		},
+		{
+			"Assisters": [],
+			"EventID": 103,
+			"EventName": "ChampionKill",
+			"EventTime": 1879.2933349609376,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 104,
+			"EventName": "ChampionKill",
+			"EventTime": 1882.48779296875,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"EventID": 105,
+			"EventName": "Multikill",
+			"EventTime": 1882.48779296875,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 106,
+			"EventName": "ChampionKill",
+			"EventTime": 1885.4483642578126,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 107,
+			"EventName": "Multikill",
+			"EventTime": 1885.4483642578126,
+			"KillStreak": 3,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 108,
+			"EventName": "ChampionKill",
+			"EventTime": 1886.3514404296876,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 109,
+			"EventName": "Multikill",
+			"EventTime": 1886.3514404296876,
+			"KillStreak": 4,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 110,
+			"EventName": "ChampionKill",
+			"EventTime": 1938.81103515625,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 111,
+			"EventName": "ChampionKill",
+			"EventTime": 1976.6248779296876,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 112,
+			"EventName": "ChampionKill",
+			"EventTime": 1977.0841064453126,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 113,
+			"EventName": "Multikill",
+			"EventTime": 1977.0841064453126,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 114,
+			"EventName": "TurretKilled",
+			"EventTime": 1996.774169921875,
+			"KillerName": "Minion_T100L1S64N0415",
+			"TurretKilled": "Turret_T2_C_03_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 115,
+			"EventName": "ChampionKill",
+			"EventTime": 2019.5726318359376,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [
+				"Shyvana Bot",
+				"Soraka Bot"
+			],
+			"EventID": 116,
+			"EventName": "InhibKilled",
+			"EventTime": 2143.218017578125,
+			"InhibKilled": "Barracks_T1_L1",
+			"KillerName": "Jax Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 117,
+			"EventName": "ChampionKill",
+			"EventTime": 2147.83251953125,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 118,
+			"EventName": "ChampionKill",
+			"EventTime": 2149.805419921875,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 119,
+			"EventName": "Multikill",
+			"EventTime": 2149.805419921875,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 120,
+			"EventName": "ChampionKill",
+			"EventTime": 2151.458251953125,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 121,
+			"EventName": "Multikill",
+			"EventTime": 2151.458251953125,
+			"KillStreak": 3,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 122,
+			"EventName": "BaronKill",
+			"EventTime": 2188.247802734375,
+			"KillerName": "Letherian",
+			"Stolen": "False"
+		},
+		{
+			"Assisters": [],
+			"EventID": 123,
+			"EventName": "ChampionKill",
+			"EventTime": 2206.751220703125,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"Assisters": [],
+			"DragonType": "Elder",
+			"EventID": 124,
+			"EventName": "DragonKill",
+			"EventTime": 2222.2255859375,
+			"KillerName": "Letherian",
+			"Stolen": "False"
+		},
+		{
+			"Assisters": [],
+			"EventID": 125,
+			"EventName": "ChampionKill",
+			"EventTime": 2253.287353515625,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 126,
+			"EventName": "ChampionKill",
+			"EventTime": 2261.084716796875,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 127,
+			"EventName": "Multikill",
+			"EventTime": 2261.084716796875,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 128,
+			"EventName": "ChampionKill",
+			"EventTime": 2278.715576171875,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 129,
+			"EventName": "ChampionKill",
+			"EventTime": 2279.9697265625,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 130,
+			"EventName": "Multikill",
+			"EventTime": 2279.9697265625,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 131,
+			"EventName": "ChampionKill",
+			"EventTime": 2319.43701171875,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 132,
+			"EventName": "ChampionKill",
+			"EventTime": 2328.237060546875,
+			"KillerName": "Letherian",
+			"VictimName": "Jax Bot"
+		},
+		{
+			"EventID": 133,
+			"EventName": "Multikill",
+			"EventTime": 2328.237060546875,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 134,
+			"EventName": "ChampionKill",
+			"EventTime": 2330.545166015625,
+			"KillerName": "Letherian",
+			"VictimName": "Alistar Bot"
+		},
+		{
+			"EventID": 135,
+			"EventName": "Multikill",
+			"EventTime": 2330.545166015625,
+			"KillStreak": 3,
+			"KillerName": "Letherian"
+		},
+		{
+			"Acer": "Letherian",
+			"AcingTeam": "ORDER",
+			"EventID": 136,
+			"EventName": "Ace",
+			"EventTime": 2330.545166015625
+		},
+		{
+			"Assisters": [],
+			"EventID": 137,
+			"EventName": "TurretKilled",
+			"EventTime": 2333.765869140625,
+			"KillerName": "Minion_T100L2S74N0485",
+			"TurretKilled": "Turret_T2_L_01_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 138,
+			"EventName": "InhibKilled",
+			"EventTime": 2337.40087890625,
+			"InhibKilled": "Barracks_T2_L1",
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 139,
+			"EventName": "InhibKilled",
+			"EventTime": 2343.483154296875,
+			"InhibKilled": "Barracks_T2_C1",
+			"KillerName": "Letherian"
+		},
+		{
+			"Assisters": [],
+			"EventID": 140,
+			"EventName": "TurretKilled",
+			"EventTime": 2349.958984375,
+			"KillerName": "Letherian",
+			"TurretKilled": "Turret_T2_R_01_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 141,
+			"EventName": "InhibKilled",
+			"EventTime": 2355.934326171875,
+			"InhibKilled": "Barracks_T2_R1",
+			"KillerName": "Minion_T100L0S75N0493"
+		},
+		{
+			"Assisters": [],
+			"EventID": 142,
+			"EventName": "ChampionKill",
+			"EventTime": 2362.783447265625,
+			"KillerName": "Letherian",
+			"VictimName": "Shyvana Bot"
+		},
+		{
+			"Assisters": [],
+			"EventID": 143,
+			"EventName": "ChampionKill",
+			"EventTime": 2367.270263671875,
+			"KillerName": "Letherian",
+			"VictimName": "Soraka Bot"
+		},
+		{
+			"EventID": 144,
+			"EventName": "Multikill",
+			"EventTime": 2367.270263671875,
+			"KillStreak": 2,
+			"KillerName": "Letherian"
+		},
+		{
+			"Acer": "Letherian",
+			"AcingTeam": "ORDER",
+			"EventID": 145,
+			"EventName": "Ace",
+			"EventTime": 2367.270263671875
+		},
+		{
+			"Assisters": [],
+			"EventID": 146,
+			"EventName": "TurretKilled",
+			"EventTime": 2371.25830078125,
+			"KillerName": "Minion_T100L0S75N0491",
+			"TurretKilled": "Turret_T2_C_01_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 147,
+			"EventName": "TurretKilled",
+			"EventTime": 2375.59521484375,
+			"KillerName": "Letherian",
+			"TurretKilled": "Turret_T2_C_02_A"
+		},
+		{
+			"Assisters": [],
+			"EventID": 148,
+			"EventName": "ChampionKill",
+			"EventTime": 2386.133544921875,
+			"KillerName": "Letherian",
+			"VictimName": "Trundle Bot"
+		},
+		{
+			"EventID": 149,
+			"EventName": "GameEnd",
+			"EventTime": 2394.416259765625,
+			"Result": "Win"
+		}
+	]
+}

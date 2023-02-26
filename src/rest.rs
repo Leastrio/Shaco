@@ -2,6 +2,7 @@ use serde::Serialize;
 
 use crate::utils::{process_info, request::build_reqwest_client};
 
+/// A client for the League-Client(LCU) REST API
 pub struct RESTClient {
     port: String,
     reqwest_client: reqwest::Client,
@@ -13,7 +14,7 @@ impl RESTClient {
     /// Create a new instance of the LCU REST wrapper
     pub fn new() -> Result<Self, Error> {
         let (auth_token, port) = process_info::get_auth_info()?;
-        let reqwest_client = build_reqwest_client(Some(auth_token))?;
+        let reqwest_client = build_reqwest_client(Some(auth_token));
         Ok(Self {
             port,
             reqwest_client,
