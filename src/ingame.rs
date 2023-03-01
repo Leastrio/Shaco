@@ -240,7 +240,7 @@ impl IngameClient {
 
     /// Get active players data \
     /// Only available during livegame
-    pub async fn active_player(&self) -> Result<ActivePlayerInfo, IngameClientError> {
+    pub async fn active_player(&self) -> Result<ActivePlayer, IngameClientError> {
         self.0
             .get(format!(
                 "https://127.0.0.1:{}/GetLiveclientdataActiveplayer",
@@ -250,12 +250,12 @@ impl IngameClient {
             .await
             .and_then(|r| r.error_for_status())
             .map_err(IngameClientError::from)?
-            .json::<ActivePlayer>()
+            .json::<ActivePlayerInfo>()
             .await
             .map_err(IngameClientError::from)
             .map(|i| match i {
-                ActivePlayer::ActivePlayer(i) => Ok(i),
-                ActivePlayer::Error { error } => {
+                ActivePlayerInfo::ActivePlayer(i) => Ok(i),
+                ActivePlayerInfo::Error { error } => {
                     Err(IngameClientError::DeserializationError(error))
                 }
             })?

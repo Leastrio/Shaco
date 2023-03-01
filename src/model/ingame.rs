@@ -4,7 +4,6 @@ use serde::{Deserialize, Deserializer, Serialize};
 use serde_with::DeserializeFromStr;
 
 pub type SummonerName = String;
-pub type ChampionName = String;
 pub type Time = f64;
 
 #[derive(Debug, Clone, Serialize)]
@@ -12,7 +11,7 @@ pub type Time = f64;
 #[serde(rename_all = "camelCase")]
 pub struct AllGameData {
     /// only available in live game - None in spectator mode
-    pub active_player: Option<ActivePlayerInfo>,
+    pub active_player: Option<ActivePlayer>,
     pub all_players: Vec<Player>,
     #[serde(deserialize_with = "serde_single_key_map::deserialize")]
     pub events: Vec<GameEvent>,
@@ -29,7 +28,7 @@ impl<'de> Deserialize<'de> for AllGameData {
         #[serde(rename_all = "camelCase")]
         pub struct Holder {
             /// only available in live game - None in spectator mode
-            active_player: ActivePlayer,
+            active_player: ActivePlayerInfo,
             all_players: Vec<Player>,
             #[serde(deserialize_with = "serde_single_key_map::deserialize")]
             events: Vec<GameEvent>,
@@ -37,8 +36,8 @@ impl<'de> Deserialize<'de> for AllGameData {
         }
         let holder = Holder::deserialize(deserializer)?;
         let active_player = match holder.active_player {
-            ActivePlayer::ActivePlayer(info) => Some(info),
-            ActivePlayer::Error { .. } => None,
+            ActivePlayerInfo::ActivePlayer(info) => Some(info),
+            ActivePlayerInfo::Error { .. } => None,
         };
         Ok(Self {
             active_player,
@@ -52,19 +51,19 @@ impl<'de> Deserialize<'de> for AllGameData {
 pub type Gold = f32;
 pub type Level = i32;
 
-/// only available in live games \
-/// is Error when spectating
+/// only pub(crate) since this is an intermediate result. The API only returns the ActivePlayer struct \
+/// only available in live games - is Error when spectating
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub(crate) enum ActivePlayer {
-    ActivePlayer(ActivePlayerInfo),
+pub(crate) enum ActivePlayerInfo {
+    ActivePlayer(ActivePlayer),
     Error { error: String },
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
-pub struct ActivePlayerInfo {
+pub struct ActivePlayer {
     pub abilities: PlayerAbilities,
     pub champion_stats: PlayerChampionStats,
     pub current_gold: Gold,
@@ -256,6 +255,7 @@ pub struct StatRune {
     pub raw_description: String,
 }
 
+pub type ChampionName = String;
 pub type SkinName = String;
 pub type SkinId = i32;
 
@@ -376,14 +376,15 @@ impl fmt::Display for TeamId {
     }
 }
 
+pub type EventId = u32;
+
+/// only pub(crate) since this is an intermediate result. The API only returns the Vec<GameEvent>
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub(crate) struct IngameEvents {
     pub events: Vec<GameEvent>,
 }
-
-pub type EventId = u32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
