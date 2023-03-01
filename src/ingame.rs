@@ -122,7 +122,7 @@ impl IngameClient {
             .map(|ie| ie.events)
     }
 
-    /// Get the active game's stats
+    /// Get the active games stats
     pub async fn game_stats(&self) -> Result<GameStats, IngameClientError> {
         self.0
             .get(format!(
@@ -138,7 +138,7 @@ impl IngameClient {
             .map_err(IngameClientError::from)
     }
 
-    /// Get a specified player's items
+    /// Get a specified players items
     pub async fn player_items<S: AsRef<str>>(
         &self,
         summoner_name: S,
@@ -178,7 +178,7 @@ impl IngameClient {
             .map_err(IngameClientError::from)
     }
 
-    /// Get a specified player's main runes
+    /// Get a specified players main runes
     pub async fn player_main_runes<S: AsRef<str>>(
         &self,
         summoner_name: S,
@@ -198,7 +198,7 @@ impl IngameClient {
             .map_err(IngameClientError::from)
     }
 
-    /// Get a specified player's score
+    /// Get a specified players score
     pub async fn player_scores<S: AsRef<str>>(
         &self,
         summoner_name: S,
@@ -218,7 +218,7 @@ impl IngameClient {
             .map_err(IngameClientError::from)
     }
 
-    /// Get specified player's summoner spells
+    /// Get specified players summoner spells
     pub async fn player_summoner_spells<S: AsRef<str>>(
         &self,
         summoner_name: S,
@@ -238,7 +238,7 @@ impl IngameClient {
             .map_err(IngameClientError::from)
     }
 
-    /// Get active player's data \
+    /// Get active players data \
     /// Only available during livegame
     pub async fn active_player(&self) -> Result<ActivePlayerInfo, IngameClientError> {
         self.0
@@ -261,7 +261,7 @@ impl IngameClient {
             })?
     }
 
-    /// Get the active player's abilities \
+    /// Get the active players abilities \
     /// Only available during livegame
     pub async fn active_player_abilities(&self) -> Result<PlayerAbilities, IngameClientError> {
         self.0
@@ -278,7 +278,7 @@ impl IngameClient {
             .map_err(IngameClientError::from)
     }
 
-    /// Get the active player's name \
+    /// Get the active players name \
     /// Only available during livegame
     pub async fn active_player_name(&self) -> Result<String, IngameClientError> {
         self.0
@@ -302,8 +302,8 @@ impl IngameClient {
             .map_err(IngameClientError::from)
     }
 
-    /// Get the active player's runes \
-    /// Only available during livegame
+    /// Get the active players runes \
+    /// Only available during livegames
     pub async fn active_player_runes(&self) -> Result<FullPlayerRunes, IngameClientError> {
         self.0
             .get(format!(
@@ -331,7 +331,7 @@ pub struct EventStream {
 
 impl EventStream {
     /// Create an [EventStream] from an [IngameClient] \
-    /// Takes an [Option<Duration>] that specifies the polling rate of the [IngameClient] thats being wrapped \
+    /// Takes an [Option] that specifies the polling rate of the [IngameClient] that's being wrapped \
     /// The default [Duration] is 500ms
     pub fn from_ingame_client(ingame_client: IngameClient, polling_rate: Option<Duration>) -> Self {
         let (start_tx, start_rx) = oneshot::channel::<()>();

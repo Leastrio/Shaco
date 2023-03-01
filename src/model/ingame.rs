@@ -49,8 +49,8 @@ impl<'de> Deserialize<'de> for AllGameData {
     }
 }
 
-pub type Gold = f64;
-pub type Level = i64;
+pub type Gold = f32;
+pub type Level = i32;
 
 /// only available in live games \
 /// is Error when spectating
@@ -86,13 +86,14 @@ pub struct PlayerAbilities {
     pub w: Ability,
 }
 
+pub type AbilityLevel = i32;
 pub type AbilityName = String;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct Ability {
-    pub ability_level: i64,
+    pub ability_level: AbilityLevel,
     pub display_name: AbilityName,
     pub id: String,
     pub raw_description: String,
@@ -109,36 +110,36 @@ pub struct Passive {
     pub raw_display_name: String,
 }
 
-pub type AbilityHaste = f64;
-pub type AbilityPower = f64;
-pub type Armor = f64;
-pub type ArmorPenetrationFlat = f64;
-pub type ArmorPenetrationPercent = f64;
-pub type AttackDamage = f64;
-pub type AttackRange = f64;
-pub type AttackSpeed = f64;
-pub type BonusArmorPenetrationPercent = f64;
-pub type BonusMagicPenetrationPercent = f64;
-pub type CritChance = f64;
-pub type CritDamage = f64;
-pub type CurrentHealth = f64;
-pub type HealShieldPower = f64;
-pub type HealthRegenRate = f64;
-pub type LifeSteal = f64;
-pub type MagicLethality = f64;
-pub type MagicPenetrationFlat = f64;
-pub type MagicPenetrationPercent = f64;
-pub type MagicResist = f64;
-pub type MaxHealth = f64;
-pub type MoveSpeed = f64;
-pub type Omnivamp = f64;
-pub type PhysicalLethality = f64;
-pub type PhysicalVamp = f64;
-pub type ResourceMax = f64;
-pub type ResourceRegenRate = f64;
-pub type ResourceValue = f64;
-pub type SpellVamp = f64;
-pub type Tenacity = f64;
+pub type AbilityHaste = f32;
+pub type AbilityPower = f32;
+pub type Armor = f32;
+pub type ArmorPenetrationFlat = f32;
+pub type ArmorPenetrationPercent = f32;
+pub type AttackDamage = f32;
+pub type AttackRange = f32;
+pub type AttackSpeed = f32;
+pub type BonusArmorPenetrationPercent = f32;
+pub type BonusMagicPenetrationPercent = f32;
+pub type CritChance = f32;
+pub type CritDamage = f32;
+pub type CurrentHealth = f32;
+pub type HealShieldPower = f32;
+pub type HealthRegenRate = f32;
+pub type LifeSteal = f32;
+pub type MagicLethality = f32;
+pub type MagicPenetrationFlat = f32;
+pub type MagicPenetrationPercent = f32;
+pub type MagicResist = f32;
+pub type MaxHealth = f32;
+pub type MoveSpeed = f32;
+pub type Omnivamp = f32;
+pub type PhysicalLethality = f32;
+pub type PhysicalVamp = f32;
+pub type ResourceMax = f32;
+pub type ResourceRegenRate = f32;
+pub type ResourceValue = f32;
+pub type SpellVamp = f32;
+pub type Tenacity = f32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -219,7 +220,7 @@ pub struct PlayerRunes {
     pub secondary_rune_tree: RuneTree,
 }
 
-pub type RuneId = i64;
+pub type RuneId = i32;
 pub type RuneName = String;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -232,7 +233,7 @@ pub struct Rune {
     pub raw_display_name: String,
 }
 
-pub type RuneTreeId = i64;
+pub type RuneTreeId = i32;
 pub type RuneTreeName = String;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -245,7 +246,7 @@ pub struct RuneTree {
     pub raw_display_name: String,
 }
 
-pub type StatRuneId = i64;
+pub type StatRuneId = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -256,7 +257,7 @@ pub struct StatRune {
 }
 
 pub type SkinName = String;
-pub type SkinId = i64;
+pub type SkinId = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -283,11 +284,11 @@ pub struct Player {
     pub team: TeamId,
 }
 
-pub type ItemCount = i64;
+pub type ItemCount = i32;
 pub type ItemName = String;
-pub type ItemId = i64;
-pub type Price = i64;
-pub type ItemSlot = i64;
+pub type ItemId = i32;
+pub type Price = i32;
+pub type ItemSlot = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -314,15 +315,16 @@ pub enum Position {
     Middle,
     Bottom,
     Utility,
+    None,
     #[serde(alias = "")]
     Unknown,
 }
 
-pub type Kills = i64;
-pub type Deaths = i64;
-pub type Assists = i64;
-pub type CreepScore = i64;
-pub type WardScore = f64;
+pub type Kills = i32;
+pub type Deaths = i32;
+pub type Assists = i32;
+pub type CreepScore = i32;
+pub type WardScore = f32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -590,7 +592,7 @@ pub struct MinionsSpawning {
     pub event_time: Time,
 }
 
-pub type KillStreak = u32;
+pub type KillStreak = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -723,39 +725,75 @@ impl FromStr for Killer {
     }
 }
 
+/// Team 1 refers to Blue / Left Side \
+/// Team 2 refers to Red / Right Side
 #[derive(Debug, Clone, Serialize, DeserializeFromStr)]
 #[serde(deny_unknown_fields)]
 pub enum Turret {
-    // -- TEAM1 --
-    Team1TopOuter,
-    Team1MidOuter,
-    Team1BotOuter,
-    // -----------
-    Team1TopInner,
-    Team1MidInner,
-    Team1BotInner,
-    // -----------
-    Team1TopInhib,
-    Team1MidInhib,
-    Team1BotInhib,
-    // -----------
-    Team1TopNexus,
-    Team1BotNexus,
-    // -- TEAM2 --
-    Team2TopOuter,
-    Team2MidOuter,
-    Team2BotOuter,
-    // -----------
-    Team2TopInner,
-    Team2MidInner,
-    Team2BotInner,
-    // -----------
-    Team2TopInhib,
-    Team2MidInhib,
-    Team2BotInhib,
-    // -----------
-    Team2TopNexus,
-    Team2BotNexus,
+    // --- TEAM1 ---
+    /// *Summoner's Rift*: Team 1 Upper Nexus Turret
+    Team1C01A,
+    /// *Summoner's Rift*: Team 1 Lower Nexus Turret
+    Team1C02A,
+    /// *Summoner's Rift*: Team 1 Mid Inhib Turret
+    Team1C03A,
+    /// *Summoner's Rift*: Team 1 Mid Inner Turret
+    Team1C04A,
+    /// *Summoner's Rift*: Team 1 Mid Outer Turret
+    Team1C05A,
+    /// *Summoner's Rift*: Team 1 Top Inihb Turret
+    Team1C06A,
+    /// *Summoner's Rift*: Team 1 Bot Inhib Turret \
+    /// *ARAM*: Team 1 Inner Turret
+    Team1C07A,
+    /// *ARAM*: Team 1 Outer Turret
+    Team1C08A,
+    /// *ARAM*: Team 1 Bot Nexus Turret
+    Team1C09A,
+    /// *ARAM*: Team 1 Top Nexus Turret
+    Team1C10A,
+    /// *Summoner's Rift*: Team 1 Top Inner Turret
+    Team1L02A,
+    /// *Summoner's Rift*: Team 1 Top Outer Turret
+    Team1L03A,
+    /// *Summoner's Rift*: Team 1 Bot Inner Turret
+    Team1R02A,
+    /// *Summoner's Rift*: Team 1 Bot Outer Turret
+    Team1R03A,
+    // --- TEAM2 ---
+    /// *Summoner's Rift*: Team 2 Lower Nexus Turret
+    Team2C01A,
+    /// *Summoner's Rift*: Team 2 Upper Nexus Turret
+    Team2C02A,
+    /// *Summoner's Rift*: Team 2 Mid Inhib Turret
+    Team2C03A,
+    /// *Summoner's Rift*: Team 2 Mid Inner Turret
+    Team2C04A,
+    /// *Summoner's Rift*: Team 2 Mid Outer Turret
+    Team2C05A,
+    /// *Summoner's Rift*: Team 2 Top Inihb Turret
+    /// *ARAM*: Team 2 Outer Turret
+    Team2L01A,
+    /// *Summoner's Rift*: Team 2 Top Inner Turret
+    /// *ARAM*: Team 2 Inner Turret
+    Team2L02A,
+    /// *Summoner's Rift*: Team 2 Top Outer Turret
+    /// *ARAM*: Team 2 Lower Nexus Turret
+    Team2L03A,
+    /// *ARAM*: Team 2 Upper Nexus Turret
+    Team2L04A,
+    /// *Summoner's Rift*: Team 2 Bot Inhib Turret
+    Team2R01A,
+    /// *Summoner's Rift*: Team 2 Bot Inner Turret
+    Team2R02A,
+    /// *Summoner's Rift*: Team 2 Bot Outer Turret
+    Team2R03A,
+    // --- OTHER ---
+    /// Azir Turret
+    Obelisk,
+    // /// The riot documentation specifying the turrets is incomplete => add Unknown to catch deserialization errors
+    // #[serde(other)]
+    // Unknown,
 }
 
 impl FromStr for Turret {
@@ -763,43 +801,62 @@ impl FromStr for Turret {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let turret = match s {
-            "Turret_T1_L_03_A" => Turret::Team1TopOuter,
-            "Turret_T1_C_05_A" => Turret::Team1MidOuter,
-            "Turret_T1_R_03_A" => Turret::Team1BotOuter,
-            "Turret_T1_L_02_A" => Turret::Team1TopInner,
-            "Turret_T1_C_04_A" => Turret::Team1MidInner,
-            "Turret_T1_R_02_A" => Turret::Team1BotInner,
-            "Turret_T1_C_06_A" => Turret::Team1TopInhib,
-            "Turret_T1_C_03_A" => Turret::Team1MidInhib,
-            "Turret_T1_C_07_A" => Turret::Team1BotInhib,
-            "Turret_T1_C_01_A" => Turret::Team1TopNexus,
-            "Turret_T1_C_02_A" => Turret::Team1BotNexus,
-            "Turret_T2_L_03_A" => Turret::Team2TopOuter,
-            "Turret_T2_C_05_A" => Turret::Team2MidOuter,
-            "Turret_T2_R_03_A" => Turret::Team2BotOuter,
-            "Turret_T2_L_02_A" => Turret::Team2TopInner,
-            "Turret_T2_C_04_A" => Turret::Team2MidInner,
-            "Turret_T2_R_02_A" => Turret::Team2BotInner,
-            "Turret_T2_L_01_A" => Turret::Team2TopInhib,
-            "Turret_T2_C_03_A" => Turret::Team2MidInhib,
-            "Turret_T2_R_01_A" => Turret::Team2BotInhib,
-            "Turret_T2_C_02_A" => Turret::Team2TopNexus,
-            "Turret_T2_C_01_A" => Turret::Team2BotNexus,
+            // --- TEAM1 ---
+            "Turret_T1_C_01_A" => Turret::Team1C01A,
+            "Turret_T1_C_02_A" => Turret::Team1C02A,
+            "Turret_T1_C_03_A" => Turret::Team1C03A,
+            "Turret_T1_C_04_A" => Turret::Team1C04A,
+            "Turret_T1_C_05_A" => Turret::Team1C05A,
+            "Turret_T1_C_06_A" => Turret::Team1C06A,
+            "Turret_T1_C_07_A" => Turret::Team1C07A,
+            "Turret_T1_C_08_A" => Turret::Team1C08A,
+            "Turret_T1_C_09_A" => Turret::Team1C09A,
+            "Turret_T1_C_010_A" => Turret::Team1C10A,
+            "Turret_T1_L_02_A" => Turret::Team1L02A,
+            "Turret_T1_L_03_A" => Turret::Team1L03A,
+            "Turret_T1_R_02_A" => Turret::Team1R02A,
+            "Turret_T1_R_03_A" => Turret::Team1R03A,
+            // --- TEAM2 ---
+            "Turret_T2_C_01_A" => Turret::Team2C01A,
+            "Turret_T2_C_02_A" => Turret::Team2C02A,
+            "Turret_T2_C_03_A" => Turret::Team2C03A,
+            "Turret_T2_C_04_A" => Turret::Team2C04A,
+            "Turret_T2_C_05_A" => Turret::Team2C05A,
+            "Turret_T2_L_01_A" => Turret::Team2L01A,
+            "Turret_T2_L_02_A" => Turret::Team2L02A,
+            "Turret_T2_L_03_A" => Turret::Team2L03A,
+            "Turret_T2_L_04_A" => Turret::Team2L04A,
+            "Turret_T2_R_01_A" => Turret::Team2R01A,
+            "Turret_T2_R_02_A" => Turret::Team2R02A,
+            "Turret_T2_R_03_A" => Turret::Team2R03A,
+            // --- OTHER ---
+            "Obelisk" => Turret::Obelisk,
             _ => return Err(s.to_string()),
+            // _ => Turret::Unknown,
         };
         Ok(turret)
     }
 }
 
+/// Team 1 refers to Blue / Left Side \
+/// Team 2 refers to Red / Right Side
 #[derive(Debug, Clone, Serialize, DeserializeFromStr)]
 #[serde(deny_unknown_fields)]
 pub enum Inhibitor {
-    Team1Top,
-    Team1Mid,
-    Team1Bot,
-    Team2Top,
-    Team2Mid,
-    Team2Bot,
+    /// *Summoner's Rift*: Team 1 Top Inhibitor
+    Team1L1,
+    /// *Summoner's Rift*: Team 1 Mid Inhibitor \
+    /// **ARAM**: Team 1 Inhibitor
+    Team1C1,
+    /// *Summoner's Rift*: Team 1 Bot Inhibitor
+    Team1R1,
+    /// *Summoner's Rift*: Team 2 Top Inhibitor
+    Team2L1,
+    /// *Summoner's Rift*: Team 1 Mid Inhibitor \
+    /// **ARAM**: Team 2 Inhibitor
+    Team2C1,
+    /// *Summoner's Rift*: Team 2 Bot Inhibitor
+    Team2R1,
 }
 
 impl FromStr for Inhibitor {
@@ -807,12 +864,12 @@ impl FromStr for Inhibitor {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let inhib = match s {
-            "Barracks_T1_L1" => Inhibitor::Team1Top,
-            "Barracks_T1_C1" => Inhibitor::Team1Mid,
-            "Barracks_T1_R1" => Inhibitor::Team1Bot,
-            "Barracks_T2_L1" => Inhibitor::Team2Top,
-            "Barracks_T2_C1" => Inhibitor::Team2Mid,
-            "Barracks_T2_R1" => Inhibitor::Team2Bot,
+            "Barracks_T1_L1" => Inhibitor::Team1L1,
+            "Barracks_T1_C1" => Inhibitor::Team1C1,
+            "Barracks_T1_R1" => Inhibitor::Team1R1,
+            "Barracks_T2_L1" => Inhibitor::Team2L1,
+            "Barracks_T2_C1" => Inhibitor::Team2C1,
+            "Barracks_T2_R1" => Inhibitor::Team2R1,
             _ => return Err(s.to_string()),
         };
         Ok(inhib)
@@ -828,8 +885,7 @@ fn deserialize_bool<'de, D: Deserializer<'de>>(deserializer: D) -> Result<bool, 
     })
 }
 
-pub type MapNumber = i64;
-pub type MapName = String;
+pub type MapNumber = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -889,7 +945,46 @@ pub enum GameMode {
     Odyssey,
     /// Ultimate Spellbook
     UltBook,
-    /// The riot documentation specifying the game modes is incomplete => add unknown to catch deserialization errors
+    /// The riot documentation specifying the game modes is incomplete => add Unknown to catch deserialization errors
+    #[serde(other)]
+    Unknown,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+#[serde(rename_all = "PascalCase")]
+pub enum MapName {
+    /// Summoner's Rift - Original Summer variant
+    Map1,
+    /// Summoner's Rift - Original Autumn variant
+    Map2,
+    /// The Proving Grounds - Tutorial map
+    Map3,
+    /// Twisted Treeline - Original Version
+    Map4,
+    /// The Crystal Scar - Dominion map
+    Map8,
+    /// Twisted Treeline
+    Map10,
+    /// Summoner's Rift - Current Version
+    Map11,
+    /// Howling Abyss - ARAM map
+    Map12,
+    /// Butcher's Bridge: Alternate ARAM map
+    Map14,
+    /// Cosmic Ruins - Dark Star: Singularity map
+    Map16,
+    /// Valoran City Park - Star Guardian Invasion map
+    Map18,
+    /// Substructure 43 - PROJECT: Hunters map
+    Map19,
+    /// Crash Site - Odyssey: Extraction map
+    Map20,
+    /// Nexus Blitz
+    Map21,
+    /// Convergence - Teamfight Tactics map
+    Map22,
+    /// The riot documentation specifying the maps is incomplete => add Unknown to catch deserialization errors
     #[serde(other)]
     Unknown,
 }

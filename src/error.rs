@@ -42,7 +42,7 @@ pub enum IngameClientError {
     ApiNotAvailableInSpectatorMode,
     ApiNotAvailableDuringLoadingScreen,
     /// An error occurred on the client side probably because of a malformed request \
-    /// Corresponds to HTTP status responses 400 – 499, excluding 400 and 404 which are [IngameClientError::ApiNotAvailable]
+    /// Corresponds to HTTP status responses 400 – 499, excluding 400 and 404 which are [IngameClientError::ApiNotAvailableInSpectatorMode] and [IngameClientError::ApiNotAvailableDuringLoadingScreen]
     ClientError(String),
     /// An error ocurred on the server side \
     /// Corresponds to HTTP status responses 500 – 599
@@ -56,10 +56,10 @@ pub enum IngameClientError {
 impl From<reqwest::Error> for IngameClientError {
     fn from(error: reqwest::Error) -> Self {
         if let Some(status) = error.status() {
-            if status == 404 {
-                return IngameClientError::ApiNotAvailableDuringLoadingScreen;
-            } else if status == 400 {
+            if status == 400 {
                 return IngameClientError::ApiNotAvailableInSpectatorMode;
+            } else if status == 404 {
+                return IngameClientError::ApiNotAvailableDuringLoadingScreen;
             } else if status.is_client_error() {
                 return IngameClientError::ClientError(status.to_string());
             } else if status.is_server_error() {

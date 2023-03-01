@@ -7,7 +7,7 @@
 //! - [IngameClient](ingame::IngameClient): A REST client for the LoL-Ingame API
 //! - [EventStream](ingame::EventStream): A wrapper around polling ingame events implementing the [futures_util::Stream] Trait
 //!
-//! If you are looking for a Rust library for the Riot Games API see [https://docs.rs/riven/latest/riven/](Riven)
+//! If you are looking for a Rust library for the Riot Games API see [Riven](https://docs.rs/riven/latest/riven/)
 
 /// Error types for the whole library
 pub mod error;

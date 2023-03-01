@@ -39,7 +39,7 @@
       "Assisters": [],
       "EventID": 5,
       "EventTime": 355.61474609375,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Annie Bot"
     },
     {
@@ -55,7 +55,7 @@
       "Assisters": [],
       "EventID": 7,
       "EventTime": 428.3828430175781,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Annie Bot"
     },
     {
@@ -63,7 +63,7 @@
       "Assisters": [],
       "EventID": 8,
       "EventTime": 479.5228576660156,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Annie Bot"
     },
     {
@@ -81,7 +81,7 @@
       "Assisters": [],
       "EventID": 10,
       "EventTime": 545.0015258789063,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Annie Bot"
     },
     {
@@ -99,7 +99,7 @@
       "Assisters": [],
       "EventID": 12,
       "EventTime": 586.7880859375,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Malphite Bot"
     },
     {
@@ -107,7 +107,7 @@
       "Assisters": [],
       "EventID": 13,
       "EventTime": 627.4328002929688,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Annie Bot"
     },
     {
@@ -115,7 +115,7 @@
       "Assisters": [],
       "EventID": 14,
       "EventTime": 635.1082763671875,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Malphite Bot"
     },
     {
@@ -123,7 +123,7 @@
       "EventID": 15,
       "EventTime": 635.1082763671875,
       "KillStreak": 2,
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "ChampionKill",
@@ -133,7 +133,7 @@
       "EventID": 16,
       "EventTime": 637.6484375,
       "KillerName": "Malphite Bot",
-      "VictimName": "hacka"
+      "VictimName": "summonerName"
     },
     {
       "EventName": "ChampionKill",
@@ -142,7 +142,7 @@
       ],
       "EventID": 17,
       "EventTime": 718.0053100585938,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Annie Bot"
     },
     {
@@ -152,14 +152,14 @@
       ],
       "EventID": 18,
       "EventTime": 738.3209838867188,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "TurretKilled": "Turret_T2_C_05_A"
     },
     {
       "EventName": "FirstBrick",
       "EventID": 19,
       "EventTime": 738.3209838867188,
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "DragonKill",
@@ -167,7 +167,7 @@
       "DragonType": "Fire",
       "EventID": 20,
       "EventTime": 788.06298828125,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "Stolen": "False"
     },
     {
@@ -187,7 +187,7 @@
       ],
       "EventID": 22,
       "EventTime": 855.7479858398438,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Annie Bot"
     },
     {
@@ -197,7 +197,7 @@
       ],
       "EventID": 23,
       "EventTime": 856.711181640625,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Malphite Bot"
     },
     {
@@ -205,14 +205,14 @@
       "EventID": 24,
       "EventTime": 856.711181640625,
       "KillStreak": 2,
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "HeraldKill",
       "Assisters": [],
       "EventID": 25,
       "EventTime": 917.4502563476563,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "Stolen": "False"
     },
     {
@@ -243,7 +243,7 @@
       "Assisters": [],
       "EventID": 28,
       "EventTime": 937.4971313476563,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Kog'Maw Bot"
     },
     {
@@ -277,7 +277,7 @@
       "Assisters": [],
       "EventID": 32,
       "EventTime": 980.288818359375,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "TurretKilled": "Turret_T2_L_02_A"
     },
     {
@@ -285,7 +285,7 @@
       "Assisters": [],
       "EventID": 33,
       "EventTime": 987.0330200195313,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Malphite Bot"
     },
     {
@@ -293,7 +293,7 @@
       "Assisters": [],
       "EventID": 34,
       "EventTime": 989.7059936523438,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Kog'Maw Bot"
     },
     {
@@ -301,7 +301,7 @@
       "EventID": 35,
       "EventTime": 989.7059936523438,
       "KillStreak": 2,
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "ChampionKill",
@@ -337,7 +337,7 @@
       "Assisters": [],
       "EventID": 39,
       "EventTime": 1088.4730224609376,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Ziggs Bot"
     },
     {
@@ -364,7 +364,7 @@
       "Assisters": [],
       "EventID": 42,
       "EventTime": 1139.52783203125,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Caitlyn Bot"
     },
     {
@@ -373,7 +373,7 @@
       "DragonType": "Earth",
       "EventID": 43,
       "EventTime": 1167.7996826171876,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "Stolen": "False"
     },
     {
@@ -381,7 +381,7 @@
       "Assisters": [],
       "EventID": 44,
       "EventTime": 1185.995361328125,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Ziggs Bot"
     },
     {
@@ -399,7 +399,7 @@
       "Assisters": [],
       "EventID": 46,
       "EventTime": 1241.9305419921876,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Caitlyn Bot"
     },
     {
@@ -459,7 +459,7 @@
       "Assisters": [],
       "EventID": 52,
       "EventTime": 1310.1341552734376,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Caitlyn Bot"
     },
     {
@@ -477,7 +477,7 @@
       ],
       "EventID": 54,
       "EventTime": 1342.384765625,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Malphite Bot"
     },
     {
@@ -485,7 +485,7 @@
       "Assisters": [],
       "EventID": 55,
       "EventTime": 1346.107666015625,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Ziggs Bot"
     },
     {
@@ -493,7 +493,7 @@
       "EventID": 56,
       "EventTime": 1346.107666015625,
       "KillStreak": 2,
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "ChampionKill",
@@ -522,7 +522,7 @@
       "Assisters": [],
       "EventID": 59,
       "EventTime": 1385.9031982421876,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Kog'Maw Bot"
     },
     {
@@ -530,7 +530,7 @@
       "Assisters": [],
       "EventID": 60,
       "EventTime": 1406.280517578125,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Ziggs Bot"
     },
     {
@@ -538,7 +538,7 @@
       "Assisters": [],
       "EventID": 61,
       "EventTime": 1427.6329345703126,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Malphite Bot"
     },
     {
@@ -550,7 +550,7 @@
       "EventID": 62,
       "EventTime": 1427.662353515625,
       "KillerName": "Annie Bot",
-      "VictimName": "hacka"
+      "VictimName": "summonerName"
     },
     {
       "EventName": "ChampionKill",
@@ -695,7 +695,7 @@
       "DragonType": "Water",
       "EventID": 77,
       "EventTime": 1615.81005859375,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "Stolen": "False"
     },
     {
@@ -703,7 +703,7 @@
       "Assisters": [],
       "EventID": 78,
       "EventTime": 1629.6572265625,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Annie Bot"
     },
     {
@@ -758,7 +758,7 @@
       "Assisters": [],
       "EventID": 84,
       "EventTime": 1704.9847412109376,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "Stolen": "False"
     },
     {
@@ -850,7 +850,7 @@
       "Assisters": [],
       "EventID": 94,
       "EventTime": 1807.0430908203126,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Kog'Maw Bot"
     },
     {
@@ -858,7 +858,7 @@
       "Assisters": [],
       "EventID": 95,
       "EventTime": 1808.296142578125,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Annie Bot"
     },
     {
@@ -866,7 +866,7 @@
       "EventID": 96,
       "EventTime": 1808.296142578125,
       "KillStreak": 2,
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "InhibRespawned",
@@ -879,7 +879,7 @@
       "Assisters": [],
       "EventID": 98,
       "EventTime": 1823.48583984375,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Ziggs Bot"
     },
     {
@@ -887,7 +887,7 @@
       "Assisters": [],
       "EventID": 99,
       "EventTime": 1827.8131103515626,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Malphite Bot"
     },
     {
@@ -895,14 +895,14 @@
       "EventID": 100,
       "EventTime": 1827.8131103515626,
       "KillStreak": 2,
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "ChampionKill",
       "Assisters": [],
       "EventID": 101,
       "EventTime": 1830.522705078125,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Caitlyn Bot"
     },
     {
@@ -910,11 +910,11 @@
       "EventID": 102,
       "EventTime": 1830.522705078125,
       "KillStreak": 3,
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "Ace",
-      "Acer": "hacka",
+      "Acer": "summonerName",
       "AcingTeam": "ORDER",
       "EventID": 103,
       "EventTime": 1830.522705078125
@@ -925,12 +925,12 @@
       "EventID": 104,
       "EventTime": 1835.54052734375,
       "InhibKilled": "Barracks_T2_L1",
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "TurretKilled",
       "Assisters": [
-        "hacka",
+        "summonerName",
         "Miss Fortune Bot"
       ],
       "EventID": 105,
@@ -1027,7 +1027,7 @@
       "DragonType": "Water",
       "EventID": 115,
       "EventTime": 1928.3040771484376,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "Stolen": "False"
     },
     {
@@ -1035,7 +1035,7 @@
       "Assisters": [],
       "EventID": 116,
       "EventTime": 1943.5872802734376,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "TurretKilled": "Turret_T2_R_02_A"
     },
     {
@@ -1053,7 +1053,7 @@
       "Assisters": [],
       "EventID": 118,
       "EventTime": 1954.5965576171876,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "TurretKilled": "Turret_T2_R_01_A"
     },
     {
@@ -1062,14 +1062,14 @@
       "EventID": 119,
       "EventTime": 1959.4805908203126,
       "InhibKilled": "Barracks_T2_R1",
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "ChampionKill",
       "Assisters": [],
       "EventID": 120,
       "EventTime": 1968.676513671875,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Ziggs Bot"
     },
     {
@@ -1077,7 +1077,7 @@
       "Assisters": [],
       "EventID": 121,
       "EventTime": 1970.65673828125,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "TurretKilled": "Turret_T2_C_01_A"
     },
     {
@@ -1085,7 +1085,7 @@
       "Assisters": [],
       "EventID": 122,
       "EventTime": 1976.7176513671876,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Kog'Maw Bot"
     },
     {
@@ -1093,7 +1093,7 @@
       "EventID": 123,
       "EventTime": 1976.7176513671876,
       "KillStreak": 2,
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "ChampionKill",
@@ -1102,7 +1102,7 @@
       ],
       "EventID": 124,
       "EventTime": 1981.910400390625,
-      "KillerName": "hacka",
+      "KillerName": "summonerName",
       "VictimName": "Malphite Bot"
     },
     {
@@ -1110,7 +1110,7 @@
       "EventID": 125,
       "EventTime": 1981.910400390625,
       "KillStreak": 3,
-      "KillerName": "hacka"
+      "KillerName": "summonerName"
     },
     {
       "EventName": "GameEnd",
