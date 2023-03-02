@@ -1,4 +1,5 @@
 use std::{fmt, str::FromStr};
+use derive_more::Display;
 
 use serde::{Deserialize, Deserializer, Serialize};
 use serde_with::DeserializeFromStr;
@@ -177,7 +178,7 @@ pub struct PlayerChampionStats {
     pub tenacity: Tenacity,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Display, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum ResourceType {
@@ -306,7 +307,7 @@ pub struct PlayerItem {
     pub slot: ItemSlot,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Display, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum Position {
@@ -618,7 +619,7 @@ pub struct TurretKilled {
     pub turret_killed: Turret,
 }
 
-#[derive(Debug, Clone, Serialize, DeserializeFromStr)]
+#[derive(Debug, Display, Clone, Serialize, DeserializeFromStr)]
 #[serde(deny_unknown_fields)]
 pub enum DragonType {
     Infernal,
@@ -648,14 +649,14 @@ impl FromStr for DragonType {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Display, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub enum GameResult {
     Win,
     Lose,
 }
 
-#[derive(Debug, Clone, Serialize, DeserializeFromStr)]
+#[derive(Debug, Display, Clone, Serialize, DeserializeFromStr)]
 #[serde(deny_unknown_fields)]
 pub enum Killer {
     Minion,
@@ -728,7 +729,7 @@ impl FromStr for Killer {
 
 /// Team 1 refers to Blue / Left Side \
 /// Team 2 refers to Red / Right Side
-#[derive(Debug, Clone, Serialize, DeserializeFromStr)]
+#[derive(Debug, Display, Clone, Serialize, DeserializeFromStr)]
 #[serde(deny_unknown_fields)]
 pub enum Turret {
     // --- TEAM1 ---
@@ -761,6 +762,9 @@ pub enum Turret {
     Team1R02A,
     /// *Summoner's Rift*: Team 1 Bot Outer Turret
     Team1R03A,
+    /// *Summoner's Rift*: Team 1 Fountain
+    /// *ARAM*: Team 1 Fountain
+    Team1Fountain,
     // --- TEAM2 ---
     /// *Summoner's Rift*: Team 2 Lower Nexus Turret
     Team2C01A,
@@ -789,6 +793,9 @@ pub enum Turret {
     Team2R02A,
     /// *Summoner's Rift*: Team 2 Bot Outer Turret
     Team2R03A,
+    /// *Summoner's Rift*: Team 2 Fountain
+    /// *ARAM*: Team 2 Fountain
+    Team2Fountain,
     // --- OTHER ---
     /// Azir Turret
     Obelisk,
@@ -817,6 +824,7 @@ impl FromStr for Turret {
             "Turret_T1_L_03_A" => Turret::Team1L03A,
             "Turret_T1_R_02_A" => Turret::Team1R02A,
             "Turret_T1_R_03_A" => Turret::Team1R03A,
+            "Turret_OrderTurretShrine_A" => Turret::Team1Fountain,
             // --- TEAM2 ---
             "Turret_T2_C_01_A" => Turret::Team2C01A,
             "Turret_T2_C_02_A" => Turret::Team2C02A,
@@ -830,6 +838,7 @@ impl FromStr for Turret {
             "Turret_T2_R_01_A" => Turret::Team2R01A,
             "Turret_T2_R_02_A" => Turret::Team2R02A,
             "Turret_T2_R_03_A" => Turret::Team2R03A,
+            "Turret_ChaosTurretShrine_A" => Turret::Team2Fountain,
             // --- OTHER ---
             "Obelisk" => Turret::Obelisk,
             _ => return Err(s.to_string()),
@@ -841,7 +850,7 @@ impl FromStr for Turret {
 
 /// Team 1 refers to Blue / Left Side \
 /// Team 2 refers to Red / Right Side
-#[derive(Debug, Clone, Serialize, DeserializeFromStr)]
+#[derive(Debug, Display, Clone, Serialize, DeserializeFromStr)]
 #[serde(deny_unknown_fields)]
 pub enum Inhibitor {
     /// *Summoner's Rift*: Team 1 Top Inhibitor
@@ -899,7 +908,7 @@ pub struct GameStats {
     pub map_terrain: MapTerrain,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Display, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum GameMode {
@@ -951,7 +960,7 @@ pub enum GameMode {
     Unknown,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Display, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub enum MapName {
@@ -990,7 +999,7 @@ pub enum MapName {
     Unknown,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Display, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub enum MapTerrain {
     Default,
