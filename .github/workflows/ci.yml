@@ -1,0 +1,29 @@
+name: CI
+
+on: [pull_request, push]
+
+env:
+  CARGO_INCREMENTAL: 0
+  RUSTFLAGS: -Cdebuginfo=1 -Dwarnings
+  CARGO_NET_RETRY: 10
+  RUSTUP_MAX_RETRIES: 10
+
+jobs:
+  clippy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Swatinem/rust-cache@v1
+      - uses: actions-rs/clippy-check@v1
+        with:
+          args: -- -D warnings
+          token: ${{ secrets.GITHUB_TOKEN }}
+  rustfmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: cargo fmt
+        uses: actions-rs/cargo@v1
+        with:
+          args: -- --check
+          command: fmt
