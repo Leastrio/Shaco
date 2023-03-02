@@ -1,6 +1,6 @@
 use std::{fmt, str::FromStr};
-use derive_more::Display;
 
+use derive_more::Display;
 use serde::{Deserialize, Deserializer, Serialize};
 use serde_with::DeserializeFromStr;
 
@@ -37,7 +37,7 @@ impl<'de> Deserialize<'de> for AllGameData {
         }
         let holder = Holder::deserialize(deserializer)?;
         let active_player = match holder.active_player {
-            ActivePlayerInfo::ActivePlayer(info) => Some(info),
+            ActivePlayerInfo::ActivePlayer(info) => Some(*info),
             ActivePlayerInfo::Error { .. } => None,
         };
         Ok(Self {
@@ -57,7 +57,7 @@ pub type Level = i32;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub(crate) enum ActivePlayerInfo {
-    ActivePlayer(ActivePlayer),
+    ActivePlayer(Box<ActivePlayer>),
     Error { error: String },
 }
 

@@ -254,7 +254,7 @@ impl IngameClient {
             .await
             .map_err(IngameClientError::from)
             .map(|i| match i {
-                ActivePlayerInfo::ActivePlayer(i) => Ok(i),
+                ActivePlayerInfo::ActivePlayer(i) => Ok(*i),
                 ActivePlayerInfo::Error { error } => {
                     Err(IngameClientError::DeserializationError(error))
                 }
