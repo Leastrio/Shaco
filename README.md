@@ -10,7 +10,7 @@ A League of Legends wrapper for the LCU REST & WS + the ingame API
 # How to install
 Add the following snippet to your `Cargo.toml`
 ```toml
-shaco = "0.4.0"
+shaco = "0.6.0"
 ```
 
 [docs-badge]: https://img.shields.io/badge/docs-online-5023dd.svg?style=for-the-badge
