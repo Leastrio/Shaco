@@ -1,2 +1,2 @@
-pub mod process_info;
-pub mod request;
+pub(crate) mod process_info;
+pub(crate) mod request;

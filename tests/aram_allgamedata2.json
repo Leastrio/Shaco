@@ -1,0 +1,3217 @@
+{
+	"activePlayer": {
+		"abilities": {
+			"E": {
+				"abilityLevel": 5,
+				"displayName": "Mourning Mist",
+				"id": "YorickE",
+				"rawDescription": "GeneratedTip_Spell_YorickE_Description",
+				"rawDisplayName": "GeneratedTip_Spell_YorickE_DisplayName"
+			},
+			"Passive": {
+				"displayName": "Shepherd of Souls",
+				"id": "YorickPassive",
+				"rawDescription": "GeneratedTip_Passive_YorickPassive_Description",
+				"rawDisplayName": "GeneratedTip_Passive_YorickPassive_DisplayName"
+			},
+			"Q": {
+				"abilityLevel": 5,
+				"displayName": "Last Rites",
+				"id": "YorickQ",
+				"rawDescription": "GeneratedTip_Spell_YorickQ_Description",
+				"rawDisplayName": "GeneratedTip_Spell_YorickQ_DisplayName"
+			},
+			"R": {
+				"abilityLevel": 3,
+				"displayName": "Eulogy of the Isles",
+				"id": "YorickR",
+				"rawDescription": "GeneratedTip_Spell_YorickR_Description",
+				"rawDisplayName": "GeneratedTip_Spell_YorickR_DisplayName"
+			},
+			"W": {
+				"abilityLevel": 5,
+				"displayName": "Dark Procession",
+				"id": "YorickW",
+				"rawDescription": "GeneratedTip_Spell_YorickW_Description",
+				"rawDisplayName": "GeneratedTip_Spell_YorickW_DisplayName"
+			}
+		},
+		"championStats": {
+			"abilityHaste": 105.0,
+			"abilityPower": 0.0,
+			"armor": 139.46200561523438,
+			"armorPenetrationFlat": 0.0,
+			"armorPenetrationPercent": 0.7462000250816345,
+			"attackDamage": 416.8999938964844,
+			"attackRange": 175.0,
+			"attackSpeed": 0.9000000357627869,
+			"bonusArmorPenetrationPercent": 1.0,
+			"bonusMagicPenetrationPercent": 1.0,
+			"critChance": 0.0,
+			"critDamage": 175.0,
+			"currentHealth": 2071.05615234375,
+			"healShieldPower": 0.0,
+			"healthRegenRate": 4.320000171661377,
+			"lifeSteal": 0.0,
+			"magicLethality": 0.0,
+			"magicPenetrationFlat": 0.0,
+			"magicPenetrationPercent": 0.9100000262260437,
+			"magicResist": 92.54550170898438,
+			"maxHealth": 4049.955322265625,
+			"moveSpeed": 424.7298278808594,
+			"omnivamp": 0.0,
+			"physicalLethality": 0.0,
+			"physicalVamp": 0.0,
+			"resourceMax": 2180.0,
+			"resourceRegenRate": 7.167400360107422,
+			"resourceType": "MANA",
+			"resourceValue": 1268.56591796875,
+			"spellVamp": 0.0,
+			"tenacity": 5.0
+		},
+		"currentGold": 2612.29296875,
+		"fullRunes": {
+			"generalRunes": [
+				{
+					"displayName": "Conqueror",
+					"id": 8010,
+					"rawDescription": "perk_tooltip_Conqueror",
+					"rawDisplayName": "perk_displayname_Conqueror"
+				},
+				{
+					"displayName": "Triumph",
+					"id": 9111,
+					"rawDescription": "perk_tooltip_9111",
+					"rawDisplayName": "perk_displayname_9111"
+				},
+				{
+					"displayName": "Legend: Tenacity",
+					"id": 9105,
+					"rawDescription": "perk_tooltip_9105",
+					"rawDisplayName": "perk_displayname_9105"
+				},
+				{
+					"displayName": "Last Stand",
+					"id": 8299,
+					"rawDescription": "perk_tooltip_8234",
+					"rawDisplayName": "perk_displayname_8234"
+				},
+				{
+					"displayName": "Overgrowth",
+					"id": 8451,
+					"rawDescription": "perk_tooltip_Overgrowth",
+					"rawDisplayName": "perk_displayname_Overgrowth"
+				},
+				{
+					"displayName": "Conditioning",
+					"id": 8429,
+					"rawDescription": "perk_tooltip_Conditioning",
+					"rawDisplayName": "perk_displayname_Conditioning"
+				}
+			],
+			"keystone": {
+				"displayName": "Conqueror",
+				"id": 8010,
+				"rawDescription": "perk_tooltip_Conqueror",
+				"rawDisplayName": "perk_displayname_Conqueror"
+			},
+			"primaryRuneTree": {
+				"displayName": "Precision",
+				"id": 8000,
+				"rawDescription": "perkstyle_tooltip_7201",
+				"rawDisplayName": "perkstyle_displayname_7201"
+			},
+			"secondaryRuneTree": {
+				"displayName": "Resolve",
+				"id": 8400,
+				"rawDescription": "perkstyle_tooltip_7204",
+				"rawDisplayName": "perkstyle_displayname_7204"
+			},
+			"statRunes": [
+				{
+					"id": 5005,
+					"rawDescription": "perk_tooltip_StatModAttackSpeed"
+				},
+				{
+					"id": 5008,
+					"rawDescription": "perk_tooltip_StatModAdaptive"
+				},
+				{
+					"id": 5001,
+					"rawDescription": "perk_tooltip_StatModHealthScaling"
+				}
+			]
+		},
+		"level": 18,
+		"summonerName": "summonerName3",
+		"teamRelativeColors": true
+	},
+	"allPlayers": [
+		{
+			"championName": "Ezreal",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Divine Sunderer",
+					"itemID": 6632,
+					"price": 700,
+					"rawDescription": "GeneratedTip_Item_6632_Description",
+					"rawDisplayName": "Item_6632_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Muramana",
+					"itemID": 3042,
+					"price": 3000,
+					"rawDescription": "GeneratedTip_Item_3042_Description",
+					"rawDisplayName": "Item_3042_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 3158,
+					"price": 650,
+					"rawDescription": "GeneratedTip_Item_3158_Description",
+					"rawDisplayName": "Item_3158_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Serylda's Grudge",
+					"itemID": 6694,
+					"price": 650,
+					"rawDescription": "GeneratedTip_Item_6694_Description",
+					"rawDisplayName": "Item_6694_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Blade of The Ruined King",
+					"itemID": 3153,
+					"price": 525,
+					"rawDescription": "GeneratedTip_Item_3153_Description",
+					"rawDisplayName": "Item_3153_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ravenous Hydra",
+					"itemID": 3074,
+					"price": 200,
+					"rawDescription": "GeneratedTip_Item_3074_Description",
+					"rawDisplayName": "Item_3074_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": true,
+					"count": 2,
+					"displayName": "Poro-Snax",
+					"itemID": 2052,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_2052_Description",
+					"rawDisplayName": "Item_2052_Name",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Ezreal",
+			"rawSkinName": "game_character_skin_displayname_Ezreal_5",
+			"respawnTimer": 0.0,
+			"runes": {
+				"keystone": {
+					"displayName": "Conqueror",
+					"id": 8010,
+					"rawDescription": "perk_tooltip_Conqueror",
+					"rawDisplayName": "perk_displayname_Conqueror"
+				},
+				"primaryRuneTree": {
+					"displayName": "Precision",
+					"id": 8000,
+					"rawDescription": "perkstyle_tooltip_7201",
+					"rawDisplayName": "perkstyle_displayname_7201"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Domination",
+					"id": 8100,
+					"rawDescription": "perkstyle_tooltip_7200",
+					"rawDisplayName": "perkstyle_displayname_7200"
+				}
+			},
+			"scores": {
+				"assists": 27,
+				"creepScore": 80,
+				"deaths": 8,
+				"kills": 22,
+				"wardScore": 0.0
+			},
+			"skinID": 5,
+			"skinName": "Pulsefire Ezreal",
+			"summonerName": "summonerName1",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Exhaust",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerExhaust_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerExhaust_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Vel'Koz",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Liandry's Anguish",
+					"itemID": 6653,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_6653_Description",
+					"rawDisplayName": "Item_6653_Name",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Zhonya's Hourglass",
+					"itemID": 3157,
+					"price": 350,
+					"rawDescription": "GeneratedTip_Item_3157_Description",
+					"rawDisplayName": "Item_3157_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 3020,
+					"price": 800,
+					"rawDescription": "GeneratedTip_Item_3020_Description",
+					"rawDisplayName": "Item_3020_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Shadowflame",
+					"itemID": 4645,
+					"price": 700,
+					"rawDescription": "GeneratedTip_Item_4645_Description",
+					"rawDisplayName": "Item_4645_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rabadon's Deathcap",
+					"itemID": 3089,
+					"price": 1100,
+					"rawDescription": "GeneratedTip_Item_3089_Description",
+					"rawDisplayName": "Item_3089_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Void Staff",
+					"itemID": 3135,
+					"price": 700,
+					"rawDescription": "GeneratedTip_Item_3135_Description",
+					"rawDisplayName": "Item_3135_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": true,
+					"count": 2,
+					"displayName": "Poro-Snax",
+					"itemID": 2052,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_2052_Description",
+					"rawDisplayName": "Item_2052_Name",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Velkoz",
+			"respawnTimer": 0.0,
+			"runes": {
+				"keystone": {
+					"displayName": "Dark Harvest",
+					"id": 8128,
+					"rawDescription": "perk_tooltip_DarkHarvest",
+					"rawDisplayName": "perk_displayname_DarkHarvest"
+				},
+				"primaryRuneTree": {
+					"displayName": "Domination",
+					"id": 8100,
+					"rawDescription": "perkstyle_tooltip_7200",
+					"rawDisplayName": "perkstyle_displayname_7200"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Sorcery",
+					"id": 8200,
+					"rawDescription": "perkstyle_tooltip_7202",
+					"rawDisplayName": "perkstyle_displayname_7202"
+				}
+			},
+			"scores": {
+				"assists": 28,
+				"creepScore": 70,
+				"deaths": 11,
+				"kills": 17,
+				"wardScore": 0.0
+			},
+			"skinID": 0,
+			"summonerName": "summonerName2",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Heal",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Yorick",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Divine Sunderer",
+					"itemID": 6632,
+					"price": 700,
+					"rawDescription": "GeneratedTip_Item_6632_Description",
+					"rawDisplayName": "Item_6632_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Muramana",
+					"itemID": 3042,
+					"price": 3000,
+					"rawDescription": "GeneratedTip_Item_3042_Description",
+					"rawDisplayName": "Item_3042_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 3158,
+					"price": 650,
+					"rawDescription": "GeneratedTip_Item_3158_Description",
+					"rawDisplayName": "Item_3158_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Black Cleaver",
+					"itemID": 3071,
+					"price": 850,
+					"rawDescription": "GeneratedTip_Item_3071_Description",
+					"rawDisplayName": "Item_3071_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Spear Of Shojin",
+					"itemID": 3161,
+					"price": 200,
+					"rawDescription": "GeneratedTip_Item_3161_Description",
+					"rawDisplayName": "Item_3161_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Last Whisper",
+					"itemID": 3035,
+					"price": 750,
+					"rawDescription": "GeneratedTip_Item_3035_Description",
+					"rawDisplayName": "Item_3035_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": true,
+					"count": 2,
+					"displayName": "Poro-Snax",
+					"itemID": 2052,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_2052_Description",
+					"rawDisplayName": "Item_2052_Name",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Yorick",
+			"respawnTimer": 0.0,
+			"runes": {
+				"keystone": {
+					"displayName": "Conqueror",
+					"id": 8010,
+					"rawDescription": "perk_tooltip_Conqueror",
+					"rawDisplayName": "perk_displayname_Conqueror"
+				},
+				"primaryRuneTree": {
+					"displayName": "Precision",
+					"id": 8000,
+					"rawDescription": "perkstyle_tooltip_7201",
+					"rawDisplayName": "perkstyle_displayname_7201"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Resolve",
+					"id": 8400,
+					"rawDescription": "perkstyle_tooltip_7204",
+					"rawDisplayName": "perkstyle_displayname_7204"
+				}
+			},
+			"scores": {
+				"assists": 32,
+				"creepScore": 40,
+				"deaths": 14,
+				"kills": 12,
+				"wardScore": 0.0
+			},
+			"skinID": 0,
+			"summonerName": "summonerName3",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Mark",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Ghost",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerHaste_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHaste_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Anivia",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Seraph's Embrace",
+					"itemID": 3040,
+					"price": 3000,
+					"rawDescription": "GeneratedTip_Item_3040_Description",
+					"rawDisplayName": "Item_3040_Name",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Zhonya's Hourglass",
+					"itemID": 3157,
+					"price": 350,
+					"rawDescription": "GeneratedTip_Item_3157_Description",
+					"rawDisplayName": "Item_3157_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 3020,
+					"price": 800,
+					"rawDescription": "GeneratedTip_Item_3020_Description",
+					"rawDisplayName": "Item_3020_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Liandry's Anguish",
+					"itemID": 6653,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_6653_Description",
+					"rawDisplayName": "Item_6653_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Void Staff",
+					"itemID": 3135,
+					"price": 700,
+					"rawDescription": "GeneratedTip_Item_3135_Description",
+					"rawDisplayName": "Item_3135_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Needlessly Large Rod",
+					"itemID": 1058,
+					"price": 1250,
+					"rawDescription": "GeneratedTip_Item_1058_Description",
+					"rawDisplayName": "Item_1058_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": true,
+					"count": 2,
+					"displayName": "Poro-Snax",
+					"itemID": 2052,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_2052_Description",
+					"rawDisplayName": "Item_2052_Name",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Anivia",
+			"rawSkinName": "game_character_skin_displayname_Anivia_17",
+			"respawnTimer": 0.0,
+			"runes": {
+				"keystone": {
+					"displayName": "Dark Harvest",
+					"id": 8128,
+					"rawDescription": "perk_tooltip_DarkHarvest",
+					"rawDisplayName": "perk_displayname_DarkHarvest"
+				},
+				"primaryRuneTree": {
+					"displayName": "Domination",
+					"id": 8100,
+					"rawDescription": "perkstyle_tooltip_7200",
+					"rawDisplayName": "perkstyle_displayname_7200"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Sorcery",
+					"id": 8200,
+					"rawDescription": "perkstyle_tooltip_7202",
+					"rawDisplayName": "perkstyle_displayname_7202"
+				}
+			},
+			"scores": {
+				"assists": 27,
+				"creepScore": 60,
+				"deaths": 15,
+				"kills": 12,
+				"wardScore": 0.0
+			},
+			"skinID": 17,
+			"skinName": "Cosmic Flight Anivia",
+			"summonerName": "summonerName4",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Mark",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Veigar",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Luden's Tempest",
+					"itemID": 6655,
+					"price": 1050,
+					"rawDescription": "GeneratedTip_Item_6655_Description",
+					"rawDisplayName": "Item_6655_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 3020,
+					"price": 800,
+					"rawDescription": "GeneratedTip_Item_3020_Description",
+					"rawDisplayName": "Item_3020_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rabadon's Deathcap",
+					"itemID": 3089,
+					"price": 1100,
+					"rawDescription": "GeneratedTip_Item_3089_Description",
+					"rawDisplayName": "Item_3089_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Void Staff",
+					"itemID": 3135,
+					"price": 700,
+					"rawDescription": "GeneratedTip_Item_3135_Description",
+					"rawDisplayName": "Item_3135_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Warmog's Armor",
+					"itemID": 3083,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_3083_Description",
+					"rawDisplayName": "Item_3083_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Giant's Belt",
+					"itemID": 1011,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_1011_Description",
+					"rawDisplayName": "Item_1011_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": true,
+					"count": 2,
+					"displayName": "Poro-Snax",
+					"itemID": 2052,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_2052_Description",
+					"rawDisplayName": "Item_2052_Name",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Veigar",
+			"rawSkinName": "game_character_skin_displayname_Veigar_9",
+			"respawnTimer": 14.724159240722657,
+			"runes": {
+				"keystone": {
+					"displayName": "Arcane Comet",
+					"id": 8229,
+					"rawDescription": "perk_tooltip_ArcaneComet",
+					"rawDisplayName": "perk_displayname_ArcaneComet"
+				},
+				"primaryRuneTree": {
+					"displayName": "Sorcery",
+					"id": 8200,
+					"rawDescription": "perkstyle_tooltip_7202",
+					"rawDisplayName": "perkstyle_displayname_7202"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Domination",
+					"id": 8100,
+					"rawDescription": "perkstyle_tooltip_7200",
+					"rawDisplayName": "perkstyle_displayname_7200"
+				}
+			},
+			"scores": {
+				"assists": 26,
+				"creepScore": 40,
+				"deaths": 13,
+				"kills": 10,
+				"wardScore": 0.0
+			},
+			"skinID": 9,
+			"skinName": "Omega Squad Veigar",
+			"summonerName": "summonerName5",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Heal",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Clarity",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerMana_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerMana_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Zoe",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Needlessly Large Rod",
+					"itemID": 1058,
+					"price": 1250,
+					"rawDescription": "GeneratedTip_Item_1058_Description",
+					"rawDisplayName": "Item_1058_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Lich Bane",
+					"itemID": 3100,
+					"price": 550,
+					"rawDescription": "GeneratedTip_Item_3100_Description",
+					"rawDisplayName": "Item_3100_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Luden's Tempest",
+					"itemID": 6655,
+					"price": 1050,
+					"rawDescription": "GeneratedTip_Item_6655_Description",
+					"rawDisplayName": "Item_6655_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 3020,
+					"price": 800,
+					"rawDescription": "GeneratedTip_Item_3020_Description",
+					"rawDisplayName": "Item_3020_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Horizon Focus",
+					"itemID": 4628,
+					"price": 1050,
+					"rawDescription": "GeneratedTip_Item_4628_Description",
+					"rawDisplayName": "Item_4628_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Shadowflame",
+					"itemID": 4645,
+					"price": 700,
+					"rawDescription": "GeneratedTip_Item_4645_Description",
+					"rawDisplayName": "Item_4645_Name",
+					"slot": 5
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Zoe",
+			"respawnTimer": 0.0,
+			"runes": {
+				"keystone": {
+					"displayName": "Dark Harvest",
+					"id": 8128,
+					"rawDescription": "perk_tooltip_DarkHarvest",
+					"rawDisplayName": "perk_displayname_DarkHarvest"
+				},
+				"primaryRuneTree": {
+					"displayName": "Domination",
+					"id": 8100,
+					"rawDescription": "perkstyle_tooltip_7200",
+					"rawDisplayName": "perkstyle_displayname_7200"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Precision",
+					"id": 8000,
+					"rawDescription": "perkstyle_tooltip_7201",
+					"rawDisplayName": "perkstyle_displayname_7201"
+				}
+			},
+			"scores": {
+				"assists": 19,
+				"creepScore": 20,
+				"deaths": 14,
+				"kills": 7,
+				"wardScore": 0.0
+			},
+			"skinID": 0,
+			"summonerName": "summonerName6",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "",
+					"rawDescription": "",
+					"rawDisplayName": ""
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Vi",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Divine Sunderer",
+					"itemID": 6632,
+					"price": 700,
+					"rawDescription": "GeneratedTip_Item_6632_Description",
+					"rawDisplayName": "Item_6632_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Mercury's Treads",
+					"itemID": 3111,
+					"price": 350,
+					"rawDescription": "GeneratedTip_Item_3111_Description",
+					"rawDisplayName": "Item_3111_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Maw of Malmortius",
+					"itemID": 3156,
+					"price": 375,
+					"rawDescription": "GeneratedTip_Item_3156_Description",
+					"rawDisplayName": "Item_3156_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Death's Dance",
+					"itemID": 6333,
+					"price": 750,
+					"rawDescription": "GeneratedTip_Item_6333_Description",
+					"rawDisplayName": "Item_6333_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Spirit Visage",
+					"itemID": 3065,
+					"price": 850,
+					"rawDescription": "GeneratedTip_Item_3065_Description",
+					"rawDisplayName": "Item_3065_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Titanic Hydra",
+					"itemID": 3748,
+					"price": 800,
+					"rawDescription": "GeneratedTip_Item_3748_Description",
+					"rawDisplayName": "Item_3748_Name",
+					"slot": 5
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Vi",
+			"rawSkinName": "game_character_skin_displayname_Vi_29",
+			"respawnTimer": 19.077608108520509,
+			"runes": {
+				"keystone": {
+					"displayName": "Conqueror",
+					"id": 8010,
+					"rawDescription": "perk_tooltip_Conqueror",
+					"rawDisplayName": "perk_displayname_Conqueror"
+				},
+				"primaryRuneTree": {
+					"displayName": "Precision",
+					"id": 8000,
+					"rawDescription": "perkstyle_tooltip_7201",
+					"rawDisplayName": "perkstyle_displayname_7201"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Domination",
+					"id": 8100,
+					"rawDescription": "perkstyle_tooltip_7200",
+					"rawDisplayName": "perkstyle_displayname_7200"
+				}
+			},
+			"scores": {
+				"assists": 21,
+				"creepScore": 30,
+				"deaths": 17,
+				"kills": 19,
+				"wardScore": 0.0
+			},
+			"skinID": 29,
+			"skinName": "Arcane Vi",
+			"summonerName": "summonerName7",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Mark",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Jhin",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "The Collector",
+					"itemID": 6676,
+					"price": 425,
+					"rawDescription": "GeneratedTip_Item_6676_Description",
+					"rawDisplayName": "Item_6676_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Boots of Swiftness",
+					"itemID": 3009,
+					"price": 600,
+					"rawDescription": "GeneratedTip_Item_3009_Description",
+					"rawDisplayName": "Item_3009_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rapid Firecannon",
+					"itemID": 3094,
+					"price": 750,
+					"rawDescription": "GeneratedTip_Item_3094_Description",
+					"rawDisplayName": "Item_3094_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Lord Dominik's Regards",
+					"itemID": 3036,
+					"price": 950,
+					"rawDescription": "GeneratedTip_Item_3036_Description",
+					"rawDisplayName": "Item_3036_Name",
+					"slot": 3
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Galeforce",
+					"itemID": 6671,
+					"price": 625,
+					"rawDescription": "GeneratedTip_Item_6671_Description",
+					"rawDisplayName": "Item_6671_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Infinity Edge",
+					"itemID": 3031,
+					"price": 625,
+					"rawDescription": "GeneratedTip_Item_3031_Description",
+					"rawDisplayName": "Item_3031_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": true,
+					"count": 1,
+					"displayName": "Poro-Snax",
+					"itemID": 2052,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_2052_Description",
+					"rawDisplayName": "Item_2052_Name",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Jhin",
+			"rawSkinName": "game_character_skin_displayname_Jhin_5",
+			"respawnTimer": 6.993053436279297,
+			"runes": {
+				"keystone": {
+					"displayName": "Dark Harvest",
+					"id": 8128,
+					"rawDescription": "perk_tooltip_DarkHarvest",
+					"rawDisplayName": "perk_displayname_DarkHarvest"
+				},
+				"primaryRuneTree": {
+					"displayName": "Domination",
+					"id": 8100,
+					"rawDescription": "perkstyle_tooltip_7200",
+					"rawDisplayName": "perkstyle_displayname_7200"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Precision",
+					"id": 8000,
+					"rawDescription": "perkstyle_tooltip_7201",
+					"rawDisplayName": "perkstyle_displayname_7201"
+				}
+			},
+			"scores": {
+				"assists": 15,
+				"creepScore": 70,
+				"deaths": 14,
+				"kills": 12,
+				"wardScore": 0.0
+			},
+			"skinID": 5,
+			"skinName": "Dark Cosmic Jhin",
+			"summonerName": "summonerName8",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Mark",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Nasus",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Divine Sunderer",
+					"itemID": 6632,
+					"price": 700,
+					"rawDescription": "GeneratedTip_Item_6632_Description",
+					"rawDisplayName": "Item_6632_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Mercury's Treads",
+					"itemID": 3111,
+					"price": 350,
+					"rawDescription": "GeneratedTip_Item_3111_Description",
+					"rawDisplayName": "Item_3111_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Spirit Visage",
+					"itemID": 3065,
+					"price": 850,
+					"rawDescription": "GeneratedTip_Item_3065_Description",
+					"rawDisplayName": "Item_3065_Name",
+					"slot": 2
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Gargoyle Stoneplate",
+					"itemID": 3193,
+					"price": 1250,
+					"rawDescription": "GeneratedTip_Item_3193_Description",
+					"rawDisplayName": "Item_3193_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Force of Nature",
+					"itemID": 4401,
+					"price": 800,
+					"rawDescription": "GeneratedTip_Item_4401_Description",
+					"rawDisplayName": "Item_4401_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Thornmail",
+					"itemID": 3075,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_3075_Description",
+					"rawDisplayName": "Item_3075_Name",
+					"slot": 5
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Nasus",
+			"rawSkinName": "game_character_skin_displayname_Nasus_5",
+			"respawnTimer": 22.794342041015626,
+			"runes": {
+				"keystone": {
+					"displayName": "Grasp of the Undying",
+					"id": 8437,
+					"rawDescription": "perk_tooltip_GraspOfTheUndying",
+					"rawDisplayName": "perk_displayname_GraspOfTheUndying"
+				},
+				"primaryRuneTree": {
+					"displayName": "Resolve",
+					"id": 8400,
+					"rawDescription": "perkstyle_tooltip_7204",
+					"rawDisplayName": "perkstyle_displayname_7204"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Precision",
+					"id": 8000,
+					"rawDescription": "perkstyle_tooltip_7201",
+					"rawDisplayName": "perkstyle_displayname_7201"
+				}
+			},
+			"scores": {
+				"assists": 22,
+				"creepScore": 130,
+				"deaths": 16,
+				"kills": 15,
+				"wardScore": 0.0
+			},
+			"skinID": 5,
+			"skinName": "Infernal Nasus",
+			"summonerName": "summonerName9",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Mark",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Gragas",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Amplifying Tome",
+					"itemID": 1052,
+					"price": 435,
+					"rawDescription": "GeneratedTip_Item_1052_Description",
+					"rawDisplayName": "Item_1052_Name",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Zhonya's Hourglass",
+					"itemID": 3157,
+					"price": 350,
+					"rawDescription": "GeneratedTip_Item_3157_Description",
+					"rawDisplayName": "Item_3157_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Night Harvester",
+					"itemID": 4636,
+					"price": 815,
+					"rawDescription": "GeneratedTip_Item_4636_Description",
+					"rawDisplayName": "Item_4636_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Seraph's Embrace",
+					"itemID": 3040,
+					"price": 3000,
+					"rawDescription": "GeneratedTip_Item_3040_Description",
+					"rawDisplayName": "Item_3040_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Cosmic Drive",
+					"itemID": 4629,
+					"price": 850,
+					"rawDescription": "GeneratedTip_Item_4629_Description",
+					"rawDisplayName": "Item_4629_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 3020,
+					"price": 800,
+					"rawDescription": "GeneratedTip_Item_3020_Description",
+					"rawDisplayName": "Item_3020_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": true,
+					"count": 2,
+					"displayName": "Poro-Snax",
+					"itemID": 2052,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_2052_Description",
+					"rawDisplayName": "Item_2052_Name",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Gragas",
+			"rawSkinName": "game_character_skin_displayname_Gragas_10",
+			"respawnTimer": 3.659801483154297,
+			"runes": {
+				"keystone": {
+					"displayName": "Dark Harvest",
+					"id": 8128,
+					"rawDescription": "perk_tooltip_DarkHarvest",
+					"rawDisplayName": "perk_displayname_DarkHarvest"
+				},
+				"primaryRuneTree": {
+					"displayName": "Domination",
+					"id": 8100,
+					"rawDescription": "perkstyle_tooltip_7200",
+					"rawDisplayName": "perkstyle_displayname_7200"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Sorcery",
+					"id": 8200,
+					"rawDescription": "perkstyle_tooltip_7202",
+					"rawDisplayName": "perkstyle_displayname_7202"
+				}
+			},
+			"scores": {
+				"assists": 17,
+				"creepScore": 20,
+				"deaths": 12,
+				"kills": 8,
+				"wardScore": 0.0
+			},
+			"skinID": 10,
+			"skinName": "Arctic Ops Gragas",
+			"summonerName": "summonerName10",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Mark",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		}
+	],
+	"events": {
+		"Events": [
+			{
+				"EventID": 0,
+				"EventName": "GameStart",
+				"EventTime": 0.027438199147582055
+			},
+			{
+				"EventID": 1,
+				"EventName": "MinionsSpawning",
+				"EventTime": 45.025535583496097
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName3",
+					"summonerName4"
+				],
+				"EventID": 2,
+				"EventName": "ChampionKill",
+				"EventTime": 82.60620880126953,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName9"
+			},
+			{
+				"EventID": 3,
+				"EventName": "FirstBlood",
+				"EventTime": 82.60620880126953,
+				"Recipient": "summonerName2"
+			},
+			{
+				"Assisters": [
+					"summonerName2"
+				],
+				"EventID": 4,
+				"EventName": "ChampionKill",
+				"EventTime": 89.2774429321289,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName9",
+					"summonerName10"
+				],
+				"EventID": 5,
+				"EventName": "ChampionKill",
+				"EventTime": 155.48793029785157,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [],
+				"EventID": 6,
+				"EventName": "ChampionKill",
+				"EventTime": 163.11827087402345,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName3",
+					"summonerName5"
+				],
+				"EventID": 7,
+				"EventName": "ChampionKill",
+				"EventTime": 164.73550415039063,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName4"
+				],
+				"EventID": 8,
+				"EventName": "ChampionKill",
+				"EventTime": 178.73757934570313,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName6"
+			},
+			{
+				"Assisters": [
+					"summonerName4"
+				],
+				"EventID": 9,
+				"EventName": "ChampionKill",
+				"EventTime": 186.243408203125,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName8"
+				],
+				"EventID": 10,
+				"EventName": "ChampionKill",
+				"EventTime": 186.93984985351563,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName5"
+				],
+				"EventID": 11,
+				"EventName": "ChampionKill",
+				"EventTime": 188.32554626464845,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName9"
+			},
+			{
+				"EventID": 12,
+				"EventName": "Multikill",
+				"EventTime": 188.32554626464845,
+				"KillStreak": 2,
+				"KillerName": "summonerName1"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName3",
+					"summonerName4",
+					"summonerName5"
+				],
+				"EventID": 13,
+				"EventName": "ChampionKill",
+				"EventTime": 221.039794921875,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName7",
+					"summonerName9"
+				],
+				"EventID": 14,
+				"EventName": "ChampionKill",
+				"EventTime": 221.8664093017578,
+				"KillerName": "summonerName10",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName7",
+					"summonerName9",
+					"summonerName10"
+				],
+				"EventID": 15,
+				"EventName": "ChampionKill",
+				"EventTime": 256.0115051269531,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName7"
+				],
+				"EventID": 16,
+				"EventName": "ChampionKill",
+				"EventTime": 259.1221923828125,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName1"
+			},
+			{
+				"Assisters": [
+					"summonerName6"
+				],
+				"EventID": 17,
+				"EventName": "ChampionKill",
+				"EventTime": 259.1479187011719,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName2"
+			},
+			{
+				"EventID": 18,
+				"EventName": "Multikill",
+				"EventTime": 259.1479187011719,
+				"KillStreak": 2,
+				"KillerName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName3"
+				],
+				"EventID": 19,
+				"EventName": "ChampionKill",
+				"EventTime": 260.2016296386719,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName10"
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName9",
+					"summonerName10"
+				],
+				"EventID": 20,
+				"EventName": "ChampionKill",
+				"EventTime": 263.34716796875,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName3"
+			},
+			{
+				"EventID": 21,
+				"EventName": "Multikill",
+				"EventTime": 263.34716796875,
+				"KillStreak": 3,
+				"KillerName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName3"
+				],
+				"EventID": 22,
+				"EventName": "ChampionKill",
+				"EventTime": 263.5704650878906,
+				"KillerName": "summonerName5",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName7"
+				],
+				"EventID": 23,
+				"EventName": "ChampionKill",
+				"EventTime": 266.1637878417969,
+				"KillerName": "summonerName6",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Acer": "summonerName6",
+				"AcingTeam": "CHAOS",
+				"EventID": 24,
+				"EventName": "Ace",
+				"EventTime": 266.1637878417969
+			},
+			{
+				"Assisters": [
+					"summonerName2"
+				],
+				"EventID": 25,
+				"EventName": "ChampionKill",
+				"EventTime": 282.7358093261719,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName6"
+			},
+			{
+				"Assisters": [],
+				"EventID": 26,
+				"EventName": "ChampionKill",
+				"EventTime": 283.7247314453125,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName3"
+				],
+				"EventID": 27,
+				"EventName": "ChampionKill",
+				"EventTime": 284.936279296875,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName8"
+			},
+			{
+				"EventID": 28,
+				"EventName": "Multikill",
+				"EventTime": 284.936279296875,
+				"KillStreak": 2,
+				"KillerName": "summonerName4"
+			},
+			{
+				"Assisters": [],
+				"EventID": 29,
+				"EventName": "ChampionKill",
+				"EventTime": 312.2417907714844,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2",
+					"summonerName3"
+				],
+				"EventID": 30,
+				"EventName": "ChampionKill",
+				"EventTime": 346.51446533203127,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName4"
+				],
+				"EventID": 31,
+				"EventName": "ChampionKill",
+				"EventTime": 363.9678649902344,
+				"KillerName": "summonerName5",
+				"VictimName": "summonerName10"
+			},
+			{
+				"Assisters": [
+					"summonerName8",
+					"summonerName10"
+				],
+				"EventID": 32,
+				"EventName": "ChampionKill",
+				"EventTime": 376.402587890625,
+				"KillerName": "summonerName6",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName8"
+				],
+				"EventID": 33,
+				"EventName": "ChampionKill",
+				"EventTime": 379.87451171875,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName1"
+				],
+				"EventID": 34,
+				"EventName": "ChampionKill",
+				"EventTime": 380.7527770996094,
+				"KillerName": "summonerName5",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName9",
+					"summonerName10"
+				],
+				"EventID": 35,
+				"EventName": "ChampionKill",
+				"EventTime": 381.7508850097656,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName5"
+			},
+			{
+				"EventID": 36,
+				"EventName": "Multikill",
+				"EventTime": 381.7508850097656,
+				"KillStreak": 2,
+				"KillerName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName3",
+					"summonerName5"
+				],
+				"EventID": 37,
+				"EventName": "ChampionKill",
+				"EventTime": 387.999267578125,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName4",
+					"summonerName5"
+				],
+				"EventID": 38,
+				"EventName": "ChampionKill",
+				"EventTime": 390.56756591796877,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName6"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2",
+					"summonerName4"
+				],
+				"EventID": 39,
+				"EventName": "ChampionKill",
+				"EventTime": 408.7091979980469,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName8",
+					"summonerName10"
+				],
+				"EventID": 40,
+				"EventName": "ChampionKill",
+				"EventTime": 439.2036437988281,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName10"
+				],
+				"EventID": 41,
+				"EventName": "ChampionKill",
+				"EventTime": 447.7933044433594,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName2"
+			},
+			{
+				"EventID": 42,
+				"EventName": "Multikill",
+				"EventTime": 447.7933044433594,
+				"KillStreak": 2,
+				"KillerName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName6"
+				],
+				"EventID": 43,
+				"EventName": "ChampionKill",
+				"EventTime": 452.887451171875,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName1"
+			},
+			{
+				"Assisters": [
+					"summonerName5"
+				],
+				"EventID": 44,
+				"EventName": "ChampionKill",
+				"EventTime": 471.5768127441406,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [],
+				"EventID": 45,
+				"EventName": "ChampionKill",
+				"EventTime": 479.7070617675781,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName6"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2",
+					"summonerName3",
+					"summonerName5"
+				],
+				"EventID": 46,
+				"EventName": "ChampionKill",
+				"EventTime": 503.95086669921877,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName3"
+				],
+				"EventID": 47,
+				"EventName": "ChampionKill",
+				"EventTime": 513.0652465820313,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2",
+					"summonerName4",
+					"summonerName5"
+				],
+				"EventID": 48,
+				"EventName": "TurretKilled",
+				"EventTime": 527.099365234375,
+				"KillerName": "Minion_T100L1S19N0116",
+				"TurretKilled": "Turret_T2_L_01_A"
+			},
+			{
+				"EventID": 49,
+				"EventName": "FirstBrick",
+				"EventTime": 527.099365234375,
+				"KillerName": "Minion_T100L1S19N0116"
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName10"
+				],
+				"EventID": 50,
+				"EventName": "ChampionKill",
+				"EventTime": 535.3395385742188,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName2"
+				],
+				"EventID": 51,
+				"EventName": "ChampionKill",
+				"EventTime": 542.8721923828125,
+				"KillerName": "summonerName5",
+				"VictimName": "summonerName6"
+			},
+			{
+				"Assisters": [
+					"summonerName7"
+				],
+				"EventID": 52,
+				"EventName": "ChampionKill",
+				"EventTime": 546.4359130859375,
+				"KillerName": "summonerName10",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2"
+				],
+				"EventID": 53,
+				"EventName": "ChampionKill",
+				"EventTime": 546.5771484375,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName9"
+				],
+				"EventID": 54,
+				"EventName": "ChampionKill",
+				"EventTime": 561.207275390625,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName7",
+					"summonerName8"
+				],
+				"EventID": 55,
+				"EventName": "ChampionKill",
+				"EventTime": 596.5440673828125,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName8"
+				],
+				"EventID": 56,
+				"EventName": "ChampionKill",
+				"EventTime": 602.501953125,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName2"
+			},
+			{
+				"EventID": 57,
+				"EventName": "Multikill",
+				"EventTime": 602.501953125,
+				"KillStreak": 2,
+				"KillerName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName5"
+				],
+				"EventID": 58,
+				"EventName": "ChampionKill",
+				"EventTime": 614.090576171875,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName7",
+					"summonerName9",
+					"summonerName10"
+				],
+				"EventID": 59,
+				"EventName": "ChampionKill",
+				"EventTime": 614.9273681640625,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName7"
+				],
+				"EventID": 60,
+				"EventName": "ChampionKill",
+				"EventTime": 628.2259521484375,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName1"
+			},
+			{
+				"Assisters": [
+					"summonerName8"
+				],
+				"EventID": 61,
+				"EventName": "ChampionKill",
+				"EventTime": 630.3787231445313,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName8",
+					"summonerName10"
+				],
+				"EventID": 62,
+				"EventName": "TurretKilled",
+				"EventTime": 634.0973510742188,
+				"KillerName": "summonerName6",
+				"TurretKilled": "Turret_T1_C_08_A"
+			},
+			{
+				"Assisters": [
+					"summonerName5"
+				],
+				"EventID": 63,
+				"EventName": "ChampionKill",
+				"EventTime": 637.0223388671875,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName3"
+				],
+				"EventID": 64,
+				"EventName": "ChampionKill",
+				"EventTime": 641.47509765625,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName6"
+			},
+			{
+				"EventID": 65,
+				"EventName": "Multikill",
+				"EventTime": 641.47509765625,
+				"KillStreak": 2,
+				"KillerName": "summonerName2"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName5"
+				],
+				"EventID": 66,
+				"EventName": "ChampionKill",
+				"EventTime": 643.3858642578125,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName3"
+				],
+				"EventID": 67,
+				"EventName": "ChampionKill",
+				"EventTime": 655.21826171875,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName10"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName4"
+				],
+				"EventID": 68,
+				"EventName": "ChampionKill",
+				"EventTime": 665.7838745117188,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName3",
+					"summonerName4"
+				],
+				"EventID": 69,
+				"EventName": "ChampionKill",
+				"EventTime": 683.4298706054688,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName6"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName8",
+					"summonerName9"
+				],
+				"EventID": 70,
+				"EventName": "ChampionKill",
+				"EventTime": 683.8273315429688,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName6"
+				],
+				"EventID": 71,
+				"EventName": "ChampionKill",
+				"EventTime": 688.116455078125,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName2"
+			},
+			{
+				"EventID": 72,
+				"EventName": "Multikill",
+				"EventTime": 688.116455078125,
+				"KillStreak": 2,
+				"KillerName": "summonerName7"
+			},
+			{
+				"Assisters": [],
+				"EventID": 73,
+				"EventName": "ChampionKill",
+				"EventTime": 723.7598266601563,
+				"KillerName": "summonerName6",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [
+					"summonerName4"
+				],
+				"EventID": 74,
+				"EventName": "ChampionKill",
+				"EventTime": 740.84033203125,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName3",
+					"summonerName4"
+				],
+				"EventID": 75,
+				"EventName": "ChampionKill",
+				"EventTime": 742.94970703125,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName7"
+			},
+			{
+				"EventID": 76,
+				"EventName": "Multikill",
+				"EventTime": 742.94970703125,
+				"KillStreak": 2,
+				"KillerName": "summonerName2"
+			},
+			{
+				"Assisters": [
+					"summonerName2"
+				],
+				"EventID": 77,
+				"EventName": "ChampionKill",
+				"EventTime": 759.8568725585938,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName6"
+			},
+			{
+				"Assisters": [
+					"summonerName9",
+					"summonerName10"
+				],
+				"EventID": 78,
+				"EventName": "ChampionKill",
+				"EventTime": 777.6246948242188,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName8",
+					"summonerName9"
+				],
+				"EventID": 79,
+				"EventName": "ChampionKill",
+				"EventTime": 786.370849609375,
+				"KillerName": "summonerName10",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName6"
+				],
+				"EventID": 80,
+				"EventName": "ChampionKill",
+				"EventTime": 800.6596069335938,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName1"
+			},
+			{
+				"Assisters": [],
+				"EventID": 81,
+				"EventName": "ChampionKill",
+				"EventTime": 802.0748291015625,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName2"
+			},
+			{
+				"Assisters": [
+					"summonerName3",
+					"summonerName5"
+				],
+				"EventID": 82,
+				"EventName": "ChampionKill",
+				"EventTime": 848.4122314453125,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName3",
+					"summonerName5"
+				],
+				"EventID": 83,
+				"EventName": "ChampionKill",
+				"EventTime": 863.0381469726563,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName3",
+					"summonerName5"
+				],
+				"EventID": 84,
+				"EventName": "ChampionKill",
+				"EventTime": 865.4207763671875,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName10"
+			},
+			{
+				"EventID": 85,
+				"EventName": "Multikill",
+				"EventTime": 865.4207763671875,
+				"KillStreak": 2,
+				"KillerName": "summonerName1"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2",
+					"summonerName3",
+					"summonerName4"
+				],
+				"EventID": 86,
+				"EventName": "ChampionKill",
+				"EventTime": 879.783935546875,
+				"KillerName": "summonerName5",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName3"
+				],
+				"EventID": 87,
+				"EventName": "ChampionKill",
+				"EventTime": 895.8544311523438,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2",
+					"summonerName3",
+					"summonerName4"
+				],
+				"EventID": 88,
+				"EventName": "TurretKilled",
+				"EventTime": 899.4213256835938,
+				"KillerName": "summonerName5",
+				"TurretKilled": "Turret_T2_L_02_A"
+			},
+			{
+				"Assisters": [
+					"summonerName6"
+				],
+				"EventID": 89,
+				"EventName": "ChampionKill",
+				"EventTime": 903.3427734375,
+				"KillerName": "summonerName10",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName8"
+				],
+				"EventID": 90,
+				"EventName": "ChampionKill",
+				"EventTime": 903.6100463867188,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName6"
+				],
+				"EventID": 91,
+				"EventName": "ChampionKill",
+				"EventTime": 909.4932861328125,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName2"
+			},
+			{
+				"EventID": 92,
+				"EventName": "Multikill",
+				"EventTime": 909.4932861328125,
+				"KillStreak": 2,
+				"KillerName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName10"
+				],
+				"EventID": 93,
+				"EventName": "ChampionKill",
+				"EventTime": 924.389892578125,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [
+					"summonerName1"
+				],
+				"EventID": 94,
+				"EventName": "ChampionKill",
+				"EventTime": 972.37744140625,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName6"
+			},
+			{
+				"Assisters": [],
+				"EventID": 95,
+				"EventName": "ChampionKill",
+				"EventTime": 993.6143188476563,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName1"
+			},
+			{
+				"Assisters": [
+					"summonerName8",
+					"summonerName10"
+				],
+				"EventID": 96,
+				"EventName": "ChampionKill",
+				"EventTime": 996.019287109375,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName9"
+				],
+				"EventID": 97,
+				"EventName": "ChampionKill",
+				"EventTime": 997.6448974609375,
+				"KillerName": "summonerName10",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName7"
+				],
+				"EventID": 98,
+				"EventName": "ChampionKill",
+				"EventTime": 1002.3584594726563,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName2"
+			},
+			{
+				"EventID": 99,
+				"EventName": "Multikill",
+				"EventTime": 1002.3584594726563,
+				"KillStreak": 2,
+				"KillerName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName9"
+				],
+				"EventID": 100,
+				"EventName": "ChampionKill",
+				"EventTime": 1007.5517578125,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Acer": "summonerName8",
+				"AcingTeam": "CHAOS",
+				"EventID": 101,
+				"EventName": "Ace",
+				"EventTime": 1007.5517578125
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName8",
+					"summonerName9"
+				],
+				"EventID": 102,
+				"EventName": "TurretKilled",
+				"EventTime": 1030.3751220703126,
+				"KillerName": "summonerName10",
+				"TurretKilled": "Turret_T1_C_07_A"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName7",
+					"summonerName10"
+				],
+				"EventID": 103,
+				"EventName": "InhibKilled",
+				"EventTime": 1036.1583251953126,
+				"InhibKilled": "Barracks_T1_C1",
+				"KillerName": "summonerName9"
+			},
+			{
+				"Assisters": [],
+				"EventID": 104,
+				"EventName": "ChampionKill",
+				"EventTime": 1040.72265625,
+				"KillerName": "summonerName5",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName7"
+				],
+				"EventID": 105,
+				"EventName": "ChampionKill",
+				"EventTime": 1041.75048828125,
+				"KillerName": "summonerName10",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [
+					"summonerName3",
+					"summonerName5"
+				],
+				"EventID": 106,
+				"EventName": "ChampionKill",
+				"EventTime": 1050.70751953125,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName2"
+				],
+				"EventID": 107,
+				"EventName": "ChampionKill",
+				"EventTime": 1051.4256591796876,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName3",
+					"summonerName4"
+				],
+				"EventID": 108,
+				"EventName": "ChampionKill",
+				"EventTime": 1062.0693359375,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName10"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName4"
+				],
+				"EventID": 109,
+				"EventName": "ChampionKill",
+				"EventTime": 1078.7584228515626,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName6"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName4"
+				],
+				"EventID": 110,
+				"EventName": "InhibKilled",
+				"EventTime": 1097.57568359375,
+				"InhibKilled": "Barracks_T2_C1",
+				"KillerName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName3",
+					"summonerName4",
+					"summonerName5"
+				],
+				"EventID": 111,
+				"EventName": "ChampionKill",
+				"EventTime": 1101.372802734375,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2",
+					"summonerName3",
+					"summonerName5"
+				],
+				"EventID": 112,
+				"EventName": "ChampionKill",
+				"EventTime": 1106.511474609375,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName9"
+				],
+				"EventID": 113,
+				"EventName": "ChampionKill",
+				"EventTime": 1108.5728759765626,
+				"KillerName": "summonerName10",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName3",
+					"summonerName4",
+					"summonerName5"
+				],
+				"EventID": 114,
+				"EventName": "ChampionKill",
+				"EventTime": 1108.868408203125,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName10"
+			},
+			{
+				"EventID": 115,
+				"EventName": "Multikill",
+				"EventTime": 1108.868408203125,
+				"KillStreak": 2,
+				"KillerName": "summonerName2"
+			},
+			{
+				"Assisters": [
+					"summonerName9"
+				],
+				"EventID": 116,
+				"EventName": "ChampionKill",
+				"EventTime": 1120.8843994140626,
+				"KillerName": "summonerName6",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName5"
+				],
+				"EventID": 117,
+				"EventName": "ChampionKill",
+				"EventTime": 1140.1243896484376,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName8"
+				],
+				"EventID": 118,
+				"EventName": "ChampionKill",
+				"EventTime": 1152.517578125,
+				"KillerName": "summonerName6",
+				"VictimName": "summonerName2"
+			},
+			{
+				"Assisters": [
+					"summonerName9"
+				],
+				"EventID": 119,
+				"EventName": "ChampionKill",
+				"EventTime": 1158.6298828125,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName9",
+					"summonerName10"
+				],
+				"EventID": 120,
+				"EventName": "ChampionKill",
+				"EventTime": 1161.9608154296876,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName1"
+			},
+			{
+				"EventID": 121,
+				"EventName": "Multikill",
+				"EventTime": 1161.9608154296876,
+				"KillStreak": 2,
+				"KillerName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName4",
+					"summonerName5"
+				],
+				"EventID": 122,
+				"EventName": "ChampionKill",
+				"EventTime": 1174.5482177734376,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName10"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName7"
+				],
+				"EventID": 123,
+				"EventName": "ChampionKill",
+				"EventTime": 1181.8575439453126,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName4"
+				],
+				"EventID": 124,
+				"EventName": "ChampionKill",
+				"EventTime": 1182.689697265625,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName7"
+			},
+			{
+				"EventID": 125,
+				"EventName": "Multikill",
+				"EventTime": 1182.689697265625,
+				"KillStreak": 2,
+				"KillerName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName4"
+				],
+				"EventID": 126,
+				"EventName": "ChampionKill",
+				"EventTime": 1187.7431640625,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName6"
+			},
+			{
+				"EventID": 127,
+				"EventName": "Multikill",
+				"EventTime": 1187.7431640625,
+				"KillStreak": 3,
+				"KillerName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName7",
+					"summonerName10"
+				],
+				"EventID": 128,
+				"EventName": "ChampionKill",
+				"EventTime": 1191.382080078125,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName3"
+			},
+			{
+				"EventID": 129,
+				"EventName": "Multikill",
+				"EventTime": 1191.382080078125,
+				"KillStreak": 2,
+				"KillerName": "summonerName9"
+			},
+			{
+				"Acer": "summonerName9",
+				"AcingTeam": "CHAOS",
+				"EventID": 130,
+				"EventName": "Ace",
+				"EventTime": 1191.382080078125
+			},
+			{
+				"Assisters": [
+					"summonerName9"
+				],
+				"EventID": 131,
+				"EventName": "ChampionKill",
+				"EventTime": 1206.1793212890626,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName2"
+			},
+			{
+				"Assisters": [
+					"summonerName2"
+				],
+				"EventID": 132,
+				"EventName": "ChampionKill",
+				"EventTime": 1208.326904296875,
+				"KillerName": "summonerName5",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName8"
+				],
+				"EventID": 133,
+				"EventName": "ChampionKill",
+				"EventTime": 1212.7491455078126,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [],
+				"EventID": 134,
+				"EventName": "ChampionKill",
+				"EventTime": 1218.538330078125,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName1"
+			},
+			{
+				"EventID": 135,
+				"EventName": "Multikill",
+				"EventTime": 1218.538330078125,
+				"KillStreak": 2,
+				"KillerName": "summonerName9"
+			},
+			{
+				"Acer": "summonerName9",
+				"AcingTeam": "CHAOS",
+				"EventID": 136,
+				"EventName": "Ace",
+				"EventTime": 1218.538330078125
+			},
+			{
+				"Assisters": [
+					"summonerName3"
+				],
+				"EventID": 137,
+				"EventName": "ChampionKill",
+				"EventTime": 1246.23046875,
+				"KillerName": "summonerName4",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName9"
+				],
+				"EventID": 138,
+				"EventName": "ChampionKill",
+				"EventTime": 1251.431396484375,
+				"KillerName": "summonerName10",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName4"
+				],
+				"EventID": 139,
+				"EventName": "ChampionKill",
+				"EventTime": 1252.0009765625,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName10"
+			},
+			{
+				"Assisters": [
+					"summonerName3"
+				],
+				"EventID": 140,
+				"EventName": "ChampionKill",
+				"EventTime": 1258.74267578125,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName7"
+			},
+			{
+				"EventID": 141,
+				"EventName": "InhibRespawningSoon",
+				"EventTime": 1271.166259765625,
+				"InhibRespawningSoon": "Barracks_T1_C1"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2",
+					"summonerName5"
+				],
+				"EventID": 142,
+				"EventName": "ChampionKill",
+				"EventTime": 1281.3470458984376,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName6"
+			},
+			{
+				"EventID": 143,
+				"EventName": "InhibRespawned",
+				"EventTime": 1286.2225341796876,
+				"InhibRespawned": "Barracks_T1_C1"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName3",
+					"summonerName5"
+				],
+				"EventID": 144,
+				"EventName": "ChampionKill",
+				"EventTime": 1313.325927734375,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName10"
+			},
+			{
+				"EventID": 145,
+				"EventName": "InhibRespawningSoon",
+				"EventTime": 1332.589111328125,
+				"InhibRespawningSoon": "Barracks_T2_C1"
+			},
+			{
+				"Assisters": [],
+				"EventID": 146,
+				"EventName": "ChampionKill",
+				"EventTime": 1333.149169921875,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [
+					"summonerName8"
+				],
+				"EventID": 147,
+				"EventName": "ChampionKill",
+				"EventTime": 1343.6439208984376,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName2"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2",
+					"summonerName4"
+				],
+				"EventID": 148,
+				"EventName": "ChampionKill",
+				"EventTime": 1346.963623046875,
+				"KillerName": "summonerName5",
+				"VictimName": "summonerName7"
+			},
+			{
+				"EventID": 149,
+				"EventName": "InhibRespawned",
+				"EventTime": 1347.628662109375,
+				"InhibRespawned": "Barracks_T2_C1"
+			},
+			{
+				"Assisters": [
+					"summonerName7",
+					"summonerName8",
+					"summonerName9"
+				],
+				"EventID": 150,
+				"EventName": "ChampionKill",
+				"EventTime": 1354.04736328125,
+				"KillerName": "summonerName6",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [
+					"summonerName4"
+				],
+				"EventID": 151,
+				"EventName": "ChampionKill",
+				"EventTime": 1360.02294921875,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName1"
+				],
+				"EventID": 152,
+				"EventName": "ChampionKill",
+				"EventTime": 1367.7203369140626,
+				"KillerName": "summonerName5",
+				"VictimName": "summonerName10"
+			},
+			{
+				"Assisters": [
+					"summonerName5"
+				],
+				"EventID": 153,
+				"EventName": "ChampionKill",
+				"EventTime": 1373.007568359375,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName9",
+					"summonerName10"
+				],
+				"EventID": 154,
+				"EventName": "ChampionKill",
+				"EventTime": 1373.50732421875,
+				"KillerName": "summonerName6",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [],
+				"EventID": 155,
+				"EventName": "ChampionKill",
+				"EventTime": 1378.3948974609376,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName6"
+			},
+			{
+				"EventID": 156,
+				"EventName": "Multikill",
+				"EventTime": 1378.3948974609376,
+				"KillStreak": 2,
+				"KillerName": "summonerName1"
+			},
+			{
+				"Acer": "summonerName1",
+				"AcingTeam": "ORDER",
+				"EventID": 157,
+				"EventName": "Ace",
+				"EventTime": 1378.3948974609376
+			},
+			{
+				"Assisters": [
+					"summonerName6"
+				],
+				"EventID": 158,
+				"EventName": "ChampionKill",
+				"EventTime": 1398.044189453125,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName1"
+			},
+			{
+				"Assisters": [
+					"summonerName1"
+				],
+				"EventID": 159,
+				"EventName": "ChampionKill",
+				"EventTime": 1408.3699951171876,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName3",
+					"summonerName4"
+				],
+				"EventID": 160,
+				"EventName": "ChampionKill",
+				"EventTime": 1418.5982666015626,
+				"KillerName": "summonerName2",
+				"VictimName": "summonerName10"
+			},
+			{
+				"Assisters": [
+					"summonerName9",
+					"summonerName10"
+				],
+				"EventID": 161,
+				"EventName": "ChampionKill",
+				"EventTime": 1421.195068359375,
+				"KillerName": "summonerName8",
+				"VictimName": "summonerName3"
+			},
+			{
+				"Assisters": [],
+				"EventID": 162,
+				"EventName": "ChampionKill",
+				"EventTime": 1429.3446044921876,
+				"KillerName": "summonerName9",
+				"VictimName": "summonerName4"
+			},
+			{
+				"Assisters": [],
+				"EventID": 163,
+				"EventName": "ChampionKill",
+				"EventTime": 1454.00390625,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName3",
+					"summonerName5"
+				],
+				"EventID": 164,
+				"EventName": "ChampionKill",
+				"EventTime": 1469.64990234375,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName9"
+			},
+			{
+				"Assisters": [
+					"summonerName6",
+					"summonerName9"
+				],
+				"EventID": 165,
+				"EventName": "ChampionKill",
+				"EventTime": 1470.396240234375,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName2"
+			},
+			{
+				"Assisters": [
+					"summonerName2",
+					"summonerName3",
+					"summonerName4",
+					"summonerName5"
+				],
+				"EventID": 166,
+				"EventName": "ChampionKill",
+				"EventTime": 1476.874755859375,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName7"
+			},
+			{
+				"EventID": 167,
+				"EventName": "Multikill",
+				"EventTime": 1476.874755859375,
+				"KillStreak": 2,
+				"KillerName": "summonerName1"
+			},
+			{
+				"Assisters": [],
+				"EventID": 168,
+				"EventName": "InhibKilled",
+				"EventTime": 1501.7996826171876,
+				"InhibKilled": "Barracks_T2_C1",
+				"KillerName": "Minion_T100L1S59N0388"
+			},
+			{
+				"Assisters": [],
+				"EventID": 169,
+				"EventName": "ChampionKill",
+				"EventTime": 1503.4896240234376,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName6"
+			},
+			{
+				"Assisters": [],
+				"EventID": 170,
+				"EventName": "TurretKilled",
+				"EventTime": 1508.6822509765626,
+				"KillerName": "summonerName1",
+				"TurretKilled": "Turret_T2_L_04_A"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName3",
+					"summonerName4"
+				],
+				"EventID": 171,
+				"EventName": "ChampionKill",
+				"EventTime": 1514.462158203125,
+				"KillerName": "summonerName5",
+				"VictimName": "summonerName10"
+			},
+			{
+				"Assisters": [
+					"summonerName3"
+				],
+				"EventID": 172,
+				"EventName": "ChampionKill",
+				"EventTime": 1517.79541015625,
+				"KillerName": "summonerName1",
+				"VictimName": "summonerName8"
+			},
+			{
+				"Assisters": [
+					"summonerName3",
+					"summonerName4"
+				],
+				"EventID": 173,
+				"EventName": "TurretKilled",
+				"EventTime": 1521.5238037109376,
+				"KillerName": "summonerName1",
+				"TurretKilled": "Turret_T2_L_03_A"
+			},
+			{
+				"Assisters": [
+					"summonerName10"
+				],
+				"EventID": 174,
+				"EventName": "ChampionKill",
+				"EventTime": 1525.5264892578126,
+				"KillerName": "summonerName7",
+				"VictimName": "summonerName5"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName4",
+					"summonerName5"
+				],
+				"EventID": 175,
+				"EventName": "ChampionKill",
+				"EventTime": 1529.8800048828126,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName7"
+			},
+			{
+				"Assisters": [
+					"summonerName1",
+					"summonerName2",
+					"summonerName4",
+					"summonerName5"
+				],
+				"EventID": 176,
+				"EventName": "ChampionKill",
+				"EventTime": 1533.5966796875,
+				"KillerName": "summonerName3",
+				"VictimName": "summonerName9"
+			},
+			{
+				"EventID": 177,
+				"EventName": "Multikill",
+				"EventTime": 1533.5966796875,
+				"KillStreak": 2,
+				"KillerName": "summonerName3"
+			},
+			{
+				"Acer": "summonerName3",
+				"AcingTeam": "ORDER",
+				"EventID": 178,
+				"EventName": "Ace",
+				"EventTime": 1533.5966796875
+			},
+			{
+				"EventID": 179,
+				"EventName": "GameEnd",
+				"EventTime": 1550.047119140625,
+				"Result": "Win"
+			}
+		]
+	},
+	"gameData": {
+		"gameMode": "ARAM",
+		"gameTime": 1551.8023681640626,
+		"mapName": "Map12",
+		"mapNumber": 12,
+		"mapTerrain": "Default"
+	}
+}

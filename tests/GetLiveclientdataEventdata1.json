@@ -1,0 +1,1122 @@
+{
+  "Events": [
+    {
+      "EventName": "GameStart",
+      "EventID": 0,
+      "EventTime": 0.022638600319623948
+    },
+    {
+      "EventName": "MinionsSpawning",
+      "EventID": 1,
+      "EventTime": 65.0479736328125
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Miss Fortune Bot"
+      ],
+      "EventID": 2,
+      "EventTime": 116.05322265625,
+      "KillerName": "Ezreal Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "FirstBlood",
+      "EventID": 3,
+      "EventTime": 116.05322265625,
+      "Recipient": "Ezreal Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 4,
+      "EventTime": 316.9102783203125,
+      "KillerName": "Caitlyn Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 5,
+      "EventTime": 355.61474609375,
+      "KillerName": "summonerName",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 6,
+      "EventTime": 425.4729309082031,
+      "KillerName": "Caitlyn Bot",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 7,
+      "EventTime": 428.3828430175781,
+      "KillerName": "summonerName",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 8,
+      "EventTime": 479.5228576660156,
+      "KillerName": "summonerName",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Miss Fortune Bot"
+      ],
+      "EventID": 9,
+      "EventTime": 531.1837158203125,
+      "KillerName": "Ezreal Bot",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 10,
+      "EventTime": 545.0015258789063,
+      "KillerName": "summonerName",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Miss Fortune Bot"
+      ],
+      "EventID": 11,
+      "EventTime": 569.1173095703125,
+      "KillerName": "Ezreal Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 12,
+      "EventTime": 586.7880859375,
+      "KillerName": "summonerName",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 13,
+      "EventTime": 627.4328002929688,
+      "KillerName": "summonerName",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 14,
+      "EventTime": 635.1082763671875,
+      "KillerName": "summonerName",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 15,
+      "EventTime": 635.1082763671875,
+      "KillStreak": 2,
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Annie Bot"
+      ],
+      "EventID": 16,
+      "EventTime": 637.6484375,
+      "KillerName": "Malphite Bot",
+      "VictimName": "summonerName"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ezreal Bot"
+      ],
+      "EventID": 17,
+      "EventTime": 718.0053100585938,
+      "KillerName": "summonerName",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [
+        "Ezreal Bot"
+      ],
+      "EventID": 18,
+      "EventTime": 738.3209838867188,
+      "KillerName": "summonerName",
+      "TurretKilled": "Turret_T2_C_05_A"
+    },
+    {
+      "EventName": "FirstBrick",
+      "EventID": 19,
+      "EventTime": 738.3209838867188,
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "DragonKill",
+      "Assisters": [],
+      "DragonType": "Fire",
+      "EventID": 20,
+      "EventTime": 788.06298828125,
+      "KillerName": "summonerName",
+      "Stolen": "False"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot"
+      ],
+      "EventID": 21,
+      "EventTime": 795.0726318359375,
+      "KillerName": "Caitlyn Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ezreal Bot"
+      ],
+      "EventID": 22,
+      "EventTime": 855.7479858398438,
+      "KillerName": "summonerName",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ezreal Bot"
+      ],
+      "EventID": 23,
+      "EventTime": 856.711181640625,
+      "KillerName": "summonerName",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 24,
+      "EventTime": 856.711181640625,
+      "KillStreak": 2,
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "HeraldKill",
+      "Assisters": [],
+      "EventID": 25,
+      "EventTime": 917.4502563476563,
+      "KillerName": "summonerName",
+      "Stolen": "False"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Caitlyn Bot",
+        "Malphite Bot"
+      ],
+      "EventID": 26,
+      "EventTime": 919.13623046875,
+      "KillerName": "Annie Bot",
+      "VictimName": "Miss Fortune Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot",
+        "Miss Fortune Bot",
+        "Kog'Maw Bot"
+      ],
+      "EventID": 27,
+      "EventTime": 919.9285278320313,
+      "KillerName": "Ezreal Bot",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 28,
+      "EventTime": 937.4971313476563,
+      "KillerName": "summonerName",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 29,
+      "EventTime": 955.5947265625,
+      "KillerName": "Minion_T100L2S29N0183",
+      "TurretKilled": "Turret_T2_L_03_A"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 30,
+      "EventTime": 960.12451171875,
+      "KillerName": "Ziggs Bot",
+      "TurretKilled": "Turret_T1_R_03_A"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Annie Bot"
+      ],
+      "EventID": 31,
+      "EventTime": 979.7280883789063,
+      "KillerName": "Caitlyn Bot",
+      "VictimName": "Miss Fortune Bot"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 32,
+      "EventTime": 980.288818359375,
+      "KillerName": "summonerName",
+      "TurretKilled": "Turret_T2_L_02_A"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 33,
+      "EventTime": 987.0330200195313,
+      "KillerName": "summonerName",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 34,
+      "EventTime": 989.7059936523438,
+      "KillerName": "summonerName",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 35,
+      "EventTime": 989.7059936523438,
+      "KillStreak": 2,
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Kog'Maw Bot",
+        "Malphite Bot"
+      ],
+      "EventID": 36,
+      "EventTime": 1057.580078125,
+      "KillerName": "Annie Bot",
+      "VictimName": "Ezreal Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Kog'Maw Bot",
+        "Malphite Bot"
+      ],
+      "EventID": 37,
+      "EventTime": 1067.25537109375,
+      "KillerName": "Annie Bot",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 38,
+      "EventTime": 1067.25537109375,
+      "KillStreak": 2,
+      "KillerName": "Annie Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 39,
+      "EventTime": 1088.4730224609376,
+      "KillerName": "summonerName",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Annie Bot",
+        "Malphite Bot"
+      ],
+      "EventID": 40,
+      "EventTime": 1094.060546875,
+      "KillerName": "Kog'Maw Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 41,
+      "EventTime": 1124.0926513671876,
+      "KillerName": "Caitlyn Bot",
+      "VictimName": "Miss Fortune Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 42,
+      "EventTime": 1139.52783203125,
+      "KillerName": "summonerName",
+      "VictimName": "Caitlyn Bot"
+    },
+    {
+      "EventName": "DragonKill",
+      "Assisters": [],
+      "DragonType": "Earth",
+      "EventID": 43,
+      "EventTime": 1167.7996826171876,
+      "KillerName": "summonerName",
+      "Stolen": "False"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 44,
+      "EventTime": 1185.995361328125,
+      "KillerName": "summonerName",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot"
+      ],
+      "EventID": 45,
+      "EventTime": 1195.0804443359376,
+      "KillerName": "Ezreal Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 46,
+      "EventTime": 1241.9305419921876,
+      "KillerName": "summonerName",
+      "VictimName": "Caitlyn Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Kog'Maw Bot",
+        "Malphite Bot"
+      ],
+      "EventID": 47,
+      "EventTime": 1258.4927978515626,
+      "KillerName": "Annie Bot",
+      "VictimName": "Miss Fortune Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot",
+        "Miss Fortune Bot",
+        "Ezreal Bot"
+      ],
+      "EventID": 48,
+      "EventTime": 1260.2735595703126,
+      "KillerName": "Kog'Maw Bot",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot",
+        "Miss Fortune Bot",
+        "Ezreal Bot"
+      ],
+      "EventID": 49,
+      "EventTime": 1262.816650390625,
+      "KillerName": "Kog'Maw Bot",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 50,
+      "EventTime": 1262.816650390625,
+      "KillStreak": 2,
+      "KillerName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Kog'Maw Bot"
+      ],
+      "EventID": 51,
+      "EventTime": 1300.02392578125,
+      "KillerName": "Ziggs Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 52,
+      "EventTime": 1310.1341552734376,
+      "KillerName": "summonerName",
+      "VictimName": "Caitlyn Bot"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 53,
+      "EventTime": 1326.77734375,
+      "KillerName": "Ezreal Bot",
+      "TurretKilled": "Turret_T2_C_04_A"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Miss Fortune Bot"
+      ],
+      "EventID": 54,
+      "EventTime": 1342.384765625,
+      "KillerName": "summonerName",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 55,
+      "EventTime": 1346.107666015625,
+      "KillerName": "summonerName",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 56,
+      "EventTime": 1346.107666015625,
+      "KillStreak": 2,
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Miss Fortune Bot",
+        "Ezreal Bot"
+      ],
+      "EventID": 57,
+      "EventTime": 1367.0867919921876,
+      "KillerName": "Ziggs Bot",
+      "VictimName": "Caitlyn Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot",
+        "Miss Fortune Bot"
+      ],
+      "EventID": 58,
+      "EventTime": 1368.1866455078126,
+      "KillerName": "Ezreal Bot",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 59,
+      "EventTime": 1385.9031982421876,
+      "KillerName": "summonerName",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 60,
+      "EventTime": 1406.280517578125,
+      "KillerName": "summonerName",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 61,
+      "EventTime": 1427.6329345703126,
+      "KillerName": "summonerName",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Caitlyn Bot",
+        "Malphite Bot"
+      ],
+      "EventID": 62,
+      "EventTime": 1427.662353515625,
+      "KillerName": "Annie Bot",
+      "VictimName": "summonerName"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Kog'Maw Bot",
+        "Ezreal Bot"
+      ],
+      "EventID": 63,
+      "EventTime": 1466.1802978515626,
+      "KillerName": "Miss Fortune Bot",
+      "VictimName": "Caitlyn Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Annie Bot",
+        "Caitlyn Bot"
+      ],
+      "EventID": 64,
+      "EventTime": 1467.9599609375,
+      "KillerName": "Ziggs Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 65,
+      "EventTime": 1470.8284912109376,
+      "KillerName": "Ziggs Bot",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot",
+        "Kog'Maw Bot"
+      ],
+      "EventID": 66,
+      "EventTime": 1475.23779296875,
+      "KillerName": "Ezreal Bot",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [
+        "Ziggs Bot",
+        "Miss Fortune Bot"
+      ],
+      "EventID": 67,
+      "EventTime": 1502.85498046875,
+      "KillerName": "Ezreal Bot",
+      "TurretKilled": "Turret_T2_L_01_A"
+    },
+    {
+      "EventName": "InhibKilled",
+      "Assisters": [
+        "Miss Fortune Bot",
+        "Ezreal Bot"
+      ],
+      "EventID": 68,
+      "EventTime": 1510.92578125,
+      "InhibKilled": "Barracks_T2_L1",
+      "KillerName": "Minion_T100L2S47N0300"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Kog'Maw Bot"
+      ],
+      "EventID": 69,
+      "EventTime": 1519.448486328125,
+      "KillerName": "Ziggs Bot",
+      "VictimName": "Miss Fortune Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Kog'Maw Bot",
+        "Malphite Bot"
+      ],
+      "EventID": 70,
+      "EventTime": 1527.44482421875,
+      "KillerName": "Ziggs Bot",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 71,
+      "EventTime": 1527.44482421875,
+      "KillStreak": 2,
+      "KillerName": "Ziggs Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Caitlyn Bot",
+        "Malphite Bot"
+      ],
+      "EventID": 72,
+      "EventTime": 1573.5428466796876,
+      "KillerName": "Annie Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot"
+      ],
+      "EventID": 73,
+      "EventTime": 1604.380859375,
+      "KillerName": "Miss Fortune Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot"
+      ],
+      "EventID": 74,
+      "EventTime": 1604.6722412109376,
+      "KillerName": "Miss Fortune Bot",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 75,
+      "EventTime": 1604.6722412109376,
+      "KillStreak": 2,
+      "KillerName": "Miss Fortune Bot"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 76,
+      "EventTime": 1608.0706787109376,
+      "KillerName": "Minion_T200L1S51N0326",
+      "TurretKilled": "Turret_T1_C_05_A"
+    },
+    {
+      "EventName": "DragonKill",
+      "Assisters": [],
+      "DragonType": "Water",
+      "EventID": 77,
+      "EventTime": 1615.81005859375,
+      "KillerName": "summonerName",
+      "Stolen": "False"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 78,
+      "EventTime": 1629.6572265625,
+      "KillerName": "summonerName",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot",
+        "Miss Fortune Bot"
+      ],
+      "EventID": 79,
+      "EventTime": 1640.8211669921876,
+      "KillerName": "Ezreal Bot",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot",
+        "Ezreal Bot"
+      ],
+      "EventID": 80,
+      "EventTime": 1644.3612060546876,
+      "KillerName": "Miss Fortune Bot",
+      "VictimName": "Caitlyn Bot"
+    },
+    {
+      "EventName": "Ace",
+      "Acer": "Miss Fortune Bot",
+      "AcingTeam": "ORDER",
+      "EventID": 81,
+      "EventTime": 1644.3612060546876
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 82,
+      "EventTime": 1659.8597412109376,
+      "KillerName": "Turret_T2_C_03_A",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot"
+      ],
+      "EventID": 83,
+      "EventTime": 1674.3031005859376,
+      "KillerName": "Kog'Maw Bot",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "BaronKill",
+      "Assisters": [],
+      "EventID": 84,
+      "EventTime": 1704.9847412109376,
+      "KillerName": "summonerName",
+      "Stolen": "False"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 85,
+      "EventTime": 1740.0120849609376,
+      "KillerName": "Kog'Maw Bot",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot"
+      ],
+      "EventID": 86,
+      "EventTime": 1742.3934326171876,
+      "KillerName": "Kog'Maw Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Malphite Bot"
+      ],
+      "EventID": 87,
+      "EventTime": 1742.961181640625,
+      "KillerName": "Caitlyn Bot",
+      "VictimName": "Miss Fortune Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot",
+        "Kog'Maw Bot"
+      ],
+      "EventID": 88,
+      "EventTime": 1743.047119140625,
+      "KillerName": "Ezreal Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot"
+      ],
+      "EventID": 89,
+      "EventTime": 1771.096923828125,
+      "KillerName": "Ezreal Bot",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Caitlyn Bot",
+        "Malphite Bot"
+      ],
+      "EventID": 90,
+      "EventTime": 1773.0205078125,
+      "KillerName": "Annie Bot",
+      "VictimName": "Ezreal Bot"
+    },
+    {
+      "EventName": "InhibRespawningSoon",
+      "EventID": 91,
+      "EventTime": 1795.923095703125,
+      "InhibRespawningSoon": "Barracks_T2_L1"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 92,
+      "EventTime": 1796.3785400390626,
+      "KillerName": "Minion_T200L0S57N0369",
+      "TurretKilled": "Turret_T1_R_02_A"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot"
+      ],
+      "EventID": 93,
+      "EventTime": 1798.1192626953126,
+      "KillerName": "Caitlyn Bot",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 94,
+      "EventTime": 1807.0430908203126,
+      "KillerName": "summonerName",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 95,
+      "EventTime": 1808.296142578125,
+      "KillerName": "summonerName",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 96,
+      "EventTime": 1808.296142578125,
+      "KillStreak": 2,
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "InhibRespawned",
+      "EventID": 97,
+      "EventTime": 1810.9613037109376,
+      "InhibRespawned": "Barracks_T2_L1"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 98,
+      "EventTime": 1823.48583984375,
+      "KillerName": "summonerName",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 99,
+      "EventTime": 1827.8131103515626,
+      "KillerName": "summonerName",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 100,
+      "EventTime": 1827.8131103515626,
+      "KillStreak": 2,
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 101,
+      "EventTime": 1830.522705078125,
+      "KillerName": "summonerName",
+      "VictimName": "Caitlyn Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 102,
+      "EventTime": 1830.522705078125,
+      "KillStreak": 3,
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "Ace",
+      "Acer": "summonerName",
+      "AcingTeam": "ORDER",
+      "EventID": 103,
+      "EventTime": 1830.522705078125
+    },
+    {
+      "EventName": "InhibKilled",
+      "Assisters": [],
+      "EventID": 104,
+      "EventTime": 1835.54052734375,
+      "InhibKilled": "Barracks_T2_L1",
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [
+        "summonerName",
+        "Miss Fortune Bot"
+      ],
+      "EventID": 105,
+      "EventTime": 1841.1915283203126,
+      "KillerName": "Kog'Maw Bot",
+      "TurretKilled": "Turret_T2_C_03_A"
+    },
+    {
+      "EventName": "InhibKilled",
+      "Assisters": [],
+      "EventID": 106,
+      "EventTime": 1862.5062255859376,
+      "InhibKilled": "Barracks_T2_C1",
+      "KillerName": "Minion_T100L1S59N0381"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 107,
+      "EventTime": 1890.83642578125,
+      "KillerName": "Minion_T100L0S59N0383",
+      "TurretKilled": "Turret_T2_R_03_A"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 108,
+      "EventTime": 1891.4984130859376,
+      "KillerName": "Minion_T100L2S60N0389",
+      "TurretKilled": "Turret_T2_C_02_A"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot",
+        "Caitlyn Bot",
+        "Malphite Bot"
+      ],
+      "EventID": 109,
+      "EventTime": 1899.43603515625,
+      "KillerName": "Kog'Maw Bot",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Kog'Maw Bot",
+        "Ezreal Bot"
+      ],
+      "EventID": 110,
+      "EventTime": 1918.0325927734376,
+      "KillerName": "Miss Fortune Bot",
+      "VictimName": "Caitlyn Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot",
+        "Kog'Maw Bot",
+        "Ezreal Bot"
+      ],
+      "EventID": 111,
+      "EventTime": 1919.2076416015626,
+      "KillerName": "Miss Fortune Bot",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 112,
+      "EventTime": 1919.2076416015626,
+      "KillStreak": 2,
+      "KillerName": "Miss Fortune Bot"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot"
+      ],
+      "EventID": 113,
+      "EventTime": 1920.2664794921876,
+      "KillerName": "Miss Fortune Bot",
+      "VictimName": "Annie Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 114,
+      "EventTime": 1920.2664794921876,
+      "KillStreak": 3,
+      "KillerName": "Miss Fortune Bot"
+    },
+    {
+      "EventName": "DragonKill",
+      "Assisters": [],
+      "DragonType": "Water",
+      "EventID": 115,
+      "EventTime": 1928.3040771484376,
+      "KillerName": "summonerName",
+      "Stolen": "False"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 116,
+      "EventTime": 1943.5872802734376,
+      "KillerName": "summonerName",
+      "TurretKilled": "Turret_T2_R_02_A"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ziggs Bot"
+      ],
+      "EventID": 117,
+      "EventTime": 1947.9222412109376,
+      "KillerName": "Malphite Bot",
+      "VictimName": "Miss Fortune Bot"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 118,
+      "EventTime": 1954.5965576171876,
+      "KillerName": "summonerName",
+      "TurretKilled": "Turret_T2_R_01_A"
+    },
+    {
+      "EventName": "InhibKilled",
+      "Assisters": [],
+      "EventID": 119,
+      "EventTime": 1959.4805908203126,
+      "InhibKilled": "Barracks_T2_R1",
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 120,
+      "EventTime": 1968.676513671875,
+      "KillerName": "summonerName",
+      "VictimName": "Ziggs Bot"
+    },
+    {
+      "EventName": "TurretKilled",
+      "Assisters": [],
+      "EventID": 121,
+      "EventTime": 1970.65673828125,
+      "KillerName": "summonerName",
+      "TurretKilled": "Turret_T2_C_01_A"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [],
+      "EventID": 122,
+      "EventTime": 1976.7176513671876,
+      "KillerName": "summonerName",
+      "VictimName": "Kog'Maw Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 123,
+      "EventTime": 1976.7176513671876,
+      "KillStreak": 2,
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "ChampionKill",
+      "Assisters": [
+        "Ezreal Bot"
+      ],
+      "EventID": 124,
+      "EventTime": 1981.910400390625,
+      "KillerName": "summonerName",
+      "VictimName": "Malphite Bot"
+    },
+    {
+      "EventName": "Multikill",
+      "EventID": 125,
+      "EventTime": 1981.910400390625,
+      "KillStreak": 3,
+      "KillerName": "summonerName"
+    },
+    {
+      "EventName": "GameEnd",
+      "EventID": 126,
+      "EventTime": 1988.142822265625,
+      "Result": "Win"
+    }
+  ]
+}

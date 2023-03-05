@@ -1,78 +1,108 @@
-use futures_util::stream::{SplitSink, SplitStream};
-use futures_util::{SinkExt, StreamExt};
-use sysinfo::{System, SystemExt};
+use std::{
+    pin::Pin,
+    task::{Context, Poll},
+};
+
+use futures_util::{SinkExt, Stream, StreamExt};
 use tokio::net::TcpStream;
-use tokio_tungstenite::tungstenite::client::IntoClientRequest;
-use tokio_tungstenite::tungstenite::http::HeaderValue;
-use tokio_tungstenite::{tungstenite::Message, MaybeTlsStream, WebSocketStream};
+use tokio_tungstenite::{
+    tungstenite, tungstenite::client::IntoClientRequest, tungstenite::http::HeaderValue,
+    tungstenite::Message, Connector, MaybeTlsStream, WebSocketStream,
+};
 
-use crate::utils::process_info::*;
+use crate::{
+    error::LcuWebsocketError,
+    model::ws::{LcuEvent, LcuSubscriptionType},
+    utils::process_info,
+};
 
-pub struct WSClient {
-    pub write: SplitSink<WebSocketStream<MaybeTlsStream<TcpStream>>, Message>,
-    pub read: SplitStream<WebSocketStream<MaybeTlsStream<TcpStream>>>,
-}
+/// A client for the League-Client(LCU) websocket API
+pub struct LcuWebsocketClient(WebSocketStream<MaybeTlsStream<TcpStream>>);
 
-type Error = Box<dyn std::error::Error>;
+impl LcuWebsocketClient {
+    /// Tries to establish a connection to the LCU Websocket API \
+    /// Returns an [LcuWebsocketError] if the API is not reachable
+    pub async fn connect() -> Result<Self, LcuWebsocketError> {
+        let (auth_token, port) = process_info::get_auth_info()
+            .map_err(|e| LcuWebsocketError::LcuNotAvailable(e.to_string()))?;
 
-#[derive(PartialEq)]
-pub enum Events {
-    Json,
-    Lcds,
-    Callback,
-    None,
-}
-
-impl WSClient {
-    pub async fn connect(events: Events) -> Result<Self, Error> {
-        let mut sys = System::new_all();
-        sys.refresh_all();
-        let process = find_process(&sys)?;
-        let args = extract_info(process)?;
-        let auth_token = encode_token(&args.0);
-
-        let cert = native_tls::Certificate::from_pem(include_bytes!("./riotgames.pem"))?;
+        let cert = native_tls::Certificate::from_pem(include_bytes!("./riotgames.pem")).unwrap();
         let tls = native_tls::TlsConnector::builder()
             .add_root_certificate(cert)
-            .build()?;
-        let connector = tokio_tungstenite::Connector::NativeTls(tls);
-        let mut url = format!("wss://127.0.0.1:{}", args.1).into_client_request()?;
-        {
-            let headers = url.headers_mut();
-            headers.insert(
-                "Authorization",
-                HeaderValue::from_str(format!("Basic {}", auth_token).as_str())?,
-            );
-        }
+            .build()
+            .unwrap();
+        let connector = Connector::NativeTls(tls);
+
+        let mut url = format!("wss://127.0.0.1:{port}")
+            .into_client_request()
+            .map_err(|_| LcuWebsocketError::AuthError)?;
+        url.headers_mut().insert(
+            "Authorization",
+            HeaderValue::from_str(format!("Basic {auth_token}").as_str())
+                .map_err(|_| LcuWebsocketError::AuthError)?,
+        );
 
         let (ws_stream, _response) =
-            tokio_tungstenite::connect_async_tls_with_config(url, None, Some(connector)).await?;
+            tokio_tungstenite::connect_async_tls_with_config(url, None, Some(connector))
+                .await
+                .map_err(|e| LcuWebsocketError::Disconnected(e.to_string()))?;
 
-        let (mut write, read) = ws_stream.split();
+        Ok(Self(ws_stream))
+    }
 
-        match events {
-            Events::Json => write.send(Message::text("[5, \"OnJsonApiEvent\"]")).await?,
-            Events::Lcds => write.send(Message::text("[5, \"OnLcdsEvent\"]")).await?,
-            Events::Callback => write.send(Message::text("[5, \"OnCallback\"]")).await?,
-            Events::None => (),
+    /// The Websocket events to subscribe to.
+    /// Look at the in-official documentation for event strings to subscribe to.
+    ///
+    /// <https://www.mingweisamuel.com/lcu-schema/tool/#/>
+    pub async fn subscribe(
+        &mut self,
+        subscription: LcuSubscriptionType,
+    ) -> Result<(), LcuWebsocketError> {
+        self.0
+            .send(Message::text(format!("[5, \"{subscription}\"]")))
+            .await
+            .map_err(|e| match e {
+                tungstenite::Error::ConnectionClosed | tungstenite::Error::AlreadyClosed => {
+                    LcuWebsocketError::Disconnected(e.to_string())
+                }
+                _ => LcuWebsocketError::SendError,
+            })
+    }
+
+    /// The Websocket events to subscribe to.
+    /// Look at the in-official documentation for event strings to subscribe to.
+    ///
+    /// <https://www.mingweisamuel.com/lcu-schema/tool/#/>
+    pub async fn unsubscribe(
+        &mut self,
+        subscription: LcuSubscriptionType,
+    ) -> Result<(), LcuWebsocketError> {
+        self.0
+            .send(Message::text(format!("[6, \"{subscription}\"]")))
+            .await
+            .map_err(|e| match e {
+                tungstenite::Error::ConnectionClosed | tungstenite::Error::AlreadyClosed => {
+                    LcuWebsocketError::Disconnected(e.to_string())
+                }
+                _ => LcuWebsocketError::SendError,
+            })
+    }
+}
+
+impl Stream for LcuWebsocketClient {
+    type Item = LcuEvent;
+
+    fn poll_next(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Option<Self::Item>> {
+        loop {
+            return match self.0.poll_next_unpin(cx) {
+                Poll::Pending => Poll::Pending,
+                Poll::Ready(Some(Ok(Message::Text(text)))) => {
+                    let Ok(event) = serde_json::from_str::<LcuEvent>(&text) else { continue };
+                    Poll::Ready(Some(event))
+                }
+                Poll::Ready(Some(Ok(Message::Close(_))) | Some(Err(_)) | None) => Poll::Ready(None),
+                _ => continue,
+            };
         }
-
-        Ok(Self { write, read })
-    }
-
-    pub async fn subscribe(&mut self, event: String) -> Result<(), Error> {
-        self.write
-            .send(Message::text(format!("[5, {}]", event)))
-            .await?;
-
-        Ok(())
-    }
-
-    pub async fn unsubscribe(&mut self, event: String) -> Result<(), Error> {
-        self.write
-            .send(Message::text(format!("[6, {}]", event)))
-            .await?;
-
-        Ok(())
     }
 }

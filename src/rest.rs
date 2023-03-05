@@ -1,10 +1,10 @@
 use serde::Serialize;
-use sysinfo::{System, SystemExt};
 
-use crate::utils::{process_info::*, request::build_reqwest_client};
+use crate::utils::{process_info, request::build_reqwest_client};
 
+/// A client for the League-Client(LCU) REST API
 pub struct RESTClient {
-    port: u32,
+    port: String,
     reqwest_client: reqwest::Client,
 }
 
@@ -13,15 +13,11 @@ type Error = Box<dyn std::error::Error>;
 impl RESTClient {
     /// Create a new instance of the LCU REST wrapper
     pub fn new() -> Result<Self, Error> {
-        let mut sys = System::new_all();
-        sys.refresh_all();
-        let process = find_process(&sys)?;
-        let args = extract_info(process)?;
-        let auth_token = encode_token(&args.0);
-        let client = build_reqwest_client(Some(auth_token))?;
+        let (auth_token, port) = process_info::get_auth_info()?;
+        let reqwest_client = build_reqwest_client(Some(auth_token));
         Ok(Self {
-            port: args.1,
-            reqwest_client: client,
+            port,
+            reqwest_client,
         })
     }
 
@@ -75,10 +71,7 @@ impl RESTClient {
     }
 
     /// Make a delete request to the specified endpoint
-    pub async fn delete(
-        &self,
-        endpoint: String,
-    ) -> Result<serde_json::Value, reqwest::Error> {
+    pub async fn delete(&self, endpoint: String) -> Result<serde_json::Value, reqwest::Error> {
         let req: serde_json::Value = self
             .reqwest_client
             .delete(format!("https://127.0.0.1:{}{}", self.port, endpoint))
