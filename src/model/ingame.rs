@@ -27,7 +27,7 @@ impl<'de> Deserialize<'de> for AllGameData {
         #[derive(Debug, Clone, Serialize, Deserialize)]
         #[serde(deny_unknown_fields)]
         #[serde(rename_all = "camelCase")]
-        pub struct Holder {
+        struct Holder {
             /// only available in live game - None in spectator mode
             active_player: ActivePlayerInfo,
             all_players: Vec<Player>,
@@ -198,6 +198,8 @@ pub enum ResourceType {
     Moonlight,
     Other,
     Max,
+    #[serde(other)]
+    Unknown,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -317,7 +319,7 @@ pub enum Position {
     Bottom,
     Utility,
     None,
-    #[serde(alias = "")]
+    #[serde(other)]
     Unknown,
 }
 
@@ -367,6 +369,7 @@ pub enum TeamId {
     /// Red / Right Side
     Chaos,
     Neutral,
+    #[serde(other)]
     Unknown,
 }
 
@@ -799,9 +802,9 @@ pub enum Turret {
     // --- OTHER ---
     /// Azir Turret
     Obelisk,
-    // /// The riot documentation specifying the turrets is incomplete => add Unknown to catch deserialization errors
-    // #[serde(other)]
-    // Unknown,
+    /// The riot documentation specifying the turrets is incomplete => add Unknown to catch deserialization errors
+    #[serde(other)]
+    Unknown,
 }
 
 impl FromStr for Turret {
@@ -841,8 +844,7 @@ impl FromStr for Turret {
             "Turret_ChaosTurretShrine_A" => Turret::Team2Fountain,
             // --- OTHER ---
             "Obelisk" => Turret::Obelisk,
-            _ => return Err(s.to_string()),
-            // _ => Turret::Unknown,
+            _ => Turret::Unknown,
         };
         Ok(turret)
     }
@@ -867,6 +869,8 @@ pub enum Inhibitor {
     Team2C1,
     /// *Summoner's Rift*: Team 2 Bot Inhibitor
     Team2R1,
+    #[serde(other)]
+    Unknown,
 }
 
 impl FromStr for Inhibitor {
@@ -880,7 +884,7 @@ impl FromStr for Inhibitor {
             "Barracks_T2_L1" => Inhibitor::Team2L1,
             "Barracks_T2_C1" => Inhibitor::Team2C1,
             "Barracks_T2_R1" => Inhibitor::Team2R1,
-            _ => return Err(s.to_string()),
+            _ => Inhibitor::Unknown,
         };
         Ok(inhib)
     }
