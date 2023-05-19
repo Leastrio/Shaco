@@ -844,7 +844,7 @@ impl FromStr for Turret {
             "Turret_ChaosTurretShrine_A" => Turret::Team2Fountain,
             // --- OTHER ---
             "Obelisk" => Turret::Obelisk,
-            _ => Turret::Unknown,
+            _ => return Err(String::from("unknown")),
         };
         Ok(turret)
     }
