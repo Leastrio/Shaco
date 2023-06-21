@@ -23,15 +23,14 @@ impl RESTClient {
 
     /// Make a get request to the specified endpoint
     pub async fn get(&self, endpoint: String) -> Result<serde_json::Value, reqwest::Error> {
-        let req: serde_json::Value = self
-            .reqwest_client
+        self.reqwest_client
             .get(format!("https://127.0.0.1:{}{}", self.port, endpoint))
             .send()
             .await?
+            .error_for_status()?
             .json()
-            .await?;
-
-        Ok(req)
+            .await
+            .or_else(|_| Ok(serde_json::Value::Null))
     }
 
     /// Make a post request to the specified endpoint
@@ -40,16 +39,15 @@ impl RESTClient {
         endpoint: String,
         body: T,
     ) -> Result<serde_json::Value, reqwest::Error> {
-        let req: serde_json::Value = self
-            .reqwest_client
+        self.reqwest_client
             .post(format!("https://127.0.0.1:{}{}", self.port, endpoint))
             .json(&body)
             .send()
             .await?
+            .error_for_status()?
             .json()
-            .await?;
-
-        Ok(req)
+            .await
+            .or_else(|_| Ok(serde_json::Value::Null))
     }
 
     /// Make a put request to the specified endpoint
@@ -58,28 +56,26 @@ impl RESTClient {
         endpoint: String,
         body: T,
     ) -> Result<serde_json::Value, reqwest::Error> {
-        let req: serde_json::Value = self
-            .reqwest_client
+        self.reqwest_client
             .put(format!("https://127.0.0.1:{}{}", self.port, endpoint))
             .json(&body)
             .send()
             .await?
+            .error_for_status()?
             .json()
-            .await?;
-
-        Ok(req)
+            .await
+            .or_else(|_| Ok(serde_json::Value::Null))
     }
 
     /// Make a delete request to the specified endpoint
     pub async fn delete(&self, endpoint: String) -> Result<serde_json::Value, reqwest::Error> {
-        let req: serde_json::Value = self
-            .reqwest_client
+        self.reqwest_client
             .delete(format!("https://127.0.0.1:{}{}", self.port, endpoint))
             .send()
             .await?
+            .error_for_status()?
             .json()
-            .await?;
-
-        Ok(req)
+            .await
+            .or_else(|_| Ok(serde_json::Value::Null))
     }
 }
