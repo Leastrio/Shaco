@@ -1,20 +1,17 @@
-use std::{fmt, str::FromStr};
+use std::fmt;
 
 use derive_more::Display;
 use serde::{Deserialize, Deserializer, Serialize};
-use serde_with::DeserializeFromStr;
 
 pub type SummonerName = String;
 pub type Time = f64;
 
 #[derive(Debug, Clone, Serialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct AllGameData {
     /// only available in live game - None in spectator mode
     pub active_player: Option<ActivePlayer>,
     pub all_players: Vec<Player>,
-    #[serde(deserialize_with = "serde_single_key_map::deserialize")]
     pub events: Vec<GameEvent>,
     pub game_data: GameStats,
 }
@@ -25,12 +22,12 @@ impl<'de> Deserialize<'de> for AllGameData {
         D: Deserializer<'de>,
     {
         #[derive(Debug, Clone, Serialize, Deserialize)]
-        #[serde(deny_unknown_fields)]
         #[serde(rename_all = "camelCase")]
         struct Holder {
             /// only available in live game - None in spectator mode
             active_player: ActivePlayerInfo,
             all_players: Vec<Player>,
+            // because events has the schema: "events": { "Events": [...] }
             #[serde(deserialize_with = "serde_single_key_map::deserialize")]
             events: Vec<GameEvent>,
             game_data: GameStats,
@@ -62,13 +59,12 @@ pub(crate) enum ActivePlayerInfo {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct ActivePlayer {
     pub abilities: PlayerAbilities,
     pub champion_stats: PlayerChampionStats,
     pub current_gold: Gold,
-    #[serde(alias = "fullRunes")]
+    #[serde(rename = "fullRunes")]
     pub runes: FullPlayerRunes,
     pub level: Level,
     pub summoner_name: SummonerName,
@@ -76,7 +72,6 @@ pub struct ActivePlayer {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct PlayerAbilities {
     pub e: Ability,
@@ -90,7 +85,6 @@ pub type AbilityLevel = i32;
 pub type AbilityName = String;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct Ability {
     pub ability_level: AbilityLevel,
@@ -101,7 +95,6 @@ pub struct Ability {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct Passive {
     pub display_name: AbilityName,
@@ -142,7 +135,6 @@ pub type SpellVamp = f32;
 pub type Tenacity = f32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct PlayerChampionStats {
     pub ability_haste: AbilityHaste,
@@ -179,7 +171,6 @@ pub struct PlayerChampionStats {
 }
 
 #[derive(Debug, Display, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum ResourceType {
     Mana,
@@ -203,7 +194,6 @@ pub enum ResourceType {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct FullPlayerRunes {
     pub general_runes: Vec<Rune>,
@@ -214,7 +204,6 @@ pub struct FullPlayerRunes {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct PlayerRunes {
     pub keystone: Rune,
@@ -226,7 +215,6 @@ pub type RuneId = i32;
 pub type RuneName = String;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct Rune {
     pub display_name: RuneName,
@@ -239,7 +227,6 @@ pub type RuneTreeId = i32;
 pub type RuneTreeName = String;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct RuneTree {
     pub display_name: RuneTreeName,
@@ -251,7 +238,6 @@ pub struct RuneTree {
 pub type StatRuneId = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct StatRune {
     pub id: StatRuneId,
@@ -263,7 +249,6 @@ pub type SkinName = String;
 pub type SkinId = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct Player {
     pub champion_name: ChampionName,
@@ -280,7 +265,7 @@ pub struct Player {
     pub raw_skin_name: Option<String>,
     /// only available in live game - None in spectator mode
     pub skin_name: Option<SkinName>,
-    #[serde(alias = "skinID")]
+    #[serde(rename = "skinID")]
     pub skin_id: SkinId,
     pub summoner_name: SummonerName,
     pub summoner_spells: SummonerSpells,
@@ -294,14 +279,13 @@ pub type Price = i32;
 pub type ItemSlot = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct PlayerItem {
     pub can_use: bool,
     pub consumable: bool,
     pub count: ItemCount,
     pub display_name: ItemName,
-    #[serde(alias = "itemID")]
+    #[serde(rename = "itemID")]
     pub item_id: ItemId,
     pub price: Price,
     pub raw_description: String,
@@ -310,7 +294,6 @@ pub struct PlayerItem {
 }
 
 #[derive(Debug, Display, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum Position {
     Top,
@@ -330,7 +313,6 @@ pub type CreepScore = i32;
 pub type WardScore = f32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct PlayerScores {
     pub kills: Kills,
@@ -341,7 +323,6 @@ pub struct PlayerScores {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct SummonerSpells {
     pub summoner_spell_one: SummonerSpell,
@@ -351,7 +332,6 @@ pub struct SummonerSpells {
 pub type SummonerSpellName = String;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct SummonerSpell {
     pub display_name: SummonerSpellName,
@@ -360,7 +340,6 @@ pub struct SummonerSpell {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum TeamId {
     All,
@@ -384,14 +363,12 @@ pub type EventId = u32;
 
 /// only pub(crate) since this is an intermediate result. The API only returns the Vec<GameEvent>
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub(crate) struct IngameEvents {
     pub events: Vec<GameEvent>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(tag = "EventName")]
 pub enum GameEvent {
     Ace(Ace),
@@ -455,7 +432,6 @@ impl GameEvent {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct Ace {
     pub acer: SummonerName,
@@ -466,7 +442,6 @@ pub struct Ace {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct BaronKill {
     pub assisters: Vec<SummonerName>,
@@ -479,7 +454,6 @@ pub struct BaronKill {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct ChampionKill {
     pub assisters: Vec<SummonerName>,
@@ -491,7 +465,6 @@ pub struct ChampionKill {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct DragonKill {
     pub assisters: Vec<String>,
@@ -505,7 +478,6 @@ pub struct DragonKill {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct FirstBlood {
     #[serde(rename = "EventID")]
@@ -515,7 +487,6 @@ pub struct FirstBlood {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct FirstBrick {
     #[serde(rename = "EventID")]
@@ -525,7 +496,6 @@ pub struct FirstBrick {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct GameEnd {
     #[serde(rename = "EventID")]
@@ -535,7 +505,6 @@ pub struct GameEnd {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct GameStart {
     #[serde(rename = "EventID")]
@@ -544,7 +513,6 @@ pub struct GameStart {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct HeraldKill {
     pub assisters: Vec<String>,
@@ -557,7 +525,6 @@ pub struct HeraldKill {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct InhibKilled {
     pub assisters: Vec<String>,
@@ -569,7 +536,6 @@ pub struct InhibKilled {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct InhibRespawned {
     #[serde(rename = "EventID")]
@@ -579,7 +545,6 @@ pub struct InhibRespawned {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct InhibRespawningSoon {
     #[serde(rename = "EventID")]
@@ -589,7 +554,6 @@ pub struct InhibRespawningSoon {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct MinionsSpawning {
     #[serde(rename = "EventID")]
@@ -600,7 +564,6 @@ pub struct MinionsSpawning {
 pub type KillStreak = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct Multikill {
     #[serde(rename = "EventID")]
@@ -611,7 +574,6 @@ pub struct Multikill {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub struct TurretKilled {
     pub assisters: Vec<String>,
@@ -622,8 +584,8 @@ pub struct TurretKilled {
     pub turret_killed: Turret,
 }
 
-#[derive(Debug, Display, Clone, Serialize, DeserializeFromStr)]
-#[serde(deny_unknown_fields)]
+#[derive(Debug, Display, Clone, Serialize, Deserialize)]
+#[serde(from = "String")]
 pub enum DragonType {
     Infernal,
     Ocean,
@@ -634,11 +596,9 @@ pub enum DragonType {
     Elder,
 }
 
-impl FromStr for DragonType {
-    type Err = String;
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let dragon_type = match s {
+impl From<String> for DragonType {
+    fn from(s: String) -> Self {
+        match s.as_str() {
             "Fire" | "SRU_Dragon_Fire" => DragonType::Infernal,
             "Water" | "SRU_Dragon_Water" => DragonType::Ocean,
             "Earth" | "SRU_Dragon_Earth" => DragonType::Mountain,
@@ -646,21 +606,19 @@ impl FromStr for DragonType {
             "Hextech" | "SRU_Dragon_Hextech" => DragonType::Hextech,
             "Chemtech" | "SRU_Dragon_Chemtech" => DragonType::Chemtech,
             "Elder" | "SRU_Dragon_Elder" => DragonType::Elder,
-            _ => return Err(s.to_string()),
-        };
-        Ok(dragon_type)
+            _ => unreachable!("unknown dragon type"),
+        }
     }
 }
 
 #[derive(Debug, Display, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 pub enum GameResult {
     Win,
     Lose,
 }
 
-#[derive(Debug, Display, Clone, Serialize, DeserializeFromStr)]
-#[serde(deny_unknown_fields)]
+#[derive(Debug, Display, Clone, Serialize, Deserialize)]
+#[serde(from = "String")]
 pub enum Killer {
     Minion,
     Dragon(DragonType),
@@ -676,128 +634,153 @@ pub enum Killer {
     Summoner(SummonerName),
 }
 
-impl FromStr for Killer {
-    type Err = String;
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
+impl From<String> for Killer {
+    fn from(s: String) -> Self {
         // SRU_Dragon_{type}
-        if let Ok(dragon) = DragonType::from_str(s) {
-            return Ok(Killer::Dragon(dragon));
+        if let Ok(dragon) = serde_json::from_str::<DragonType>(&s) {
+            return Killer::Dragon(dragon);
         }
         // Turret_{}_{}_{}_{}
-        if let Ok(turret) = Turret::from_str(s) {
-            return Ok(Killer::Turret(turret));
+        if let Ok(turret) = serde_json::from_str::<Turret>(&s) {
+            return Killer::Turret(turret);
         }
         // Minion_{}
         if s.starts_with("Minion") {
-            return Ok(Killer::Minion);
+            return Killer::Minion;
         }
         // SRU_RiftHerald{}
         if s.contains("RiftHerald") {
-            return Ok(Killer::RiftHerald);
+            return Killer::RiftHerald;
         }
         // SRU_Baron{}
         if s.contains("Baron") {
-            return Ok(Killer::RiftHerald);
+            return Killer::RiftHerald;
         }
         // SRU_Gromp{}
         if s.contains("Gromp") {
-            return Ok(Killer::Gromp);
+            return Killer::Gromp;
         }
         // SRU_Blue{}
         if s.contains("Blue") {
-            return Ok(Killer::Blue);
+            return Killer::Blue;
         }
         // SRU_Murkwolf{}
         if s.contains("Murkwolf") {
-            return Ok(Killer::Murkwolf);
+            return Killer::Murkwolf;
         }
         // SRU_Razorbeak{}
         if s.contains("Razorbeak") {
-            return Ok(Killer::Razorbeak);
+            return Killer::Razorbeak;
         }
         // SRU_Red{}
         if s.contains("Red") {
-            return Ok(Killer::Red);
+            return Killer::Red;
         }
         // SRU_Krug{}
         if s.contains("Krug") {
-            return Ok(Killer::Krug);
+            return Killer::Krug;
         }
 
         // if none of the others its 99% the summoner name
-        Ok(Killer::Summoner(s.to_string()))
+        Killer::Summoner(s.to_string())
     }
 }
 
-/// Team 1 refers to Blue / Left Side \
-/// Team 2 refers to Red / Right Side
-#[derive(Debug, Display, Clone, Serialize, DeserializeFromStr)]
-#[serde(deny_unknown_fields)]
+/// Blue Team is the left side / Red Team is the right side \
+/// These don't have better names since the names are shared between game modes
+#[derive(Debug, Display, Clone, Serialize, Deserialize)]
 pub enum Turret {
     // --- TEAM1 ---
-    /// *Summoner's Rift*: Team 1 Upper Nexus Turret
+    /// *Summoner's Rift*: Blue Team (left) Upper Nexus Turret
+    #[serde(rename = "Turret_T1_C_01_A")]
     Team1C01A,
-    /// *Summoner's Rift*: Team 1 Lower Nexus Turret
+    /// *Summoner's Rift*: Blue Team Lower Nexus Turret
+    #[serde(rename = "Turret_T1_C_02_A")]
     Team1C02A,
-    /// *Summoner's Rift*: Team 1 Mid Inhib Turret
+    /// *Summoner's Rift*: Blue Team Mid Inhib Turret
+    #[serde(rename = "Turret_T1_C_03_A")]
     Team1C03A,
-    /// *Summoner's Rift*: Team 1 Mid Inner Turret
+    /// *Summoner's Rift*: Blue Team Mid Inner Turret
+    #[serde(rename = "Turret_T1_C_04_A")]
     Team1C04A,
-    /// *Summoner's Rift*: Team 1 Mid Outer Turret
+    /// *Summoner's Rift*: Blue Team Mid Outer Turret
+    #[serde(rename = "Turret_T1_C_05_A")]
     Team1C05A,
-    /// *Summoner's Rift*: Team 1 Top Inihb Turret
+    /// *Summoner's Rift*: Blue Team Top Inihb Turret
+    #[serde(rename = "Turret_T1_C_06_A")]
     Team1C06A,
-    /// *Summoner's Rift*: Team 1 Bot Inhib Turret \
-    /// *ARAM*: Team 1 Inner Turret
+    /// *Summoner's Rift*: Blue Team Bot Inhib Turret \
+    /// *ARAM*: Blue Team Inner Turret
+    #[serde(rename = "Turret_T1_C_07_A")]
     Team1C07A,
-    /// *ARAM*: Team 1 Outer Turret
+    /// *ARAM*: Blue Team Outer Turret
+    #[serde(rename = "Turret_T1_C_08_A")]
     Team1C08A,
-    /// *ARAM*: Team 1 Bot Nexus Turret
+    /// *ARAM*: Blue Team Bot Nexus Turret
+    #[serde(rename = "Turret_T1_C_09_A")]
     Team1C09A,
-    /// *ARAM*: Team 1 Top Nexus Turret
+    /// *ARAM*: Blue Team Top Nexus Turret
+    #[serde(rename = "Turret_T1_C_010_A")]
     Team1C10A,
-    /// *Summoner's Rift*: Team 1 Top Inner Turret
+    /// *Summoner's Rift*: Blue Team Top Inner Turret
+    #[serde(rename = "Turret_T1_L_02_A")]
     Team1L02A,
-    /// *Summoner's Rift*: Team 1 Top Outer Turret
+    /// *Summoner's Rift*: Blue Team Top Outer Turret
+    #[serde(rename = "Turret_T1_L_03_A")]
     Team1L03A,
-    /// *Summoner's Rift*: Team 1 Bot Inner Turret
+    /// *Summoner's Rift*: Blue Team Bot Inner Turret
+    #[serde(rename = "Turret_T1_R_02_A")]
     Team1R02A,
-    /// *Summoner's Rift*: Team 1 Bot Outer Turret
+    /// *Summoner's Rift*: Blue Team Bot Outer Turret
+    #[serde(rename = "Turret_T1_R_03_A")]
     Team1R03A,
-    /// *Summoner's Rift*: Team 1 Fountain
-    /// *ARAM*: Team 1 Fountain
+    /// *Summoner's Rift*: Blue Team Fountain
+    /// *ARAM*: Blue Team Fountain
+    #[serde(rename = "Turret_OrderTurretShrine_A")]
     Team1Fountain,
     // --- TEAM2 ---
-    /// *Summoner's Rift*: Team 2 Lower Nexus Turret
+    /// *Summoner's Rift*: Red Team Lower Nexus Turret
+    #[serde(rename = "Turret_T2_C_01_A")]
     Team2C01A,
-    /// *Summoner's Rift*: Team 2 Upper Nexus Turret
+    /// *Summoner's Rift*: Red Team Upper Nexus Turret
+    #[serde(rename = "Turret_T2_C_02_A")]
     Team2C02A,
-    /// *Summoner's Rift*: Team 2 Mid Inhib Turret
+    /// *Summoner's Rift*: Red Team Mid Inhib Turret
+    #[serde(rename = "Turret_T2_C_03_A")]
     Team2C03A,
-    /// *Summoner's Rift*: Team 2 Mid Inner Turret
+    /// *Summoner's Rift*: Red Team Mid Inner Turret
+    #[serde(rename = "Turret_T2_C_04_A")]
     Team2C04A,
-    /// *Summoner's Rift*: Team 2 Mid Outer Turret
+    /// *Summoner's Rift*: Red Team Mid Outer Turret
+    #[serde(rename = "Turret_T2_C_05_A")]
     Team2C05A,
-    /// *Summoner's Rift*: Team 2 Top Inihb Turret
-    /// *ARAM*: Team 2 Outer Turret
+    /// *Summoner's Rift*: Red Team Top Inihb Turret
+    /// *ARAM*: Red Team Outer Turret
+    #[serde(rename = "Turret_T2_L_01_A")]
     Team2L01A,
-    /// *Summoner's Rift*: Team 2 Top Inner Turret
-    /// *ARAM*: Team 2 Inner Turret
+    /// *Summoner's Rift*: Red Team Top Inner Turret
+    /// *ARAM*: Red Team Inner Turret
+    #[serde(rename = "Turret_T2_L_02_A")]
     Team2L02A,
-    /// *Summoner's Rift*: Team 2 Top Outer Turret
-    /// *ARAM*: Team 2 Lower Nexus Turret
+    /// *Summoner's Rift*: Red Team Top Outer Turret
+    /// *ARAM*: Red Team Lower Nexus Turret
+    #[serde(rename = "Turret_T2_L_03_A")]
     Team2L03A,
-    /// *ARAM*: Team 2 Upper Nexus Turret
+    /// *ARAM*: Red Team Upper Nexus Turret
+    #[serde(rename = "Turret_T2_L_04_A")]
     Team2L04A,
-    /// *Summoner's Rift*: Team 2 Bot Inhib Turret
+    /// *Summoner's Rift*: Red Team Bot Inhib Turret
+    #[serde(rename = "Turret_T2_R_01_A")]
     Team2R01A,
-    /// *Summoner's Rift*: Team 2 Bot Inner Turret
+    /// *Summoner's Rift*: Red Team Bot Inner Turret
+    #[serde(rename = "Turret_T2_R_02_A")]
     Team2R02A,
-    /// *Summoner's Rift*: Team 2 Bot Outer Turret
+    /// *Summoner's Rift*: Red Team Bot Outer Turret
+    #[serde(rename = "Turret_T2_R_03_A")]
     Team2R03A,
-    /// *Summoner's Rift*: Team 2 Fountain
-    /// *ARAM*: Team 2 Fountain
+    /// *Summoner's Rift*: Red Team Fountain
+    /// *ARAM*: Red Team Fountain
+    #[serde(rename = "Turret_ChaosTurretShrine_A")]
     Team2Fountain,
     // --- OTHER ---
     /// Azir Turret
@@ -807,87 +790,32 @@ pub enum Turret {
     Unknown,
 }
 
-impl FromStr for Turret {
-    type Err = String;
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let turret = match s {
-            // --- TEAM1 ---
-            "Turret_T1_C_01_A" => Turret::Team1C01A,
-            "Turret_T1_C_02_A" => Turret::Team1C02A,
-            "Turret_T1_C_03_A" => Turret::Team1C03A,
-            "Turret_T1_C_04_A" => Turret::Team1C04A,
-            "Turret_T1_C_05_A" => Turret::Team1C05A,
-            "Turret_T1_C_06_A" => Turret::Team1C06A,
-            "Turret_T1_C_07_A" => Turret::Team1C07A,
-            "Turret_T1_C_08_A" => Turret::Team1C08A,
-            "Turret_T1_C_09_A" => Turret::Team1C09A,
-            "Turret_T1_C_010_A" => Turret::Team1C10A,
-            "Turret_T1_L_02_A" => Turret::Team1L02A,
-            "Turret_T1_L_03_A" => Turret::Team1L03A,
-            "Turret_T1_R_02_A" => Turret::Team1R02A,
-            "Turret_T1_R_03_A" => Turret::Team1R03A,
-            "Turret_OrderTurretShrine_A" => Turret::Team1Fountain,
-            // --- TEAM2 ---
-            "Turret_T2_C_01_A" => Turret::Team2C01A,
-            "Turret_T2_C_02_A" => Turret::Team2C02A,
-            "Turret_T2_C_03_A" => Turret::Team2C03A,
-            "Turret_T2_C_04_A" => Turret::Team2C04A,
-            "Turret_T2_C_05_A" => Turret::Team2C05A,
-            "Turret_T2_L_01_A" => Turret::Team2L01A,
-            "Turret_T2_L_02_A" => Turret::Team2L02A,
-            "Turret_T2_L_03_A" => Turret::Team2L03A,
-            "Turret_T2_L_04_A" => Turret::Team2L04A,
-            "Turret_T2_R_01_A" => Turret::Team2R01A,
-            "Turret_T2_R_02_A" => Turret::Team2R02A,
-            "Turret_T2_R_03_A" => Turret::Team2R03A,
-            "Turret_ChaosTurretShrine_A" => Turret::Team2Fountain,
-            // --- OTHER ---
-            "Obelisk" => Turret::Obelisk,
-            _ => return Err(String::from("unknown")),
-        };
-        Ok(turret)
-    }
-}
-
-/// Team 1 refers to Blue / Left Side \
-/// Team 2 refers to Red / Right Side
-#[derive(Debug, Display, Clone, Serialize, DeserializeFromStr)]
-#[serde(deny_unknown_fields)]
+/// Blue Team is the left side / Red Team is the right side \
+/// These don't have better names since the names are shared between game modes
+#[derive(Debug, Display, Clone, Serialize, Deserialize)]
 pub enum Inhibitor {
-    /// *Summoner's Rift*: Team 1 Top Inhibitor
+    /// *Summoner's Rift*: Blue Team Top Inhibitor
+    #[serde(rename = "Barracks_T1_L1")]
     Team1L1,
-    /// *Summoner's Rift*: Team 1 Mid Inhibitor \
-    /// **ARAM**: Team 1 Inhibitor
+    /// *Summoner's Rift*: Blue Team Mid Inhibitor \
+    /// **ARAM**: Blue Team Inhibitor
+    #[serde(rename = "Barracks_T1_C1")]
     Team1C1,
-    /// *Summoner's Rift*: Team 1 Bot Inhibitor
+    /// *Summoner's Rift*: Blue Team Bot Inhibitor
+    #[serde(rename = "Barracks_T1_R1")]
     Team1R1,
-    /// *Summoner's Rift*: Team 2 Top Inhibitor
+    /// *Summoner's Rift*: Red Team Top Inhibitor
+    #[serde(rename = "Barracks_T2_L1")]
     Team2L1,
-    /// *Summoner's Rift*: Team 1 Mid Inhibitor \
-    /// **ARAM**: Team 2 Inhibitor
+    /// *Summoner's Rift*: Blue Team Mid Inhibitor \
+    /// **ARAM**: Red Team Inhibitor
+    #[serde(rename = "Barracks_T2_C1")]
     Team2C1,
-    /// *Summoner's Rift*: Team 2 Bot Inhibitor
+    /// *Summoner's Rift*: Red Team Bot Inhibitor
+    #[serde(rename = "Barracks_T2_R1")]
     Team2R1,
     #[serde(other)]
     Unknown,
-}
-
-impl FromStr for Inhibitor {
-    type Err = String;
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let inhib = match s {
-            "Barracks_T1_L1" => Inhibitor::Team1L1,
-            "Barracks_T1_C1" => Inhibitor::Team1C1,
-            "Barracks_T1_R1" => Inhibitor::Team1R1,
-            "Barracks_T2_L1" => Inhibitor::Team2L1,
-            "Barracks_T2_C1" => Inhibitor::Team2C1,
-            "Barracks_T2_R1" => Inhibitor::Team2R1,
-            _ => Inhibitor::Unknown,
-        };
-        Ok(inhib)
-    }
 }
 
 fn deserialize_bool<'de, D: Deserializer<'de>>(deserializer: D) -> Result<bool, D::Error> {
@@ -902,7 +830,6 @@ fn deserialize_bool<'de, D: Deserializer<'de>>(deserializer: D) -> Result<bool, 
 pub type MapNumber = i32;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "camelCase")]
 pub struct GameStats {
     pub game_mode: GameMode,
@@ -913,59 +840,60 @@ pub struct GameStats {
 }
 
 #[derive(Debug, Display, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum GameMode {
-    /// Classic Summoner's Rift and Twisted Treeline games
+    /// Classic Summoner's Rift and Twisted Treeline
     Classic,
-    /// Dominion/Crystal Scar games
+    /// Dominion/Crystal Scar
     Odin,
     Aram,
     Tutorial,
     /// Part 1 of the tutorial
-    #[serde(alias = "TUTORIAL_MODULE_1")]
+    #[serde(rename = "TUTORIAL_MODULE_1")]
     Tutorial1,
     /// Part 2 of the tutorial
-    #[serde(alias = "TUTORIAL_MODULE_2")]
+    #[serde(rename = "TUTORIAL_MODULE_2")]
     Tutorial2,
     /// Part 3 of the tutorial
-    #[serde(alias = "TUTORIAL_MODULE_3")]
+    #[serde(rename = "TUTORIAL_MODULE_3")]
     Tutorial3,
     Urf,
     PracticeTool,
-    /// Doombots games
+    /// Doombots
     DoombotsTeemo,
     OneForAll,
     Ascension,
-    /// Snowdown Showdown games
+    /// Snowdown Showdown
     FirstBlood,
-    /// Poroking games
+    /// Poroking
     KingPoro,
-    /// Nexus Siege games
+    /// Nexus Siege
     Siege,
-    /// Blood Hunt Assassin games
+    /// Blood Hunt Assassin
     Assassinate,
-    /// All Random Summoner's Rift games
+    /// All Random Summoner's Rift
     ARSR,
-    /// Dark Star: Singularity games
+    /// Dark Star: Singularity
     Darkstar,
-    /// Star Guardian Invasion games
+    /// Star Guardian Invasion
     StarGuardian,
-    /// PROJECT: Hunters games
+    /// PROJECT: Hunters
     Project,
-    #[serde(alias = "GAMEMODEX")]
+    #[serde(rename = "GAMEMODEX")]
     NexusBlitz,
-    /// Odyssey: Extraction games
+    /// Odyssey: Extraction
     Odyssey,
     /// Ultimate Spellbook
     UltBook,
+    /// Arena 2v2v2v2
+    #[serde(rename = "CHERRY")]
+    Arena,
     /// The riot documentation specifying the game modes is incomplete => add Unknown to catch deserialization errors
     #[serde(other)]
     Unknown,
 }
 
 #[derive(Debug, Display, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 #[serde(rename_all = "PascalCase")]
 pub enum MapName {
     /// Summoner's Rift - Original Summer variant
@@ -998,13 +926,14 @@ pub enum MapName {
     Map21,
     /// Convergence - Teamfight Tactics map
     Map22,
+    /// Arena 2v2v2v2
+    Map30,
     /// The riot documentation specifying the maps is incomplete => add Unknown to catch deserialization errors
     #[serde(other)]
     Unknown,
 }
 
 #[derive(Debug, Display, Clone, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
 pub enum MapTerrain {
     Default,
     Infernal,
