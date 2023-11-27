@@ -22,7 +22,7 @@ impl RESTClient {
     }
 
     /// Make a get request to the specified endpoint
-    pub async fn get(&self, endpoint: String) -> Result<serde_json::Value, reqwest::Error> {
+    pub async fn get(&self, endpoint: &str) -> Result<serde_json::Value, reqwest::Error> {
         self.reqwest_client
             .get(format!("https://127.0.0.1:{}{}", self.port, endpoint))
             .send()
@@ -36,7 +36,7 @@ impl RESTClient {
     /// Make a post request to the specified endpoint
     pub async fn post<T: Serialize>(
         &self,
-        endpoint: String,
+        endpoint: &str,
         body: T,
     ) -> Result<serde_json::Value, reqwest::Error> {
         self.reqwest_client
@@ -53,7 +53,7 @@ impl RESTClient {
     /// Make a put request to the specified endpoint
     pub async fn put<T: Serialize>(
         &self,
-        endpoint: String,
+        endpoint: &str,
         body: T,
     ) -> Result<serde_json::Value, reqwest::Error> {
         self.reqwest_client
@@ -68,7 +68,7 @@ impl RESTClient {
     }
 
     /// Make a delete request to the specified endpoint
-    pub async fn delete(&self, endpoint: String) -> Result<serde_json::Value, reqwest::Error> {
+    pub async fn delete(&self, endpoint: &str) -> Result<serde_json::Value, reqwest::Error> {
         self.reqwest_client
             .delete(format!("https://127.0.0.1:{}{}", self.port, endpoint))
             .send()

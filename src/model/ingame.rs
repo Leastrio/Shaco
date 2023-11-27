@@ -879,7 +879,8 @@ pub enum GameMode {
     StarGuardian,
     /// PROJECT: Hunters
     Project,
-    #[serde(rename = "GAMEMODEX")]
+    #[serde(alias = "GAMEMODEX")]
+    #[serde(alias = "NEXUSBLITZ")]
     NexusBlitz,
     /// Odyssey: Extraction
     Odyssey,
