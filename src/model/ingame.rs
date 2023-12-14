@@ -34,7 +34,7 @@ impl<'de> Deserialize<'de> for AllGameData {
         }
         let holder = Holder::deserialize(deserializer)?;
         let active_player = match holder.active_player {
-            ActivePlayerInfo::ActivePlayer(info) => Some(*info),
+            ActivePlayerInfo::ActivePlayer(info) => Some(info),
             ActivePlayerInfo::Error { .. } => None,
         };
         Ok(Self {
@@ -54,7 +54,7 @@ pub type Level = i32;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub(crate) enum ActivePlayerInfo {
-    ActivePlayer(Box<ActivePlayer>),
+    ActivePlayer(ActivePlayer),
     Error { error: String },
 }
 
@@ -195,12 +195,16 @@ pub enum ResourceType {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct FullPlayerRunes {
-    pub general_runes: Vec<Rune>,
-    pub keystone: Rune,
-    pub primary_rune_tree: RuneTree,
-    pub secondary_rune_tree: RuneTree,
-    pub stat_runes: Vec<StatRune>,
+#[serde(untagged)]
+pub enum FullPlayerRunes {
+    Runes {
+        general_runes: Vec<Rune>,
+        keystone: Rune,
+        primary_rune_tree: RuneTree,
+        secondary_rune_tree: RuneTree,
+        stat_runes: Vec<StatRune>,
+    },
+    NoRunes {},
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -259,7 +263,7 @@ pub struct Player {
     pub position: Position,
     pub raw_champion_name: String,
     pub respawn_timer: Time,
-    pub runes: PlayerRunes,
+    pub runes: Option<PlayerRunes>,
     pub scores: PlayerScores,
     /// only available in live game - None in spectator mode
     pub raw_skin_name: Option<String>,
@@ -324,9 +328,13 @@ pub struct PlayerScores {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct SummonerSpells {
-    pub summoner_spell_one: SummonerSpell,
-    pub summoner_spell_two: SummonerSpell,
+#[serde(untagged)]
+pub enum SummonerSpells {
+    SummonerSpells {
+        summoner_spell_one: SummonerSpell,
+        summoner_spell_two: SummonerSpell,
+    },
+    NoSummonerSpells {},
 }
 
 pub type SummonerSpellName = String;
