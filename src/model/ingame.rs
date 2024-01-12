@@ -380,6 +380,7 @@ pub(crate) struct IngameEvents {
 #[serde(tag = "EventName")]
 pub enum GameEvent {
     Ace(Ace),
+    HordeKill(HordeKill),
     BaronKill(BaronKill),
     ChampionKill(ChampionKill),
     DragonKill(DragonKill),
@@ -401,6 +402,7 @@ impl GameEvent {
     pub fn get_event_id(&self) -> EventId {
         match self {
             GameEvent::Ace(e) => e.event_id,
+            GameEvent::HordeKill(e) => e.event_id,
             GameEvent::BaronKill(e) => e.event_id,
             GameEvent::ChampionKill(e) => e.event_id,
             GameEvent::DragonKill(e) => e.event_id,
@@ -421,6 +423,7 @@ impl GameEvent {
     pub fn get_event_time(&self) -> Time {
         match self {
             GameEvent::Ace(e) => e.event_time,
+            GameEvent::HordeKill(e) => e.event_time,
             GameEvent::BaronKill(e) => e.event_time,
             GameEvent::ChampionKill(e) => e.event_time,
             GameEvent::DragonKill(e) => e.event_time,
@@ -447,6 +450,18 @@ pub struct Ace {
     #[serde(rename = "EventID")]
     pub event_id: EventId,
     pub event_time: Time,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "PascalCase")]
+pub struct HordeKill {
+    pub assisters: Vec<SummonerName>,
+    #[serde(rename = "EventID")]
+    pub event_id: EventId,
+    pub event_time: Time,
+    pub killer_name: Killer,
+    #[serde(deserialize_with = "deserialize_bool")]
+    pub stolen: bool,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
