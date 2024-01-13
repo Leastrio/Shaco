@@ -43,7 +43,7 @@ impl LcuWebsocketClient {
         );
 
         let (ws_stream, _response) =
-            tokio_tungstenite::connect_async_tls_with_config(url, None, Some(connector))
+            tokio_tungstenite::connect_async_tls_with_config(url, None, false, Some(connector))
                 .await
                 .map_err(|e| LcuWebsocketError::Disconnected(e.to_string()))?;
 
@@ -97,7 +97,9 @@ impl Stream for LcuWebsocketClient {
             return match self.0.poll_next_unpin(cx) {
                 Poll::Pending => Poll::Pending,
                 Poll::Ready(Some(Ok(Message::Text(text)))) => {
-                    let Ok(event) = serde_json::from_str::<LcuEvent>(&text) else { continue };
+                    let Ok(event) = serde_json::from_str::<LcuEvent>(&text) else {
+                        continue;
+                    };
                     Poll::Ready(Some(event))
                 }
                 Poll::Ready(Some(Ok(Message::Close(_))) | Some(Err(_)) | None) => Poll::Ready(None),

@@ -6,57 +6,28 @@ use serde::{Deserialize, Deserializer, Serialize};
 pub type SummonerName = String;
 pub type Time = f64;
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct AllGameData {
     /// only available in live game - None in spectator mode
+    #[serde(deserialize_with = "treat_error_as_none")]
     pub active_player: Option<ActivePlayer>,
     pub all_players: Vec<Player>,
+    // because events has the schema: "events": { "Events": [...] }
+    #[serde(deserialize_with = "serde_single_key_map::deserialize")]
     pub events: Vec<GameEvent>,
     pub game_data: GameStats,
 }
 
-impl<'de> Deserialize<'de> for AllGameData {
-    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
-    where
-        D: Deserializer<'de>,
-    {
-        #[derive(Debug, Clone, Serialize, Deserialize)]
-        #[serde(rename_all = "camelCase")]
-        struct Holder {
-            /// only available in live game - None in spectator mode
-            active_player: ActivePlayerInfo,
-            all_players: Vec<Player>,
-            // because events has the schema: "events": { "Events": [...] }
-            #[serde(deserialize_with = "serde_single_key_map::deserialize")]
-            events: Vec<GameEvent>,
-            game_data: GameStats,
-        }
-        let holder = Holder::deserialize(deserializer)?;
-        let active_player = match holder.active_player {
-            ActivePlayerInfo::ActivePlayer(info) => Some(*info),
-            ActivePlayerInfo::Error { .. } => None,
-        };
-        Ok(Self {
-            active_player,
-            all_players: holder.all_players,
-            events: holder.events,
-            game_data: holder.game_data,
-        })
-    }
+fn treat_error_as_none<'de, D>(deserializer: D) -> Result<Option<ActivePlayer>, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    Ok(ActivePlayer::deserialize(deserializer).ok())
 }
 
 pub type Gold = f32;
 pub type Level = i32;
-
-/// only pub(crate) since this is an intermediate result. The API only returns the ActivePlayer struct \
-/// only available in live games - is Error when spectating
-#[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(untagged)]
-pub(crate) enum ActivePlayerInfo {
-    ActivePlayer(Box<ActivePlayer>),
-    Error { error: String },
-}
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -195,12 +166,16 @@ pub enum ResourceType {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct FullPlayerRunes {
-    pub general_runes: Vec<Rune>,
-    pub keystone: Rune,
-    pub primary_rune_tree: RuneTree,
-    pub secondary_rune_tree: RuneTree,
-    pub stat_runes: Vec<StatRune>,
+#[serde(untagged)]
+pub enum FullPlayerRunes {
+    Runes {
+        general_runes: Vec<Rune>,
+        keystone: Rune,
+        primary_rune_tree: Box<RuneTree>,
+        secondary_rune_tree: Box<RuneTree>,
+        stat_runes: Vec<StatRune>,
+    },
+    NoRunes {},
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -259,7 +234,7 @@ pub struct Player {
     pub position: Position,
     pub raw_champion_name: String,
     pub respawn_timer: Time,
-    pub runes: PlayerRunes,
+    pub runes: Option<PlayerRunes>,
     pub scores: PlayerScores,
     /// only available in live game - None in spectator mode
     pub raw_skin_name: Option<String>,
@@ -324,9 +299,13 @@ pub struct PlayerScores {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct SummonerSpells {
-    pub summoner_spell_one: SummonerSpell,
-    pub summoner_spell_two: SummonerSpell,
+#[serde(untagged)]
+pub enum SummonerSpells {
+    SummonerSpells {
+        summoner_spell_one: SummonerSpell,
+        summoner_spell_two: SummonerSpell,
+    },
+    NoSummonerSpells {},
 }
 
 pub type SummonerSpellName = String;
@@ -372,6 +351,7 @@ pub(crate) struct IngameEvents {
 #[serde(tag = "EventName")]
 pub enum GameEvent {
     Ace(Ace),
+    HordeKill(HordeKill),
     BaronKill(BaronKill),
     ChampionKill(ChampionKill),
     DragonKill(DragonKill),
@@ -393,6 +373,7 @@ impl GameEvent {
     pub fn get_event_id(&self) -> EventId {
         match self {
             GameEvent::Ace(e) => e.event_id,
+            GameEvent::HordeKill(e) => e.event_id,
             GameEvent::BaronKill(e) => e.event_id,
             GameEvent::ChampionKill(e) => e.event_id,
             GameEvent::DragonKill(e) => e.event_id,
@@ -413,6 +394,7 @@ impl GameEvent {
     pub fn get_event_time(&self) -> Time {
         match self {
             GameEvent::Ace(e) => e.event_time,
+            GameEvent::HordeKill(e) => e.event_time,
             GameEvent::BaronKill(e) => e.event_time,
             GameEvent::ChampionKill(e) => e.event_time,
             GameEvent::DragonKill(e) => e.event_time,
@@ -439,6 +421,18 @@ pub struct Ace {
     #[serde(rename = "EventID")]
     pub event_id: EventId,
     pub event_time: Time,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "PascalCase")]
+pub struct HordeKill {
+    pub assisters: Vec<SummonerName>,
+    #[serde(rename = "EventID")]
+    pub event_id: EventId,
+    pub event_time: Time,
+    pub killer_name: Killer,
+    #[serde(deserialize_with = "deserialize_bool")]
+    pub stolen: bool,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -879,7 +873,8 @@ pub enum GameMode {
     StarGuardian,
     /// PROJECT: Hunters
     Project,
-    #[serde(rename = "GAMEMODEX")]
+    #[serde(alias = "GAMEMODEX")]
+    #[serde(alias = "NEXUSBLITZ")]
     NexusBlitz,
     /// Odyssey: Extraction
     Odyssey,

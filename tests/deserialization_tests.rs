@@ -66,14 +66,28 @@ fn deserialize_data_test() {
     let test_data2 = include_str!("GetLiveclientdataEventdata2.json");
     let test_data3 = include_str!("aram_allgamedata1.json");
     let test_data4 = include_str!("aram_allgamedata2.json");
+    let test_data5 = include_str!("arena_GetLiveclientdataAllgamedata.json");
 
-    let events1: IngameEvents = serde_json::from_str(test_data1).unwrap();
-    let events2: IngameEvents = serde_json::from_str(test_data2).unwrap();
-    let _data1: AllGameData = serde_json::from_str(test_data3).unwrap();
-    let _data2: AllGameData = serde_json::from_str(test_data4).unwrap();
+    assert!(serde_json::from_str::<IngameEvents>(test_data1).is_ok());
+    assert!(serde_json::from_str::<IngameEvents>(test_data2).is_ok());
+    assert!(serde_json::from_str::<AllGameData>(test_data3).is_ok());
+    assert!(serde_json::from_str::<AllGameData>(test_data4).is_ok());
+    assert!(serde_json::from_str::<AllGameData>(test_data5).is_ok());
 
-    assert_eq!(events1.events.len(), 127);
-    assert_eq!(events2.events.len(), 150);
+    assert_eq!(
+        serde_json::from_str::<IngameEvents>(test_data1)
+            .unwrap()
+            .events
+            .len(),
+        127
+    );
+    assert_eq!(
+        serde_json::from_str::<IngameEvents>(test_data2)
+            .unwrap()
+            .events
+            .len(),
+        150
+    );
 }
 
 #[test]
@@ -99,6 +113,7 @@ fn deserialize_game_mode() {
         "ODYSSEY",
         "NEXUSBLITZ",
         "ULTBOOK",
+        "CHERRY",
     ];
 
     vec.iter().for_each(|game_mode| {

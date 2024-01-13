@@ -241,6 +241,14 @@ impl IngameClient {
     /// Get active players data \
     /// Only available during livegame
     pub async fn active_player(&self) -> Result<ActivePlayer, IngameClientError> {
+        /// only available in live games - is Error when spectating
+        #[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
+        #[serde(untagged)]
+        enum ActivePlayerInfo {
+            ActivePlayer(Box<ActivePlayer>),
+            Error { error: String },
+        }
+
         self.0
             .get(format!(
                 "https://127.0.0.1:{}/GetLiveclientdataActiveplayer",
