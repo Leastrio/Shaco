@@ -38,8 +38,9 @@ impl Display for ProcessInfoError {
 /// Errors for the Ingame API
 #[derive(Debug, Clone)]
 pub enum IngameClientError {
-    /// An API might not be available yet during the loading screen
+    /// Some API calls only return valid results after the game has started even if other API calls already work
     ApiNotAvailableInSpectatorMode,
+    /// An API might not be available yet during the loading screen
     ApiNotAvailableDuringLoadingScreen,
     /// An error occurred on the client side probably because of a malformed request \
     /// Corresponds to HTTP status responses 400 – 499, excluding 400 and 404 which are [IngameClientError::ApiNotAvailableInSpectatorMode] and [IngameClientError::ApiNotAvailableDuringLoadingScreen]

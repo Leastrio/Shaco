@@ -1,6 +1,7 @@
 use std::{task::Poll, time::Duration};
 
 use futures_util::Stream;
+use reqwest::Response;
 use tokio::{
     sync::mpsc::{unbounded_channel, UnboundedReceiver},
     sync::oneshot,
@@ -26,31 +27,33 @@ impl IngameClient {
     pub async fn active_game(&self) -> bool {
         let req = self
             .0
-            // HEAD doesn't work with "/liveclientdata/allgamedata" for some reason
-            .head(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataAllgamedata",
+            .get(format!(
+                "https://127.0.0.1:{}/GetLiveclientdataGamestats",
                 PORT
             ))
-            // set a custom timeout so the function doesn't take forever to complete when the server is not reachable
-            .timeout(Duration::from_millis(100))
             .send()
             .await;
 
         if let Ok(req) = req {
-            req.status().is_success()
-        } else {
-            false
+            // as soon as your own game has loaded the API returns GameStats but with a game_time slightly bigger than 0.0
+            // this game_time stays constant until the game starts
+            // as far as I can tell the value is always something around ~0.02
+            // => check if game_time is > 0.1 as a proxy for if the game has started
+            if let Ok(game_stats) = req.json::<GameStats>().await {
+                return game_stats.game_time > 0.1;
+            }
         }
+
+        false
     }
 
     /// Checks if there is an active game \
-    /// Returns true even in loading screen while other API calls still return Error
+    /// Same as [`IngameClient::active_game`] but returns true during loading screen when other API calls still return Error.
+    /// Also returns true when the game has already started.
     pub async fn active_game_loadingscreen(&self) -> bool {
         let req = self
             .0
             .head(format!("https://127.0.0.1:{}/Help", PORT))
-            // set a custom timeout so the function doesn't take forever to complete when the server is not reachable
-            .timeout(Duration::from_millis(100))
             .send()
             .await;
 
@@ -63,6 +66,12 @@ impl IngameClient {
 
     /// Checks if the game is a livegame or in spectatormode
     pub async fn is_spectator_mode(&self) -> Result<bool, IngameClientError> {
+        // before the game has actually started the API sometimes returns falsely
+        // that the game is a spectator game when it is not
+        if !self.active_game().await {
+            return Err(IngameClientError::ApiNotAvailableDuringLoadingScreen);
+        }
+
         let req = self
             .0
             .head(format!(
@@ -71,7 +80,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from);
 
         match req {
@@ -94,7 +103,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json()
             .await
@@ -114,7 +123,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json::<IngameEvents>()
             .await
@@ -131,7 +140,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json()
             .await
@@ -151,7 +160,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json()
             .await
@@ -171,7 +180,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json()
             .await
@@ -191,7 +200,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json()
             .await
@@ -211,7 +220,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json()
             .await
@@ -231,7 +240,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json()
             .await
@@ -256,7 +265,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json::<ActivePlayerInfo>()
             .await
@@ -279,7 +288,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json()
             .await
@@ -296,7 +305,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .text()
             .await
@@ -320,7 +329,7 @@ impl IngameClient {
             ))
             .send()
             .await
-            .and_then(|r| r.error_for_status())
+            .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
             .json()
             .await
