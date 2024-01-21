@@ -321,7 +321,6 @@ pub struct SummonerSpell {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum TeamId {
-    All,
     /// Blue / Left Side
     Order,
     /// Red / Right Side
