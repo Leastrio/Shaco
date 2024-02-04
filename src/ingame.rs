@@ -377,13 +377,11 @@ impl EventStream {
             loop {
                 timer.tick().await;
                 match ingame_client.event_data(Some(current_event_id)).await {
-                    Ok(mut events) => {
+                    Ok(events) => {
                         if let Some(last_event) = events.last() {
                             current_event_id = last_event.get_event_id() + 1;
                         }
-                        events.drain(..).for_each(|e| {
-                            let _ = events_tx.send(e);
-                        })
+                        events.into_iter().for_each(|e| _ = events_tx.send(e))
                     }
                     Err(_) => return,
                 }
