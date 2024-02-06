@@ -368,7 +368,7 @@ impl EventStream {
             // wait for a game to start
             loop {
                 timer.tick().await;
-                if ingame_client.event_data(None).await.is_ok() {
+                if ingame_client.active_game().await {
                     break;
                 };
             }
