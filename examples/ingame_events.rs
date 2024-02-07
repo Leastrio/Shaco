@@ -1,11 +1,10 @@
 use futures_util::StreamExt;
 
-use shaco::{ingame::EventStream, ingame::IngameClient};
+use shaco::ingame::EventStream;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let ingame_client = IngameClient::new()?;
-    let mut event_stream = EventStream::from_ingame_client(ingame_client, None);
+    let mut event_stream = EventStream::new();
 
     while let Some(event) = event_stream.next().await {
         println!("{:?}", event)

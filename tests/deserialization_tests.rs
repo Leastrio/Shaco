@@ -9,7 +9,7 @@ use shaco::{
 /// DOES NOT CHECK IF THE EVENTS GET DESERIALIZED CORRECTLY
 #[tokio::test]
 async fn ingame_livegame_api_deserialization() {
-    let client = IngameClient::new().unwrap();
+    let client = IngameClient::new();
 
     assert!(client.active_game().await);
     assert!(client.active_game_loadingscreen().await);
@@ -36,7 +36,7 @@ async fn ingame_livegame_api_deserialization() {
 /// DOES NOT CHECK IF THE EVENTS GET DESERIALIZED CORRECTLY
 #[tokio::test]
 async fn ingame_spectate_api_deserialization() {
-    let client = IngameClient::new().unwrap();
+    let client = IngameClient::new();
 
     assert!(client.active_game().await);
     assert!(client.active_game_loadingscreen().await);

@@ -340,13 +340,6 @@ impl fmt::Display for TeamId {
 
 pub type EventId = u32;
 
-/// only pub(crate) since this is an intermediate result. The API only returns the Vec<GameEvent>
-#[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(rename_all = "PascalCase")]
-pub(crate) struct IngameEvents {
-    pub events: Vec<GameEvent>,
-}
-
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(tag = "EventName")]
 pub enum GameEvent {

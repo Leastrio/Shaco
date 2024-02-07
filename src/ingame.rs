@@ -18,8 +18,8 @@ pub struct IngameClient(reqwest::Client);
 
 impl IngameClient {
     /// Create a new connection to the ingame api. This will return an error if a game is not running
-    pub fn new() -> Result<Self, IngameClientError> {
-        Ok(Self(build_reqwest_client(None)))
+    pub fn new() -> Self {
+        Self(build_reqwest_client(None))
     }
 
     /// Checks if there is an active game \
@@ -115,6 +115,12 @@ impl IngameClient {
         &self,
         event_id: Option<u32>,
     ) -> Result<Vec<GameEvent>, IngameClientError> {
+        #[derive(serde::Deserialize)]
+        #[serde(rename_all = "PascalCase")]
+        struct IngameEvents {
+            pub events: Vec<GameEvent>,
+        }
+
         self.0
             .get(format!(
                 "https://127.0.0.1:{}/GetLiveclientdataEventdata?eventID={}",
@@ -337,7 +343,7 @@ impl IngameClient {
     }
 }
 
-const DEFAULT_POLLING_RATE_MILLIS: u64 = 500;
+const DEFAULT_POLLING_RATE_MILLIS: Duration = Duration::from_millis(500);
 
 /// A wrapper around a [IngameClient] that regularly polls the ingame events
 pub struct EventStream {
@@ -347,16 +353,32 @@ pub struct EventStream {
 }
 
 impl EventStream {
+    pub fn new() -> Self {
+        Self::from_ingame_client(IngameClient::new())
+    }
+
+    pub fn new_with_polling_rate(polling_rate: Duration) -> Self {
+        Self::from_ingame_client_with_polling_rate(IngameClient::new(), polling_rate)
+    }
+
     /// Create an [EventStream] from an [IngameClient] \
     /// Takes an [Option] that specifies the polling rate of the [IngameClient] that's being wrapped \
     /// The default [Duration] is 500ms
-    pub fn from_ingame_client(ingame_client: IngameClient, polling_rate: Option<Duration>) -> Self {
+    pub fn from_ingame_client(ingame_client: IngameClient) -> Self {
+        Self::from_ingame_client_with_polling_rate(ingame_client, DEFAULT_POLLING_RATE_MILLIS)
+    }
+
+    /// Create an [EventStream] from an [IngameClient] \
+    /// Takes an [Option] that specifies the polling rate of the [IngameClient] that's being wrapped \
+    /// The default [Duration] is 500ms
+    pub fn from_ingame_client_with_polling_rate(
+        ingame_client: IngameClient,
+        polling_rate: Duration,
+    ) -> Self {
         let (start_tx, start_rx) = oneshot::channel::<()>();
         let (events_tx, events_rx) = unbounded_channel();
 
         let poll_task_handle = tokio::spawn(async move {
-            let polling_rate =
-                polling_rate.unwrap_or(Duration::from_millis(DEFAULT_POLLING_RATE_MILLIS));
             let mut timer = tokio::time::interval(polling_rate);
             let mut current_event_id = 0;
 
@@ -366,25 +388,21 @@ impl EventStream {
             }
 
             // wait for a game to start
-            loop {
+            timer.reset();
+            while !ingame_client.active_game().await {
                 timer.tick().await;
-                if ingame_client.active_game().await {
-                    break;
-                };
             }
 
             // loop for as long as api calls are successful
-            loop {
-                timer.tick().await;
-                match ingame_client.event_data(Some(current_event_id)).await {
-                    Ok(events) => {
-                        if let Some(last_event) = events.last() {
-                            current_event_id = last_event.get_event_id() + 1;
-                        }
-                        events.into_iter().for_each(|e| _ = events_tx.send(e))
-                    }
-                    Err(_) => return,
+            timer.reset();
+            while let Ok(events) = ingame_client.event_data(Some(current_event_id)).await {
+                if let Some(last_event) = events.last() {
+                    current_event_id = last_event.get_event_id() + 1;
                 }
+
+                events.into_iter().for_each(|e| _ = events_tx.send(e));
+
+                timer.tick().await;
             }
         });
 
