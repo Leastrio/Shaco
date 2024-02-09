@@ -382,15 +382,9 @@ impl EventStream {
             let mut timer = tokio::time::interval(polling_rate);
             let mut current_event_id = 0;
 
-            // await start, but return on error (start_tx got dropped)
+            // await start so the future is maximally lazy, but return on error (start_tx got dropped)
             if start_rx.await.is_err() {
                 return;
-            }
-
-            // wait for a game to start
-            timer.reset();
-            while !ingame_client.active_game().await {
-                timer.tick().await;
             }
 
             // loop for as long as api calls are successful
