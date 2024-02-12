@@ -4,16 +4,18 @@ use std::{
 };
 
 use futures_util::{SinkExt, Stream, StreamExt};
+use rustls::{ClientConfig, RootCertStore};
+use rustls_pemfile::Item;
 use tokio::net::TcpStream;
 use tokio_tungstenite::{
-    tungstenite, tungstenite::client::IntoClientRequest, tungstenite::http::HeaderValue,
-    tungstenite::Message, Connector, MaybeTlsStream, WebSocketStream,
+    connect_async_tls_with_config, tungstenite, tungstenite::client::IntoClientRequest,
+    tungstenite::http::HeaderValue, tungstenite::Message, Connector, MaybeTlsStream,
+    WebSocketStream,
 };
 
 use crate::{
     error::LcuWebsocketError,
     model::ws::{LcuEvent, LcuSubscriptionType},
-    utils::process_info,
 };
 
 /// A client for the League-Client(LCU) websocket API
@@ -23,29 +25,37 @@ impl LcuWebsocketClient {
     /// Tries to establish a connection to the LCU Websocket API \
     /// Returns an [LcuWebsocketError] if the API is not reachable
     pub async fn connect() -> Result<Self, LcuWebsocketError> {
-        let (auth_token, port) = process_info::get_auth_info()
+        let credentials = riot_local_auth::lcu::try_get_credentials()
             .map_err(|e| LcuWebsocketError::LcuNotAvailable(e.to_string()))?;
 
-        let cert = native_tls::Certificate::from_pem(include_bytes!("./riotgames.pem")).unwrap();
-        let tls = native_tls::TlsConnector::builder()
-            .add_root_certificate(cert)
-            .build()
-            .unwrap();
-        let connector = Connector::NativeTls(tls);
-
-        let mut url = format!("wss://127.0.0.1:{port}")
+        let mut url = format!("wss://127.0.0.1:{}", credentials.port)
             .into_client_request()
             .map_err(|_| LcuWebsocketError::AuthError)?;
         url.headers_mut().insert(
             "Authorization",
-            HeaderValue::from_str(format!("Basic {auth_token}").as_str())
+            HeaderValue::from_str(&credentials.basic_auth())
                 .map_err(|_| LcuWebsocketError::AuthError)?,
         );
 
-        let (ws_stream, _response) =
-            tokio_tungstenite::connect_async_tls_with_config(url, None, false, Some(connector))
-                .await
-                .map_err(|e| LcuWebsocketError::Disconnected(e.to_string()))?;
+        let mut cert_store = RootCertStore::empty();
+        let Ok(Some((Item::X509Certificate(cert), _))) =
+            rustls_pemfile::read_one_from_slice(include_bytes!("../riotgames.pem").as_slice())
+        else {
+            return Err(LcuWebsocketError::AuthError);
+        };
+        cert_store
+            .add(cert)
+            .map_err(|_| LcuWebsocketError::AuthError)?;
+
+        let connector = Connector::Rustls(
+            ClientConfig::builder()
+                .with_root_certificates(cert_store)
+                .with_no_client_auth()
+                .into(),
+        );
+        let (ws_stream, _) = connect_async_tls_with_config(url, None, false, Some(connector))
+            .await
+            .map_err(|e| LcuWebsocketError::Disconnected(e.to_string()))?;
 
         Ok(Self(ws_stream))
     }

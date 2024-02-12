@@ -1,40 +1,5 @@
 use std::{error::Error, fmt, fmt::Display};
 
-/// Errors that can occur when trying to get the Riot process information
-#[derive(Debug, Clone)]
-pub(crate) enum ProcessInfoError {
-    /// League client has not been started
-    ProcessNotAvailable,
-    /// There has been an error getting the API port
-    PortNotFound,
-    /// There has been an error getting the API auth token
-    AuthTokenNotFound,
-}
-
-impl Error for ProcessInfoError {}
-
-impl Display for ProcessInfoError {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            Self::ProcessNotAvailable => write!(
-                f,
-                "{:?}: Riot/League client process could not be found",
-                self
-            ),
-            Self::PortNotFound => write!(
-                f,
-                "{:?}: API port could not be parsed from process arguments",
-                self
-            ),
-            Self::AuthTokenNotFound => write!(
-                f,
-                "{:?}: API auth token could not be parsed from process arguments",
-                self
-            ),
-        }
-    }
-}
-
 /// Errors for the Ingame API
 #[derive(Debug, Clone)]
 pub enum IngameClientError {

@@ -1,7 +1,7 @@
 use std::{task::Poll, time::Duration};
 
 use futures_util::Stream;
-use reqwest::Response;
+use reqwest::{Certificate, Response};
 use tokio::{
     sync::mpsc::{unbounded_channel, UnboundedReceiver},
     sync::oneshot,
@@ -9,7 +9,7 @@ use tokio::{
     task::JoinHandle,
 };
 
-use crate::{error::IngameClientError, model::ingame::*, utils::request::build_reqwest_client};
+use crate::{error::IngameClientError, model::ingame::*};
 
 const PORT: u16 = 2999;
 
@@ -19,7 +19,15 @@ pub struct IngameClient(reqwest::Client);
 impl IngameClient {
     /// Create a new connection to the ingame api. This will return an error if a game is not running
     pub fn new() -> Self {
-        Self(build_reqwest_client(None))
+        Self(
+            reqwest::ClientBuilder::new()
+                .add_root_certificate(
+                    Certificate::from_pem(include_bytes!("../riotgames.pem")).unwrap(),
+                )
+                .timeout(Duration::from_millis(200))
+                .build()
+                .unwrap(),
+        )
     }
 
     /// Checks if there is an active game \
