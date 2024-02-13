@@ -12,9 +12,16 @@ use tokio::{
 use crate::{error::IngameClientError, model::ingame::*};
 
 const PORT: u16 = 2999;
+const DEFAULT_POLLING_RATE_MILLIS: Duration = Duration::from_millis(500);
 
 /// A client for the LoL-Ingame API
 pub struct IngameClient(reqwest::Client);
+
+impl Default for IngameClient {
+    fn default() -> Self {
+        Self::new()
+    }
+}
 
 impl IngameClient {
     /// Create a new connection to the ingame api. This will return an error if a game is not running
@@ -351,13 +358,17 @@ impl IngameClient {
     }
 }
 
-const DEFAULT_POLLING_RATE_MILLIS: Duration = Duration::from_millis(500);
-
 /// A wrapper around a [IngameClient] that regularly polls the ingame events
 pub struct EventStream {
     start_tx: Option<Sender<()>>,
     poll_task_handle: JoinHandle<()>,
     events_rx: UnboundedReceiver<GameEvent>,
+}
+
+impl Default for EventStream {
+    fn default() -> Self {
+        Self::new()
+    }
 }
 
 impl EventStream {
