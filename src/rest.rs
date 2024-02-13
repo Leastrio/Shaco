@@ -17,8 +17,6 @@ impl RESTClient {
     pub fn new() -> Result<Self, Error> {
         let credentials = riot_local_auth::lcu::try_get_credentials()?;
 
-        let cert = Certificate::from_pem(include_bytes!("../riotgames.pem")).unwrap();
-
         let mut headers = HeaderMap::new();
         headers.insert(
             "Authorization",
@@ -26,7 +24,9 @@ impl RESTClient {
         );
 
         let reqwest_client = reqwest::ClientBuilder::new()
-            .add_root_certificate(cert)
+            .add_root_certificate(
+                Certificate::from_pem(include_bytes!("../riotgames.pem")).unwrap(),
+            )
             .default_headers(headers)
             .build()
             .unwrap();
