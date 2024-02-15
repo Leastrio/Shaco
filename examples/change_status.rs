@@ -1,6 +1,6 @@
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let client = shaco::rest::RESTClient::new()?;
+    let client = shaco::rest::LcuRestClient::new()?;
 
     println!(
         "{:#?}",

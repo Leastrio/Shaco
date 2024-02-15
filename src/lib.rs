@@ -2,7 +2,7 @@
 //!
 //! A wrapper for the League-Client and LoL-Ingame APIs
 //!
-//! - [RESTClient](rest::RESTClient): A REST client for the League-Client(LCU) API
+//! - [LcuRestClient](rest::LcuRestClient): A REST client for the League-Client(LCU) API
 //! - [LcuWebsocketClient](ws::LcuWebsocketClient): Subscription based Websocket API for the League-Client(LCU) API
 //! - [IngameClient](ingame::IngameClient): A REST client for the LoL-Ingame API
 //! - [EventStream](ingame::EventStream): A wrapper around polling ingame events implementing the [futures_util::Stream] Trait
@@ -15,7 +15,7 @@ pub mod error;
 pub mod ingame;
 /// Contains all the type definitions for the data returned by the library
 pub mod model;
-/// Contains the [RESTClient](rest::RESTClient)
+/// Contains the [LcuRestClient](rest::LcuRestClient)
 pub mod rest;
 /// Contains the [LcuWebsocketClient](ws::LcuWebsocketClient)
 pub mod ws;

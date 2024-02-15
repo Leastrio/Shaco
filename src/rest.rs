@@ -2,19 +2,17 @@ use reqwest::{
     header::{HeaderMap, HeaderValue},
     Certificate,
 };
-use serde::Serialize;
+use serde::{de::DeserializeOwned, Serialize};
 
 /// A client for the League-Client(LCU) REST API
-pub struct RESTClient {
+pub struct LcuRestClient {
     port: String,
     reqwest_client: reqwest::Client,
 }
 
-type Error = Box<dyn std::error::Error>;
-
-impl RESTClient {
+impl LcuRestClient {
     /// Create a new instance of the LCU REST wrapper
-    pub fn new() -> Result<Self, Error> {
+    pub fn new() -> Result<Self, riot_local_auth::Error> {
         let credentials = riot_local_auth::lcu::try_get_credentials()?;
 
         let mut headers = HeaderMap::new();
@@ -38,7 +36,7 @@ impl RESTClient {
     }
 
     /// Make a get request to the specified endpoint
-    pub async fn get(&self, endpoint: &str) -> Result<serde_json::Value, reqwest::Error> {
+    pub async fn get<U: DeserializeOwned>(&self, endpoint: &str) -> Result<U, reqwest::Error> {
         self.reqwest_client
             .get(format!("https://127.0.0.1:{}{}", self.port, endpoint))
             .send()
@@ -46,15 +44,14 @@ impl RESTClient {
             .error_for_status()?
             .json()
             .await
-            .or_else(|_| Ok(serde_json::Value::Null))
     }
 
     /// Make a post request to the specified endpoint
-    pub async fn post<T: Serialize>(
+    pub async fn post<T: Serialize, U: DeserializeOwned>(
         &self,
         endpoint: &str,
         body: T,
-    ) -> Result<serde_json::Value, reqwest::Error> {
+    ) -> Result<U, reqwest::Error> {
         self.reqwest_client
             .post(format!("https://127.0.0.1:{}{}", self.port, endpoint))
             .json(&body)
@@ -63,15 +60,14 @@ impl RESTClient {
             .error_for_status()?
             .json()
             .await
-            .or_else(|_| Ok(serde_json::Value::Null))
     }
 
     /// Make a put request to the specified endpoint
-    pub async fn put<T: Serialize>(
+    pub async fn put<T: Serialize, U: DeserializeOwned>(
         &self,
         endpoint: &str,
         body: T,
-    ) -> Result<serde_json::Value, reqwest::Error> {
+    ) -> Result<U, reqwest::Error> {
         self.reqwest_client
             .put(format!("https://127.0.0.1:{}{}", self.port, endpoint))
             .json(&body)
@@ -80,11 +76,10 @@ impl RESTClient {
             .error_for_status()?
             .json()
             .await
-            .or_else(|_| Ok(serde_json::Value::Null))
     }
 
     /// Make a delete request to the specified endpoint
-    pub async fn delete(&self, endpoint: &str) -> Result<serde_json::Value, reqwest::Error> {
+    pub async fn delete<U: DeserializeOwned>(&self, endpoint: &str) -> Result<U, reqwest::Error> {
         self.reqwest_client
             .delete(format!("https://127.0.0.1:{}{}", self.port, endpoint))
             .send()
@@ -92,7 +87,6 @@ impl RESTClient {
             .error_for_status()?
             .json()
             .await
-            .or_else(|_| Ok(serde_json::Value::Null))
     }
 
     /// Make a patch request to the specified endpoint

@@ -1,45 +1,30 @@
-use std::{fmt, fmt::Display};
+use std::fmt::{self, Display};
 
-use serde::{de, Deserialize, Deserializer};
+use serde::{de, Deserialize, Deserializer, Serialize};
 use serde_json::Value;
 
 /// The Websocket connection returns LcuEvents
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct LcuEvent {
+    _opcode: u8,
     pub subscription_type: LcuSubscriptionType,
-    pub data: Value,
-    pub event_type: String,
+    pub payload: LcuEventData,
 }
 
-/// LcuEvents first get deserialized to deserialize::DeEvent and then to LcuEvent
-/// because the data formats are not directly deserializable by serde
-impl<'de> Deserialize<'de> for LcuEvent {
-    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
-    where
-        D: Deserializer<'de>,
-    {
-        /// Intermediate data-structure for deserializing LcuEvents
-        #[derive(Deserialize, Debug)]
-        pub struct DeEvent {
-            _opcode: i64,
-            pub(crate) subscription_type: LcuSubscriptionType,
-            pub(crate) data: Data,
-        }
-        /// Intermediate data-structure for deserializing LcuEvents
-        #[derive(Deserialize, Debug)]
-        #[serde(rename_all = "camelCase")]
-        pub struct Data {
-            pub(crate) data: Value,
-            pub(crate) event_type: String,
-        }
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct LcuEventData {
+    pub data: Value,
+    pub event_type: EventType,
+    pub uri: String,
+}
 
-        let de_event = DeEvent::deserialize(deserializer)?;
-        Ok(Self {
-            subscription_type: de_event.subscription_type,
-            data: de_event.data.data,
-            event_type: de_event.data.event_type,
-        })
-    }
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub enum EventType {
+    Create,
+    Update,
+    Delete,
 }
 
 /// The Websocket events to subscribe to.
@@ -70,6 +55,15 @@ impl Display for LcuSubscriptionType {
                 s.trim_start_matches('/').replace('/', "_")
             )),
         }
+    }
+}
+
+impl Serialize for LcuSubscriptionType {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        serializer.serialize_str(&self.to_string())
     }
 }
 
