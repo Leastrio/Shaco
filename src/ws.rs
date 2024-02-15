@@ -4,6 +4,7 @@ use std::{
 };
 
 use futures_util::{SinkExt, Stream, StreamExt};
+use riot_local_auth::Credentials;
 use rustls::{ClientConfig, RootCertStore};
 use rustls_pemfile::Item;
 use tokio::net::TcpStream;
@@ -28,6 +29,12 @@ impl LcuWebsocketClient {
         let credentials = riot_local_auth::lcu::try_get_credentials()
             .map_err(|e| LcuWebsocketError::LcuNotAvailable(e.to_string()))?;
 
+        Self::connect_with(&credentials).await
+    }
+
+    /// Tries to establish a connection to the LCU Websocket API \
+    /// Returns an [LcuWebsocketError] if the API is not reachable
+    pub async fn connect_with(credentials: &Credentials) -> Result<Self, LcuWebsocketError> {
         let mut url = format!("wss://127.0.0.1:{}", credentials.port)
             .into_client_request()
             .map_err(|_| LcuWebsocketError::AuthError)?;

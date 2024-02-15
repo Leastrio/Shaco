@@ -2,6 +2,7 @@ use reqwest::{
     header::{HeaderMap, HeaderValue},
     Certificate,
 };
+use riot_local_auth::Credentials;
 use serde::{de::DeserializeOwned, Serialize};
 
 /// A client for the League-Client(LCU) REST API
@@ -11,10 +12,14 @@ pub struct LcuRestClient {
 }
 
 impl LcuRestClient {
-    /// Create a new instance of the LCU REST wrapper
-    pub fn new() -> Result<Self, riot_local_auth::Error> {
-        let credentials = riot_local_auth::lcu::try_get_credentials()?;
+    pub fn new() -> riot_local_auth::Result<Self> {
+        Ok(Self::new_internal(
+            &riot_local_auth::lcu::try_get_credentials()?,
+        ))
+    }
 
+    /// Create a new instance of the LCU REST wrapper
+    fn new_internal(credentials: &Credentials) -> Self {
         let mut headers = HeaderMap::new();
         headers.insert(
             "Authorization",
@@ -29,10 +34,10 @@ impl LcuRestClient {
             .build()
             .unwrap();
 
-        Ok(Self {
+        Self {
             port: credentials.port.to_string(),
             reqwest_client,
-        })
+        }
     }
 
     /// Make a get request to the specified endpoint
@@ -104,5 +109,11 @@ impl LcuRestClient {
             .json()
             .await
             .or_else(|_| Ok(serde_json::Value::Null))
+    }
+}
+
+impl From<&Credentials> for LcuRestClient {
+    fn from(credentials: &Credentials) -> Self {
+        Self::new_internal(credentials)
     }
 }
