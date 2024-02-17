@@ -40,10 +40,13 @@ impl LcuRestClient {
         }
     }
 
-    /// Make a get request to the specified endpoint
-    pub async fn get<U: DeserializeOwned>(&self, endpoint: &str) -> Result<U, reqwest::Error> {
+    /// Make a get request to the specified path
+    pub async fn get<U: DeserializeOwned>(
+        &self,
+        path: impl AsRef<str>,
+    ) -> Result<U, reqwest::Error> {
         self.reqwest_client
-            .get(format!("https://127.0.0.1:{}{}", self.port, endpoint))
+            .get(format!("https://127.0.0.1:{}{}", self.port, path.as_ref()))
             .send()
             .await?
             .error_for_status()?
@@ -51,14 +54,14 @@ impl LcuRestClient {
             .await
     }
 
-    /// Make a post request to the specified endpoint
+    /// Make a post request to the specified path
     pub async fn post<T: Serialize, U: DeserializeOwned>(
         &self,
-        endpoint: &str,
+        path: impl AsRef<str>,
         body: T,
     ) -> Result<U, reqwest::Error> {
         self.reqwest_client
-            .post(format!("https://127.0.0.1:{}{}", self.port, endpoint))
+            .post(format!("https://127.0.0.1:{}{}", self.port, path.as_ref()))
             .json(&body)
             .send()
             .await?
@@ -67,14 +70,14 @@ impl LcuRestClient {
             .await
     }
 
-    /// Make a put request to the specified endpoint
+    /// Make a put request to the specified path
     pub async fn put<T: Serialize, U: DeserializeOwned>(
         &self,
-        endpoint: &str,
+        path: impl AsRef<str>,
         body: T,
     ) -> Result<U, reqwest::Error> {
         self.reqwest_client
-            .put(format!("https://127.0.0.1:{}{}", self.port, endpoint))
+            .put(format!("https://127.0.0.1:{}{}", self.port, path.as_ref()))
             .json(&body)
             .send()
             .await?
@@ -83,10 +86,13 @@ impl LcuRestClient {
             .await
     }
 
-    /// Make a delete request to the specified endpoint
-    pub async fn delete<U: DeserializeOwned>(&self, endpoint: &str) -> Result<U, reqwest::Error> {
+    /// Make a delete request to the specified path
+    pub async fn delete<U: DeserializeOwned>(
+        &self,
+        path: impl AsRef<str>,
+    ) -> Result<U, reqwest::Error> {
         self.reqwest_client
-            .delete(format!("https://127.0.0.1:{}{}", self.port, endpoint))
+            .delete(format!("https://127.0.0.1:{}{}", self.port, path.as_ref()))
             .send()
             .await?
             .error_for_status()?
