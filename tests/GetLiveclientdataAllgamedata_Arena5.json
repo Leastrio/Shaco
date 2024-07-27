@@ -1,0 +1,3191 @@
+{
+	"activePlayer": {
+		"abilities": {
+			"E": {
+				"abilityLevel": 3,
+				"displayName": "90 Caliber Net",
+				"id": "CaitlynE",
+				"rawDescription": "GeneratedTip_Spell_CaitlynE_Description",
+				"rawDisplayName": "GeneratedTip_Spell_CaitlynE_DisplayName"
+			},
+			"Passive": {
+				"displayName": "Headshot",
+				"id": "CaitlynPassive",
+				"rawDescription": "GeneratedTip_Passive_CaitlynPassive_Description",
+				"rawDisplayName": "GeneratedTip_Passive_CaitlynPassive_DisplayName"
+			},
+			"Q": {
+				"abilityLevel": 5,
+				"displayName": "Piltover Peacemaker",
+				"id": "CaitlynQ",
+				"rawDescription": "GeneratedTip_Spell_CaitlynQ_Description",
+				"rawDisplayName": "GeneratedTip_Spell_CaitlynQ_DisplayName"
+			},
+			"R": {
+				"abilityLevel": 2,
+				"displayName": "Ace in the Hole",
+				"id": "CaitlynR",
+				"rawDescription": "GeneratedTip_Spell_CaitlynR_Description",
+				"rawDisplayName": "GeneratedTip_Spell_CaitlynR_DisplayName"
+			},
+			"W": {
+				"abilityLevel": 5,
+				"displayName": "Yordle Snap Trap",
+				"id": "CaitlynW",
+				"rawDescription": "GeneratedTip_Spell_CaitlynW_Description",
+				"rawDisplayName": "GeneratedTip_Spell_CaitlynW_DisplayName"
+			}
+		},
+		"championStats": {
+			"abilityHaste": 20.0,
+			"abilityPower": 127.05882263183594,
+			"armor": 109.46315002441406,
+			"armorPenetrationFlat": 0.0,
+			"armorPenetrationPercent": 0.6000000238418579,
+			"attackDamage": 435.63616943359377,
+			"attackRange": 650.0,
+			"attackSpeed": 2.092106342315674,
+			"bonusArmorPenetrationPercent": 1.0,
+			"bonusMagicPenetrationPercent": 1.0,
+			"critChance": 1.0,
+			"critDamage": 230.0,
+			"currentHealth": 77.5146484375,
+			"healShieldPower": 0.0,
+			"healthRegenRate": 2.1591501235961916,
+			"lifeSteal": 0.05000000074505806,
+			"magicLethality": 0.0,
+			"magicPenetrationFlat": 0.0,
+			"magicPenetrationPercent": 1.0,
+			"magicResist": 67.36215209960938,
+			"maxHealth": 2972.884521484375,
+			"moveSpeed": 457.09100341796877,
+			"omnivamp": 0.0,
+			"physicalLethality": 0.0,
+			"physicalVamp": 0.0,
+			"resourceMax": 1095.60009765625,
+			"resourceRegenRate": 22.837100982666017,
+			"resourceType": "MANA",
+			"resourceValue": 1095.60009765625,
+			"spellVamp": 0.0,
+			"tenacity": 5.0
+		},
+		"currentGold": 0.0,
+		"fullRunes": {},
+		"level": 15,
+		"riotId": "hacka#EUW",
+		"riotIdGameName": "hacka",
+		"riotIdTagLine": "EUW",
+		"summonerName": "hacka#EUW",
+		"teamRelativeColors": true
+	},
+	"allPlayers": [
+		{
+			"championName": "Caitlyn",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Berserker's Greaves",
+					"itemID": 223006,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223006_Description",
+					"rawDisplayName": "Item_3006_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Hamstringer",
+					"itemID": 443069,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443069_Description",
+					"rawDisplayName": "Item_443069_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Infinity Edge",
+					"itemID": 223031,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223031_Description",
+					"rawDisplayName": "Item_223031_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Lord Dominik's Regards",
+					"itemID": 223036,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223036_Description",
+					"rawDisplayName": "Item_223036_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Fulmination",
+					"itemID": 443055,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443055_Description",
+					"rawDisplayName": "Item_443055_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 15,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Caitlyn",
+			"rawSkinName": "game_character_skin_displayname_Caitlyn_19",
+			"respawnTimer": 9648.5244140625,
+			"riotId": "hacka#EUW",
+			"riotIdGameName": "hacka",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 3,
+				"creepScore": 0,
+				"deaths": 6,
+				"kills": 7,
+				"wardScore": 0.0
+			},
+			"skinID": 19,
+			"skinName": "Arcade Caitlyn",
+			"summonerName": "hacka#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Blitzcrank",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Detonation Orb",
+					"itemID": 447113,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447113_Description",
+					"rawDisplayName": "Item_447113_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Lich Bane",
+					"itemID": 223100,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223100_Description",
+					"rawDisplayName": "Item_223100_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rabadon's Deathcap",
+					"itemID": 223089,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223089_Description",
+					"rawDisplayName": "Item_223089_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 223020,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223020_Description",
+					"rawDisplayName": "Item_223020_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Orb",
+					"itemID": 223112,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223112_Description",
+					"rawDisplayName": "game_item_displayname_223112",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 14,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Blitzcrank",
+			"rawSkinName": "game_character_skin_displayname_Blitzcrank_17",
+			"respawnTimer": 9581.1494140625,
+			"riotId": "Barry Lete#V20",
+			"riotIdGameName": "Barry Lete",
+			"riotIdTagLine": "V20",
+			"runes": null,
+			"scores": {
+				"assists": 1,
+				"creepScore": 0,
+				"deaths": 5,
+				"kills": 6,
+				"wardScore": 0.0
+			},
+			"skinID": 17,
+			"skinName": "Battle Boss Blitzcrank",
+			"summonerName": "Barry Lete#V20",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Thresh",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Berserker's Greaves",
+					"itemID": 223006,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223006_Description",
+					"rawDisplayName": "Item_3006_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Fulmination",
+					"itemID": 443055,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443055_Description",
+					"rawDisplayName": "Item_443055_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Stormrazor",
+					"itemID": 223095,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223095_Description",
+					"rawDisplayName": "Item_223095_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rapid Firecannon",
+					"itemID": 223094,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223094_Description",
+					"rawDisplayName": "Item_223094_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 14,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Thresh",
+			"respawnTimer": 9572.416015625,
+			"riotId": "zaap#PHUB",
+			"riotIdGameName": "zaap",
+			"riotIdTagLine": "PHUB",
+			"runes": null,
+			"scores": {
+				"assists": 5,
+				"creepScore": 0,
+				"deaths": 7,
+				"kills": 1,
+				"wardScore": 0.0
+			},
+			"skinID": 0,
+			"summonerName": "zaap#PHUB",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Gwen",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Detonation Orb",
+					"itemID": 447113,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447113_Description",
+					"rawDisplayName": "Item_447113_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 223020,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223020_Description",
+					"rawDisplayName": "Item_223020_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Riftmaker",
+					"itemID": 224633,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_224633_Description",
+					"rawDisplayName": "Item_224633_Name",
+					"slot": 3
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 15,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Gwen",
+			"respawnTimer": 9649.294921875,
+			"riotId": "Oowi Glad#EUW",
+			"riotIdGameName": "Oowi Glad",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 3,
+				"creepScore": 0,
+				"deaths": 8,
+				"kills": 3,
+				"wardScore": 0.0
+			},
+			"skinID": 0,
+			"summonerName": "Oowi Glad#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Ezreal",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "The Collector",
+					"itemID": 226676,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226676_Description",
+					"rawDisplayName": "Item_226676_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 223158,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223158_Description",
+					"rawDisplayName": "Item_223158_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Muramana",
+					"itemID": 223042,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223042_Description",
+					"rawDisplayName": "Item_223042_Name",
+					"slot": 2
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Galeforce",
+					"itemID": 446671,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_446671_Description",
+					"rawDisplayName": "Item_446671_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Trinity Force",
+					"itemID": 223078,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223078_Description",
+					"rawDisplayName": "Item_223078_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Hellfire Hatchet",
+					"itemID": 4017,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_4017_Description",
+					"rawDisplayName": "Item_4017_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Ezreal",
+			"rawSkinName": "game_character_skin_displayname_Ezreal_54",
+			"respawnTimer": 9920.7138671875,
+			"riotId": "OfCourseLucky#Luck",
+			"riotIdGameName": "OfCourseLucky",
+			"riotIdTagLine": "Luck",
+			"runes": null,
+			"scores": {
+				"assists": 7,
+				"creepScore": 0,
+				"deaths": 8,
+				"kills": 8,
+				"wardScore": 0.0
+			},
+			"skinID": 54,
+			"skinName": "Prestige Heavenscale Ezreal",
+			"summonerName": "OfCourseLucky#Luck",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Malphite",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Horn",
+					"itemID": 222051,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_222051_Description",
+					"rawDisplayName": "game_item_displayname_2051",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Mercury's Treads",
+					"itemID": 223111,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223111_Description",
+					"rawDisplayName": "Item_223111_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Dragonheart",
+					"itemID": 447106,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447106_Description",
+					"rawDisplayName": "Item_447106_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Heartsteel",
+					"itemID": 223084,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223084_Description",
+					"rawDisplayName": "Item_223084_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sunfire Aegis",
+					"itemID": 223068,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223068_Description",
+					"rawDisplayName": "Item_223068_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Jak'Sho, The Protean",
+					"itemID": 226665,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226665_Description",
+					"rawDisplayName": "Item_226665_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 15,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Malphite",
+			"rawSkinName": "game_character_skin_displayname_Malphite_6",
+			"respawnTimer": 9672.919921875,
+			"riotId": "Rolliger Rudolf#EUW",
+			"riotIdGameName": "Rolliger Rudolf",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 8,
+				"creepScore": 0,
+				"deaths": 7,
+				"kills": 4,
+				"wardScore": 0.0
+			},
+			"skinID": 6,
+			"skinName": "Mecha Malphite",
+			"summonerName": "Rolliger Rudolf#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Corki",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Boots of Swiftness",
+					"itemID": 223009,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223009_Description",
+					"rawDisplayName": "Item_223009_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Hamstringer",
+					"itemID": 443069,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443069_Description",
+					"rawDisplayName": "Item_443069_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Flesheater",
+					"itemID": 447112,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447112_Description",
+					"rawDisplayName": "Item_447112_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Infinity Edge",
+					"itemID": 223031,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223031_Description",
+					"rawDisplayName": "Item_223031_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rapid Firecannon",
+					"itemID": 223094,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223094_Description",
+					"rawDisplayName": "Item_223094_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 15,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Corki",
+			"rawSkinName": "game_character_skin_displayname_Corki_3",
+			"respawnTimer": 9679.810546875,
+			"riotId": "WYSTΞRΛW#EUW",
+			"riotIdGameName": "WYSTΞRΛW",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 4,
+				"creepScore": 0,
+				"deaths": 10,
+				"kills": 8,
+				"wardScore": 0.0
+			},
+			"skinID": 3,
+			"skinName": "Red Baron Corki",
+			"summonerName": "WYSTΞRΛW#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Castle",
+					"rawDescription": "GeneratedTip_SummonerSpell_Augment_Castle_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_Augment_Castle_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Vladimir",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Shroud",
+					"itemID": 2050,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_2050_Description",
+					"rawDisplayName": "Item_2050_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 223020,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223020_Description",
+					"rawDisplayName": "Item_223020_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Cloak of Starry Night",
+					"itemID": 443059,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443059_Description",
+					"rawDisplayName": "Item_443059_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Void Staff",
+					"itemID": 223135,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223135_Description",
+					"rawDisplayName": "Item_223135_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rabadon's Deathcap",
+					"itemID": 223089,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223089_Description",
+					"rawDisplayName": "Item_223089_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Shadowflame",
+					"itemID": 224645,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_224645_Description",
+					"rawDisplayName": "Item_224645_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 15,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Vladimir",
+			"rawSkinName": "game_character_skin_displayname_Vladimir_1",
+			"respawnTimer": 9646.408203125,
+			"riotId": "Erijo#Dog",
+			"riotIdGameName": "Erijo",
+			"riotIdTagLine": "Dog",
+			"runes": null,
+			"scores": {
+				"assists": 4,
+				"creepScore": 0,
+				"deaths": 6,
+				"kills": 9,
+				"wardScore": 0.0
+			},
+			"skinID": 1,
+			"skinName": "Count Vladimir",
+			"summonerName": "Erijo#Dog",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Fate's Call",
+					"rawDescription": "GeneratedTip_Spell_Augment_Oathsworn_KalistaRx_Description",
+					"rawDisplayName": "GeneratedTip_Spell_Augment_Oathsworn_KalistaRx_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Riven",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Hemomancer's Helm",
+					"itemID": 447103,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447103_Description",
+					"rawDisplayName": "Item_447103_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Eclipse",
+					"itemID": 226692,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226692_Description",
+					"rawDisplayName": "Item_226692_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sterak's Gage",
+					"itemID": 223053,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223053_Description",
+					"rawDisplayName": "Item_223053_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Duskblade of Draktharr",
+					"itemID": 446691,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_446691_Description",
+					"rawDisplayName": "Item_446691_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 223158,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223158_Description",
+					"rawDisplayName": "Item_223158_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Dirk",
+					"itemID": 223185,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223185_Description",
+					"rawDisplayName": "game_item_displayname_223185",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 15,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Riven",
+			"rawSkinName": "game_character_skin_displayname_Riven_16",
+			"respawnTimer": 9659.0458984375,
+			"riotId": "BearJew43#Bonk",
+			"riotIdGameName": "BearJew43",
+			"riotIdTagLine": "Bonk",
+			"runes": null,
+			"scores": {
+				"assists": 9,
+				"creepScore": 0,
+				"deaths": 7,
+				"kills": 4,
+				"wardScore": 0.0
+			},
+			"skinID": 16,
+			"skinName": "Dawnbringer Riven",
+			"summonerName": "BearJew43#Bonk",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Brand",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rylai's Crystal Scepter",
+					"itemID": 223116,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223116_Description",
+					"rawDisplayName": "Item_223116_Name",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Wooglet's Witchcap",
+					"itemID": 228002,
+					"price": 6000,
+					"rawDescription": "GeneratedTip_Item_228002_Description",
+					"rawDisplayName": "Cherry_WoogletsWitchcap_ItemName",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 223158,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223158_Description",
+					"rawDisplayName": "Item_223158_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Runecarver",
+					"itemID": 447108,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447108_Description",
+					"rawDisplayName": "Item_447108_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Detonation Orb",
+					"itemID": 447113,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447113_Description",
+					"rawDisplayName": "Item_447113_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Morellonomicon",
+					"itemID": 223165,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223165_Description",
+					"rawDisplayName": "Item_223165_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Brand",
+			"rawSkinName": "game_character_skin_displayname_Brand_9",
+			"respawnTimer": 9986.759765625,
+			"riotId": "Synarys#EUW",
+			"riotIdGameName": "Synarys",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 7,
+				"creepScore": 0,
+				"deaths": 8,
+				"kills": 8,
+				"wardScore": 0.0
+			},
+			"skinID": 9,
+			"skinName": "Arclight Brand",
+			"summonerName": "Synarys#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Sett",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Spear of Shojin",
+					"itemID": 223161,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223161_Description",
+					"rawDisplayName": "Item_223161_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sterak's Gage",
+					"itemID": 223053,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223053_Description",
+					"rawDisplayName": "Item_223053_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sword of the Divine",
+					"itemID": 443060,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443060_Description",
+					"rawDisplayName": "Item_443060_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Atma's Reckoning",
+					"itemID": 223039,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223039_Description",
+					"rawDisplayName": "Item_223039_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sundered Sky",
+					"itemID": 226610,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_6610_Description",
+					"rawDisplayName": "Item_226610_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Trinity Force",
+					"itemID": 223078,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223078_Description",
+					"rawDisplayName": "Item_223078_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Sett",
+			"rawSkinName": "game_character_skin_displayname_Sett_40",
+			"respawnTimer": 9984.3232421875,
+			"riotId": "Babboz premier#9152",
+			"riotIdGameName": "Babboz premier",
+			"riotIdTagLine": "9152",
+			"runes": null,
+			"scores": {
+				"assists": 5,
+				"creepScore": 0,
+				"deaths": 7,
+				"kills": 8,
+				"wardScore": 0.0
+			},
+			"skinID": 40,
+			"skinName": "Spirit Blossom Sett",
+			"summonerName": "Babboz premier#9152",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Lissandra",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Void Staff",
+					"itemID": 223135,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223135_Description",
+					"rawDisplayName": "Item_223135_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 223020,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223020_Description",
+					"rawDisplayName": "Item_223020_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Detonation Orb",
+					"itemID": 447113,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447113_Description",
+					"rawDisplayName": "Item_447113_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rite Of Ruin",
+					"itemID": 3430,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_3430_Description",
+					"rawDisplayName": "Item_3430_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rabadon's Deathcap",
+					"itemID": 223089,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223089_Description",
+					"rawDisplayName": "Item_223089_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Shadowflame",
+					"itemID": 224645,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_224645_Description",
+					"rawDisplayName": "Item_224645_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Lissandra",
+			"rawSkinName": "game_character_skin_displayname_Lissandra_33",
+			"respawnTimer": 9914.63671875,
+			"riotId": "Rock the Kahba#EUW",
+			"riotIdGameName": "Rock the Kahba",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 8,
+				"creepScore": 0,
+				"deaths": 6,
+				"kills": 9,
+				"wardScore": 0.0
+			},
+			"skinID": 33,
+			"skinName": "Prestige Porcelain Lissandra",
+			"summonerName": "Rock the Kahba#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Die Another Day",
+					"rawDescription": "GeneratedTip_SummonerSpell_Augment_DieAnotherDay_KindredR_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_Augment_DieAnotherDay_KindredR_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Hecarim",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 223158,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223158_Description",
+					"rawDisplayName": "Item_223158_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Moonflair Spellblade",
+					"itemID": 447110,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447110_Description",
+					"rawDisplayName": "Item_447110_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Muramana",
+					"itemID": 223042,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223042_Description",
+					"rawDisplayName": "Item_223042_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Hellfire Hatchet",
+					"itemID": 4017,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_4017_Description",
+					"rawDisplayName": "Item_4017_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Black Cleaver",
+					"itemID": 223071,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223071_Description",
+					"rawDisplayName": "Item_223071_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Death's Dance",
+					"itemID": 226333,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226333_Description",
+					"rawDisplayName": "Item_226333_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 18,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Hecarim",
+			"rawSkinName": "game_character_skin_displayname_Hecarim_4",
+			"respawnTimer": 0.0,
+			"riotId": "DDDDDDDDDDDDDD#EUW",
+			"riotIdGameName": "DDDDDDDDDDDDDD",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 3,
+				"creepScore": 0,
+				"deaths": 2,
+				"kills": 18,
+				"wardScore": 0.0
+			},
+			"skinID": 4,
+			"skinName": "Arcade Hecarim",
+			"summonerName": "DDDDDDDDDDDDDD#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Camille",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Titanic Hydra",
+					"itemID": 223748,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223748_Description",
+					"rawDisplayName": "Item_223748_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Mercury's Treads",
+					"itemID": 223111,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223111_Description",
+					"rawDisplayName": "Item_223111_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Overlord's Bloodmail",
+					"itemID": 447111,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447111_Description",
+					"rawDisplayName": "Item_447111_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Heartsteel",
+					"itemID": 223084,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223084_Description",
+					"rawDisplayName": "Item_223084_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Cloak of Starry Night",
+					"itemID": 443059,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443059_Description",
+					"rawDisplayName": "Item_443059_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Divine Sunderer",
+					"itemID": 446632,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_446632_Description",
+					"rawDisplayName": "Item_446632_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 25,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Camille",
+			"rawSkinName": "game_character_skin_displayname_Camille_10",
+			"respawnTimer": 0.0,
+			"riotId": "Caashual#EUW",
+			"riotIdGameName": "Caashual",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 14,
+				"creepScore": 0,
+				"deaths": 5,
+				"kills": 7,
+				"wardScore": 0.0
+			},
+			"skinID": 10,
+			"skinName": "iG Camille",
+			"summonerName": "Caashual#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Warmup Routine",
+					"rawDescription": "GeneratedTip_SummonerSpell_Augment_WarmupRoutine_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_Augment_WarmupRoutine_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Veigar",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Orb",
+					"itemID": 223112,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223112_Description",
+					"rawDisplayName": "game_item_displayname_223112",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Everfrost",
+					"itemID": 446656,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_446656_Description",
+					"rawDisplayName": "Item_446656_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 223158,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223158_Description",
+					"rawDisplayName": "Item_223158_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Seraph's Embrace",
+					"itemID": 223040,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223040_Description",
+					"rawDisplayName": "Item_223040_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rabadon's Deathcap",
+					"itemID": 223089,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223089_Description",
+					"rawDisplayName": "Item_223089_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 13,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Veigar",
+			"rawSkinName": "game_character_skin_displayname_Veigar_31",
+			"respawnTimer": 9511.0625,
+			"riotId": "AncientBoso#EUW",
+			"riotIdGameName": "AncientBoso",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 1,
+				"creepScore": 0,
+				"deaths": 6,
+				"kills": 3,
+				"wardScore": 0.0
+			},
+			"skinID": 31,
+			"skinName": "Furyhorn Cosplay Veigar",
+			"summonerName": "AncientBoso#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Bel'Veth",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Berserker's Greaves",
+					"itemID": 223006,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223006_Description",
+					"rawDisplayName": "Item_3006_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Hamstringer",
+					"itemID": 443069,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443069_Description",
+					"rawDisplayName": "Item_443069_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Blade of The Ruined King",
+					"itemID": 223153,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223153_Description",
+					"rawDisplayName": "Item_223153_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Jak'Sho, The Protean",
+					"itemID": 226665,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226665_Description",
+					"rawDisplayName": "Item_226665_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 13,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Belveth",
+			"rawSkinName": "game_character_skin_displayname_Belveth_1",
+			"respawnTimer": 9505.7861328125,
+			"riotId": "Reicken#EUW",
+			"riotIdGameName": "Reicken",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 3,
+				"creepScore": 0,
+				"deaths": 7,
+				"kills": 1,
+				"wardScore": 0.0
+			},
+			"skinID": 1,
+			"skinName": "Battle Boss Bel'Veth",
+			"summonerName": "Reicken#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Thresh",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 15,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Thresh",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Lux",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 15,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Lux",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Jhin",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 15,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Jhin",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Sett",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 15,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Sett",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Pyke",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 15,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Pyke",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		}
+	],
+	"events": {
+		"Events": [
+			{
+				"EventID": 0,
+				"EventName": "GameStart",
+				"EventTime": 0.02265089936554432
+			},
+			{
+				"Assisters": [
+					"Erijo"
+				],
+				"EventID": 1,
+				"EventName": "ChampionKill",
+				"EventTime": 70.8059310913086,
+				"KillerName": "BearJew43",
+				"VictimName": "Caashual"
+			},
+			{
+				"EventID": 2,
+				"EventName": "FirstBlood",
+				"EventTime": 70.8059310913086,
+				"Recipient": "BearJew43"
+			},
+			{
+				"Assisters": [
+					"Caashual"
+				],
+				"EventID": 3,
+				"EventName": "ChampionKill",
+				"EventTime": 72.50231170654297,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "BearJew43"
+			},
+			{
+				"Assisters": [
+					"Rock the Kahba"
+				],
+				"EventID": 4,
+				"EventName": "ChampionKill",
+				"EventTime": 75.31416320800781,
+				"KillerName": "OfCourseLucky",
+				"VictimName": "zaap"
+			},
+			{
+				"Assisters": [
+					"AncientBoso"
+				],
+				"EventID": 5,
+				"EventName": "ChampionKill",
+				"EventTime": 78.30369567871094,
+				"KillerName": "Reicken",
+				"VictimName": "Synarys"
+			},
+			{
+				"Assisters": [
+					"Synarys"
+				],
+				"EventID": 6,
+				"EventName": "ChampionKill",
+				"EventTime": 83.62960815429688,
+				"KillerName": "Babboz premier",
+				"VictimName": "Reicken"
+			},
+			{
+				"Assisters": [],
+				"EventID": 7,
+				"EventName": "ChampionKill",
+				"EventTime": 86.23847961425781,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Erijo"
+			},
+			{
+				"Assisters": [
+					"OfCourseLucky"
+				],
+				"EventID": 8,
+				"EventName": "ChampionKill",
+				"EventTime": 92.12323760986328,
+				"KillerName": "Rock the Kahba",
+				"VictimName": "Barry Lete"
+			},
+			{
+				"Assisters": [
+					"Rock the Kahba"
+				],
+				"EventID": 9,
+				"EventName": "ChampionKill",
+				"EventTime": 97.71664428710938,
+				"KillerName": "OfCourseLucky",
+				"VictimName": "zaap"
+			},
+			{
+				"Assisters": [],
+				"EventID": 10,
+				"EventName": "ChampionKill",
+				"EventTime": 106.22671508789063,
+				"KillerName": "Babboz premier",
+				"VictimName": "AncientBoso"
+			},
+			{
+				"Assisters": [
+					"Rolliger Rudolf"
+				],
+				"EventID": 11,
+				"EventName": "ChampionKill",
+				"EventTime": 118.49600982666016,
+				"KillerName": "WYSTΞRΛW",
+				"VictimName": "hacka"
+			},
+			{
+				"EventID": 12,
+				"EventName": "MinionsSpawning",
+				"EventTime": 120.01715850830078
+			},
+			{
+				"Assisters": [
+					"hacka"
+				],
+				"EventID": 13,
+				"EventName": "ChampionKill",
+				"EventTime": 123.75492095947266,
+				"KillerName": "Oowi Glad",
+				"VictimName": "Rolliger Rudolf"
+			},
+			{
+				"Assisters": [
+					"Rolliger Rudolf"
+				],
+				"EventID": 14,
+				"EventName": "ChampionKill",
+				"EventTime": 124.56584930419922,
+				"KillerName": "WYSTΞRΛW",
+				"VictimName": "Oowi Glad"
+			},
+			{
+				"EventID": 15,
+				"EventName": "Multikill",
+				"EventTime": 124.56584930419922,
+				"KillStreak": 2,
+				"KillerName": "WYSTΞRΛW"
+			},
+			{
+				"Assisters": [
+					"hacka"
+				],
+				"EventID": 16,
+				"EventName": "ChampionKill",
+				"EventTime": 124.83928680419922,
+				"KillerName": "Oowi Glad",
+				"VictimName": "WYSTΞRΛW"
+			},
+			{
+				"EventID": 17,
+				"EventName": "Multikill",
+				"EventTime": 124.83928680419922,
+				"KillStreak": 2,
+				"KillerName": "Oowi Glad"
+			},
+			{
+				"Assisters": [
+					"Synarys"
+				],
+				"EventID": 18,
+				"EventName": "ChampionKill",
+				"EventTime": 197.6542205810547,
+				"KillerName": "Babboz premier",
+				"VictimName": "zaap"
+			},
+			{
+				"Assisters": [
+					"Oowi Glad"
+				],
+				"EventID": 19,
+				"EventName": "ChampionKill",
+				"EventTime": 201.27737426757813,
+				"KillerName": "hacka",
+				"VictimName": "Reicken"
+			},
+			{
+				"Assisters": [
+					"Erijo"
+				],
+				"EventID": 20,
+				"EventName": "ChampionKill",
+				"EventTime": 212.46542358398438,
+				"KillerName": "BearJew43",
+				"VictimName": "Rock the Kahba"
+			},
+			{
+				"Assisters": [
+					"Caashual"
+				],
+				"EventID": 21,
+				"EventName": "ChampionKill",
+				"EventTime": 213.8985137939453,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "WYSTΞRΛW"
+			},
+			{
+				"Assisters": [
+					"Rolliger Rudolf"
+				],
+				"EventID": 22,
+				"EventName": "ChampionKill",
+				"EventTime": 213.93002319335938,
+				"KillerName": "WYSTΞRΛW",
+				"VictimName": "DDDDDDDDDDDDDD"
+			},
+			{
+				"Assisters": [
+					"Babboz premier"
+				],
+				"EventID": 23,
+				"EventName": "ChampionKill",
+				"EventTime": 215.4224395751953,
+				"KillerName": "Synarys",
+				"VictimName": "Barry Lete"
+			},
+			{
+				"Assisters": [],
+				"EventID": 24,
+				"EventName": "ChampionKill",
+				"EventTime": 215.6230926513672,
+				"KillerName": "hacka",
+				"VictimName": "AncientBoso"
+			},
+			{
+				"Assisters": [
+					"Rock the Kahba"
+				],
+				"EventID": 25,
+				"EventName": "ChampionKill",
+				"EventTime": 219.2171630859375,
+				"KillerName": "OfCourseLucky",
+				"VictimName": "Erijo"
+			},
+			{
+				"Assisters": [
+					"BearJew43"
+				],
+				"EventID": 26,
+				"EventName": "ChampionKill",
+				"EventTime": 219.31491088867188,
+				"KillerName": "Erijo",
+				"VictimName": "OfCourseLucky"
+			},
+			{
+				"Assisters": [],
+				"EventID": 27,
+				"EventName": "ChampionKill",
+				"EventTime": 230.19534301757813,
+				"KillerName": "Cherry_Shopkeeper",
+				"VictimName": "Rolliger Rudolf"
+			},
+			{
+				"Assisters": [],
+				"EventID": 28,
+				"EventName": "ChampionKill",
+				"EventTime": 239.14427185058595,
+				"KillerName": "Caashual",
+				"VictimName": "WYSTΞRΛW"
+			},
+			{
+				"Assisters": [
+					"BearJew43"
+				],
+				"EventID": 29,
+				"EventName": "ChampionKill",
+				"EventTime": 303.0120544433594,
+				"KillerName": "Erijo",
+				"VictimName": "Babboz premier"
+			},
+			{
+				"Assisters": [
+					"OfCourseLucky"
+				],
+				"EventID": 30,
+				"EventName": "ChampionKill",
+				"EventTime": 303.2181701660156,
+				"KillerName": "Rock the Kahba",
+				"VictimName": "DDDDDDDDDDDDDD"
+			},
+			{
+				"Assisters": [
+					"DDDDDDDDDDDDDD"
+				],
+				"EventID": 31,
+				"EventName": "ChampionKill",
+				"EventTime": 303.7876892089844,
+				"KillerName": "Caashual",
+				"VictimName": "Rock the Kahba"
+			},
+			{
+				"Assisters": [
+					"zaap"
+				],
+				"EventID": 32,
+				"EventName": "ChampionKill",
+				"EventTime": 303.95526123046877,
+				"KillerName": "Barry Lete",
+				"VictimName": "Oowi Glad"
+			},
+			{
+				"Assisters": [
+					"Rolliger Rudolf"
+				],
+				"EventID": 33,
+				"EventName": "ChampionKill",
+				"EventTime": 310.568359375,
+				"KillerName": "WYSTΞRΛW",
+				"VictimName": "Reicken"
+			},
+			{
+				"Assisters": [
+					"Barry Lete"
+				],
+				"EventID": 34,
+				"EventName": "ChampionKill",
+				"EventTime": 312.6029968261719,
+				"KillerName": "zaap",
+				"VictimName": "hacka"
+			},
+			{
+				"Assisters": [
+					"Rock the Kahba"
+				],
+				"EventID": 35,
+				"EventName": "ChampionKill",
+				"EventTime": 313.0817565917969,
+				"KillerName": "OfCourseLucky",
+				"VictimName": "Caashual"
+			},
+			{
+				"Assisters": [
+					"Erijo"
+				],
+				"EventID": 36,
+				"EventName": "ChampionKill",
+				"EventTime": 319.2106018066406,
+				"KillerName": "BearJew43",
+				"VictimName": "Synarys"
+			},
+			{
+				"Assisters": [
+					"Synarys"
+				],
+				"EventID": 37,
+				"EventName": "ChampionKill",
+				"EventTime": 322.49700927734377,
+				"KillerName": "Babboz premier",
+				"VictimName": "BearJew43"
+			},
+			{
+				"Assisters": [
+					"BearJew43"
+				],
+				"EventID": 38,
+				"EventName": "ChampionKill",
+				"EventTime": 325.4095458984375,
+				"KillerName": "Erijo",
+				"VictimName": "Babboz premier"
+			},
+			{
+				"Assisters": [
+					"Reicken"
+				],
+				"EventID": 39,
+				"EventName": "ChampionKill",
+				"EventTime": 330.8350524902344,
+				"KillerName": "AncientBoso",
+				"VictimName": "Rolliger Rudolf"
+			},
+			{
+				"Assisters": [
+					"Reicken"
+				],
+				"EventID": 40,
+				"EventName": "ChampionKill",
+				"EventTime": 332.12506103515627,
+				"KillerName": "AncientBoso",
+				"VictimName": "WYSTΞRΛW"
+			},
+			{
+				"EventID": 41,
+				"EventName": "Multikill",
+				"EventTime": 332.12506103515627,
+				"KillStreak": 2,
+				"KillerName": "AncientBoso"
+			},
+			{
+				"Assisters": [
+					"Erijo"
+				],
+				"EventID": 42,
+				"EventName": "ChampionKill",
+				"EventTime": 392.0235595703125,
+				"KillerName": "BearJew43",
+				"VictimName": "Oowi Glad"
+			},
+			{
+				"Assisters": [
+					"zaap"
+				],
+				"EventID": 43,
+				"EventName": "ChampionKill",
+				"EventTime": 395.1387023925781,
+				"KillerName": "Barry Lete",
+				"VictimName": "Reicken"
+			},
+			{
+				"Assisters": [
+					"Caashual"
+				],
+				"EventID": 44,
+				"EventName": "ChampionKill",
+				"EventTime": 396.8771667480469,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Synarys"
+			},
+			{
+				"Assisters": [
+					"Caashual"
+				],
+				"EventID": 45,
+				"EventName": "ChampionKill",
+				"EventTime": 398.304443359375,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Babboz premier"
+			},
+			{
+				"EventID": 46,
+				"EventName": "Multikill",
+				"EventTime": 398.304443359375,
+				"KillStreak": 2,
+				"KillerName": "DDDDDDDDDDDDDD"
+			},
+			{
+				"Assisters": [
+					"zaap"
+				],
+				"EventID": 47,
+				"EventName": "ChampionKill",
+				"EventTime": 404.6380310058594,
+				"KillerName": "Barry Lete",
+				"VictimName": "AncientBoso"
+			},
+			{
+				"EventID": 48,
+				"EventName": "Multikill",
+				"EventTime": 404.6380310058594,
+				"KillStreak": 2,
+				"KillerName": "Barry Lete"
+			},
+			{
+				"Assisters": [
+					"Oowi Glad"
+				],
+				"EventID": 49,
+				"EventName": "ChampionKill",
+				"EventTime": 409.9170837402344,
+				"KillerName": "hacka",
+				"VictimName": "BearJew43"
+			},
+			{
+				"Assisters": [
+					"BearJew43"
+				],
+				"EventID": 50,
+				"EventName": "ChampionKill",
+				"EventTime": 413.3069152832031,
+				"KillerName": "Erijo",
+				"VictimName": "Oowi Glad"
+			},
+			{
+				"Assisters": [
+					"WYSTΞRΛW"
+				],
+				"EventID": 51,
+				"EventName": "ChampionKill",
+				"EventTime": 414.2256164550781,
+				"KillerName": "Rolliger Rudolf",
+				"VictimName": "OfCourseLucky"
+			},
+			{
+				"Assisters": [
+					"BearJew43"
+				],
+				"EventID": 52,
+				"EventName": "ChampionKill",
+				"EventTime": 414.73748779296877,
+				"KillerName": "Erijo",
+				"VictimName": "hacka"
+			},
+			{
+				"EventID": 53,
+				"EventName": "Multikill",
+				"EventTime": 414.73748779296877,
+				"KillStreak": 2,
+				"KillerName": "Erijo"
+			},
+			{
+				"Assisters": [],
+				"EventID": 54,
+				"EventName": "ChampionKill",
+				"EventTime": 426.01544189453127,
+				"KillerName": "Rock the Kahba",
+				"VictimName": "WYSTΞRΛW"
+			},
+			{
+				"Assisters": [],
+				"EventID": 55,
+				"EventName": "ChampionKill",
+				"EventTime": 432.4102783203125,
+				"KillerName": "Rock the Kahba",
+				"VictimName": "Rolliger Rudolf"
+			},
+			{
+				"EventID": 56,
+				"EventName": "Multikill",
+				"EventTime": 432.4102783203125,
+				"KillStreak": 2,
+				"KillerName": "Rock the Kahba"
+			},
+			{
+				"Assisters": [
+					"BearJew43"
+				],
+				"EventID": 57,
+				"EventName": "ChampionKill",
+				"EventTime": 490.0967102050781,
+				"KillerName": "Erijo",
+				"VictimName": "Reicken"
+			},
+			{
+				"Assisters": [],
+				"EventID": 58,
+				"EventName": "ChampionKill",
+				"EventTime": 493.6936340332031,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Oowi Glad"
+			},
+			{
+				"Assisters": [
+					"BearJew43",
+					"Pyke Bot"
+				],
+				"EventID": 59,
+				"EventName": "ChampionKill",
+				"EventTime": 496.5680236816406,
+				"KillerName": "Erijo",
+				"VictimName": "AncientBoso"
+			},
+			{
+				"EventID": 60,
+				"EventName": "Multikill",
+				"EventTime": 496.5680236816406,
+				"KillStreak": 2,
+				"KillerName": "Erijo"
+			},
+			{
+				"Assisters": [
+					"Caashual",
+					"Thresh Bot"
+				],
+				"EventID": 61,
+				"EventName": "ChampionKill",
+				"EventTime": 496.9507141113281,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "hacka"
+			},
+			{
+				"EventID": 62,
+				"EventName": "Multikill",
+				"EventTime": 496.9507141113281,
+				"KillStreak": 2,
+				"KillerName": "DDDDDDDDDDDDDD"
+			},
+			{
+				"Assisters": [],
+				"EventID": 63,
+				"EventName": "ChampionKill",
+				"EventTime": 501.19140625,
+				"KillerName": "Synarys",
+				"VictimName": "Rock the Kahba"
+			},
+			{
+				"Assisters": [
+					"Rolliger Rudolf"
+				],
+				"EventID": 64,
+				"EventName": "ChampionKill",
+				"EventTime": 501.6995849609375,
+				"KillerName": "WYSTΞRΛW",
+				"VictimName": "zaap"
+			},
+			{
+				"Assisters": [],
+				"EventID": 65,
+				"EventName": "ChampionKill",
+				"EventTime": 514.6065673828125,
+				"KillerName": "Synarys",
+				"VictimName": "OfCourseLucky"
+			},
+			{
+				"Assisters": [
+					"Rolliger Rudolf"
+				],
+				"EventID": 66,
+				"EventName": "ChampionKill",
+				"EventTime": 520.00390625,
+				"KillerName": "WYSTΞRΛW",
+				"VictimName": "Barry Lete"
+			},
+			{
+				"Assisters": [
+					"zaap"
+				],
+				"EventID": 67,
+				"EventName": "ChampionKill",
+				"EventTime": 586.9451904296875,
+				"KillerName": "Barry Lete",
+				"VictimName": "BearJew43"
+			},
+			{
+				"Assisters": [
+					"OfCourseLucky"
+				],
+				"EventID": 68,
+				"EventName": "ChampionKill",
+				"EventTime": 587.686279296875,
+				"KillerName": "Rock the Kahba",
+				"VictimName": "Oowi Glad"
+			},
+			{
+				"Assisters": [],
+				"EventID": 69,
+				"EventName": "ChampionKill",
+				"EventTime": 590.2977905273438,
+				"KillerName": "hacka",
+				"VictimName": "OfCourseLucky"
+			},
+			{
+				"Assisters": [
+					"OfCourseLucky"
+				],
+				"EventID": 70,
+				"EventName": "ChampionKill",
+				"EventTime": 590.5833740234375,
+				"KillerName": "Rock the Kahba",
+				"VictimName": "hacka"
+			},
+			{
+				"EventID": 71,
+				"EventName": "Multikill",
+				"EventTime": 590.5833740234375,
+				"KillStreak": 2,
+				"KillerName": "Rock the Kahba"
+			},
+			{
+				"Assisters": [
+					"Reicken"
+				],
+				"EventID": 72,
+				"EventName": "ChampionKill",
+				"EventTime": 592.31884765625,
+				"KillerName": "AncientBoso",
+				"VictimName": "Caashual"
+			},
+			{
+				"Assisters": [
+					"Caashual",
+					"Thresh Bot"
+				],
+				"EventID": 73,
+				"EventName": "ChampionKill",
+				"EventTime": 592.5860595703125,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "AncientBoso"
+			},
+			{
+				"Assisters": [
+					"Rolliger Rudolf"
+				],
+				"EventID": 74,
+				"EventName": "ChampionKill",
+				"EventTime": 594.83203125,
+				"KillerName": "WYSTΞRΛW",
+				"VictimName": "Babboz premier"
+			},
+			{
+				"Assisters": [
+					"BearJew43"
+				],
+				"EventID": 75,
+				"EventName": "ChampionKill",
+				"EventTime": 594.9207763671875,
+				"KillerName": "Erijo",
+				"VictimName": "zaap"
+			},
+			{
+				"Assisters": [
+					"Caashual",
+					"Thresh Bot"
+				],
+				"EventID": 76,
+				"EventName": "ChampionKill",
+				"EventTime": 595.9884033203125,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Reicken"
+			},
+			{
+				"EventID": 77,
+				"EventName": "Multikill",
+				"EventTime": 595.9884033203125,
+				"KillStreak": 2,
+				"KillerName": "DDDDDDDDDDDDDD"
+			},
+			{
+				"Assisters": [
+					"zaap"
+				],
+				"EventID": 78,
+				"EventName": "ChampionKill",
+				"EventTime": 599.3370361328125,
+				"KillerName": "Barry Lete",
+				"VictimName": "Erijo"
+			},
+			{
+				"Assisters": [
+					"Babboz premier"
+				],
+				"EventID": 79,
+				"EventName": "ChampionKill",
+				"EventTime": 606.6257934570313,
+				"KillerName": "Synarys",
+				"VictimName": "WYSTΞRΛW"
+			},
+			{
+				"Assisters": [],
+				"EventID": 80,
+				"EventName": "ChampionKill",
+				"EventTime": 630.5857543945313,
+				"KillerName": "Synarys",
+				"VictimName": "WYSTΞRΛW"
+			},
+			{
+				"Assisters": [
+					"WYSTΞRΛW"
+				],
+				"EventID": 81,
+				"EventName": "ChampionKill",
+				"EventTime": 631.982421875,
+				"KillerName": "Rolliger Rudolf",
+				"VictimName": "Synarys"
+			},
+			{
+				"Assisters": [
+					"Synarys"
+				],
+				"EventID": 82,
+				"EventName": "ChampionKill",
+				"EventTime": 643.6124267578125,
+				"KillerName": "Babboz premier",
+				"VictimName": "Rolliger Rudolf"
+			},
+			{
+				"Assisters": [
+					"DDDDDDDDDDDDDD"
+				],
+				"EventID": 83,
+				"EventName": "ChampionKill",
+				"EventTime": 687.8211059570313,
+				"KillerName": "Caashual",
+				"VictimName": "zaap"
+			},
+			{
+				"Assisters": [
+					"Synarys"
+				],
+				"EventID": 84,
+				"EventName": "ChampionKill",
+				"EventTime": 690.6760864257813,
+				"KillerName": "Babboz premier",
+				"VictimName": "Oowi Glad"
+			},
+			{
+				"Assisters": [
+					"Oowi Glad"
+				],
+				"EventID": 85,
+				"EventName": "ChampionKill",
+				"EventTime": 691.0227661132813,
+				"KillerName": "hacka",
+				"VictimName": "Babboz premier"
+			},
+			{
+				"Assisters": [],
+				"EventID": 86,
+				"EventName": "ChampionKill",
+				"EventTime": 700.5423583984375,
+				"KillerName": "hacka",
+				"VictimName": "Synarys"
+			},
+			{
+				"EventID": 87,
+				"EventName": "Multikill",
+				"EventTime": 700.5423583984375,
+				"KillStreak": 2,
+				"KillerName": "hacka"
+			},
+			{
+				"Assisters": [
+					"WYSTΞRΛW"
+				],
+				"EventID": 88,
+				"EventName": "ChampionKill",
+				"EventTime": 703.8668823242188,
+				"KillerName": "Rolliger Rudolf",
+				"VictimName": "BearJew43"
+			},
+			{
+				"Assisters": [
+					"Rolliger Rudolf"
+				],
+				"EventID": 89,
+				"EventName": "ChampionKill",
+				"EventTime": 704.3682861328125,
+				"KillerName": "WYSTΞRΛW",
+				"VictimName": "Erijo"
+			},
+			{
+				"Assisters": [
+					"Caashual"
+				],
+				"EventID": 90,
+				"EventName": "ChampionKill",
+				"EventTime": 707.7551879882813,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Barry Lete"
+			},
+			{
+				"Assisters": [
+					"Rock the Kahba"
+				],
+				"EventID": 91,
+				"EventName": "ChampionKill",
+				"EventTime": 709.5720825195313,
+				"KillerName": "OfCourseLucky",
+				"VictimName": "Reicken"
+			},
+			{
+				"Assisters": [
+					"OfCourseLucky"
+				],
+				"EventID": 92,
+				"EventName": "ChampionKill",
+				"EventTime": 714.8484497070313,
+				"KillerName": "Rock the Kahba",
+				"VictimName": "AncientBoso"
+			},
+			{
+				"Acer": "Rock the Kahba",
+				"AcingTeam": "CHAOS",
+				"EventID": 93,
+				"EventName": "Ace",
+				"EventTime": 714.8484497070313
+			},
+			{
+				"Assisters": [
+					"Jhin Bot"
+				],
+				"EventID": 94,
+				"EventName": "ChampionKill",
+				"EventTime": 775.2179565429688,
+				"KillerName": "hacka",
+				"VictimName": "WYSTΞRΛW"
+			},
+			{
+				"Assisters": [
+					"Rock the Kahba"
+				],
+				"EventID": 95,
+				"EventName": "ChampionKill",
+				"EventTime": 776.201416015625,
+				"KillerName": "OfCourseLucky",
+				"VictimName": "zaap"
+			},
+			{
+				"Assisters": [
+					"Caashual",
+					"Pyke Bot"
+				],
+				"EventID": 96,
+				"EventName": "ChampionKill",
+				"EventTime": 778.0474853515625,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "BearJew43"
+			},
+			{
+				"Assisters": [],
+				"EventID": 97,
+				"EventName": "ChampionKill",
+				"EventTime": 778.6884155273438,
+				"KillerName": "Barry Lete",
+				"VictimName": "Rock the Kahba"
+			},
+			{
+				"Assisters": [
+					"BearJew43",
+					"Pyke Bot"
+				],
+				"EventID": 98,
+				"EventName": "ChampionKill",
+				"EventTime": 779.1884155273438,
+				"KillerName": "Erijo",
+				"VictimName": "Caashual"
+			},
+			{
+				"Assisters": [
+					"Caashual",
+					"Pyke Bot"
+				],
+				"EventID": 99,
+				"EventName": "ChampionKill",
+				"EventTime": 779.6668701171875,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Erijo"
+			},
+			{
+				"EventID": 100,
+				"EventName": "Multikill",
+				"EventTime": 779.6668701171875,
+				"KillStreak": 2,
+				"KillerName": "DDDDDDDDDDDDDD"
+			},
+			{
+				"Assisters": [
+					"hacka",
+					"Jhin Bot"
+				],
+				"EventID": 101,
+				"EventName": "ChampionKill",
+				"EventTime": 781.8851318359375,
+				"KillerName": "Oowi Glad",
+				"VictimName": "Rolliger Rudolf"
+			},
+			{
+				"Assisters": [
+					"Rock the Kahba"
+				],
+				"EventID": 102,
+				"EventName": "ChampionKill",
+				"EventTime": 784.9352416992188,
+				"KillerName": "OfCourseLucky",
+				"VictimName": "Barry Lete"
+			},
+			{
+				"EventID": 103,
+				"EventName": "Multikill",
+				"EventTime": 784.9352416992188,
+				"KillStreak": 2,
+				"KillerName": "OfCourseLucky"
+			},
+			{
+				"Assisters": [
+					"OfCourseLucky"
+				],
+				"EventID": 104,
+				"EventName": "ChampionKill",
+				"EventTime": 850.1945190429688,
+				"KillerName": "Rock the Kahba",
+				"VictimName": "Erijo"
+			},
+			{
+				"Assisters": [
+					"Babboz premier"
+				],
+				"EventID": 105,
+				"EventName": "ChampionKill",
+				"EventTime": 852.3099365234375,
+				"KillerName": "Synarys",
+				"VictimName": "hacka"
+			},
+			{
+				"Assisters": [
+					"Babboz premier"
+				],
+				"EventID": 106,
+				"EventName": "ChampionKill",
+				"EventTime": 853.0804443359375,
+				"KillerName": "Synarys",
+				"VictimName": "Oowi Glad"
+			},
+			{
+				"EventID": 107,
+				"EventName": "Multikill",
+				"EventTime": 853.0804443359375,
+				"KillStreak": 2,
+				"KillerName": "Synarys"
+			},
+			{
+				"Assisters": [
+					"Caashual"
+				],
+				"EventID": 108,
+				"EventName": "ChampionKill",
+				"EventTime": 862.50537109375,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "WYSTΞRΛW"
+			},
+			{
+				"Assisters": [
+					"OfCourseLucky"
+				],
+				"EventID": 109,
+				"EventName": "ChampionKill",
+				"EventTime": 862.8317260742188,
+				"KillerName": "Rock the Kahba",
+				"VictimName": "BearJew43"
+			},
+			{
+				"Assisters": [
+					"WYSTΞRΛW",
+					"Lux Bot"
+				],
+				"EventID": 110,
+				"EventName": "ChampionKill",
+				"EventTime": 864.8869018554688,
+				"KillerName": "Rolliger Rudolf",
+				"VictimName": "Caashual"
+			},
+			{
+				"Assisters": [
+					"Caashual",
+					"Lux Bot"
+				],
+				"EventID": 111,
+				"EventName": "ChampionKill",
+				"EventTime": 876.7061767578125,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Rolliger Rudolf"
+			},
+			{
+				"Assisters": [
+					"Caashual"
+				],
+				"EventID": 112,
+				"EventName": "ChampionKill",
+				"EventTime": 883.5968627929688,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "WYSTΞRΛW"
+			},
+			{
+				"EventID": 113,
+				"EventName": "Multikill",
+				"EventTime": 883.5968627929688,
+				"KillStreak": 2,
+				"KillerName": "DDDDDDDDDDDDDD"
+			},
+			{
+				"Assisters": [],
+				"EventID": 114,
+				"EventName": "ChampionKill",
+				"EventTime": 952.2185668945313,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Babboz premier"
+			},
+			{
+				"Assisters": [],
+				"EventID": 115,
+				"EventName": "ChampionKill",
+				"EventTime": 954.9070434570313,
+				"KillerName": "Caashual",
+				"VictimName": "Synarys"
+			},
+			{
+				"Assisters": [],
+				"EventID": 116,
+				"EventName": "ChampionKill",
+				"EventTime": 1025.791748046875,
+				"KillerName": "Caashual",
+				"VictimName": "OfCourseLucky"
+			},
+			{
+				"Assisters": [
+					"DDDDDDDDDDDDDD"
+				],
+				"EventID": 117,
+				"EventName": "ChampionKill",
+				"EventTime": 1046.152099609375,
+				"KillerName": "Caashual",
+				"VictimName": "Rock the Kahba"
+			},
+			{
+				"Assisters": [],
+				"EventID": 118,
+				"EventName": "ChampionKill",
+				"EventTime": 1049.0050048828126,
+				"KillerName": "Caashual",
+				"VictimName": "OfCourseLucky"
+			},
+			{
+				"EventID": 119,
+				"EventName": "Multikill",
+				"EventTime": 1049.0050048828126,
+				"KillStreak": 2,
+				"KillerName": "Caashual"
+			},
+			{
+				"Assisters": [
+					"Babboz premier"
+				],
+				"EventID": 120,
+				"EventName": "ChampionKill",
+				"EventTime": 1100.1153564453126,
+				"KillerName": "Synarys",
+				"VictimName": "OfCourseLucky"
+			},
+			{
+				"Assisters": [
+					"Synarys"
+				],
+				"EventID": 121,
+				"EventName": "ChampionKill",
+				"EventTime": 1118.4222412109376,
+				"KillerName": "Babboz premier",
+				"VictimName": "Rock the Kahba"
+			},
+			{
+				"Assisters": [
+					"Synarys"
+				],
+				"EventID": 122,
+				"EventName": "ChampionKill",
+				"EventTime": 1124.4998779296876,
+				"KillerName": "Babboz premier",
+				"VictimName": "OfCourseLucky"
+			},
+			{
+				"EventID": 123,
+				"EventName": "Multikill",
+				"EventTime": 1124.4998779296876,
+				"KillStreak": 2,
+				"KillerName": "Babboz premier"
+			},
+			{
+				"Assisters": [
+					"Rock the Kahba",
+					"Thresh Bot"
+				],
+				"EventID": 124,
+				"EventName": "ChampionKill",
+				"EventTime": 1124.6473388671876,
+				"KillerName": "OfCourseLucky",
+				"VictimName": "Synarys"
+			},
+			{
+				"Assisters": [
+					"Sett Bot"
+				],
+				"EventID": 125,
+				"EventName": "ChampionKill",
+				"EventTime": 1188.1094970703126,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Babboz premier"
+			},
+			{
+				"Assisters": [
+					"Caashual"
+				],
+				"EventID": 126,
+				"EventName": "ChampionKill",
+				"EventTime": 1190.5460205078126,
+				"KillerName": "DDDDDDDDDDDDDD",
+				"VictimName": "Synarys"
+			},
+			{
+				"EventID": 127,
+				"EventName": "Multikill",
+				"EventTime": 1190.5460205078126,
+				"KillStreak": 2,
+				"KillerName": "DDDDDDDDDDDDDD"
+			},
+			{
+				"EventID": 128,
+				"EventName": "GameEnd",
+				"EventTime": 1196.595947265625,
+				"Result": "Lose"
+			}
+		]
+	},
+	"gameData": {
+		"gameMode": "CHERRY",
+		"gameTime": 1202.785888671875,
+		"mapName": "Map30",
+		"mapNumber": 30,
+		"mapTerrain": "Default"
+	}
+}

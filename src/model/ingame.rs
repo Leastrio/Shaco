@@ -1,7 +1,7 @@
 use std::fmt;
 
 use derive_more::Display;
-use serde::{Deserialize, Deserializer, Serialize};
+use serde::{de::DeserializeOwned, Deserialize, Deserializer, Serialize};
 
 pub type SummonerName = String;
 pub type Time = f64;
@@ -12,18 +12,73 @@ pub struct AllGameData {
     /// only available in live game - None in spectator mode
     #[serde(deserialize_with = "treat_error_as_none")]
     pub active_player: Option<ActivePlayer>,
+    #[serde(deserialize_with = "deserialize_players")]
     pub all_players: Vec<Player>,
-    // because events has the schema: "events": { "Events": [...] }
-    #[serde(deserialize_with = "serde_single_key_map::deserialize")]
+    #[serde(deserialize_with = "deserialize_events")]
     pub events: Vec<GameEvent>,
     pub game_data: GameStats,
 }
 
-fn treat_error_as_none<'de, D>(deserializer: D) -> Result<Option<ActivePlayer>, D::Error>
+/// in Arena mode the special events (random Thresh lanterns, Pyke jumping across the map, Jhin shooting bullets)
+/// are coded as normal champions, which show up in the API response as champions but with an error message
+/// instead of proper stats
+///
+/// as a workaround deserialize players to `PlayerOpt` and only return Players that were successfully deserialized
+pub(crate) fn deserialize_players<'de, D>(deserializer: D) -> Result<Vec<Player>, D::Error>
 where
     D: Deserializer<'de>,
 {
-    Ok(ActivePlayer::deserialize(deserializer).ok())
+    #[derive(Deserialize)]
+    struct PlayerOpt(#[serde(deserialize_with = "treat_error_as_none")] Option<Player>);
+
+    let players = Vec::<PlayerOpt>::deserialize(deserializer)?
+        .into_iter()
+        .filter_map(|player| player.0)
+        .collect::<Vec<_>>();
+
+    Ok(players)
+}
+
+pub(crate) fn deserialize_events<'de, D>(deserializer: D) -> Result<Vec<GameEvent>, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    #[derive(Deserialize)]
+    #[serde(rename_all = "PascalCase")]
+    struct GameEventsTmp {
+        events: Vec<GameEventTmp>,
+    }
+
+    #[derive(Deserialize)]
+    struct GameEventTmp(#[serde(deserialize_with = "treat_error_as_none")] Option<GameEvent>);
+
+    let events = GameEventsTmp::deserialize(deserializer)?
+        .events
+        .into_iter()
+        .filter_map(|event| event.0)
+        .collect::<Vec<_>>();
+
+    Ok(events)
+}
+
+pub(crate) fn treat_error_as_none<'de, D, T: DeserializeOwned>(
+    deserializer: D,
+) -> Result<Option<T>, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    #[derive(Deserialize)]
+    #[serde(untagged)]
+    enum Tmp<T> {
+        Some(T),
+        None {},
+    }
+
+    match Tmp::deserialize(deserializer) {
+        Ok(Tmp::Some(value)) => Ok(Some(value)),
+        Ok(Tmp::None {}) => Ok(None),
+        _ => unreachable!("'None {{}}' should always match"),
+    }
 }
 
 pub type Gold = f32;
@@ -32,13 +87,15 @@ pub type Level = i32;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ActivePlayer {
+    pub summoner_name: SummonerName,
+    #[serde(flatten)]
+    pub riot_id: RiotId,
     pub abilities: PlayerAbilities,
     pub champion_stats: PlayerChampionStats,
     pub current_gold: Gold,
     #[serde(rename = "fullRunes")]
     pub runes: FullPlayerRunes,
     pub level: Level,
-    pub summoner_name: SummonerName,
     pub team_relative_colors: bool,
 }
 
@@ -226,25 +283,37 @@ pub type SkinId = i32;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Player {
+    pub summoner_name: SummonerName,
+    #[serde(flatten)]
+    pub riot_id: RiotId,
     pub champion_name: ChampionName,
+    pub raw_champion_name: String,
+    /// only available in live game - None in spectator mode
+    pub skin_name: Option<SkinName>,
+    /// only available in live game - None in spectator mode
+    pub raw_skin_name: Option<String>,
+    #[serde(rename = "skinID")]
+    pub skin_id: SkinId,
     pub is_bot: bool,
     pub is_dead: bool,
     pub items: Vec<PlayerItem>,
     pub level: Level,
     pub position: Position,
-    pub raw_champion_name: String,
     pub respawn_timer: Time,
     pub runes: Option<PlayerRunes>,
     pub scores: PlayerScores,
-    /// only available in live game - None in spectator mode
-    pub raw_skin_name: Option<String>,
-    /// only available in live game - None in spectator mode
-    pub skin_name: Option<SkinName>,
-    #[serde(rename = "skinID")]
-    pub skin_id: SkinId,
-    pub summoner_name: SummonerName,
     pub summoner_spells: SummonerSpells,
     pub team: TeamId,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RiotId {
+    #[serde(rename = "riotId")]
+    pub riot_id: String,
+    #[serde(rename = "riotIdGameName")]
+    pub game_name: String,
+    #[serde(rename = "riotIdTagLine")]
+    pub tag_line: String,
 }
 
 pub type ItemCount = i32;
