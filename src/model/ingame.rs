@@ -1,7 +1,7 @@
 use std::fmt;
 
 use derive_more::Display;
-use serde::{Deserialize, Deserializer, Serialize};
+use serde::{de::DeserializeOwned, Deserialize, Deserializer, Serialize};
 
 pub type SummonerName = String;
 pub type Time = f64;
@@ -14,8 +14,7 @@ pub struct AllGameData {
     pub active_player: Option<ActivePlayer>,
     #[serde(deserialize_with = "deserialize_players")]
     pub all_players: Vec<Player>,
-    // because events has the schema: "events": { "Events": [...] }
-    #[serde(deserialize_with = "serde_single_key_map::deserialize")]
+    #[serde(deserialize_with = "deserialize_events")]
     pub events: Vec<GameEvent>,
     pub game_data: GameStats,
 }
@@ -25,37 +24,61 @@ pub struct AllGameData {
 /// instead of proper stats
 ///
 /// as a workaround deserialize players to `PlayerOpt` and only return Players that were successfully deserialized
-fn deserialize_players<'de, D>(deserializer: D) -> Result<Vec<Player>, D::Error>
+pub(crate) fn deserialize_players<'de, D>(deserializer: D) -> Result<Vec<Player>, D::Error>
 where
     D: Deserializer<'de>,
 {
-    #[allow(clippy::large_enum_variant)]
     #[derive(Deserialize)]
-    #[serde(untagged)]
-    enum PlayerOpt {
-        Player(Player),
-        None {},
-    }
+    struct PlayerOpt(#[serde(deserialize_with = "treat_error_as_none")] Option<Player>);
 
     let players = Vec::<PlayerOpt>::deserialize(deserializer)?
         .into_iter()
-        .filter_map(|p| {
-            if let PlayerOpt::Player(player) = p {
-                Some(player)
-            } else {
-                None
-            }
-        })
+        .filter_map(|player| player.0)
         .collect::<Vec<_>>();
 
     Ok(players)
 }
 
-fn treat_error_as_none<'de, D>(deserializer: D) -> Result<Option<ActivePlayer>, D::Error>
+pub(crate) fn deserialize_events<'de, D>(deserializer: D) -> Result<Vec<GameEvent>, D::Error>
 where
     D: Deserializer<'de>,
 {
-    Ok(ActivePlayer::deserialize(deserializer).ok())
+    #[derive(Deserialize)]
+    #[serde(rename_all = "PascalCase")]
+    struct GameEventsTmp {
+        events: Vec<GameEventTmp>,
+    }
+
+    #[derive(Deserialize)]
+    struct GameEventTmp(#[serde(deserialize_with = "treat_error_as_none")] Option<GameEvent>);
+
+    let events = GameEventsTmp::deserialize(deserializer)?
+        .events
+        .into_iter()
+        .filter_map(|event| event.0)
+        .collect::<Vec<_>>();
+
+    Ok(events)
+}
+
+pub(crate) fn treat_error_as_none<'de, D, T: DeserializeOwned>(
+    deserializer: D,
+) -> Result<Option<T>, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    #[derive(Deserialize)]
+    #[serde(untagged)]
+    enum Tmp<T> {
+        Some(T),
+        None {},
+    }
+
+    match Tmp::deserialize(deserializer) {
+        Ok(Tmp::Some(value)) => Ok(Some(value)),
+        Ok(Tmp::None {}) => Ok(None),
+        _ => unreachable!("'None {{}}' should always match"),
+    }
 }
 
 pub type Gold = f32;

@@ -130,11 +130,16 @@ impl IngameClient {
         &self,
         event_id: Option<u32>,
     ) -> Result<Vec<GameEvent>, IngameClientError> {
+        use crate::model::ingame::treat_error_as_none;
+
         #[derive(serde::Deserialize)]
         #[serde(rename_all = "PascalCase")]
         struct IngameEvents {
-            pub events: Vec<GameEvent>,
+            pub events: Vec<GameEventTmp>,
         }
+
+        #[derive(serde::Deserialize)]
+        struct GameEventTmp(#[serde(deserialize_with = "treat_error_as_none")] Option<GameEvent>);
 
         self.0
             .get(format!(
@@ -149,7 +154,12 @@ impl IngameClient {
             .json::<IngameEvents>()
             .await
             .map_err(IngameClientError::from)
-            .map(|ie| ie.events)
+            .map(|ie| {
+                ie.events
+                    .into_iter()
+                    .filter_map(|event| event.0)
+                    .collect::<Vec<_>>()
+            })
     }
 
     /// Get the active games stats
@@ -175,7 +185,7 @@ impl IngameClient {
     ) -> Result<Vec<PlayerItem>, IngameClientError> {
         self.0
             .get(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataPlayeritems?summonerName={}",
+                "https://127.0.0.1:{}/GetLiveclientdataPlayeritems?riotId={}",
                 PORT,
                 summoner_name.as_ref()
             ))
@@ -193,6 +203,11 @@ impl IngameClient {
         &self,
         team_id: Option<TeamId>,
     ) -> Result<Vec<Player>, IngameClientError> {
+        use crate::model::ingame::treat_error_as_none;
+
+        #[derive(serde::Deserialize)]
+        struct PlayerOpt(#[serde(deserialize_with = "treat_error_as_none")] Option<Player>);
+
         self.0
             .get(format!(
                 "https://127.0.0.1:{}/GetLiveclientdataPlayerlist?teamID={}",
@@ -203,9 +218,15 @@ impl IngameClient {
             .await
             .and_then(Response::error_for_status)
             .map_err(IngameClientError::from)?
-            .json()
+            .json::<Vec<PlayerOpt>>()
             .await
             .map_err(IngameClientError::from)
+            .map(|players| {
+                players
+                    .into_iter()
+                    .filter_map(|player| player.0)
+                    .collect::<Vec<_>>()
+            })
     }
 
     /// Get a specified players main runes
@@ -215,7 +236,7 @@ impl IngameClient {
     ) -> Result<PlayerRunes, IngameClientError> {
         self.0
             .get(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataPlayermainrunes?summonerName={}",
+                "https://127.0.0.1:{}/GetLiveclientdataPlayermainrunes?riotId={}",
                 PORT,
                 summoner_name.as_ref()
             ))
@@ -235,7 +256,7 @@ impl IngameClient {
     ) -> Result<PlayerScores, IngameClientError> {
         self.0
             .get(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataPlayerscores?summonerName={}",
+                "https://127.0.0.1:{}/GetLiveclientdataPlayerscores?riotId={}",
                 PORT,
                 summoner_name.as_ref()
             ))
@@ -255,7 +276,7 @@ impl IngameClient {
     ) -> Result<SummonerSpells, IngameClientError> {
         self.0
             .get(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataPlayersummonerspells?summonerName={}",
+                "https://127.0.0.1:{}/GetLiveclientdataPlayersummonerspells?riotId={}",
                 PORT,
                 summoner_name.as_ref()
             ))

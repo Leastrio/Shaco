@@ -1,0 +1,2549 @@
+{
+	"activePlayer": {
+		"abilities": {
+			"E": {
+				"abilityLevel": 4,
+				"displayName": "Relentless Pursuit",
+				"id": "LucianE",
+				"rawDescription": "GeneratedTip_Spell_LucianE_Description",
+				"rawDisplayName": "GeneratedTip_Spell_LucianE_DisplayName"
+			},
+			"Passive": {
+				"displayName": "Lightslinger",
+				"id": "LucianPassive",
+				"rawDescription": "GeneratedTip_Passive_LucianPassive_Description",
+				"rawDisplayName": "GeneratedTip_Passive_LucianPassive_DisplayName"
+			},
+			"Q": {
+				"abilityLevel": 5,
+				"displayName": "Piercing Light",
+				"id": "LucianQ",
+				"rawDescription": "GeneratedTip_Spell_LucianQ_Description",
+				"rawDisplayName": "GeneratedTip_Spell_LucianQ_DisplayName"
+			},
+			"R": {
+				"abilityLevel": 2,
+				"displayName": "The Culling",
+				"id": "LucianR",
+				"rawDescription": "GeneratedTip_Spell_LucianR_Description",
+				"rawDisplayName": "GeneratedTip_Spell_LucianR_DisplayName"
+			},
+			"W": {
+				"abilityLevel": 1,
+				"displayName": "Ardent Blaze",
+				"id": "LucianW",
+				"rawDescription": "GeneratedTip_Spell_LucianW_Description",
+				"rawDisplayName": "GeneratedTip_Spell_LucianW_DisplayName"
+			}
+		},
+		"championStats": {
+			"abilityHaste": 60.0,
+			"abilityPower": 0.0,
+			"armor": 85.58428955078125,
+			"armorPenetrationFlat": 0.0,
+			"armorPenetrationPercent": 0.6000000238418579,
+			"attackDamage": 253.55050659179688,
+			"attackRange": 500.0,
+			"attackSpeed": 1.3556766510009766,
+			"bonusArmorPenetrationPercent": 1.0,
+			"bonusMagicPenetrationPercent": 1.0,
+			"critChance": 0.8999999761581421,
+			"critDamage": 230.0,
+			"currentHealth": 1452.9091796875,
+			"healShieldPower": 0.0,
+			"healthRegenRate": 2.0298500061035158,
+			"lifeSteal": 0.05000000074505806,
+			"magicLethality": 0.0,
+			"magicPenetrationFlat": 0.0,
+			"magicPenetrationPercent": 1.0,
+			"magicResist": 59.03379440307617,
+			"maxHealth": 2422.558837890625,
+			"moveSpeed": 462.97564697265627,
+			"omnivamp": 0.0,
+			"physicalLethality": 0.0,
+			"physicalVamp": 0.0,
+			"resourceMax": 993.3350219726563,
+			"resourceRegenRate": 13.946403503417969,
+			"resourceType": "MANA",
+			"resourceValue": 993.3350219726563,
+			"spellVamp": 0.0,
+			"tenacity": 5.0
+		},
+		"currentGold": 750.0,
+		"fullRunes": {},
+		"level": 12,
+		"riotId": "hacka#EUW",
+		"riotIdGameName": "hacka",
+		"riotIdTagLine": "EUW",
+		"summonerName": "hacka#EUW",
+		"teamRelativeColors": true
+	},
+	"allPlayers": [
+		{
+			"championName": "Lucian",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 223158,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223158_Description",
+					"rawDisplayName": "Item_223158_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Fulmination",
+					"itemID": 443055,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443055_Description",
+					"rawDisplayName": "Item_443055_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Lord Dominik's Regards",
+					"itemID": 223036,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223036_Description",
+					"rawDisplayName": "Item_223036_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Infinity Edge",
+					"itemID": 223031,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223031_Description",
+					"rawDisplayName": "Item_223031_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Lucian",
+			"rawSkinName": "game_character_skin_displayname_Lucian_8",
+			"respawnTimer": 9886.66015625,
+			"riotId": "hacka#EUW",
+			"riotIdGameName": "hacka",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 4,
+				"creepScore": 0,
+				"deaths": 3,
+				"kills": 5,
+				"wardScore": 0.0
+			},
+			"skinID": 8,
+			"skinName": "High Noon Lucian",
+			"summonerName": "hacka#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "LeBlanc",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Orb",
+					"itemID": 223112,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223112_Description",
+					"rawDisplayName": "game_item_displayname_223112",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 223020,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223020_Description",
+					"rawDisplayName": "Item_223020_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Runecarver",
+					"itemID": 447108,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447108_Description",
+					"rawDisplayName": "Item_447108_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Shadowflame",
+					"itemID": 224645,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_224645_Description",
+					"rawDisplayName": "Item_224645_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rabadon's Deathcap",
+					"itemID": 223089,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223089_Description",
+					"rawDisplayName": "Item_223089_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Leblanc",
+			"respawnTimer": 9955.1923828125,
+			"riotId": "Wendaranahi#18710",
+			"riotIdGameName": "Wendaranahi",
+			"riotIdTagLine": "18710",
+			"runes": null,
+			"scores": {
+				"assists": 1,
+				"creepScore": 0,
+				"deaths": 5,
+				"kills": 6,
+				"wardScore": 0.0
+			},
+			"skinID": 0,
+			"summonerName": "Wendaranahi#18710",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Malphite",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Shroud",
+					"itemID": 2050,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_2050_Description",
+					"rawDisplayName": "Item_2050_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Detonation Orb",
+					"itemID": 447113,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447113_Description",
+					"rawDisplayName": "Item_447113_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 223020,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223020_Description",
+					"rawDisplayName": "Item_223020_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Shadowflame",
+					"itemID": 224645,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_224645_Description",
+					"rawDisplayName": "Item_224645_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Void Staff",
+					"itemID": 223135,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223135_Description",
+					"rawDisplayName": "Item_223135_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Malphite",
+			"rawSkinName": "game_character_skin_displayname_Malphite_3",
+			"respawnTimer": 9889.39453125,
+			"riotId": "BindBeard#1111",
+			"riotIdGameName": "BindBeard",
+			"riotIdTagLine": "1111",
+			"runes": null,
+			"scores": {
+				"assists": 5,
+				"creepScore": 0,
+				"deaths": 2,
+				"kills": 4,
+				"wardScore": 0.0
+			},
+			"skinID": 3,
+			"skinName": "Marble Malphite",
+			"summonerName": "BindBeard#1111",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Poppy",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Blade",
+					"itemID": 223177,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223177_Description",
+					"rawDisplayName": "game_item_displayname_223177",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Plated Steelcaps",
+					"itemID": 223047,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223047_Description",
+					"rawDisplayName": "Item_223047_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Darksteel Talons",
+					"itemID": 443054,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443054_Description",
+					"rawDisplayName": "Item_443054_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Thornmail",
+					"itemID": 223075,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223075_Description",
+					"rawDisplayName": "Item_223075_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Force of Nature",
+					"itemID": 224401,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_224401_Description",
+					"rawDisplayName": "Item_224401_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Poppy",
+			"rawSkinName": "game_character_skin_displayname_Poppy_7",
+			"respawnTimer": 9971.9482421875,
+			"riotId": "Theoyeeee#EUW",
+			"riotIdGameName": "Theoyeeee",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 2,
+				"creepScore": 0,
+				"deaths": 5,
+				"kills": 2,
+				"wardScore": 0.0
+			},
+			"skinID": 7,
+			"skinName": "Star Guardian Poppy",
+			"summonerName": "Theoyeeee#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Twisted Fate",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_TwistedFate",
+			"rawSkinName": "game_character_skin_displayname_TwistedFate_4",
+			"respawnTimer": 9988.98828125,
+			"riotId": "PaiiN P#EUW",
+			"riotIdGameName": "PaiiN P",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 2,
+				"creepScore": 0,
+				"deaths": 7,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"skinID": 4,
+			"skinName": "Tango Twisted Fate",
+			"summonerName": "PaiiN P#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Bard",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Orb",
+					"itemID": 223112,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223112_Description",
+					"rawDisplayName": "game_item_displayname_223112",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Everfrost",
+					"itemID": 446656,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_446656_Description",
+					"rawDisplayName": "Item_446656_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Berserker's Greaves",
+					"itemID": 223006,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223006_Description",
+					"rawDisplayName": "Item_3006_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rapid Firecannon",
+					"itemID": 223094,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223094_Description",
+					"rawDisplayName": "Item_223094_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Nashor's Tooth",
+					"itemID": 223115,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223115_Description",
+					"rawDisplayName": "Item_223115_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Bard",
+			"rawSkinName": "game_character_skin_displayname_Bard_5",
+			"respawnTimer": 9977.9267578125,
+			"riotId": "GusepeCarabinero#YOO",
+			"riotIdGameName": "GusepeCarabinero",
+			"riotIdTagLine": "YOO",
+			"runes": null,
+			"scores": {
+				"assists": 1,
+				"creepScore": 0,
+				"deaths": 4,
+				"kills": 4,
+				"wardScore": 0.0
+			},
+			"skinID": 5,
+			"skinName": "Snow Day Bard",
+			"summonerName": "GusepeCarabinero#YOO",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryAugFlashyFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryAugFlashyFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Master Yi",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Mercury's Treads",
+					"itemID": 223111,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223111_Description",
+					"rawDisplayName": "Item_223111_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guinsoo's Rageblade",
+					"itemID": 223124,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223124_Description",
+					"rawDisplayName": "Item_223124_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Mirage Blade",
+					"itemID": 447100,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_447100_Description",
+					"rawDisplayName": "Item_447100_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Blade of The Ruined King",
+					"itemID": 223153,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223153_Description",
+					"rawDisplayName": "Item_223153_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_MasterYi",
+			"respawnTimer": 9963.1953125,
+			"riotId": "livevil#music",
+			"riotIdGameName": "livevil",
+			"riotIdTagLine": "music",
+			"runes": null,
+			"scores": {
+				"assists": 4,
+				"creepScore": 0,
+				"deaths": 4,
+				"kills": 1,
+				"wardScore": 0.0
+			},
+			"skinID": 0,
+			"summonerName": "livevil#music",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Now You See Me",
+					"rawDescription": "GeneratedTip_SummonerSpell_Augment_NowYouSeeMe_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_Augment_NowYouSeeMe_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Nidalee",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Orb",
+					"itemID": 223112,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223112_Description",
+					"rawDisplayName": "game_item_displayname_223112",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Lich Bane",
+					"itemID": 223100,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223100_Description",
+					"rawDisplayName": "Item_223100_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Night Harvester",
+					"itemID": 444636,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_444636_Description",
+					"rawDisplayName": "Item_444636_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sorcerer's Shoes",
+					"itemID": 223020,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223020_Description",
+					"rawDisplayName": "Item_223020_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Rabadon's Deathcap",
+					"itemID": 223089,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223089_Description",
+					"rawDisplayName": "Item_223089_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Nidalee",
+			"rawSkinName": "game_character_skin_displayname_Nidalee_9",
+			"respawnTimer": 9850.5302734375,
+			"riotId": "Rüben4win#EUW",
+			"riotIdGameName": "Rüben4win",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 3,
+				"creepScore": 0,
+				"deaths": 3,
+				"kills": 5,
+				"wardScore": 0.0
+			},
+			"skinID": 9,
+			"skinName": "Super Galaxy Nidalee",
+			"summonerName": "Rüben4win#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Dr. Mundo",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Horn",
+					"itemID": 222051,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_222051_Description",
+					"rawDisplayName": "game_item_displayname_2051",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Gargoyle Stoneplate",
+					"itemID": 443193,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443193_Description",
+					"rawDisplayName": "Item_443193_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Mercury's Treads",
+					"itemID": 223111,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223111_Description",
+					"rawDisplayName": "Item_223111_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Heartsteel",
+					"itemID": 223084,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223084_Description",
+					"rawDisplayName": "Item_223084_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Spirit Visage",
+					"itemID": 223065,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223065_Description",
+					"rawDisplayName": "Item_223065_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_DrMundo",
+			"rawSkinName": "game_character_skin_displayname_DrMundo_4",
+			"respawnTimer": 9856.046875,
+			"riotId": "LukasTshoeBBHood#8533",
+			"riotIdGameName": "LukasTshoeBBHood",
+			"riotIdTagLine": "8533",
+			"runes": null,
+			"scores": {
+				"assists": 5,
+				"creepScore": 0,
+				"deaths": 2,
+				"kills": 3,
+				"wardScore": 0.0
+			},
+			"skinID": 4,
+			"skinName": "Mundo Mundo",
+			"summonerName": "LukasTshoeBBHood#8533",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Qiyana",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 223158,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223158_Description",
+					"rawDisplayName": "Item_223158_Name",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Gargoyle Stoneplate",
+					"itemID": 443193,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443193_Description",
+					"rawDisplayName": "Item_443193_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Chempunk Chainsword",
+					"itemID": 226609,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226609_Description",
+					"rawDisplayName": "Item_226609_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Hubris",
+					"itemID": 226697,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226697_Description",
+					"rawDisplayName": "Item_226697_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Dirk",
+					"itemID": 223185,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223185_Description",
+					"rawDisplayName": "game_item_displayname_223185",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Qiyana",
+			"respawnTimer": 9962.5908203125,
+			"riotId": "Chain Combo#EUW",
+			"riotIdGameName": "Chain Combo",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 2,
+				"creepScore": 0,
+				"deaths": 6,
+				"kills": 2,
+				"wardScore": 0.0
+			},
+			"skinID": 0,
+			"summonerName": "Chain Combo#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Volibear",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Horn",
+					"itemID": 222051,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_222051_Description",
+					"rawDisplayName": "game_item_displayname_2051",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 223158,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223158_Description",
+					"rawDisplayName": "Item_223158_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Duskblade of Draktharr",
+					"itemID": 446691,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_446691_Description",
+					"rawDisplayName": "Item_446691_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Bloodletter's Curse",
+					"itemID": 4010,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_4010_Description",
+					"rawDisplayName": "Item_4010_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Iceborn Gauntlet",
+					"itemID": 226662,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226662_Description",
+					"rawDisplayName": "Item_226662_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Volibear",
+			"rawSkinName": "game_character_skin_displayname_Volibear_7",
+			"respawnTimer": 9856.9580078125,
+			"riotId": "Thanátosi#Luo",
+			"riotIdGameName": "Thanátosi",
+			"riotIdTagLine": "Luo",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 5,
+				"kills": 2,
+				"wardScore": 0.0
+			},
+			"skinID": 7,
+			"skinName": "Duality Dragon Volibear",
+			"summonerName": "Thanátosi#Luo",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Urgot",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ravenous Hydra",
+					"itemID": 223074,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223074_Description",
+					"rawDisplayName": "Item_223074_Name",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Wordless Promise",
+					"itemID": 4016,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_4016_Description",
+					"rawDisplayName": "Item_4016_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Moonstone Renewer",
+					"itemID": 226617,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226617_Description",
+					"rawDisplayName": "Item_226617_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Eleisa's Miracle",
+					"itemID": 443063,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443063_Description",
+					"rawDisplayName": "Item_443063_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Mercury's Treads",
+					"itemID": 223111,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223111_Description",
+					"rawDisplayName": "Item_223111_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Urgot",
+			"respawnTimer": 9988.533203125,
+			"riotId": "zzzzzffff#EUW",
+			"riotIdGameName": "zzzzzffff",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 5,
+				"creepScore": 0,
+				"deaths": 3,
+				"kills": 6,
+				"wardScore": 0.0
+			},
+			"skinID": 0,
+			"summonerName": "zzzzzffff#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Lee Sin",
+			"isBot": false,
+			"isDead": true,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Dirk",
+					"itemID": 223185,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223185_Description",
+					"rawDisplayName": "game_item_displayname_223185",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Mercury's Treads",
+					"itemID": 223111,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223111_Description",
+					"rawDisplayName": "Item_223111_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Sword of the Divine",
+					"itemID": 443060,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443060_Description",
+					"rawDisplayName": "Item_443060_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Infinity Edge",
+					"itemID": 223031,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223031_Description",
+					"rawDisplayName": "Item_223031_Name",
+					"slot": 3
+				},
+				{
+					"canUse": true,
+					"consumable": true,
+					"count": 1,
+					"displayName": "Lucky Dice",
+					"itemID": 2145,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_2145_Description",
+					"rawDisplayName": "Item_2145_Name",
+					"slot": 4
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "The Collector",
+					"itemID": 226676,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226676_Description",
+					"rawDisplayName": "Item_226676_Name",
+					"slot": 5
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_LeeSin",
+			"respawnTimer": 9968.9296875,
+			"riotId": "Thibackmor#7108",
+			"riotIdGameName": "Thibackmor",
+			"riotIdTagLine": "7108",
+			"runes": null,
+			"scores": {
+				"assists": 4,
+				"creepScore": 0,
+				"deaths": 5,
+				"kills": 1,
+				"wardScore": 0.0
+			},
+			"skinID": 0,
+			"summonerName": "Thibackmor#7108",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Kai'Sa",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Berserker's Greaves",
+					"itemID": 223006,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223006_Description",
+					"rawDisplayName": "Item_3006_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Fulmination",
+					"itemID": 443055,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443055_Description",
+					"rawDisplayName": "Item_443055_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "The Collector",
+					"itemID": 226676,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226676_Description",
+					"rawDisplayName": "Item_226676_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Infinity Edge",
+					"itemID": 223031,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223031_Description",
+					"rawDisplayName": "Item_223031_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Kaisa",
+			"rawSkinName": "game_character_skin_displayname_Kaisa_1",
+			"respawnTimer": 9422.7548828125,
+			"riotId": "CakedupDrake#1979",
+			"riotIdGameName": "CakedupDrake",
+			"riotIdTagLine": "1979",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 1,
+				"kills": 13,
+				"wardScore": 0.0
+			},
+			"skinID": 1,
+			"skinName": "Bullet Angel Kai'Sa",
+			"summonerName": "CakedupDrake#1979",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Karma",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Amulet",
+					"itemID": 2049,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_2049_Description",
+					"rawDisplayName": "Item_2049_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Ionian Boots of Lucidity",
+					"itemID": 223158,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223158_Description",
+					"rawDisplayName": "Item_223158_Name",
+					"slot": 1
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Locket of the Iron Solari",
+					"itemID": 223190,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223190_Description",
+					"rawDisplayName": "Item_223190_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Cloak of Starry Night",
+					"itemID": 443059,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443059_Description",
+					"rawDisplayName": "Item_443059_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Moonstone Renewer",
+					"itemID": 226617,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226617_Description",
+					"rawDisplayName": "Item_226617_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Karma",
+			"rawSkinName": "game_character_skin_displayname_Karma_27",
+			"respawnTimer": 9427.7275390625,
+			"riotId": "Definitely Sabri#EUW",
+			"riotIdGameName": "Definitely Sabri",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 13,
+				"creepScore": 0,
+				"deaths": 2,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"skinID": 27,
+			"skinName": "Ruined Karma",
+			"summonerName": "Definitely Sabri#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Nunu & Willump",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Shroud",
+					"itemID": 2050,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_2050_Description",
+					"rawDisplayName": "Item_2050_Name",
+					"slot": 0
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Mercury's Treads",
+					"itemID": 223111,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223111_Description",
+					"rawDisplayName": "Item_223111_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Eleisa's Miracle",
+					"itemID": 443063,
+					"price": 1000,
+					"rawDescription": "GeneratedTip_Item_443063_Description",
+					"rawDisplayName": "Item_443063_Name",
+					"slot": 2
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Moonstone Renewer",
+					"itemID": 226617,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_226617_Description",
+					"rawDisplayName": "Item_226617_Name",
+					"slot": 3
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Spirit Visage",
+					"itemID": 223065,
+					"price": 2500,
+					"rawDescription": "GeneratedTip_Item_223065_Description",
+					"rawDisplayName": "Item_223065_Name",
+					"slot": 4
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 12,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Nunu",
+			"rawSkinName": "game_character_skin_displayname_Nunu_4",
+			"respawnTimer": 9770.9462890625,
+			"riotId": "JuaniRios#EUW",
+			"riotIdGameName": "JuaniRios",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 6,
+				"creepScore": 0,
+				"deaths": 2,
+				"kills": 5,
+				"wardScore": 0.0
+			},
+			"skinID": 4,
+			"skinName": "Nunu & Willump Bot",
+			"summonerName": "JuaniRios#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash <i>(on cooldown)</i>",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_CD_DisplayName"
+				}
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Thresh",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 8,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Thresh",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Lux",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 8,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Lux",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Jhin",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 8,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Jhin",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Sett",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 8,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Sett",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Pyke",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 8,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Pyke",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		}
+	],
+	"events": {
+		"Events": [
+			{
+				"EventID": 0,
+				"EventName": "GameStart",
+				"EventTime": 0.026411600410938264
+			},
+			{
+				"Assisters": [
+					"JuaniRios"
+				],
+				"EventID": 1,
+				"EventName": "ChampionKill",
+				"EventTime": 61.11565017700195,
+				"KillerName": "zzzzzffff",
+				"VictimName": "Definitely Sabri"
+			},
+			{
+				"Assisters": [
+					"Rüben4win"
+				],
+				"EventID": 2,
+				"EventName": "ChampionKill",
+				"EventTime": 69.43828582763672,
+				"KillerName": "LukasTshoeBBHood",
+				"VictimName": "Chain Combo"
+			},
+			{
+				"EventID": 3,
+				"EventName": "FirstBlood",
+				"EventTime": 69.43828582763672,
+				"Recipient": "LukasTshoeBBHood"
+			},
+			{
+				"Assisters": [
+					"BindBeard"
+				],
+				"EventID": 4,
+				"EventName": "ChampionKill",
+				"EventTime": 77.6132583618164,
+				"KillerName": "hacka",
+				"VictimName": "Thanátosi"
+			},
+			{
+				"Assisters": [
+					"LukasTshoeBBHood"
+				],
+				"EventID": 5,
+				"EventName": "ChampionKill",
+				"EventTime": 81.1380844116211,
+				"KillerName": "Rüben4win",
+				"VictimName": "Theoyeeee"
+			},
+			{
+				"Assisters": [
+					"zzzzzffff"
+				],
+				"EventID": 6,
+				"EventName": "ChampionKill",
+				"EventTime": 89.07881927490235,
+				"KillerName": "JuaniRios",
+				"VictimName": "CakedupDrake"
+			},
+			{
+				"Assisters": [
+					"Thibackmor"
+				],
+				"EventID": 7,
+				"EventName": "ChampionKill",
+				"EventTime": 90.00926208496094,
+				"KillerName": "GusepeCarabinero",
+				"VictimName": "livevil"
+			},
+			{
+				"Assisters": [
+					"BindBeard"
+				],
+				"EventID": 8,
+				"EventName": "ChampionKill",
+				"EventTime": 91.28515625,
+				"KillerName": "hacka",
+				"VictimName": "PaiiN P"
+			},
+			{
+				"Assisters": [
+					"JuaniRios"
+				],
+				"EventID": 9,
+				"EventName": "ChampionKill",
+				"EventTime": 94.05148315429688,
+				"KillerName": "zzzzzffff",
+				"VictimName": "Definitely Sabri"
+			},
+			{
+				"Assisters": [],
+				"EventID": 10,
+				"EventName": "ChampionKill",
+				"EventTime": 113.95693969726563,
+				"KillerName": "Wendaranahi",
+				"VictimName": "Thibackmor"
+			},
+			{
+				"Assisters": [
+					"Thibackmor"
+				],
+				"EventID": 11,
+				"EventName": "ChampionKill",
+				"EventTime": 114.13031768798828,
+				"KillerName": "GusepeCarabinero",
+				"VictimName": "Wendaranahi"
+			},
+			{
+				"Assisters": [],
+				"EventID": 12,
+				"EventName": "HeraldKill",
+				"EventTime": 116.6503677368164,
+				"Stolen": "False"
+			},
+			{
+				"EventID": 13,
+				"EventName": "MinionsSpawning",
+				"EventTime": 120.01714324951172
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri"
+				],
+				"EventID": 14,
+				"EventName": "ChampionKill",
+				"EventTime": 190.6488800048828,
+				"KillerName": "CakedupDrake",
+				"VictimName": "Chain Combo"
+			},
+			{
+				"Assisters": [
+					"Rüben4win"
+				],
+				"EventID": 15,
+				"EventName": "ChampionKill",
+				"EventTime": 207.25778198242188,
+				"KillerName": "LukasTshoeBBHood",
+				"VictimName": "Thanátosi"
+			},
+			{
+				"Assisters": [
+					"BindBeard"
+				],
+				"EventID": 16,
+				"EventName": "ChampionKill",
+				"EventTime": 210.1011199951172,
+				"KillerName": "hacka",
+				"VictimName": "Thibackmor"
+			},
+			{
+				"Assisters": [
+					"JuaniRios"
+				],
+				"EventID": 17,
+				"EventName": "ChampionKill",
+				"EventTime": 210.6994171142578,
+				"KillerName": "zzzzzffff",
+				"VictimName": "livevil"
+			},
+			{
+				"Assisters": [
+					"hacka"
+				],
+				"EventID": 18,
+				"EventName": "ChampionKill",
+				"EventTime": 210.93101501464845,
+				"KillerName": "BindBeard",
+				"VictimName": "GusepeCarabinero"
+			},
+			{
+				"Assisters": [
+					"livevil"
+				],
+				"EventID": 19,
+				"EventName": "ChampionKill",
+				"EventTime": 212.27687072753907,
+				"KillerName": "Wendaranahi",
+				"VictimName": "JuaniRios"
+			},
+			{
+				"Assisters": [
+					"LukasTshoeBBHood"
+				],
+				"EventID": 20,
+				"EventName": "ChampionKill",
+				"EventTime": 220.33396911621095,
+				"KillerName": "Rüben4win",
+				"VictimName": "PaiiN P"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri"
+				],
+				"EventID": 21,
+				"EventName": "ChampionKill",
+				"EventTime": 223.33590698242188,
+				"KillerName": "CakedupDrake",
+				"VictimName": "Chain Combo"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri"
+				],
+				"EventID": 22,
+				"EventName": "ChampionKill",
+				"EventTime": 228.87234497070313,
+				"KillerName": "CakedupDrake",
+				"VictimName": "Theoyeeee"
+			},
+			{
+				"EventID": 23,
+				"EventName": "Multikill",
+				"EventTime": 228.87234497070313,
+				"KillStreak": 2,
+				"KillerName": "CakedupDrake"
+			},
+			{
+				"Assisters": [
+					"zzzzzffff"
+				],
+				"EventID": 24,
+				"EventName": "ChampionKill",
+				"EventTime": 232.44964599609376,
+				"KillerName": "JuaniRios",
+				"VictimName": "Wendaranahi"
+			},
+			{
+				"Assisters": [],
+				"EventID": 25,
+				"EventName": "HeraldKill",
+				"EventTime": 234.94992065429688,
+				"Stolen": "False"
+			},
+			{
+				"Assisters": [
+					"Chain Combo"
+				],
+				"EventID": 26,
+				"EventName": "ChampionKill",
+				"EventTime": 301.9644775390625,
+				"KillerName": "Theoyeeee",
+				"VictimName": "livevil"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri"
+				],
+				"EventID": 27,
+				"EventName": "ChampionKill",
+				"EventTime": 305.68414306640627,
+				"KillerName": "CakedupDrake",
+				"VictimName": "PaiiN P"
+			},
+			{
+				"Assisters": [
+					"Theoyeeee"
+				],
+				"EventID": 28,
+				"EventName": "ChampionKill",
+				"EventTime": 314.2071533203125,
+				"KillerName": "Chain Combo",
+				"VictimName": "Wendaranahi"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri"
+				],
+				"EventID": 29,
+				"EventName": "ChampionKill",
+				"EventTime": 315.7301330566406,
+				"KillerName": "CakedupDrake",
+				"VictimName": "Thanátosi"
+			},
+			{
+				"Assisters": [
+					"LukasTshoeBBHood"
+				],
+				"EventID": 30,
+				"EventName": "ChampionKill",
+				"EventTime": 322.19415283203127,
+				"KillerName": "Rüben4win",
+				"VictimName": "hacka"
+			},
+			{
+				"Assisters": [
+					"LukasTshoeBBHood"
+				],
+				"EventID": 31,
+				"EventName": "ChampionKill",
+				"EventTime": 338.9259338378906,
+				"KillerName": "Rüben4win",
+				"VictimName": "BindBeard"
+			},
+			{
+				"Assisters": [
+					"zzzzzffff"
+				],
+				"EventID": 32,
+				"EventName": "ChampionKill",
+				"EventTime": 339.7393493652344,
+				"KillerName": "JuaniRios",
+				"VictimName": "Thibackmor"
+			},
+			{
+				"Assisters": [
+					"JuaniRios"
+				],
+				"EventID": 33,
+				"EventName": "ChampionKill",
+				"EventTime": 349.4552917480469,
+				"KillerName": "zzzzzffff",
+				"VictimName": "GusepeCarabinero"
+			},
+			{
+				"Assisters": [],
+				"EventID": 34,
+				"EventName": "HeraldKill",
+				"EventTime": 351.98309326171877,
+				"Stolen": "False"
+			},
+			{
+				"Assisters": [
+					"BindBeard"
+				],
+				"EventID": 35,
+				"EventName": "ChampionKill",
+				"EventTime": 415.9664001464844,
+				"KillerName": "hacka",
+				"VictimName": "zzzzzffff"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri"
+				],
+				"EventID": 36,
+				"EventName": "ChampionKill",
+				"EventTime": 418.3440246582031,
+				"KillerName": "CakedupDrake",
+				"VictimName": "Rüben4win"
+			},
+			{
+				"Assisters": [
+					"Wendaranahi"
+				],
+				"EventID": 37,
+				"EventName": "ChampionKill",
+				"EventTime": 423.4669494628906,
+				"KillerName": "livevil",
+				"VictimName": "PaiiN P"
+			},
+			{
+				"Assisters": [
+					"Theoyeeee"
+				],
+				"EventID": 38,
+				"EventName": "ChampionKill",
+				"EventTime": 425.74395751953127,
+				"KillerName": "Chain Combo",
+				"VictimName": "Thibackmor"
+			},
+			{
+				"Assisters": [
+					"PaiiN P"
+				],
+				"EventID": 39,
+				"EventName": "ChampionKill",
+				"EventTime": 432.42291259765627,
+				"KillerName": "Thanátosi",
+				"VictimName": "Wendaranahi"
+			},
+			{
+				"Assisters": [
+					"Thibackmor"
+				],
+				"EventID": 40,
+				"EventName": "ChampionKill",
+				"EventTime": 436.7639465332031,
+				"KillerName": "GusepeCarabinero",
+				"VictimName": "Chain Combo"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri"
+				],
+				"EventID": 41,
+				"EventName": "ChampionKill",
+				"EventTime": 437.0674743652344,
+				"KillerName": "CakedupDrake",
+				"VictimName": "LukasTshoeBBHood"
+			},
+			{
+				"Assisters": [
+					"BindBeard"
+				],
+				"EventID": 42,
+				"EventName": "ChampionKill",
+				"EventTime": 437.2705078125,
+				"KillerName": "hacka",
+				"VictimName": "JuaniRios"
+			},
+			{
+				"Assisters": [
+					"Chain Combo"
+				],
+				"EventID": 43,
+				"EventName": "ChampionKill",
+				"EventTime": 439.1695251464844,
+				"KillerName": "Theoyeeee",
+				"VictimName": "GusepeCarabinero"
+			},
+			{
+				"Assisters": [
+					"hacka"
+				],
+				"EventID": 44,
+				"EventName": "ChampionKill",
+				"EventTime": 439.2801208496094,
+				"KillerName": "BindBeard",
+				"VictimName": "zzzzzffff"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri"
+				],
+				"EventID": 45,
+				"EventName": "ChampionKill",
+				"EventTime": 443.3572998046875,
+				"KillerName": "CakedupDrake",
+				"VictimName": "Rüben4win"
+			},
+			{
+				"EventID": 46,
+				"EventName": "Multikill",
+				"EventTime": 443.3572998046875,
+				"KillStreak": 2,
+				"KillerName": "CakedupDrake"
+			},
+			{
+				"Assisters": [],
+				"EventID": 47,
+				"EventName": "ChampionKill",
+				"EventTime": 453.2373352050781,
+				"KillerName": "Wendaranahi",
+				"VictimName": "PaiiN P"
+			},
+			{
+				"Assisters": [
+					"livevil"
+				],
+				"EventID": 48,
+				"EventName": "ChampionKill",
+				"EventTime": 455.449951171875,
+				"KillerName": "Wendaranahi",
+				"VictimName": "Thanátosi"
+			},
+			{
+				"EventID": 49,
+				"EventName": "Multikill",
+				"EventTime": 455.449951171875,
+				"KillStreak": 2,
+				"KillerName": "Wendaranahi"
+			},
+			{
+				"Assisters": [],
+				"EventID": 50,
+				"EventName": "HeraldKill",
+				"EventTime": 457.9616394042969,
+				"Stolen": "False"
+			},
+			{
+				"Assisters": [
+					"JuaniRios",
+					"Sett Bot"
+				],
+				"EventID": 51,
+				"EventName": "ChampionKill",
+				"EventTime": 510.3082275390625,
+				"KillerName": "zzzzzffff",
+				"VictimName": "Theoyeeee"
+			},
+			{
+				"Assisters": [
+					"livevil"
+				],
+				"EventID": 52,
+				"EventName": "ChampionKill",
+				"EventTime": 516.854736328125,
+				"KillerName": "Wendaranahi",
+				"VictimName": "Rüben4win"
+			},
+			{
+				"Assisters": [
+					"livevil",
+					"Lux Bot"
+				],
+				"EventID": 53,
+				"EventName": "ChampionKill",
+				"EventTime": 522.3710327148438,
+				"KillerName": "Wendaranahi",
+				"VictimName": "LukasTshoeBBHood"
+			},
+			{
+				"EventID": 54,
+				"EventName": "Multikill",
+				"EventTime": 522.3710327148438,
+				"KillStreak": 2,
+				"KillerName": "Wendaranahi"
+			},
+			{
+				"Assisters": [
+					"GusepeCarabinero"
+				],
+				"EventID": 55,
+				"EventName": "ChampionKill",
+				"EventTime": 523.2820434570313,
+				"KillerName": "Thibackmor",
+				"VictimName": "Thanátosi"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri",
+					"Thresh Bot"
+				],
+				"EventID": 56,
+				"EventName": "ChampionKill",
+				"EventTime": 534.0509643554688,
+				"KillerName": "CakedupDrake",
+				"VictimName": "hacka"
+			},
+			{
+				"Assisters": [
+					"zzzzzffff",
+					"Sett Bot"
+				],
+				"EventID": 57,
+				"EventName": "ChampionKill",
+				"EventTime": 538.9344482421875,
+				"KillerName": "JuaniRios",
+				"VictimName": "Theoyeeee"
+			},
+			{
+				"Assisters": [
+					"Thibackmor"
+				],
+				"EventID": 58,
+				"EventName": "ChampionKill",
+				"EventTime": 545.1062622070313,
+				"KillerName": "GusepeCarabinero",
+				"VictimName": "PaiiN P"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri",
+					"Thresh Bot"
+				],
+				"EventID": 59,
+				"EventName": "ChampionKill",
+				"EventTime": 552.9839477539063,
+				"KillerName": "CakedupDrake",
+				"VictimName": "hacka"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri",
+					"Thresh Bot"
+				],
+				"EventID": 60,
+				"EventName": "ChampionKill",
+				"EventTime": 555.7188110351563,
+				"KillerName": "CakedupDrake",
+				"VictimName": "BindBeard"
+			},
+			{
+				"EventID": 61,
+				"EventName": "Multikill",
+				"EventTime": 555.7188110351563,
+				"KillStreak": 2,
+				"KillerName": "CakedupDrake"
+			},
+			{
+				"Assisters": [
+					"JuaniRios"
+				],
+				"EventID": 62,
+				"EventName": "ChampionKill",
+				"EventTime": 555.8273315429688,
+				"KillerName": "zzzzzffff",
+				"VictimName": "Chain Combo"
+			},
+			{
+				"Assisters": [],
+				"EventID": 63,
+				"EventName": "HeraldKill",
+				"EventTime": 558.3360595703125,
+				"Stolen": "False"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri"
+				],
+				"EventID": 64,
+				"EventName": "ChampionKill",
+				"EventTime": 621.5161743164063,
+				"KillerName": "CakedupDrake",
+				"VictimName": "Wendaranahi"
+			},
+			{
+				"Assisters": [
+					"hacka"
+				],
+				"EventID": 65,
+				"EventName": "ChampionKill",
+				"EventTime": 628.9146728515625,
+				"KillerName": "BindBeard",
+				"VictimName": "Chain Combo"
+			},
+			{
+				"Assisters": [
+					"Definitely Sabri"
+				],
+				"EventID": 66,
+				"EventName": "ChampionKill",
+				"EventTime": 629.5189208984375,
+				"KillerName": "CakedupDrake",
+				"VictimName": "livevil"
+			},
+			{
+				"EventID": 67,
+				"EventName": "Multikill",
+				"EventTime": 629.5189208984375,
+				"KillStreak": 2,
+				"KillerName": "CakedupDrake"
+			},
+			{
+				"Assisters": [
+					"LukasTshoeBBHood"
+				],
+				"EventID": 68,
+				"EventName": "ChampionKill",
+				"EventTime": 635.2536010742188,
+				"KillerName": "Rüben4win",
+				"VictimName": "Thibackmor"
+			},
+			{
+				"Assisters": [
+					"hacka"
+				],
+				"EventID": 69,
+				"EventName": "ChampionKill",
+				"EventTime": 638.2721557617188,
+				"KillerName": "BindBeard",
+				"VictimName": "Theoyeeee"
+			},
+			{
+				"EventID": 70,
+				"EventName": "Multikill",
+				"EventTime": 638.2721557617188,
+				"KillStreak": 2,
+				"KillerName": "BindBeard"
+			},
+			{
+				"Assisters": [
+					"Rüben4win"
+				],
+				"EventID": 71,
+				"EventName": "ChampionKill",
+				"EventTime": 644.2504272460938,
+				"KillerName": "LukasTshoeBBHood",
+				"VictimName": "GusepeCarabinero"
+			},
+			{
+				"Assisters": [
+					"PaiiN P",
+					"Pyke Bot"
+				],
+				"EventID": 72,
+				"EventName": "ChampionKill",
+				"EventTime": 654.8572387695313,
+				"KillerName": "Thanátosi",
+				"VictimName": "zzzzzffff"
+			},
+			{
+				"Assisters": [
+					"zzzzzffff",
+					"Pyke Bot"
+				],
+				"EventID": 73,
+				"EventName": "ChampionKill",
+				"EventTime": 655.312255859375,
+				"KillerName": "JuaniRios",
+				"VictimName": "PaiiN P"
+			}
+		]
+	},
+	"gameData": {
+		"gameMode": "CHERRY",
+		"gameTime": 665.3240356445313,
+		"mapName": "Map30",
+		"mapNumber": 30,
+		"mapTerrain": "Default"
+	}
+}

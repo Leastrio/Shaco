@@ -1,0 +1,1174 @@
+{
+	"activePlayer": {
+		"error": "Spectator mode doesn't currently support this feature"
+	},
+	"allPlayers": [
+		{
+			"championName": "Malzahar",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Orb",
+					"itemID": 223112,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223112_Description",
+					"rawDisplayName": "game_item_displayname_223112",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Malzahar",
+			"rawSkinName": "game_character_skin_displayname_Malzahar_38",
+			"respawnTimer": 0.0,
+			"riotId": "KingsCrusher2014#EUW",
+			"riotIdGameName": "KingsCrusher2014",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "476.8758545,252.0645142",
+			"screenPositionCenter": "489.6147156,212.9682617",
+			"skinID": 38,
+			"skinName": "Three Honors Malzahar",
+			"summonerName": "KingsCrusher2014#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Frozen Foundations",
+					"rawDescription": "GeneratedTip_Spell_Augment_FrozenFoundations_AniviaW_Description",
+					"rawDisplayName": "GeneratedTip_Spell_Augment_FrozenFoundations_AniviaW_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Yorick",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Dirk",
+					"itemID": 223185,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223185_Description",
+					"rawDisplayName": "game_item_displayname_223185",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Yorick",
+			"respawnTimer": 0.0,
+			"riotId": "hacka#EUW",
+			"riotIdGameName": "hacka",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "170.4980469,292.7192688",
+			"screenPositionCenter": "205.8138275,212.9682617",
+			"skinID": 0,
+			"summonerName": "hacka#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Senna",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Senna",
+			"rawSkinName": "game_character_skin_displayname_Senna_27",
+			"respawnTimer": 0.0,
+			"riotId": "ssmaplus#APE",
+			"riotIdGameName": "ssmaplus",
+			"riotIdTagLine": "APE",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "2099.4174805,718.8239136",
+			"screenPositionCenter": "2083.0273438,660.1854858",
+			"skinID": 27,
+			"skinName": "Prestige Lunar Eclipse Senna",
+			"summonerName": "ssmaplus#APE",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Shyvana",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Shyvana",
+			"rawSkinName": "game_character_skin_displayname_Shyvana_5",
+			"respawnTimer": 0.0,
+			"riotId": "AirBenderAng#EUW",
+			"riotIdGameName": "AirBenderAng",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "-25.6214905,1600.1088867",
+			"screenPositionCenter": "7.9226685,1502.1480713",
+			"skinID": 5,
+			"skinName": "Worlds 2014 Shyvana",
+			"summonerName": "AirBenderAng#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Mordekaiser",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Shroud",
+					"itemID": 2050,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_2050_Description",
+					"rawDisplayName": "Item_2050_Name",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Mordekaiser",
+			"rawSkinName": "game_character_skin_displayname_Mordekaiser_43",
+			"respawnTimer": 0.0,
+			"riotId": "Mariux22#350Z",
+			"riotIdGameName": "Mariux22",
+			"riotIdTagLine": "350Z",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "17.5671387,1435.0701904",
+			"screenPositionCenter": "91.0491180,1222.7412109",
+			"skinID": 43,
+			"skinName": "Ashen Graveknight Mordekaiser",
+			"summonerName": "Mariux22#350Z",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Ahri",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Orb",
+					"itemID": 223112,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223112_Description",
+					"rawDisplayName": "game_item_displayname_223112",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Ahri",
+			"rawSkinName": "game_character_skin_displayname_Ahri_75",
+			"respawnTimer": 0.0,
+			"riotId": "SYNÐRA#666",
+			"riotIdGameName": "SYNÐRA",
+			"riotIdTagLine": "666",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"screenPositionCenter": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"skinID": 75,
+			"skinName": "Foxfire Ahri",
+			"summonerName": "SYNÐRA#666",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Brand",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Orb",
+					"itemID": 223112,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223112_Description",
+					"rawDisplayName": "game_item_displayname_223112",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Brand",
+			"rawSkinName": "game_character_skin_displayname_Brand_2",
+			"respawnTimer": 0.0,
+			"riotId": "monkmental#32257",
+			"riotIdGameName": "monkmental",
+			"riotIdTagLine": "32257",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "1875.6545410,404.8415222",
+			"screenPositionCenter": "1866.5805664,364.9653015",
+			"skinID": 2,
+			"skinName": "Vandal Brand",
+			"summonerName": "monkmental#32257",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Amumu",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Horn",
+					"itemID": 222051,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_222051_Description",
+					"rawDisplayName": "game_item_displayname_2051",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Amumu",
+			"rawSkinName": "game_character_skin_displayname_Amumu_8",
+			"respawnTimer": 0.0,
+			"riotId": "TouchMySkill#8555",
+			"riotIdGameName": "TouchMySkill",
+			"riotIdTagLine": "8555",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "2037.1894531,222.6234741",
+			"screenPositionCenter": "2028.4886475,194.6383362",
+			"skinID": 8,
+			"skinName": "Surprise Party Amumu",
+			"summonerName": "TouchMySkill#8555",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Pyke",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Dirk",
+					"itemID": 223185,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223185_Description",
+					"rawDisplayName": "game_item_displayname_223185",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Pyke",
+			"respawnTimer": 0.0,
+			"riotId": "NLS Stark#EUW",
+			"riotIdGameName": "NLS Stark",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "2328.9653320,687.0626221",
+			"screenPositionCenter": "2312.5144043,641.5832520",
+			"skinID": 0,
+			"summonerName": "NLS Stark#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Vex",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Shroud",
+					"itemID": 2050,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_2050_Description",
+					"rawDisplayName": "Item_2050_Name",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Vex",
+			"respawnTimer": 0.0,
+			"riotId": "SalvaSalvador#Salva",
+			"riotIdGameName": "SalvaSalvador",
+			"riotIdTagLine": "Salva",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"screenPositionCenter": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"skinID": 0,
+			"summonerName": "SalvaSalvador#Salva",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Sivir",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Sivir",
+			"rawSkinName": "game_character_skin_displayname_Sivir_5",
+			"respawnTimer": 0.0,
+			"riotId": "owNy#Gott",
+			"riotIdGameName": "owNy",
+			"riotIdTagLine": "Gott",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "97.7281952,763.7454224",
+			"screenPositionCenter": "133.4529877,673.8031006",
+			"skinID": 5,
+			"skinName": "PAX Sivir",
+			"summonerName": "owNy#Gott",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Sona",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Amulet",
+					"itemID": 2049,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_2049_Description",
+					"rawDisplayName": "Item_2049_Name",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Sona",
+			"rawSkinName": "game_character_skin_displayname_Sona_1",
+			"respawnTimer": 0.0,
+			"riotId": "BassSultanHengzt#EUW",
+			"riotIdGameName": "BassSultanHengzt",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "-198.4919739,960.4651489",
+			"screenPositionCenter": "-144.2608643,844.0700684",
+			"skinID": 1,
+			"skinName": "Muse Sona",
+			"summonerName": "BassSultanHengzt#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Samira",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Hammer",
+					"itemID": 223184,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223184_Description",
+					"rawDisplayName": "game_item_displayname_223184",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Samira",
+			"rawSkinName": "game_character_skin_displayname_Samira_12",
+			"respawnTimer": 0.0,
+			"riotId": "DOINB DANCING#FPX",
+			"riotIdGameName": "DOINB DANCING",
+			"riotIdTagLine": "FPX",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "1519.7559814,1690.6115723",
+			"screenPositionCenter": "1508.1610107,1501.8365479",
+			"skinID": 12,
+			"skinName": "Space Groove Samira",
+			"summonerName": "DOINB DANCING#FPX",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Sylas",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Orb",
+					"itemID": 223112,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223112_Description",
+					"rawDisplayName": "game_item_displayname_223112",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Sylas",
+			"respawnTimer": 0.0,
+			"riotId": "Plant32#EUW",
+			"riotIdGameName": "Plant32",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"screenPositionCenter": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"skinID": 0,
+			"summonerName": "Plant32#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Ziggs",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Orb",
+					"itemID": 223112,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_223112_Description",
+					"rawDisplayName": "game_item_displayname_223112",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Ziggs",
+			"rawSkinName": "game_character_skin_displayname_Ziggs_4",
+			"respawnTimer": 0.0,
+			"riotId": "To0GUD4M3#EUW",
+			"riotIdGameName": "To0GUD4M3",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "2094.8117676,1263.5322266",
+			"screenPositionCenter": "2077.1093750,1188.0065918",
+			"skinID": 4,
+			"skinName": "Snow Day Ziggs",
+			"summonerName": "To0GUD4M3#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Skarner",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Guardian's Horn",
+					"itemID": 222051,
+					"price": 500,
+					"rawDescription": "GeneratedTip_Item_222051_Description",
+					"rawDisplayName": "game_item_displayname_2051",
+					"slot": 0
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Arcane Sweeper",
+					"itemID": 3348,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3348_Description",
+					"rawDisplayName": "game_item_displayname_3348",
+					"slot": 6
+				}
+			],
+			"level": 3,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Skarner",
+			"respawnTimer": 0.0,
+			"riotId": "proster123#EUW",
+			"riotIdGameName": "proster123",
+			"riotIdTagLine": "EUW",
+			"runes": null,
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"screenPositionBottom": "2356.3447266,1608.3355713",
+			"screenPositionCenter": "2307.1564941,1433.7131348",
+			"skinID": 0,
+			"summonerName": "proster123#EUW",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flee",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryHold_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryHold_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerCherryFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerCherryFlash_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		},
+		{
+			"championName": "Thresh",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 3,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Thresh",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"screenPositionBottom": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"screenPositionCenter": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Lux",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 3,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Lux",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"screenPositionBottom": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"screenPositionCenter": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Jhin",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 3,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Jhin",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"screenPositionBottom": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"screenPositionCenter": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Sett",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 3,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Sett",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"screenPositionBottom": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"screenPositionCenter": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		},
+		{
+			"championName": "Pyke",
+			"isBot": true,
+			"isDead": false,
+			"items": {
+				"error": "Unable to find player"
+			},
+			"level": 3,
+			"position": "",
+			"rawChampionName": "game_character_displayname_Pyke",
+			"respawnTimer": 0.0,
+			"riotId": "",
+			"riotIdGameName": "",
+			"riotIdTagLine": "",
+			"runes": {
+				"error": "Unable to find player"
+			},
+			"scores": {
+				"error": "Unable to find player"
+			},
+			"screenPositionBottom": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"screenPositionCenter": "340282346638528859811704183484516925440.0000000,340282346638528859811704183484516925440.0000000",
+			"skinID": 0,
+			"summonerName": "Unknown",
+			"summonerSpells": {
+				"error": "Unable to find player"
+			},
+			"team": "CHAOS"
+		}
+	],
+	"events": {
+		"Events": [
+			{
+				"EventID": 0,
+				"EventName": "GameStart",
+				"EventTime": 0.0
+			},
+			{
+				"Assisters": [],
+				"EventID": 1,
+				"EventName": "ChampionKill",
+				"EventTime": 1090.2955322265626,
+				"KillerName": "DOINB DANCING",
+				"VictimName": "BassSultanHengzt"
+			}
+		]
+	},
+	"gameData": {
+		"gameMode": "CHERRY",
+		"gameTime": 43.407196044921878,
+		"mapName": "Map30",
+		"mapNumber": 30,
+		"mapTerrain": "Default"
+	}
+}
