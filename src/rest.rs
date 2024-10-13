@@ -78,4 +78,21 @@ impl RESTClient {
             .await
             .or_else(|_| Ok(serde_json::Value::Null))
     }
+
+    /// Make a patch request to the specified endpoint
+    pub async fn patch<T: Serialize>(
+        &self,
+        endpoint: &str,
+        body: T,
+    ) -> Result<serde_json::Value, reqwest::Error> {
+        self.reqwest_client
+            .patch(format!("https://127.0.0.1:{}{}", self.port, endpoint))
+            .json(&body)
+            .send()
+            .await?
+            .error_for_status()?
+            .json()
+            .await
+            .or_else(|_| Ok(serde_json::Value::Null))
+    }
 }
