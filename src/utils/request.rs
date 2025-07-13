@@ -8,7 +8,7 @@ pub(crate) fn build_reqwest_client(auth_token: Option<String>) -> reqwest::Clien
 
     if let Some(token) = auth_token {
         let auth_header =
-            header::HeaderValue::from_str(format!("Basic {}", token).as_str()).unwrap();
+            header::HeaderValue::from_str(format!("Basic {token}").as_str()).unwrap();
         headers.insert("Authorization", auth_header);
     }
 

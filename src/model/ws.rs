@@ -95,8 +95,7 @@ impl<'de> Deserialize<'de> for LcuSubscriptionType {
             }
         } else {
             Err(de::Error::custom(format!(
-                "Unknown SubscriptionType: {}",
-                s
+                "Unknown SubscriptionType: {s}"
             )))
         }
     }

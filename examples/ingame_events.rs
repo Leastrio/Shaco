@@ -8,7 +8,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut event_stream = EventStream::from_ingame_client(ingame_client, None);
 
     while let Some(event) = event_stream.next().await {
-        println!("{:?}", event)
+        println!("{event:?}")
     }
 
     Ok(())

@@ -16,6 +16,12 @@ const PORT: u16 = 2999;
 /// A client for the LoL-Ingame API
 pub struct IngameClient(reqwest::Client);
 
+impl Default for IngameClient {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl IngameClient {
     /// Create a new connection to the ingame api. This will return an error if a game is not running
     pub fn new() -> Self {
@@ -28,8 +34,7 @@ impl IngameClient {
         let req = self
             .0
             .get(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataGamestats",
-                PORT
+                "https://127.0.0.1:{PORT}/GetLiveclientdataGamestats"
             ))
             .send()
             .await;
@@ -53,7 +58,7 @@ impl IngameClient {
     pub async fn active_game_loadingscreen(&self) -> bool {
         let req = self
             .0
-            .head(format!("https://127.0.0.1:{}/Help", PORT))
+            .head(format!("https://127.0.0.1:{PORT}/Help"))
             .send()
             .await;
 
@@ -75,8 +80,7 @@ impl IngameClient {
         let req = self
             .0
             .head(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataActiveplayer",
-                PORT
+                "https://127.0.0.1:{PORT}/GetLiveclientdataActiveplayer"
             ))
             .send()
             .await
@@ -141,8 +145,7 @@ impl IngameClient {
     pub async fn game_stats(&self) -> Result<GameStats, IngameClientError> {
         self.0
             .get(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataGamestats",
-                PORT
+                "https://127.0.0.1:{PORT}/GetLiveclientdataGamestats"
             ))
             .send()
             .await
@@ -279,8 +282,7 @@ impl IngameClient {
 
         self.0
             .get(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataActiveplayer",
-                PORT
+                "https://127.0.0.1:{PORT}/GetLiveclientdataActiveplayer"
             ))
             .send()
             .await
@@ -302,8 +304,7 @@ impl IngameClient {
     pub async fn active_player_abilities(&self) -> Result<PlayerAbilities, IngameClientError> {
         self.0
             .get(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataActiveplayerabilities",
-                PORT
+                "https://127.0.0.1:{PORT}/GetLiveclientdataActiveplayerabilities"
             ))
             .send()
             .await
@@ -319,8 +320,7 @@ impl IngameClient {
     pub async fn active_player_name(&self) -> Result<String, IngameClientError> {
         self.0
             .get(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataActiveplayername",
-                PORT
+                "https://127.0.0.1:{PORT}/GetLiveclientdataActiveplayername"
             ))
             .send()
             .await
@@ -343,8 +343,7 @@ impl IngameClient {
     pub async fn active_player_runes(&self) -> Result<FullPlayerRunes, IngameClientError> {
         self.0
             .get(format!(
-                "https://127.0.0.1:{}/GetLiveclientdataActiveplayerrunes",
-                PORT
+                "https://127.0.0.1:{PORT}/GetLiveclientdataActiveplayerrunes"
             ))
             .send()
             .await

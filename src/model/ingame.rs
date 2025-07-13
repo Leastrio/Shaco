@@ -401,7 +401,7 @@ pub enum TeamId {
 
 impl fmt::Display for TeamId {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        let uppercase = format!("{:?}", self).to_uppercase();
+        let uppercase = format!("{self:?}").to_uppercase();
         write!(f, "{uppercase}")
     }
 }

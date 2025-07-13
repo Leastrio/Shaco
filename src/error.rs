@@ -18,18 +18,15 @@ impl Display for ProcessInfoError {
         match self {
             Self::ProcessNotAvailable => write!(
                 f,
-                "{:?}: Riot/League client process could not be found",
-                self
+                "{self:?}: Riot/League client process could not be found"
             ),
             Self::PortNotFound => write!(
                 f,
-                "{:?}: API port could not be parsed from process arguments",
-                self
+                "{self:?}: API port could not be parsed from process arguments"
             ),
             Self::AuthTokenNotFound => write!(
                 f,
-                "{:?}: API auth token could not be parsed from process arguments",
-                self
+                "{self:?}: API auth token could not be parsed from process arguments"
             ),
         }
     }
@@ -100,10 +97,10 @@ impl Error for LcuWebsocketError {}
 impl Display for LcuWebsocketError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
-            Self::LcuNotAvailable(s) => write!(f, "LCU API not available: {}", s),
+            Self::LcuNotAvailable(s) => write!(f, "LCU API not available: {s}"),
             Self::AuthError => write!(f, "Authentication error"),
             Self::SendError => write!(f, "Error sending message"),
-            Self::Disconnected(s) => write!(f, "Websocket disconnected: {}", s),
+            Self::Disconnected(s) => write!(f, "Websocket disconnected: {s}"),
         }
     }
 }

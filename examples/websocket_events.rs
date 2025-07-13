@@ -13,7 +13,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .unwrap();
 
     while let Some(event) = client.next().await {
-        println!("Event: {:?}", event);
+        println!("Event: {event:?}");
     }
 
     Ok(())
