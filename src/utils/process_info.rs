@@ -37,7 +37,7 @@ pub(crate) fn get_auth_info() -> Result<(String, String), ProcessInfoError> {
         .ok_or(ProcessInfoError::AuthTokenNotFound)?;
 
     Ok((
-        general_purpose::STANDARD.encode(format!("riot:{}", auth_token)),
+        general_purpose::STANDARD.encode(format!("riot:{auth_token}")),
         port,
     ))
 }
